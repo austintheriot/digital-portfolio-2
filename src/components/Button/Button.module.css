@@ -1,0 +1,30 @@
+.button {
+	display: block;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	text-transform: uppercase;
+	border: 1px solid black;
+	padding: 0.5rem 1rem;
+	margin: 2rem 0;
+	cursor: pointer;
+}
+
+.button a {
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.arrow {
+	position: relative;
+	top: 0.5px;
+	height: 100%;
+	max-width: 100%;
+	margin: 0 0 0 0.5rem;
+	transition: transform 0.2s;
+}
+
+.button:hover .arrow.down {
+	transform: rotate(90deg);
+}

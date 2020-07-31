@@ -1,0 +1,24 @@
+.footer {
+	margin: 250px 0 25px;
+}
+
+.linkContainer {
+	display: flex;
+	flex: none;
+	justify-content: center;
+	align-items: center;
+}
+.linkContainer a {
+	width: 35px;
+	margin: 0 0.5rem;
+}
+
+.linkContainer img {
+	max-width: 100%;
+}
+
+.copyright {
+	width: 100%;
+	padding: 1rem 0;
+	text-align: center;
+}

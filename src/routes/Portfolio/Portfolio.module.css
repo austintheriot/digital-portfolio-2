@@ -1,0 +1,117 @@
+/* General Font Sizing: --alternative sizes for Portfolio page only*/
+
+.container h2 {
+	font-size: 80px;
+	font-weight: 200;
+	text-transform: lowercase;
+}
+
+.container h3 {
+	font-size: 70px;
+	font-weight: 200;
+}
+
+.container h4 {
+	font-size: 30px;
+	font-weight: 400;
+}
+
+@media (min-width: 800px) {
+	.container h2 {
+		font-size: 135px;
+		font-weight: 200;
+		text-transform: lowercase;
+	}
+
+	.container h3 {
+		font-size: 120px;
+		font-weight: 200;
+	}
+
+	.container h4 {
+		font-size: 50px;
+		font-weight: 400;
+	}
+}
+
+/* ///////////////////////////// Specific formatting ///////////////////////////// */
+
+.container .titleContainer {
+	position: relative;
+	padding-top: 125px;
+}
+
+.container::before,
+.container .titleContainer::before,
+.container .titleContainer::after {
+	content: '';
+	background-color: gray;
+	position: absolute;
+	height: 1px;
+}
+
+/* Decorative lines */
+.container::before {
+	top: 75px;
+	width: 40vw;
+}
+
+.container .titleContainer::before {
+	top: 500px;
+	width: 40vw;
+	left: 60vw;
+}
+
+.container .titleContainer::after {
+	top: 525px;
+	width: 50vw;
+	left: 50vw;
+}
+
+.container h1 {
+	font-weight: 200;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: white;
+}
+
+.container .subtitle {
+	font-size: 50px;
+	font-weight: 200;
+	text-transform: lowercase;
+	text-align: center;
+	margin: 2rem auto;
+	background-color: white;
+}
+
+.buttonContainer {
+	width: 100vw;
+}
+
+.buttonContainer button {
+	margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+	.container .titleContainer {
+		padding-top: 10vw;
+		width: 85%;
+		left: 15%;
+	}
+
+	.buttonContainer {
+		width: max-content;
+		margin: 3rem 0 0 0;
+	}
+
+	.container h1 {
+		font-size: 150px;
+		font-weight: 200;
+		text-align: left;
+	}
+	.container .subtitle {
+		font-weight: 300;
+		text-align: left;
+		margin: 0;
+	}
+}
