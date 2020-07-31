@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Contact.module.css';
+import key from '../../config';
 
 import Input from '../../components/Input/Input';
 import Modal from '../../components/Modal/Modal';
@@ -15,6 +16,7 @@ export default (props) => {
 			animateUp: false,
 			empty: true,
 			touched: false,
+			disabled: false,
 			message: {
 				error: false,
 				text: '',
@@ -25,6 +27,7 @@ export default (props) => {
 			animateUp: false,
 			empty: true,
 			touched: false,
+			disabled: false,
 			message: {
 				error: false,
 				text: '',
@@ -35,12 +38,14 @@ export default (props) => {
 			animateUp: false,
 			empty: true,
 			touched: false,
+			disabled: false,
 			message: {
 				error: false,
 				text: '',
 			},
 		},
 	});
+	const [buttonDisabled, setbuttonDisabled] = useState(false);
 	const [modalMessage, setModalMessage] = useState('');
 
 	const handleFocus = (event, newestType) => {
@@ -168,17 +173,89 @@ export default (props) => {
 			return;
 		} else {
 			//assuming the email is valid, send form:
-			sendForm();
+			submit();
 		}
 	};
 
-	const sendForm = () => {
+	const disableElements = (disabled) => {
+		//Set all inputs to disabled or enabled
+		Object.keys(inputs).forEach((inputType) => {
+			setInputs((prevState) => ({
+				...prevState,
+				[inputType]: {
+					...prevState[inputType],
+					disabled,
+				},
+			}));
+		});
+		setbuttonDisabled(disabled);
+	};
+
+	const clearInputs = () => {
+		Object.keys(inputs).forEach((inputType) => {
+			setInputs((prevState) => ({
+				...prevState,
+				[inputType]: {
+					...prevState[inputType],
+					value: '',
+					touched: false,
+					animateUp: false,
+					empty: true,
+				},
+			}));
+		});
+	};
+
+	const sendSubmission = async () => {
 		console.log(
 			'sending form...',
 			inputs.email.value,
 			inputs.name.value,
 			inputs.message.value
 		);
+
+		const response = await fetch(
+			'https://us-central1-austins-email-server.cloudfunctions.net/sendEmail',
+			{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					Name: inputs.name.value,
+					Email: inputs.email.value,
+					Message: inputs.message.value,
+					_private: {
+						key,
+					},
+				}),
+			}
+		);
+		return response.json();
+	};
+
+	const submit = () => {
+		disableElements(true);
+		setModalMessage('Sending message...');
+		sendSubmission()
+			.then((data) => {
+				disableElements(false);
+				if (data.error) {
+					setModalMessage(
+						'Sorry, there was an error processing your message. Please try again later.'
+					);
+				} else {
+					console.log(data);
+					clearInputs();
+					setModalMessage('Your message was successfully received!');
+				}
+			})
+			.catch((error) => {
+				console.error(error);
+				setModalMessage(
+					'Sorry, there was an error processing your message. Please try again later.'
+				);
+			});
 	};
 
 	return (
@@ -214,7 +291,9 @@ export default (props) => {
 					inputs={inputs}
 				/>
 				{modalMessage ? <Modal message={modalMessage} color='black' /> : null}
-				<Button type='submit'>Submit</Button>
+				<Button disabled={buttonDisabled} type='submit'>
+					Submit
+				</Button>
 			</form>
 		</section>
 	);

@@ -3,7 +3,12 @@ import styles from './Button.module.css';
 
 export default ({ children, ...props }) => {
 	return (
-		<button className={styles.button} {...props}>
+		<button
+			className={[
+				styles.button,
+				props.disabled || props.inactive ? styles.inactive : null,
+			].join(' ')}
+			{...props}>
 			{children}
 			{props.arrow ? (
 				<img

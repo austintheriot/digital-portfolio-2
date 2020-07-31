@@ -28,3 +28,10 @@
 .button:hover .arrow.down {
 	transform: rotate(90deg);
 }
+
+.inactive {
+	color: #777;
+	background-color: #efefef;
+	border: 1px solid #777;
+	cursor: auto;
+}

@@ -21,7 +21,9 @@ export default (props) => {
 							: '',
 
 						//inactive?
-						props?.readOnly ? styles.inactiveLabel : '',
+						props?.readOnly || props?.inputs[props.customType]?.disabled
+							? styles.inactiveLabel
+							: '',
 					].join(' ')}>
 					{props?.label || 'Label'}
 				</label>
@@ -43,10 +45,13 @@ export default (props) => {
 						: '',
 
 					//inactive?
-					props?.readOnly ? styles.inactiveTextarea : '',
+					props?.readOnly || props?.inputs[props.customType]?.disabled
+						? styles.inactiveTextarea
+						: '',
 				].join(' ')}
 				value={props?.inputs[props.customType]?.value || ''}
 				type={props.type || 'text'}
+				disabled={props?.inputs[props.customType]?.disabled || false}
 				onBlur={(e) => props.handleBlur(e, props.customType)}
 				onFocus={(e) => props.handleFocus(e, props.customType)}
 				onChange={(e) => props.handleChange(e, props.customType)}

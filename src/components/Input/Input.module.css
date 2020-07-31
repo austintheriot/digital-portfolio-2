@@ -76,6 +76,7 @@
 
 .inactiveInput {
 	border-color: #adadad;
+	color: #777;
 	background-color: #efefef;
 	pointer-events: none;
 	z-index: -1;
