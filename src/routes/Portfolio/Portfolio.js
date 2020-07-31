@@ -37,7 +37,6 @@ export default (props) => {
 					title='Presto'
 					subtitle='react social media web app'
 					to='/portfolio/presto'
-					whitetext={true}
 					color='purple'
 				/>
 				<ProjectCard
@@ -53,7 +52,6 @@ export default (props) => {
 					title='LASC'
 					subtitle='local business landing page'
 					to='/portfolio/lascabling'
-					whitetext={true}
 					color='blue'
 				/>
 				<ProjectCard
@@ -61,7 +59,7 @@ export default (props) => {
 					title='JSArt'
 					subtitle='interactive canvas app'
 					to='/portfolio/jsart'
-					color='lightgray'
+					color='gray'
 					rightalign={true}
 				/>
 				<ProjectCard
@@ -69,7 +67,7 @@ export default (props) => {
 					title='Email'
 					subtitle='API for static sites'
 					to='/portfolio/email-api'
-					color='lightgreen'
+					color='green'
 				/>
 			</section>
 			<section>
