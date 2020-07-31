@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="email-api__logo.svg"
+   id="svg871"
+   version="1.1"
+   viewBox="0 0 164.136 110.795"
+   height="110.795"
+   width="164.136">
+  <metadata
+     id="metadata877">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs875" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg871"
+     inkscape:window-maximized="1"
+     inkscape:window-y="577"
+     inkscape:window-x="1271"
+     inkscape:cy="111.21895"
+     inkscape:cx="107.79947"
+     inkscape:zoom="2.7634572"
+     showgrid="false"
+     id="namedview873"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     style="stroke-width:2.12366"
+     fill="none"
+     transform="matrix(0.47088627,0,0,0.47088627,43.389964,27.395528)"
+     data-name="Icon zocial-email"
+     id="Icon_zocial-email">
+    <path
+       style="stroke-width:4.50991"
+       id="path866"
+       stroke="none"
+       d="M 0.072,105.05 V 13.881 q 0,-0.158 0.475,-3.007 L 54.2,56.775 0.705,108.216 A 13.414,13.414 0 0 1 0.072,105.05 Z M 7.195,4.543 A 6.821,6.821 0 0 1 9.886,4.068 h 144.509 a 8.963,8.963 0 0 1 2.849,0.475 L 103.429,50.6 96.306,56.3 82.219,67.855 68.132,56.3 61.01,50.6 Z m 0.158,109.846 53.973,-51.758 20.893,16.936 20.893,-16.936 53.973,51.757 a 7.6,7.6 0 0 1 -2.691,0.475 H 9.885 a 7.169,7.169 0 0 1 -2.532,-0.475 z m 102.882,-57.614 53.5,-45.9 a 9.447,9.447 0 0 1 0.475,3.007 v 91.168 a 12.132,12.132 0 0 1 -0.475,3.166 z" />
+    <path
+       style="stroke-width:4.50991"
+       id="path868"
+       fill="#8f8f8f"
+       stroke="none"
+       d="M 145.14233,109.86365 102.83445,69.292755 85.367584,83.4515 82.219055,86.0037 79.070534,83.4515 61.603661,69.292755 19.295799,109.86365 H 145.14233 M 5.0720057,97.080566 46.764732,56.991379 5.0720057,21.325039 V 97.080566 M 159.20786,96.928337 V 21.344704 l -41.54031,35.641067 41.54031,39.942566 m -76.988805,-35.540462 10.915947,-8.953553 0.02361,-0.01937 0.02385,-0.01907 7.057848,-5.646263 44.02665,-37.6816121 H 20.171185 l 44.02663,37.6816121 7.057838,5.646263 0.02385,0.01907 0.0236,0.01937 10.915947,8.953553 m 72.17548,53.475775 H 9.8853312 c -0.8441506,0 -1.6883259,-0.15827 -2.5324755,-0.47483 L 61.326157,62.631424 82.219055,79.567322 103.11195,62.631424 157.08528,114.38882 c -0.84415,0.31656 -1.74107,0.47483 -2.69075,0.47483 z M 0.7051307,108.21593 C 0.28305572,106.73865 0.07200573,105.68345 0.07200573,105.05032 V 13.881324 c 0,-0.105525 0.158275,-1.107949 0.47482498,-3.0073 L 54.203579,56.775074 Z m 163.0278993,-3e-5 -53.4985,-51.440826 53.4985,-45.90105 c 0.31655,0.949675 0.47483,1.9521 0.47483,3.0073 v 91.168996 c 0,0.94968 -0.15828,2.00488 -0.47483,3.16558 z M 82.219055,67.854652 68.132179,56.300224 61.009605,50.602173 7.1945806,4.5428491 C 7.9332056,4.226274 8.8301306,4.0679994 9.8853312,4.0679994 H 154.39453 c 0.94968,0 1.89935,0.1582746 2.84903,0.4748497 L 103.4285,50.602173 96.305931,56.300224 Z" />
+  </g>
+</svg>

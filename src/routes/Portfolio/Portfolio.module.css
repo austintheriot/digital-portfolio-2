@@ -3,7 +3,10 @@
 .container h2 {
 	font-size: 80px;
 	font-weight: 200;
-	text-transform: lowercase;
+	text-transform: none;
+	margin-top: 215px;
+	text-align: center;
+	background-color: white;
 }
 
 .container h3 {
@@ -14,13 +17,22 @@
 .container h4 {
 	font-size: 30px;
 	font-weight: 400;
+	text-transform: lowercase;
+}
+
+.container li {
+	font-size: 30px;
+	font-weight: 300;
+	list-style: none;
+	text-align: center;
+	margin: 1rem auto;
 }
 
 @media (min-width: 800px) {
 	.container h2 {
 		font-size: 135px;
 		font-weight: 200;
-		text-transform: lowercase;
+		text-transform: none;
 	}
 
 	.container h3 {
@@ -32,6 +44,9 @@
 		font-size: 50px;
 		font-weight: 400;
 	}
+	.container li {
+		font-size: 50px;
+	}
 }
 
 /* ///////////////////////////// Specific formatting ///////////////////////////// */
@@ -39,33 +54,6 @@
 .container .titleContainer {
 	position: relative;
 	padding-top: 125px;
-}
-
-.container::before,
-.container .titleContainer::before,
-.container .titleContainer::after {
-	content: '';
-	background-color: gray;
-	position: absolute;
-	height: 1px;
-}
-
-/* Decorative lines */
-.container::before {
-	top: 75px;
-	width: 40vw;
-}
-
-.container .titleContainer::before {
-	top: 500px;
-	width: 40vw;
-	left: 60vw;
-}
-
-.container .titleContainer::after {
-	top: 525px;
-	width: 50vw;
-	left: 50vw;
 }
 
 .container h1 {
@@ -92,6 +80,10 @@
 	margin: 0 auto;
 }
 
+.container button {
+	margin: 150px auto 0 auto;
+}
+
 @media (min-width: 800px) {
 	.container .titleContainer {
 		padding-top: 10vw;
@@ -109,6 +101,7 @@
 		font-weight: 200;
 		text-align: left;
 	}
+
 	.container .subtitle {
 		font-weight: 300;
 		text-align: left;

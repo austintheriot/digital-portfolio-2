@@ -1,0 +1,73 @@
+.decoration1__1,
+.decoration1__2,
+.decoration1__3,
+.decoration2__1,
+.decoration2__2,
+.decoration2__3,
+.decoration3__1,
+.decoration3__2,
+.decoration3__3 {
+	position: relative;
+	z-index: -1;
+	content: '';
+	background-color: gray;
+	height: 1px;
+}
+/* Section 1 */
+
+.decoration1__1 {
+	left: -75vw;
+	top: -15px;
+	width: 100vw;
+}
+
+.decoration1__2 {
+	top: 500px;
+	width: 40vw;
+	left: 60vw;
+}
+
+.decoration1__3 {
+	top: 525px;
+	width: 50vw;
+	left: 50vw;
+}
+
+/* Section 2 */
+
+.decoration2__1 {
+	left: -75vw;
+	top: 0px;
+	width: 100vw;
+}
+
+.decoration2__2 {
+	top: 500px;
+	width: 40vw;
+	left: 60vw;
+}
+
+.decoration2__3 {
+	top: 525px;
+	width: 50vw;
+	left: 50vw;
+}
+
+/* Section 3 */
+.decoration3__1 {
+	left: -75vw;
+	top: 0px;
+	width: 100vw;
+}
+
+.decoration3__2 {
+	top: 500px;
+	width: 40vw;
+	left: 60vw;
+}
+
+.decoration3__3 {
+	top: 525px;
+	width: 50vw;
+	left: 50vw;
+}
