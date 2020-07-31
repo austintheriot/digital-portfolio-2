@@ -1,0 +1,60 @@
+/* Default */
+.divHidden {
+	display: block;
+	width: max-content;
+	min-width: 200px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	border: 3px solid transparent;
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 0 5px;
+	height: 0rem;
+	display: none;
+}
+
+.divShown {
+	composes: divHidden;
+	display: block;
+	height: 2.5rem;
+	padding: 5px;
+	margin: 0 auto;
+}
+
+.divRed {
+	composes: divShown;
+	border: 3px solid var(--red);
+}
+.divGreen {
+	composes: divShown;
+	border: 3px solid var(--green);
+}
+.divBlack {
+	composes: divShown;
+	border: none;
+}
+
+.paragraphHidden {
+	box-sizing: border-box;
+	color: black;
+	padding: 0.1rem 1rem;
+	height: 0rem;
+}
+
+.paragraphShown {
+	composes: paragraphHidden;
+	height: 100%;
+}
+
+.paragraphRed {
+	composes: paragraphShown;
+	color: red;
+}
+.paragraphGreen {
+	composes: paragraphShown;
+	color: green;
+}
+.paragraphBlack {
+	composes: paragraphShown;
+	color: black;
+}
