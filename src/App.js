@@ -10,9 +10,10 @@ import Footer from './components/Footer/Footer';
 import Portfolio from './routes/Portfolio/Portfolio';
 import About from './routes/About/About';
 import Contact from './routes/Contact/Contact';
-import Presto from './routes/Portfolio Articles/Presto/Presto';
-import Yevgeniy from './routes/Portfolio Articles/Yevgeniy/Yevgeniy';
-import LASC from './routes/Portfolio Articles/LASC/LASC';
+import Presto from './routes/Portfolio Articles/Presto';
+import Yevgeniy from './routes/Portfolio Articles/Yevgeniy';
+import LASC from './routes/Portfolio Articles/LASC';
+import JSArt from './routes/Portfolio Articles/JSArt';
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 					<Route exact path='/presto' component={Presto} />
 					<Route exact path='/yevgeniy' component={Yevgeniy} />
 					<Route exact path='/lascabling' component={LASC} />
+					<Route exact path='/jsart' component={JSArt} />
 					<Route path='/' component={Portfolio} />
 				</Switch>
 				<Footer />

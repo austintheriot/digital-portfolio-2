@@ -1,10 +1,10 @@
 import React from 'react';
-import generalStyles from '../PortfolioArticle.module.css';
-import Button from '../../../components/Button/Button';
+import generalStyles from './PortfolioArticle.module.css';
+import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 
-import hero1 from '../../../assets/images/presto__hero1.png';
-import hero2 from '../../../assets/images/presto__hero2.png';
+import hero1 from '../../assets/images/presto__hero1.png';
+import hero2 from '../../assets/images/presto__hero2.png';
 
 export default (props) => {
 	const CODE_URL = 'https://github.com/austintheriot/presto-web-app';

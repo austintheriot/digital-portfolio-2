@@ -1,9 +1,9 @@
 import React from 'react';
-import generalStyles from '../PortfolioArticle.module.css';
-import Button from '../../../components/Button/Button';
+import generalStyles from './PortfolioArticle.module.css';
+import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 
-import hero1 from '../../../assets/images/lascabling__allscreens.png';
+import hero1 from '../../assets/images/lascabling__allscreens.png';
 
 export default (props) => {
 	return (

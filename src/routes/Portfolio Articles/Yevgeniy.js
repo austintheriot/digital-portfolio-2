@@ -1,11 +1,11 @@
 import React from 'react';
-import generalStyles from '../PortfolioArticle.module.css';
-import Button from '../../../components/Button/Button';
+import generalStyles from './PortfolioArticle.module.css';
+import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 
-import hero1 from '../../../assets/images/yevgeniy__hero1.png';
-import hero2 from '../../../assets/images/yevgeniy__hero2.png';
-import hero3 from '../../../assets/images/yevgeniy__hero3.png';
+import hero1 from '../../assets/images/yevgeniy__hero1.png';
+import hero2 from '../../assets/images/yevgeniy__hero2.png';
+import hero3 from '../../assets/images/yevgeniy__hero3.png';
 
 export default (props) => {
 	const WEBSITE_URL = 'https://ysharlat.imfast.io/';

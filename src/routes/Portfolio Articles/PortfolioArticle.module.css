@@ -38,6 +38,23 @@ a,
 	margin: 1rem 2rem;
 }
 
+.panel {
+	width: 100vw;
+	margin: 2rem auto;
+	display: flex;
+	flex: none;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.panel img {
+	display: block;
+	width: 25vw;
+	min-width: 300px;
+	margin: 1rem;
+	box-shadow: var(--shadow);
+}
+
 .hero {
 	object-fit: cover;
 	width: 100%;
