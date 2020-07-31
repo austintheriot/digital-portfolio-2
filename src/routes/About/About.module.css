@@ -1,9 +1,16 @@
 .aboutme h1,
 .aboutme h2 {
 	text-align: center;
-	margin: 2rem auto;
 	max-width: 600px;
 	width: 90%;
+}
+
+.aboutme h1 {
+	margin: 4rem auto 2rem auto;
+}
+
+.aboutme h2 {
+	margin: 2rem auto;
 }
 
 .aboutme p {
