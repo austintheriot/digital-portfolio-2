@@ -72,6 +72,10 @@
 	background-color: white;
 }
 
+.Link {
+	text-decoration: none;
+}
+
 .buttonContainer {
 	width: 100vw;
 }

@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 
 //Routes
 import Portfolio from './routes/Portfolio/Portfolio';
+import About from './routes/About/About';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<div className='App'>
 				<Header />
 				<Route exact path='/' component={Portfolio} />
+				<Route exact path='/about' component={About} />
 
 				<Footer />
 			</div>

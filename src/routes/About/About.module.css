@@ -1,0 +1,73 @@
+.aboutme h1,
+.aboutme h2 {
+	text-align: center;
+	margin: 2rem auto;
+	max-width: 600px;
+	width: 90%;
+}
+
+.aboutme p {
+	margin: 1rem auto;
+	max-width: 600px;
+	width: 90%;
+}
+
+.headshot {
+	display: block;
+	max-width: 300px;
+	margin: 1rem auto;
+	align-self: center;
+}
+
+.buttonContainer {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.Link {
+	text-decoration: none;
+}
+
+.buttonContainer {
+	max-width: 600px;
+	margin: 2rem auto 0 auto;
+}
+
+.buttonContainer button {
+	margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+	.flexContainer {
+		display: flex;
+		flex: none;
+		justify-content: center;
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.aboutme h2 {
+		margin: 0 5%;
+		text-align: left;
+	}
+
+	.headshot {
+		margin: 0;
+	}
+	.wrapper {
+		margin: 0;
+		align-self: start;
+	}
+
+	.buttonContainer button {
+		position: relative;
+		margin: 0;
+		left: 5%;
+	}
+}
+
+@media (min-width: 1000px) {
+	.headshot {
+		align-self: start;
+	}
+}

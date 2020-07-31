@@ -5,6 +5,7 @@ import styles from './Portfolio.module.css';
 import Button from '../../components/Button/Button';
 import Decorations1 from '../../components/Decorations/Decorations1';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import { Link } from 'react-router-dom';
 
 //images
 import prestoLogo from '../../assets/images/presto__logo.svg';
@@ -87,7 +88,9 @@ export default (props) => {
 					<li>Adobe Illustrator</li>
 				</ul>
 			</section>
-			<Button arrow={true}>About Me</Button>
+			<Link to='/about' className={styles.Link}>
+				<Button arrow={true}>About Me</Button>
+			</Link>
 		</div>
 	);
 };
