@@ -4,7 +4,7 @@ import styles from './Portfolio.module.css';
 //components
 import Button from '../../components/Button/Button';
 import Decorations1 from '../../components/Decorations/Decorations1';
-import ProjectLeft from '../../components/ProjectLeft/Projectleft';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
 
 //images
 import prestoLogo from '../../assets/images/presto__logo.svg';
@@ -31,7 +31,7 @@ export default (props) => {
 			</section>
 			<section>
 				<h2 id='work'>My Work</h2>
-				<ProjectLeft
+				<ProjectCard
 					img={prestoLogo}
 					title='Presto'
 					subtitle='react social media web app'
@@ -39,14 +39,15 @@ export default (props) => {
 					whitetext={true}
 					color='purple'
 				/>
-				<ProjectLeft
+				<ProjectCard
 					img={yevgeniyMonogram}
 					title='Yevgeniy'
 					subtitle='classical composer portfolio'
 					to='/portfolio/yevgeniy'
 					color='cream'
+					rightalign={true}
 				/>
-				<ProjectLeft
+				<ProjectCard
 					img={lascablingLogo}
 					title='LASC'
 					subtitle='local business landing page'
@@ -54,14 +55,15 @@ export default (props) => {
 					whitetext={true}
 					color='blue'
 				/>
-				<ProjectLeft
+				<ProjectCard
 					img={jsartGif}
 					title='JSArt'
 					subtitle='interactive canvas app'
 					to='/portfolio/jsart'
 					color='lightgray'
+					rightalign={true}
 				/>
-				<ProjectLeft
+				<ProjectCard
 					img={emailAPI}
 					title='Email'
 					subtitle='API for static sites'

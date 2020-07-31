@@ -1,34 +1,49 @@
-.section {
-	width: 90%;
-	max-width: 400px;
+.Link {
+	position: relative;
+	text-decoration: none;
+	display: block;
+	width: max-content;
+	height: max-content;
+	padding: 0;
 	margin: 3rem auto 4rem auto;
+}
+
+.section {
+	position: relative;
+	height: max-content;
+	width: 90vw;
+	max-width: 400px;
 	overflow: hidden;
 	box-shadow: var(--shadow);
 }
 
-.section a {
-	text-decoration: none;
-}
-
 .img {
 	width: 100%;
-	transition: width 0.2s;
+	transition: width 0s;
 }
 
 .title,
 .subtitle {
 	text-align: center;
+	max-width: 90%;
+}
+
+.title {
+	margin: 0 auto;
 }
 
 .subtitle {
 	margin: 2rem auto 3rem auto;
 }
 
+/* Medium-size screens */
 @media (min-width: 800px) {
-	.section {
-		position: relative;
-		max-width: none;
+	.Link {
 		margin: 3rem 0 4rem 0;
+	}
+
+	.section {
+		max-width: none;
 		height: 400px;
 	}
 	.img {
@@ -41,6 +56,7 @@
 	}
 
 	.topDiv {
+		position: absolute;
 		height: 100%;
 		display: flex;
 		flex: none;
@@ -54,18 +70,21 @@
 	.title {
 		text-align: left;
 		margin-left: 2rem;
+		max-width: none;
 	}
 
 	.subtitle {
 		text-align: left;
-		margin: 0;
 		margin: 0 2rem;
+		max-width: none;
 	}
 }
 
+/* Large screens */
 @media (min-width: 1000px) {
 	.img {
 		width: 150px;
+		transition: width 0.2s;
 	}
 
 	.topDiv {
@@ -77,6 +96,7 @@
 	}
 }
 
+/* Color styling (based on props) */
 @media (min-width: 800px) {
 	.whitetext h3,
 	.whitetext h4 {
@@ -101,5 +121,27 @@
 
 	.lightgreen {
 		background-color: #d8e9d4;
+	}
+}
+
+/* Styling for right-aligned projects -- Medium-Sized Screens */
+@media (min-width: 800px) {
+	.Link.rightalign {
+		left: 10%;
+	}
+
+	.rightalign .title,
+	.rightalign .subtitle {
+		text-align: right;
+		margin: 0 2rem 0 0;
+	}
+
+	.rightalign .topDiv {
+		left: unset;
+		right: 0;
+	}
+
+	.rightalign .img {
+		left: 25px;
 	}
 }
