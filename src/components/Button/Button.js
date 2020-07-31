@@ -17,6 +17,9 @@ export default ({ children, ...props }) => {
 					className={[styles.arrow, props.down ? styles.down : null].join(' ')}
 				/>
 			) : null}
+			<div className={styles.lineDiv1}></div>
+			<div className={styles.lineDiv2}></div>
+			<div className={styles.lineDiv3}></div>
 		</button>
 	);
 };

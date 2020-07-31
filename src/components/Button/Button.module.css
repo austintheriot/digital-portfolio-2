@@ -1,6 +1,6 @@
 .button {
+	position: relative;
 	display: block;
-	background-color: transparent;
 	border: none;
 	outline: none;
 	font-size: 1rem;
@@ -9,6 +9,7 @@
 	padding: 0.5rem 1rem;
 	margin: 2rem 0;
 	cursor: pointer;
+	background-color: white;
 }
 
 .button a {
@@ -34,4 +35,97 @@
 	background-color: #efefef;
 	border: 1px solid #777;
 	cursor: auto;
+}
+
+/* Hover anmations */
+/* Base settings */
+
+.lineDiv1,
+.lineDiv2,
+.lineDiv3 {
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+}
+
+.button:before,
+.button:after,
+.lineDiv1:before,
+.lineDiv1:after,
+.lineDiv2:before,
+.lineDiv2:after,
+.lineDiv3:before,
+.lineDiv3:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	height: 1px;
+	background-color: gray;
+	z-index: -1;
+	transition: left 0.1s;
+}
+
+/* Starting Points */
+.button:before {
+	top: 17%;
+}
+
+.button:after {
+	top: 53%;
+}
+
+.lineDiv1:before {
+	top: 71%;
+}
+
+.lineDiv1:after {
+	top: 93%;
+}
+
+.lineDiv2:before {
+	top: 27%;
+}
+
+.lineDiv2:after {
+	top: 61%;
+}
+
+.lineDiv3:before {
+	top: 20%;
+}
+
+.lineDiv3:after {
+	top: 25%;
+}
+
+/* Hover */
+.button:hover:before {
+	left: -23%;
+}
+
+.button:hover .lineDiv1:before {
+	left: 15%;
+}
+
+.button:hover .lineDiv1:after {
+	left: -13%;
+}
+
+.button:hover .lineDiv2:after {
+	left: -41%;
+}
+
+.button:hover .lineDiv3:after {
+	left: 37%;
+}
+
+/* Focus */
+.button:focus {
+	outline: 1px solid black;
+	outline-offset: 2px;
 }

@@ -20,6 +20,7 @@ html {
 html {
 	font-size: 1rem;
 	font-weight: 400;
+	overflow-x: hidden;
 }
 
 h1 {

@@ -64,8 +64,8 @@ export default (props) => {
 				/>
 				<ProjectCard
 					img={emailAPI}
-					title='Email'
-					subtitle='API for static sites'
+					title='Email API'
+					subtitle='service for static sites'
 					to='/portfolio/email-api'
 					color='green'
 				/>
