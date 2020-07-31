@@ -41,7 +41,6 @@
 	}
 
 	.topDiv {
-		background-color: blue;
 		height: 100%;
 		display: flex;
 		flex: none;
@@ -75,5 +74,32 @@
 
 	.section:hover .topDiv {
 		width: calc(100% - 200px);
+	}
+}
+
+@media (min-width: 800px) {
+	.whitetext h3,
+	.whitetext h4 {
+		color: white;
+	}
+
+	.purple {
+		background-color: #60399d;
+	}
+
+	.cream {
+		background-color: rgb(252, 248, 233);
+	}
+
+	.blue {
+		background-color: #173dde;
+	}
+
+	.lightgray {
+		background-color: #f3f3f3;
+	}
+
+	.lightgreen {
+		background-color: #d8e9d4;
 	}
 }

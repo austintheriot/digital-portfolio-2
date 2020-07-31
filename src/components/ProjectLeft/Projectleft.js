@@ -7,7 +7,12 @@ export default (props) => {
 		<section className={styles.section}>
 			<Link to={props.to || '/'}>
 				<img alt='' className={styles.img} src={props.img || ''} />
-				<div className={styles.topDiv}>
+				<div
+					className={[
+						styles.topDiv,
+						props.whitetext ? styles.whitetext : null,
+						props.color ? styles[props.color] : null,
+					].join(' ')}>
 					<h3 className={styles.title}>{props.title || 'Title'}</h3>
 					<h4 className={styles.subtitle}>{props.subtitle || 'Subtitle'}</h4>
 				</div>

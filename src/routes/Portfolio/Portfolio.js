@@ -24,42 +24,49 @@ export default (props) => {
 					<p className={styles.subtitle}>web developer</p>
 					<div className={styles.buttonContainer}>
 						<Button arrow={true} down={true}>
-							See My Work
+							<a href='#work'>See My Work</a>
 						</Button>
 					</div>
 				</div>
 			</section>
 			<section>
-				<h2>My Work</h2>
+				<h2 id='work'>My Work</h2>
 				<ProjectLeft
 					img={prestoLogo}
 					title='Presto'
 					subtitle='react social media web app'
 					to='/portfolio/presto'
+					whitetext={true}
+					color='purple'
 				/>
 				<ProjectLeft
 					img={yevgeniyMonogram}
 					title='Yevgeniy'
 					subtitle='classical composer portfolio'
 					to='/portfolio/yevgeniy'
+					color='cream'
 				/>
 				<ProjectLeft
 					img={lascablingLogo}
 					title='LASC'
 					subtitle='local business landing page'
 					to='/portfolio/lascabling'
+					whitetext={true}
+					color='blue'
 				/>
 				<ProjectLeft
 					img={jsartGif}
 					title='JSArt'
 					subtitle='interactive canvas app'
 					to='/portfolio/jsart'
+					color='lightgray'
 				/>
 				<ProjectLeft
 					img={emailAPI}
 					title='Email'
 					subtitle='API for static sites'
 					to='/portfolio/email-api'
+					color='lightgreen'
 				/>
 			</section>
 			<section>
