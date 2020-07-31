@@ -24,7 +24,7 @@ export default (props) => {
 					<h1>Austin Theriot</h1>
 					<p className={styles.subtitle}>web developer</p>
 					<div className={styles.buttonContainer}>
-						<Button arrow={true} down={true}>
+						<Button arrow={'true'} down={'true'}>
 							<a href='#work'>See My Work</a>
 						</Button>
 					</div>
@@ -36,14 +36,14 @@ export default (props) => {
 					img={prestoLogo}
 					title='Presto'
 					subtitle='react social media web app'
-					to='/portfolio/presto'
+					to='/presto'
 					color='purple'
 				/>
 				<ProjectCard
 					img={yevgeniyMonogram}
 					title='Yevgeniy'
 					subtitle='classical composer portfolio'
-					to='/portfolio/yevgeniy'
+					to='/yevgeniy'
 					color='cream'
 					rightalign={true}
 				/>
@@ -51,14 +51,14 @@ export default (props) => {
 					img={lascablingLogo}
 					title='LASC'
 					subtitle='local business landing page'
-					to='/portfolio/lascabling'
+					to='/lascabling'
 					color='blue'
 				/>
 				<ProjectCard
 					img={jsartGif}
 					title='JSArt'
 					subtitle='interactive canvas app'
-					to='/portfolio/jsart'
+					to='/jsart'
 					color='gray'
 					rightalign={true}
 				/>
@@ -66,7 +66,7 @@ export default (props) => {
 					img={emailAPI}
 					title='Email API'
 					subtitle='service for static sites'
-					to='/portfolio/email-api'
+					to='/email-api'
 					color='green'
 				/>
 			</section>
@@ -87,7 +87,7 @@ export default (props) => {
 				</ul>
 			</section>
 			<Link to='/about' className={styles.Link}>
-				<Button arrow={true}>About Me</Button>
+				<Button arrow={'true'}>About Me</Button>
 			</Link>
 		</div>
 	);
