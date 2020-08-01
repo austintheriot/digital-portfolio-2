@@ -34,7 +34,7 @@ export default (props) => {
 					</p>
 					<div className={styles.buttonContainer}>
 						<Link to='/contact' className={styles.Link}>
-							<Button arrow={true}>Contact Me</Button>
+							<Button arrow={'true'}>Contact Me</Button>
 						</Link>
 					</div>
 				</div>
