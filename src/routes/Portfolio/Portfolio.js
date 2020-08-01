@@ -70,8 +70,9 @@ export default (props) => {
 					color='green'
 				/>
 			</section>
-			<section>
+			<section className={styles.skills}>
 				<h2>Skills</h2>
+				<h3>Code:</h3>
 				<ul>
 					<li>React</li>
 					<li>JavaScript (ES6+)</li>
@@ -81,9 +82,13 @@ export default (props) => {
 					<li>REST APIs</li>
 					<li>AJAX</li>
 					<li>GSAP</li>
+				</ul>
+				<h3>Graphic Design:</h3>
+				<ul>
 					<li>Adobe Photoshop</li>
 					<li>Adobe XD</li>
 					<li>Adobe Illustrator</li>
+					<li>Inkscape</li>
 				</ul>
 			</section>
 			<Link to='/about' className={styles.Link}>

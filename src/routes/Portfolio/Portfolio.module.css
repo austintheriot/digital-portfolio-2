@@ -10,8 +10,10 @@
 }
 
 .container h3 {
-	font-size: 70px;
+	font-size: 50px;
 	font-weight: 200;
+	text-align: center;
+	margin-top: 2.5rem;
 }
 
 .container h4 {
@@ -36,8 +38,9 @@
 	}
 
 	.container h3 {
-		font-size: 120px;
-		font-weight: 200;
+		font-size: 75px;
+		font-weight: 300;
+		margin-top: 4rem;
 	}
 
 	.container h4 {
