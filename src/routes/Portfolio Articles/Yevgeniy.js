@@ -12,10 +12,10 @@ export default (props) => {
 
 	return (
 		<article>
-			<h1>Yevgeniy</h1>
-			<h2>Classical Composer Portfolio Site</h2>
-			<h3>About</h3>
-			<p>
+			<h1 className={generalStyles.h1}>Yevgeniy</h1>
+			<h2 className={generalStyles.h2}>Classical Composer Portfolio Site</h2>
+			<h3 className={generalStyles.h3}>About</h3>
+			<p className={generalStyles.p}>
 				Yevgeniy Sharlat is a classical composer currently based in Austin,
 				Texas, and a recent recipient of a Guggenheim Fellowship. I designed and
 				coded this digital portfolio website for him so that others can quickly
@@ -33,8 +33,8 @@ export default (props) => {
 					className={generalStyles.hero}
 				/>
 			</a>
-			<h3>Purpose</h3>
-			<p>
+			<h3 className={generalStyles.h3}>Purpose</h3>
+			<p className={generalStyles.p}>
 				This digital portfolio features Yevgeniy Sharlat's music prominently on
 				the front page to allow visitors to quickly and easily listen to his
 				music. If visitors wish, they can then proceed to the dedicated Music
@@ -55,8 +55,8 @@ export default (props) => {
 					className={generalStyles.hero}
 				/>
 			</a>
-			<h3>Tech</h3>
-			<p>
+			<h3 className={generalStyles.h3}>Tech</h3>
+			<p className={generalStyles.p}>
 				I built this page using HTML5, CSS3, and JavaScript—although I believe
 				that templates and libraries like Bootstrap a useful way to build
 				websites, I tend to build websites from scratch in order to ensure that

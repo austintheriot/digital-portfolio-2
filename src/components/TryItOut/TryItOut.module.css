@@ -1,0 +1,15 @@
+.title {
+	text-align: center;
+	margin: 4rem auto 2rem auto;
+	max-width: 90%;
+}
+
+.subtitle {
+	text-align: center;
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.tryitout button {
+	margin: 1rem auto;
+}

@@ -8,10 +8,10 @@ import hero1 from '../../assets/images/lascabling__allscreens.png';
 export default (props) => {
 	return (
 		<article>
-			<h1>LASCabling</h1>
-			<h2>Local Business Landing Page</h2>
-			<h3>About</h3>
-			<p>
+			<h1 className={generalStyles.h1}>LASCabling</h1>
+			<h2 className={generalStyles.h2}>Local Business Landing Page</h2>
+			<h3 className={generalStyles.h3}>About</h3>
+			<p className={generalStyles.p}>
 				LASCabling.com is a responsive landing page I made for a local business
 				in Louisiana to advertise their services to local residents as well as
 				generate customer leads. Web traffic increase is currently being
@@ -41,8 +41,8 @@ export default (props) => {
 					className={generalStyles.hero}
 				/>
 			</a>
-			<h3>Tech</h3>
-			<p>
+			<h3 className={generalStyles.h3}>Tech</h3>
+			<p className={generalStyles.p}>
 				I built this page using HTML5, CSS3, and JavaScript—although I believe
 				that templates and libraries like Bootstrap a useful way to build
 				websites, I tend to build websites from scratch in order to ensure that

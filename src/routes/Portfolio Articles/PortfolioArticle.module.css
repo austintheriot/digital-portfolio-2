@@ -1,15 +1,15 @@
-h1 {
+.h1 {
 	text-align: center;
 	margin: 4rem auto 2rem auto;
 }
 
-h2 {
+.h2 {
 	text-align: center;
 	margin: 2rem auto;
 }
 
-h3,
-p {
+.h3,
+.p {
 	width: 90%;
 	max-width: 600px;
 	margin: 2rem auto;

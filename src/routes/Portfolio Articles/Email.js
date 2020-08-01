@@ -2,19 +2,17 @@ import React from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
-
-import hero1 from '../../assets/images/presto__hero1.png';
-import hero2 from '../../assets/images/presto__hero2.png';
+import TryItOut from '../../components/TryItOut/TryItOut';
 
 export default (props) => {
 	const CODE_URL = 'https://github.com/austintheriot/email-sender-api';
 
 	return (
 		<article>
-			<h1>Email API</h1>
-			<h2>Email Service for Static Sites</h2>
-			<h3>About</h3>
-			<p>
+			<h1 className={generalStyles.h1}>Email API</h1>
+			<h2 className={generalStyles.h2}>Email Service for Static Sites</h2>
+			<h3 className={generalStyles.h3}>About</h3>
+			<p className={generalStyles.p}>
 				As a freelance web developer, I was tired of trying to set up services
 				for clients that would send an email after a form submission: there was
 				never a guarantee that whatever hosting service they were using would
@@ -30,8 +28,9 @@ export default (props) => {
 					<Button>See Code</Button>
 				</a>
 			</div>
-			<h3>Tech</h3>
-			<p>
+			<TryItOut />
+			<h3 className={generalStyles.h3}>Tech</h3>
+			<p className={generalStyles.p}>
 				This project uses Node.js, Express.js, the Express CORS middleware (to
 				allow cross-origin scripting), and the Nodemailer Node.js module to send
 				emails. This project also relies on Firebase Cloud Functions to run the

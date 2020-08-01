@@ -11,10 +11,10 @@ export default (props) => {
 
 	return (
 		<article>
-			<h1>Presto</h1>
-			<h2>React Social Media Web App</h2>
-			<h3>About</h3>
-			<p>
+			<h1 className={generalStyles.h1}>Presto</h1>
+			<h2 className={generalStyles.h2}>React Social Media Web App</h2>
+			<h3 className={generalStyles.h3}>About</h3>
+			<p className={generalStyles.p}>
 				Presto is a React single-page web currently in development. It is
 				designed to be the go-to social media app for musicians to meet other
 				local musicians and to get hired by people in the community. In today's
@@ -39,8 +39,8 @@ export default (props) => {
 					className={generalStyles.hero}
 				/>
 			</a>
-			<h3>Purpose</h3>
-			<p>
+			<h3 className={generalStyles.h3}>Purpose</h3>
+			<p className={generalStyles.p}>
 				Enabling local musicians to collaborate and be hired more easily. This
 				app is intended for performers, composers, arrangers, conductors,
 				soloists, ensembles, bands, and any people from their local community
@@ -53,8 +53,8 @@ export default (props) => {
 					className={generalStyles.hero}
 				/>
 			</a>
-			<h3>Tech</h3>
-			<p>
+			<h3 className={generalStyles.h3}>Tech</h3>
+			<p className={generalStyles.p}>
 				Presto was bootstrapped with Create React App, and is built to be a
 				fast, secure, web app. For the backend, Presto uses relies on Firebase
 				for authentication, file storage, and database systems. Presto also

@@ -35,10 +35,10 @@ export default (props) => {
 
 	return (
 		<article>
-			<h1>JSArt</h1>
-			<h2>javascript canvas application</h2>
-			<h3>About</h3>
-			<p>
+			<h1 className={generalStyles.h1}>JSArt</h1>
+			<h2 className={generalStyles.h2}>javascript canvas application</h2>
+			<h3 className={generalStyles.h3}>About</h3>
+			<p className={generalStyles.p}>
 				A collection of applications I built using the JavaScript Canvas API.
 				Achieved dual objectives of being 100% crash-free and providing
 				interactive setting controls on every project for visitors.
@@ -68,8 +68,8 @@ export default (props) => {
 				</a>
 			</div>
 
-			<h3>Purpose</h3>
-			<p>
+			<h3 className={generalStyles.h3}>Purpose</h3>
+			<p className={generalStyles.p}>
 				These projects allow visitors to generate new algorithmically-generated
 				visual patterns and designs based on predefined settings provided by the
 				user.
@@ -88,8 +88,8 @@ export default (props) => {
 				</a>
 			</div>
 
-			<h3>Tech</h3>
-			<p>
+			<h3 className={generalStyles.h3}>Tech</h3>
+			<p className={generalStyles.p}>
 				I built these projects using the JavaScript Canvas API and a small
 				amount of HTML and CSS to provide the settings interface.
 			</p>
