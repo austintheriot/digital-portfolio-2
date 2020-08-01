@@ -14,14 +14,18 @@ import hero3__2 from '../../assets/images/jsart__hero3--2.png';
 import hero3__3 from '../../assets/images/jsart__hero3--3.png';
 
 export default (props) => {
+	// eslint-disable-next-line no-unused-vars
+	const CANVAS_PROJECTS_COLLECTION_CODE =
+		'https://github.com/austintheriot/canvas-projects-combined';
 	const WEB_PARTICLES_LIVE = 'https://canvasprojects.imfast.io/index.html';
+	// eslint-disable-next-line no-unused-vars
 	const WEB_PARTICLES_CODE = 'https://github.com/austintheriot/web-particles';
 	const FRACTURES_LIVE =
 		'https://canvasprojects.imfast.io/fractures-index.html';
 	// eslint-disable-next-line no-unused-vars
 	const FRACTURES_CODE = 'https://github.com/austintheriot/fractures';
 	const BROWNIAN_LIVE =
-		'https://canvasprojects.imfast.io/brownian-motion-index.html';
+		'https://canvasprojects.imfast.io/brownian-motion/index.html';
 	// eslint-disable-next-line no-unused-vars
 	const BROWNIAN_CODE = 'https://github.com/austintheriot/brownian-motion';
 	const STOCHASTIC_LIVE =
@@ -43,7 +47,10 @@ export default (props) => {
 				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<Button>See Live</Button>
 				</a>
-				<a href={WEB_PARTICLES_CODE} target='_blank' rel='noopener noreferrer'>
+				<a
+					href={CANVAS_PROJECTS_COLLECTION_CODE}
+					target='_blank'
+					rel='noopener noreferrer'>
 					<Button>See Code</Button>
 				</a>
 			</div>
@@ -51,48 +58,40 @@ export default (props) => {
 			{/* Panel 1 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
 				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero1__1} />
+					<img alt='Example of Fractures app' src={hero1__1} />
 				</a>
 				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero1__2} />
+					<img alt='Example of Web Particles app' src={hero1__2} />
 				</a>
 				<a href={BROWNIAN_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero1__3} />
+					<img alt='Example of Brownian Motion app' src={hero1__3} />
 				</a>
 			</div>
 
 			<h3>Purpose</h3>
 			<p>
-				Enabling local musicians to collaborate and be hired more easily. This
-				app is intended for performers, composers, arrangers, conductors,
-				soloists, ensembles, bands, and any people from their local community
-				interested in hiring them.
+				These projects allow visitors to generate new algorithmically-generated
+				visual patterns and designs based on predefined settings provided by the
+				user.
 			</p>
 
 			{/* Panel 2 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
 				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero2__1} />
+					<img alt='Example of Web Particles app' src={hero2__1} />
 				</a>
 				<a href={BROWNIAN_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero2__2} />
+					<img alt='Example of Brownian Motion' src={hero2__2} />
 				</a>
 				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero2__3} />
+					<img alt='Example of Fractures app' src={hero2__3} />
 				</a>
 			</div>
 
 			<h3>Tech</h3>
 			<p>
-				Presto was bootstrapped with Create React App, and is built to be a
-				fast, secure, web app. For the backend, Presto uses relies on Firebase
-				for authentication, file storage, and database systems. Presto also
-				makes use of the Geoapify API to validate users' location: they can
-				either autofill their location using the built-in JavaScript Geolocation
-				API, or they can manually input their location and select from the
-				options provided by the Geoapify autocomplete API. For styling, Presto
-				uses CSS modules and is inspired by Google's Material UI—clean,
-				accessible, and modern.
+				I built these projects using the JavaScript Canvas API and a small
+				amount of HTML and CSS to provide the settings interface.
 			</p>
 			<div className={generalStyles.center}>
 				<Link to='/contact' className={generalStyles.Link}>
@@ -103,13 +102,13 @@ export default (props) => {
 			{/* Panel 3 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
 				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero3__1} />
+					<img alt='Example of Fractures app' src={hero3__1} />
 				</a>
 				<a href={STOCHASTIC_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero3__2} />
+					<img alt='Example Stochastic Roots app' src={hero3__2} />
 				</a>
 				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
-					<img alt='JavaScript Application example' src={hero3__3} />
+					<img alt='Example of Fractures app' src={hero3__3} />
 				</a>
 			</div>
 		</article>
