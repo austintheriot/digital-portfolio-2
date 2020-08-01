@@ -24,10 +24,9 @@ export default (props) => {
 						visual or text—have always been two of my greatest strengths. When I
 						first discovered programming during my undergraduate degree, I
 						instantly fell in love, realizing that coding provided a way for me
-						to use my talents in tangible ways for other people. Now I spend my
-						time designing/coding websites and applications for clients as a
-						freelance web developer. I currently hold a customer satisfaction
-						rating of 100%.{' '}
+						to use my talents in tangible ways for other people. Now I design
+						and develop websites and applications for clients as a freelance web
+						developer. I currently hold a customer satisfaction rating of 100%.{' '}
 					</p>
 					<p>
 						If you're interested in hiring me, or just want to say hi, please
