@@ -14,9 +14,19 @@ import hero3__2 from '../../assets/images/jsart__hero3--2.png';
 import hero3__3 from '../../assets/images/jsart__hero3--3.png';
 
 export default (props) => {
+	const WEB_PARTICLES_LIVE = 'https://canvasprojects.imfast.io/index.html';
 	const WEB_PARTICLES_CODE = 'https://github.com/austintheriot/web-particles';
+	const FRACTURES_LIVE =
+		'https://canvasprojects.imfast.io/fractures-index.html';
+	// eslint-disable-next-line no-unused-vars
 	const FRACTURES_CODE = 'https://github.com/austintheriot/fractures';
+	const BROWNIAN_LIVE =
+		'https://canvasprojects.imfast.io/brownian-motion-index.html';
+	// eslint-disable-next-line no-unused-vars
 	const BROWNIAN_CODE = 'https://github.com/austintheriot/brownian-motion';
+	const STOCHASTIC_LIVE =
+		'https://canvasprojects.imfast.io/stochastic-roots-index.html';
+	// eslint-disable-next-line no-unused-vars
 	const STOCHASTIC_CODE = 'https://github.com/austintheriot/stochastic-roots';
 
 	return (
@@ -30,8 +40,8 @@ export default (props) => {
 				interactive setting controls on every project for visitors.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<a href='' target='_blank' rel='noopener noreferrer'>
-					<Button disabled={true}>See Live</Button>
+				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
+					<Button>See Live</Button>
 				</a>
 				<a href={WEB_PARTICLES_CODE} target='_blank' rel='noopener noreferrer'>
 					<Button>See Code</Button>
@@ -40,13 +50,13 @@ export default (props) => {
 
 			{/* Panel 1 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<a href={FRACTURES_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero1__1} />
 				</a>
-				<a href={WEB_PARTICLES_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero1__2} />
 				</a>
-				<a href={BROWNIAN_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={BROWNIAN_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero1__3} />
 				</a>
 			</div>
@@ -61,13 +71,13 @@ export default (props) => {
 
 			{/* Panel 2 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<a href={WEB_PARTICLES_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero2__1} />
 				</a>
-				<a href={BROWNIAN_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={BROWNIAN_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero2__2} />
 				</a>
-				<a href={FRACTURES_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero2__3} />
 				</a>
 			</div>
@@ -92,13 +102,13 @@ export default (props) => {
 
 			{/* Panel 3 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<a href={FRACTURES_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero3__1} />
 				</a>
-				<a href={STOCHASTIC_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={STOCHASTIC_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero3__2} />
 				</a>
-				<a href={FRACTURES_CODE} target='_blank' rel='noopener noreferrer'>
+				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='JavaScript Application example' src={hero3__3} />
 				</a>
 			</div>

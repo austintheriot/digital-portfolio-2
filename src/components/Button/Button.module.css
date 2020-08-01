@@ -36,6 +36,9 @@
 	border: 1px solid #777;
 	cursor: auto;
 }
+.button.inactive a {
+	pointer-events: none;
+}
 
 /* Hover anmations */
 /* Base settings */
