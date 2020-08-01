@@ -2,10 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-//GSAP
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 //Components
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -19,8 +15,6 @@ import Sharlat from './routes/Portfolio Articles/Sharlat';
 import LASC from './routes/Portfolio Articles/LASC';
 import JSArt from './routes/Portfolio Articles/JSArt';
 import Email from './routes/Portfolio Articles/Email';
-
-// gsap.registerPlugin(ScrollTrigger);
 
 function App() {
 	return (
