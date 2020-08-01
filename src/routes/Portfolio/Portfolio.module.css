@@ -1,5 +1,11 @@
 /* General Font Sizing: --alternative sizes for Portfolio page only*/
 
+.container h1 {
+	max-width: 90%;
+	text-align: center;
+	margin: 200px auto 3rem auto;
+}
+
 .container h2 {
 	font-size: 80px;
 	font-weight: 200;
@@ -62,16 +68,15 @@
 .container h1 {
 	font-weight: 200;
 	text-transform: uppercase;
-	text-align: center;
 	background-color: white;
-	margin: 2rem 0;
 }
 
-.container .subtitle {
+.subtitle {
 	font-size: 50px;
 	font-weight: 200;
 	text-transform: lowercase;
 	text-align: center;
+	width: max-content;
 	margin: 2rem auto;
 	background-color: white;
 }
@@ -107,12 +112,9 @@
 	.container h1 {
 		font-size: 150px;
 		font-weight: 200;
-		text-align: left;
 	}
 
 	.container .subtitle {
 		font-weight: 300;
-		text-align: left;
-		margin: 0;
 	}
 }

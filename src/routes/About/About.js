@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './About.module.css';
 
 import Button from '../../components/Button/Button';
@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import headshot from '../../assets/images/headshot.jpg';
 
 export default (props) => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<section className={styles.aboutme}>
 			<h1>About Me</h1>

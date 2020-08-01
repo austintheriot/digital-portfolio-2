@@ -18,17 +18,12 @@ export default (props) => {
 	return (
 		<div className={styles.container}>
 			<section>
-				<div className={styles.titleContainer}>
-					<Decorations1></Decorations1>
-					<div className={styles.line1}></div>
-					<h1>Austin Theriot</h1>
-					<p className={styles.subtitle}>web developer</p>
-					<div className={styles.buttonContainer}>
-						<Button arrow={'true'} down={'true'}>
-							<a href='#work'>See My Work</a>
-						</Button>
-					</div>
-				</div>
+				<Decorations1 />
+				<h1>Austin Theriot</h1>
+				<p className={styles.subtitle}>web developer</p>
+				<Button arrow={'true'} down={'true'}>
+					<a href='#work'>See My Work</a>
+				</Button>
 			</section>
 			<section>
 				<h2 id='work'>My Work</h2>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Contact.module.css';
 import { contactForm } from '../../config';
 
@@ -45,6 +45,10 @@ export default (props) => {
 	});
 	const [buttonDisabled, setbuttonDisabled] = useState(false);
 	const [modalMessage, setModalMessage] = useState('');
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const handleFocus = (event, newestType) => {
 		//animation

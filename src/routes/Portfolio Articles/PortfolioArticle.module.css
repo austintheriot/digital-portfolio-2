@@ -22,6 +22,10 @@ a,
 	height: max-content;
 }
 
+.trueLink {
+	text-decoration: underline;
+}
+
 .center {
 	width: max-content;
 	margin: 3rem auto;

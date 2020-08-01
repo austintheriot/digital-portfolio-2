@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -14,6 +14,10 @@ import hero3__2 from '../../assets/images/jsart__hero3--2.png';
 import hero3__3 from '../../assets/images/jsart__hero3--3.png';
 
 export default (props) => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	// eslint-disable-next-line no-unused-vars
 	const CANVAS_PROJECTS_COLLECTION_CODE =
 		'https://github.com/austintheriot/canvas-projects-combined';

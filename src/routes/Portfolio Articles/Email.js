@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,10 @@ import TryItOut from '../../components/TryItOut/TryItOut';
 
 export default (props) => {
 	const CODE_URL = 'https://github.com/austintheriot/email-sender-api';
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 		<article>
