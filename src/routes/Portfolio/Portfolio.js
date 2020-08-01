@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Portfolio.module.css';
 
 //components
@@ -14,54 +14,112 @@ import lascablingLogo from '../../assets/images/lascabling__logo.png';
 import jsartGif from '../../assets/images/jsart__gif.gif';
 import emailAPI from '../../assets/images/email-api__logo.svg';
 
+//custom hook to scroll to an element indicated in url
+const useScroll = () => {
+	const htmlElRef = useRef(null);
+	const executeScroll = () =>
+		window.scrollTo({
+			left: 0,
+			top: htmlElRef.current.offsetTop,
+			behavior: 'auto',
+		});
+
+	return [executeScroll, htmlElRef];
+};
+
+const useSmoothScroll = () => {
+	const htmlElRef = useRef(null);
+	const executeSmoothScroll = () =>
+		window.scrollTo({
+			left: 0,
+			top: htmlElRef.current.offsetTop,
+			behavior: 'smooth',
+		});
+
+	return [executeSmoothScroll, htmlElRef];
+};
+
 export default (props) => {
+	const [scrollToMywork, mywork] = useSmoothScroll();
+	const [scrollToPresto, presto] = useScroll();
+	const [scrollToSharlat, sharlat] = useScroll();
+	const [scrollToLascabling, lascabling] = useScroll();
+	const [scrollToJsart, jsart] = useScroll();
+	const [scrollToEmail, email] = useScroll();
+
+	useEffect(() => {
+		//scroll to indicated position in the url one is defined
+		//divs in between the project items give react an easy html element to use as a ref
+		if (window.location.href.includes('#')) {
+			let scrollLocation = window.location.href.split('#')[1];
+			if (scrollLocation === 'presto') return scrollToPresto();
+			else if (scrollLocation === 'sharlat') return scrollToSharlat();
+			else if (scrollLocation === 'lascabling') return scrollToLascabling();
+			else if (scrollLocation === 'jsart') return scrollToJsart();
+			else if (scrollLocation === 'email-api') return scrollToEmail();
+			else return;
+		}
+	}, [
+		scrollToPresto,
+		scrollToSharlat,
+		scrollToLascabling,
+		scrollToJsart,
+		scrollToEmail,
+	]);
+
 	return (
 		<div className={styles.container}>
 			<section>
 				<Decorations1 />
 				<h1>Austin Theriot</h1>
 				<p className={styles.subtitle}>web developer</p>
-				<Button arrow={'true'} down={'true'}>
-					<a href='#work'>See My Work</a>
+				<Button onClick={scrollToMywork} arrow={'true'} down={'true'}>
+					See My Work
 				</Button>
 			</section>
 			<section>
+				<div ref={mywork}></div>
 				<h2 id='work'>My Work</h2>
+				<div ref={presto}></div>
 				<ProjectCard
 					img={prestoLogo}
 					title='Presto'
 					subtitle='react social media web app'
-					to='/presto'
+					id='presto'
 					color='purple'
 				/>
+				<div ref={sharlat}></div>
 				<ProjectCard
 					img={yevgeniyMonogram}
 					title='Sharlat'
 					subtitle='classical composer portfolio'
-					to='/sharlat'
+					id='sharlat'
 					color='cream'
 					rightalign={true}
 				/>
+				<div ref={lascabling}></div>
 				<ProjectCard
 					img={lascablingLogo}
 					title='LASC'
 					subtitle='local business landing page'
-					to='/lascabling'
+					id='lascabling'
 					color='blue'
 				/>
+				<div ref={jsart}></div>
 				<ProjectCard
 					img={jsartGif}
 					title='JSArt'
 					subtitle='interactive canvas app'
-					to='/jsart'
+					id='jsart'
 					color='gray'
 					rightalign={true}
 				/>
+				<div ref={email}></div>
 				<ProjectCard
 					img={emailAPI}
 					title='Email API'
 					subtitle='service for static sites'
-					to='/email-api'
+					id='email-api'
 					color='green'
 				/>
 			</section>

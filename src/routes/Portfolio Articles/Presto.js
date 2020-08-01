@@ -69,7 +69,10 @@ export default (props) => {
 				uses CSS modules and is inspired by Google's Material UI—clean,
 				accessible, and modern.
 			</p>
-			<div className={generalStyles.center}>
+			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
+				<Link to='/'>
+					<Button>Back</Button>
+				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
 					<Button arrow='true'>Contact Me</Button>
 				</Link>
