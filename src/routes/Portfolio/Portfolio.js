@@ -36,9 +36,9 @@ export default (props) => {
 				/>
 				<ProjectCard
 					img={yevgeniyMonogram}
-					title='Yevgeniy'
+					title='Sharlat'
 					subtitle='classical composer portfolio'
-					to='/yevgeniy'
+					to='/sharlat'
 					color='cream'
 					rightalign={true}
 				/>

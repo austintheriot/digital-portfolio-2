@@ -16,7 +16,7 @@ export default (props) => {
 
 	return (
 		<article>
-			<h1 className={generalStyles.h1}>Yevgeniy</h1>
+			<h1 className={generalStyles.h1}>Sharlat</h1>
 			<h2 className={generalStyles.h2}>Classical Composer Portfolio Site</h2>
 			<h3 className={generalStyles.h3}>About</h3>
 			<p className={generalStyles.p}>

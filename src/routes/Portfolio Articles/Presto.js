@@ -19,11 +19,11 @@ export default (props) => {
 			<h2 className={generalStyles.h2}>React Social Media Web App</h2>
 			<h3 className={generalStyles.h3}>About</h3>
 			<p className={generalStyles.p}>
-				Presto is a React single-page web currently in development. It is
-				designed to be the go-to social media app for musicians to meet other
-				local musicians and to get hired by people in the community. In today's
-				day and age, meeting and hiring local musicians should be easy, and yet
-				it's been anything but. Presto is designed to reduce the barriers to
+				Presto is a React single-page web app that I'm currently developing. It
+				is designed to be a media app for musicians to meet other local
+				musicians and to get hired by people in the community. In today's day
+				and age, meeting and hiring local musicians should be easy, and yet it's
+				been anything but. Presto is designed to reduce the barriers to
 				collaboration by enabling guests and musicians to make public posts
 				based on location. Need a singer? Make a post. Looking for a fill-in
 				trumpet player for a gig this weekend? Write a post. Write a little on
