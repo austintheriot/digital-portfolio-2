@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import styles from './TryItOut.module.css';
-import key from '../../config';
+import { tryItOut } from '../../config';
 
 import Input from '../../components/Input/Input';
 import Modal from '../../components/Modal/Modal';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
-
-//redirect with AuthContext once setInputs permeates down to component
 
 export default (props) => {
 	const [inputs, setInputs] = useState({
@@ -169,7 +167,7 @@ export default (props) => {
 		});
 
 		if (anyErrorsFound) {
-			setModalMessage('Please input a valid email before submitting');
+			setModalMessage('Please provide an email before submitting');
 			return;
 		} else {
 			//assuming the email is valid, send form:
@@ -215,7 +213,7 @@ export default (props) => {
 		);
 
 		const response = await fetch(
-			'https://us-central1-austins-email-server.cloudfunctions.net/sendEmail',
+			'https://us-central1-austins-email-server.cloudfunctions.net/sendEmail/tryItOut',
 			{
 				method: 'POST',
 				headers: {
@@ -226,7 +224,7 @@ export default (props) => {
 					Email: inputs.email.value,
 					Message: inputs.message.value,
 					_private: {
-						key,
+						key: tryItOut,
 					},
 				}),
 			}
@@ -247,7 +245,7 @@ export default (props) => {
 				} else {
 					console.log(data);
 					clearInputs();
-					setModalMessage('Your message was successfully received!');
+					setModalMessage('Your message was successfully sent!');
 				}
 			})
 			.catch((error) => {
@@ -291,7 +289,9 @@ export default (props) => {
 					label={'Message (optional)'}
 					inputs={inputs}
 				/>
-				{modalMessage ? <Modal message={modalMessage} color='black' /> : null}
+				<div className={styles.modalWrapper}>
+					{modalMessage ? <Modal message={modalMessage} color='black' /> : null}
+				</div>
 				<Button disabled={buttonDisabled} type='submit'>
 					Submit
 				</Button>

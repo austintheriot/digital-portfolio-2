@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Contact.module.css';
-import key from '../../config';
+import { contactForm } from '../../config';
 
 import Input from '../../components/Input/Input';
 import Modal from '../../components/Modal/Modal';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
-
-//redirect with AuthContext once setInputs permeates down to component
 
 export default (props) => {
 	const [inputs, setInputs] = useState({
@@ -215,7 +213,7 @@ export default (props) => {
 		);
 
 		const response = await fetch(
-			'https://us-central1-austins-email-server.cloudfunctions.net/sendEmail',
+			'https://us-central1-austins-email-server.cloudfunctions.net/sendEmail/contactForm',
 			{
 				method: 'POST',
 				headers: {
@@ -226,7 +224,7 @@ export default (props) => {
 					Email: inputs.email.value,
 					Message: inputs.message.value,
 					_private: {
-						key,
+						key: contactForm,
 					},
 				}),
 			}
