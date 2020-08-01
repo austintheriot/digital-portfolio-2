@@ -56,7 +56,7 @@ export default (props) => {
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
 				I built this page using HTML5, CSS3, and JavaScript—although I believe
-				that templates and libraries like Bootstrap a fast and useful way to
+				that templates and libraries like Bootstrap are a fast and useful way to
 				build websites, I tend to my websites from scratch. This ensures that
 				the needs of the client, and not whatever library I'm using at the
 				moment determine the choices I make in the build process. Finally, as in

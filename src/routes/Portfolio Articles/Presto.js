@@ -22,14 +22,14 @@ export default (props) => {
 				Presto is a React single-page web app that I'm currently developing. It
 				is designed to be a media app for musicians to meet other local
 				musicians and to get hired by people in the community. In today's day
-				and age, meeting and hiring local musicians should be easy, and yet it's
-				been anything but. Presto is designed to reduce the barriers to
-				collaboration by enabling guests and musicians to make public posts
-				based on location. Need a singer? Make a post. Looking for a fill-in
-				trumpet player for a gig this weekend? Write a post. Write a little on
-				your own profile so that others can see what musical services you offer.
-				Then, when you've found a musician that you'd like to work with, message
-				them privately to connect.
+				and age, meeting and hiring local musicians should be easy. Until now,
+				though, it's been anything but. Presto is designed to reduce the
+				barriers to collaboration by enabling guests and musicians to make
+				public posts based on location. Need a singer? Make a post. Looking for
+				a fill-in trumpet player for a gig this weekend? Write a post. Write a
+				little on your own profile so that others can see what musical services
+				you offer. Then, when you've found a musician that you'd like to work
+				with, message them privately to connect.
 			</p>
 			<div className={generalStyles.center}>
 				<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>

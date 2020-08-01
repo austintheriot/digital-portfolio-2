@@ -53,13 +53,37 @@ a,
 	justify-content: space-evenly;
 	align-items: flex-end;
 }
+.panel a {
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	margin: 1rem;
+}
 
 .panel img {
 	display: block;
+	position: relative;
 	width: 25vw;
 	min-width: 300px;
+}
 
-	box-shadow: var(--shadow);
+/* Hover animations */
+@media (min-width: 800px) {
+	.panel a:after {
+		position: absolute;
+		z-index: 10;
+		content: 'See Live';
+		width: 25vw;
+		min-width: 300px;
+		text-align: center;
+		font-size: 25px;
+		font-weight: 300;
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+
+	.panel a:hover:after {
+		opacity: 1;
+	}
 }
 
 .hero {
