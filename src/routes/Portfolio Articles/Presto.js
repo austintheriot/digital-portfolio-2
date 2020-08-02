@@ -60,8 +60,9 @@ export default (props) => {
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
 				Presto was bootstrapped with Create React App, and is built to be a
-				fast, secure, web app. For the backend, Presto uses relies on Firebase
-				for authentication, file storage, and database systems. Presto also
+				fast, secure, web app. Uses React Hooks and the Context API for
+				authentication state management. For the backend, Presto uses the
+				Firebase authentication, file storage, and database systems. Presto also
 				makes use of the Geoapify API to validate users' location: they can
 				either autofill their location using the built-in JavaScript Geolocation
 				API, or they can manually input their location and select from the
@@ -71,7 +72,7 @@ export default (props) => {
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#presto'>
-					<Button arrowLeft='true'>Back</Button>
+					<Button arrowLeft='true'>Go Back</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
 					<Button arrow='true'>Contact Me</Button>

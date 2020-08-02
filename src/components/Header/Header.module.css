@@ -12,6 +12,7 @@
 }
 
 .ul {
+	position: relative;
 	list-style: none;
 	display: flex;
 	flex: none;
@@ -33,4 +34,22 @@
 }
 .nav .li a:hover {
 	text-decoration: underline;
+}
+
+.rolloutMenu {
+	position: relative;
+	left: 0;
+	background-color: white;
+	height: max-content;
+	visibility: hidden;
+}
+
+.portfolio {
+	visibility: visible;
+}
+
+@media (min-width: 800px) {
+	.rolloutMenu:hover {
+		visibility: visible;
+	}
 }
