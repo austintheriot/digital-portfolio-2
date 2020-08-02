@@ -46,7 +46,7 @@ export default (props) => {
 				unathorized access to the service).
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to='/#email'>
+				<Link to='/#email-api'>
 					<Button arrowLeft='true'>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>

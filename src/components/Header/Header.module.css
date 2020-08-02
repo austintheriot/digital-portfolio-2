@@ -9,6 +9,7 @@
 
 .nav {
 	height: 3rem;
+	text-transform: uppercase;
 }
 
 .ul {
@@ -30,7 +31,6 @@
 
 .nav .li a {
 	text-decoration: none;
-	text-transform: uppercase;
 }
 .nav .li a:hover {
 	text-decoration: underline;
@@ -42,10 +42,12 @@
 	background-color: white;
 	height: max-content;
 	visibility: hidden;
+	text-transform: none;
 }
 
 .portfolio {
 	visibility: visible;
+	text-transform: uppercase;
 }
 
 @media (min-width: 800px) {
