@@ -97,7 +97,10 @@ export default (props) => {
 				I built these projects using the JavaScript Canvas API and a small
 				amount of HTML and CSS to provide the settings interface.
 			</p>
-			<div className={generalStyles.center}>
+			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
+				<Link to='/#jsart'>
+					<Button>Back</Button>
+				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
 					<Button arrow='true'>Contact Me</Button>
 				</Link>

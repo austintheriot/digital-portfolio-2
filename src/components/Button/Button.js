@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Button.module.css';
 
-export default ({ children, ...props }) => {
+export default ({ children, arrowLeft, ...props }) => {
 	return (
 		<button
 			className={[
@@ -9,7 +9,7 @@ export default ({ children, ...props }) => {
 				props.disabled || props.inactive ? styles.inactive : null,
 			].join(' ')}
 			{...props}>
-			{props.arrowLeft ? (
+			{arrowLeft ? (
 				<img
 					src={require('../../assets/images/arrow-right.svg')}
 					alt=''

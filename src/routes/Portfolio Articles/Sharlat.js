@@ -71,7 +71,7 @@ export default (props) => {
 				for a third party email service.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to='/#presto'>
+				<Link to='/#sharlat'>
 					<Button>Back</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
