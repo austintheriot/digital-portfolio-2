@@ -14,6 +14,11 @@ import lascablingLogo from '../../assets/images/lascabling__logo.png';
 import jsartGif from '../../assets/images/jsart__gif.gif';
 import emailAPI from '../../assets/images/email-api__logo.svg';
 
+//enable smooth scroll on Safari
+import smoothscroll from 'smoothscroll-polyfill';
+// kick off the polyfill!
+smoothscroll.polyfill();
+
 //custom hook to scroll to an element indicated in url
 const useScroll = () => {
 	const htmlElRef = useRef(null);
@@ -58,6 +63,8 @@ export default (props) => {
 			else if (scrollLocation === 'jsart') return scrollToJsart();
 			else if (scrollLocation === 'email-api') return scrollToEmail();
 			else return;
+		} else {
+			window.scrollTo(0, 0);
 		}
 	}, [
 		scrollToPresto,

@@ -71,7 +71,7 @@ export default (props) => {
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#presto'>
-					<Button>Back</Button>
+					<Button arrowLeft='true'>Back</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
 					<Button arrow='true'>Contact Me</Button>
