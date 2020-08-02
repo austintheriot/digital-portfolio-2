@@ -26,6 +26,12 @@
 	transition: transform 0.2s;
 }
 
+.arrowLeft {
+	composes: arrow;
+	margin: 0 0.5rem 0 0;
+	transform: rotate(180deg);
+}
+
 .button:hover .arrow.down {
 	transform: rotate(90deg);
 }

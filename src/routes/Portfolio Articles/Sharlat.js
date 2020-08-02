@@ -70,7 +70,10 @@ export default (props) => {
 				and also cuts cost for my clients, who might otherwise be forced to pay
 				for a third party email service.
 			</p>
-			<div className={generalStyles.center}>
+			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
+				<Link to='/#presto'>
+					<Button>Back</Button>
+				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
 					<Button arrow='true'>Contact Me</Button>
 				</Link>

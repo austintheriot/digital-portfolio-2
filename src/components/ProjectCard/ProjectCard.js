@@ -40,7 +40,7 @@ export default (props) => {
 		<section
 			id={props.id}
 			//when clicked, replace the current url with the object id and go to the location
-			onClick={() => {
+			onClick={(e) => {
 				history.replace(`/#${props.id}`);
 				history.push(`/${props.id}`);
 			}}

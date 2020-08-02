@@ -9,6 +9,13 @@ export default ({ children, ...props }) => {
 				props.disabled || props.inactive ? styles.inactive : null,
 			].join(' ')}
 			{...props}>
+			{props.arrowLeft ? (
+				<img
+					src={require('../../assets/images/arrow-right.svg')}
+					alt=''
+					className={[styles.arrowLeft].join(' ')}
+				/>
+			) : null}
 			{children}
 			{props.arrow ? (
 				<img
