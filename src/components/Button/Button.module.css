@@ -60,8 +60,6 @@
 	width: 100%;
 }
 
-.button:before,
-.button:after,
 .lineDiv1:before,
 .lineDiv1:after,
 .lineDiv2:before,
@@ -80,16 +78,8 @@
 }
 
 /* Starting Points */
-.button:before {
-	top: 17%;
-}
-
-.button:after {
-	top: 53%;
-}
-
 .lineDiv1:before {
-	top: 71%;
+	top: 85%;
 }
 
 .lineDiv1:after {
@@ -97,7 +87,7 @@
 }
 
 .lineDiv2:before {
-	top: 27%;
+	top: 17%;
 }
 
 .lineDiv2:after {
@@ -105,7 +95,7 @@
 }
 
 .lineDiv3:before {
-	top: 20%;
+	top: 55%;
 }
 
 .lineDiv3:after {
@@ -113,20 +103,24 @@
 }
 
 /* Hover */
-.button:hover:before {
-	left: -23%;
-}
-
 .button:hover .lineDiv1:before {
-	left: 15%;
+	left: 31%;
 }
 
 .button:hover .lineDiv1:after {
 	left: -13%;
 }
 
+.button:hover .lineDiv2:before {
+	left: -23%;
+}
+
 .button:hover .lineDiv2:after {
 	left: -41%;
+}
+
+.button:hover .lineDiv3:before {
+	left: 15%;
 }
 
 .button:hover .lineDiv3:after {
