@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './ProjectCard.module.css';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 //GSAP
 import { gsap } from 'gsap';
