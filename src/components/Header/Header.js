@@ -13,9 +13,9 @@ export default (props) => {
 						<li className={styles.li}>
 							<Link to='/presto'>Presto</Link>
 						</li>
-						<li className={styles.li}>
+						{/* <li className={styles.li}>
 							<Link to='/sharlat'>Sharlat</Link>
-						</li>
+						</li> */}
 						<li className={styles.li}>
 							<Link to='/lascabling'>LASCabling</Link>
 						</li>

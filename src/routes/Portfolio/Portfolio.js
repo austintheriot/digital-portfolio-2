@@ -87,6 +87,14 @@ export default (props) => {
 			<section>
 				<div ref={mywork}></div>
 				<h2 id='work'>My Work</h2>
+				{/* <div ref={sharlat}></div>
+				<ProjectCard
+					img={yevgeniyMonogram}
+					title='Sharlat'
+					subtitle='classical composer portfolio'
+					id='sharlat'
+					color='cream'
+				/> */}
 				<div ref={presto}></div>
 				<ProjectCard
 					img={prestoLogo}
@@ -94,14 +102,6 @@ export default (props) => {
 					subtitle='react social media web app'
 					id='presto'
 					color='purple'
-				/>
-				<div ref={sharlat}></div>
-				<ProjectCard
-					img={yevgeniyMonogram}
-					title='Sharlat'
-					subtitle='classical composer portfolio'
-					id='sharlat'
-					color='cream'
 					rightalign={true}
 				/>
 				<div ref={lascabling}></div>
