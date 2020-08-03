@@ -4,14 +4,14 @@ import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 
 import hero1__1 from '../../assets/images/jsart__hero1--1.jpg';
-import hero1__2 from '../../assets/images/jsart__hero1--2.png';
-import hero1__3 from '../../assets/images/jsart__hero1--3.png';
-import hero2__1 from '../../assets/images/jsart__hero2--1.png';
-import hero2__2 from '../../assets/images/jsart__hero2--2.png';
+import hero1__2 from '../../assets/images/jsart__hero1--2.jpg';
+import hero1__3 from '../../assets/images/jsart__hero1--3.jpg';
+import hero2__1 from '../../assets/images/jsart__hero2--1.jpg';
+import hero2__2 from '../../assets/images/jsart__hero2--2.jpg';
 import hero2__3 from '../../assets/images/jsart__hero2--3.jpg';
-import hero3__1 from '../../assets/images/jsart__hero3--1.png';
-import hero3__2 from '../../assets/images/jsart__hero3--2.png';
-import hero3__3 from '../../assets/images/jsart__hero3--3.png';
+import hero3__1 from '../../assets/images/jsart__hero3--1.jpg';
+import hero3__2 from '../../assets/images/jsart__hero3--2.jpg';
+import hero3__3 from '../../assets/images/jsart__hero3--3.jpg';
 
 export default (props) => {
 	useEffect(() => {

@@ -3,7 +3,7 @@ import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 
-import hero1 from '../../assets/images/lascabling__allscreens.png';
+import hero1 from '../../assets/images/lascabling__allscreens.jpg';
 
 export default (props) => {
 	useEffect(() => {
@@ -42,7 +42,7 @@ export default (props) => {
 				<img
 					alt='photos of the LASCabling website'
 					src={hero1}
-					className={generalStyles.hero}
+					className={generalStyles.heroBigger}
 				/>
 			</a>
 			<h3 className={generalStyles.h3}>Tech</h3>
