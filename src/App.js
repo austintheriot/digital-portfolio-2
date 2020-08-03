@@ -25,7 +25,7 @@ function App() {
 					<Route path='/about' component={About} />
 					<Route path='/contact' component={Contact} />
 					<Route path='/presto' component={Presto} />
-					<Route path='/sharlat' component={Sharlat} />
+					{/* <Route path='/sharlat' component={Sharlat} /> */}
 					<Route path='/lascabling' component={LASC} />
 					<Route path='/jsart' component={JSArt} />
 					<Route path='/email-api' component={Email} />
