@@ -97,14 +97,6 @@ export default (props) => {
 				I built these projects using the JavaScript Canvas API and a small
 				amount of HTML and CSS to provide the settings interface.
 			</p>
-			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to='/#jsart'>
-					<Button arrowLeft='true'>Portfolio</Button>
-				</Link>
-				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow='true'>Contact Me</Button>
-				</Link>
-			</div>
 
 			{/* Panel 3 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
@@ -117,6 +109,14 @@ export default (props) => {
 				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
 					<img alt='Example of Fractures app' src={hero3__3} />
 				</a>
+			</div>
+			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
+				<Link to='/#jsart'>
+					<Button arrowLeft='true'>Portfolio</Button>
+				</Link>
+				<Link to='/contact' className={generalStyles.Link}>
+					<Button arrow='true'>Contact Me</Button>
+				</Link>
 			</div>
 		</article>
 	);

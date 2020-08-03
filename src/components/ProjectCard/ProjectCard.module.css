@@ -58,15 +58,18 @@
 	}
 
 	.title {
-		text-align: left;
-		margin-left: 2rem;
 		max-width: none;
+		text-align: left;
+		/* To match edges of ProjectCards: */
+		margin-left: 10vw;
 	}
 
 	.subtitle {
-		text-align: left;
-		margin: 0 2rem;
 		max-width: none;
+		text-align: left;
+		/* To match edges of ProjectCards: */
+		margin-left: 10vw;
+		margin-right: 5vw;
 	}
 }
 
@@ -123,7 +126,7 @@
 	.rightalign .title,
 	.rightalign .subtitle {
 		text-align: right;
-		margin: 0 2rem 0 0;
+		margin: 0 10vw 0 5vw;
 	}
 
 	.rightalign .topDiv {
