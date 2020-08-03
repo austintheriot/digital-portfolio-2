@@ -3,6 +3,7 @@ import styles from './About.module.css';
 
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
+import Decoration from '../../components/Decorations/Decorations1';
 
 import headshot from '../../assets/images/headshot.jpg';
 
@@ -13,6 +14,7 @@ export default (props) => {
 
 	return (
 		<section className={styles.aboutme}>
+			<Decoration />
 			<h1>About Me</h1>
 			<div className={styles.flexContainer}>
 				<img

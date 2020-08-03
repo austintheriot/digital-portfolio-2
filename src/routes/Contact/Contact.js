@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Contact.module.css';
 import { contactForm } from '../../config';
+import Decoration from '../../components/Decorations/Decorations1';
 
 import Input from '../../components/Input/Input';
 import Modal from '../../components/Modal/Modal';
@@ -263,6 +264,7 @@ export default (props) => {
 	return (
 		//display modal message if redirected from another page requiring authentication:
 		<section className={styles.contact}>
+			<Decoration />
 			<h1 className={styles.title}>Contact Me</h1>
 			<form onSubmit={submitHandler}>
 				<Input

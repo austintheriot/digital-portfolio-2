@@ -3,7 +3,7 @@
 .container h1 {
 	max-width: 90%;
 	text-align: center;
-	margin: 200px auto 3rem auto;
+	margin: 150px auto 3rem auto;
 }
 
 .container h2 {
@@ -37,6 +37,10 @@
 }
 
 @media (min-width: 800px) {
+	.container h1 {
+		margin: 175px auto 3rem auto;
+	}
+
 	.container h2 {
 		font-size: 135px;
 		font-weight: 200;

@@ -2,6 +2,11 @@
 	text-align: center;
 	margin: 4rem auto 2rem auto;
 	max-width: 90%;
+	background-color: white;
+}
+
+.form {
+	background-color: white;
 }
 
 .contact button {

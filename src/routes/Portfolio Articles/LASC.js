@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
+import Decoration from '../../components/Decorations/Decorations1';
 
 import hero1 from '../../assets/images/lascabling__allscreens.jpg';
 
@@ -12,6 +13,7 @@ export default (props) => {
 
 	return (
 		<article>
+			<Decoration />
 			<h1 className={generalStyles.h1}>LASCabling</h1>
 			<h2 className={generalStyles.h2}>Local Business Landing Page</h2>
 			<h3 className={generalStyles.h3}>About</h3>

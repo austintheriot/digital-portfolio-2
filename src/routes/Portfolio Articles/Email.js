@@ -3,6 +3,7 @@ import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import TryItOut from '../../components/TryItOut/TryItOut';
+import Decoration from '../../components/Decorations/Decorations1';
 
 export default (props) => {
 	const CODE_URL = 'https://github.com/austintheriot/email-sender-api';
@@ -13,6 +14,7 @@ export default (props) => {
 
 	return (
 		<article>
+			<Decoration />
 			<h1 className={generalStyles.h1}>Email API</h1>
 			<h2 className={generalStyles.h2}>Email Service for Static Sites</h2>
 			<h3 className={generalStyles.h3}>About</h3>

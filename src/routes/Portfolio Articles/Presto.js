@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
+import Decoration from '../../components/Decorations/Decorations1';
 
 import hero1 from '../../assets/images/presto__hero1.jpg';
 import hero2 from '../../assets/images/presto__hero2.jpg';
@@ -15,6 +16,7 @@ export default (props) => {
 
 	return (
 		<article>
+			<Decoration />
 			<h1 className={generalStyles.h1}>Presto</h1>
 			<h2 className={generalStyles.h2}>React Social Media Web App</h2>
 			<h3 className={generalStyles.h3}>About</h3>

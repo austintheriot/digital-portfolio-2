@@ -3,7 +3,7 @@ import styles from './Portfolio.module.css';
 
 //components
 import Button from '../../components/Button/Button';
-import Decorations1 from '../../components/Decorations/Decorations1';
+import Decoration from '../../components/Decorations/Decorations1';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { Link } from 'react-router-dom';
 
@@ -79,7 +79,7 @@ export default (props) => {
 	return (
 		<div className={styles.container}>
 			<section>
-				<Decorations1 />
+				<Decoration />
 				<h1>Austin Theriot</h1>
 				<p className={styles.subtitle}>web developer</p>
 				<Button onClick={scrollToMywork} arrow={'true'} down={'true'}>

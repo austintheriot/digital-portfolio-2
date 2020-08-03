@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
+import Decoration from '../../components/Decorations/Decorations1';
 
 import hero1__1 from '../../assets/images/jsart__hero1--1.jpg';
 import hero1__2 from '../../assets/images/jsart__hero1--2.jpg';
@@ -39,6 +40,7 @@ export default (props) => {
 
 	return (
 		<article>
+			<Decoration />
 			<h1 className={generalStyles.h1}>JSArt</h1>
 			<h2 className={generalStyles.h2}>javascript canvas application</h2>
 			<h3 className={generalStyles.h3}>About</h3>

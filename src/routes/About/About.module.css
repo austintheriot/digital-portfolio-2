@@ -6,18 +6,23 @@
 .aboutme h1 {
 	margin: 4rem auto 2rem auto;
 	max-width: 90%;
+	background-color: white;
+	padding: 0 2rem;
 }
 
 .aboutme h2 {
 	margin: 2rem auto;
 	max-width: 600px;
 	width: 90%;
+	background-color: white;
 }
 
 .aboutme p {
 	margin: 1rem auto;
 	max-width: 600px;
 	width: 90%;
+	background-color: white;
+	padding: 0 2rem 0 0;
 }
 
 .headshot {
