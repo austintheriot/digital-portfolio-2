@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Portfolio.module.css';
 
+//GSAP
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 //components
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -18,6 +22,8 @@ import emailAPI from '../../assets/images/email-api__logo.svg';
 import smoothscroll from 'smoothscroll-polyfill';
 // kick off the polyfill!
 smoothscroll.polyfill();
+
+gsap.registerPlugin(ScrollTrigger);
 
 //custom hook to scroll to an element indicated in url
 const useScroll = () => {
