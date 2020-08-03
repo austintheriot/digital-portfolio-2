@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 //images
 import prestoLogo from '../../assets/images/presto__logo.svg';
-import yevgeniyMonogram from '../../assets/images/yevgeniy__monogram.svg';
+/* import yevgeniyMonogram from '../../assets/images/yevgeniy__monogram.svg'; */
 import lascablingLogo from '../../assets/images/lascabling__logo.png';
 import jsartGif from '../../assets/images/jsart__gif.gif';
 import emailAPI from '../../assets/images/email-api__logo.svg';
@@ -47,7 +47,7 @@ const useSmoothScroll = () => {
 export default (props) => {
 	const [scrollToMywork, mywork] = useSmoothScroll();
 	const [scrollToPresto, presto] = useScroll();
-	const [scrollToSharlat, sharlat] = useScroll();
+	/* 	const [scrollToSharlat, sharlat] = useScroll(); */
 	const [scrollToLascabling, lascabling] = useScroll();
 	const [scrollToJsart, jsart] = useScroll();
 	const [scrollToEmail, email] = useScroll();
@@ -58,8 +58,10 @@ export default (props) => {
 		if (window.location.href.includes('#')) {
 			let scrollLocation = window.location.href.split('#')[1];
 			if (scrollLocation === 'presto') return scrollToPresto();
-			else if (scrollLocation === 'sharlat') return scrollToSharlat();
-			else if (scrollLocation === 'lascabling') return scrollToLascabling();
+			/* else if (scrollLocation === 'sharlat') return scrollToSharlat(); */ else if (
+				scrollLocation === 'lascabling'
+			)
+				return scrollToLascabling();
 			else if (scrollLocation === 'jsart') return scrollToJsart();
 			else if (scrollLocation === 'email-api') return scrollToEmail();
 			else return;
@@ -68,7 +70,7 @@ export default (props) => {
 		}
 	}, [
 		scrollToPresto,
-		scrollToSharlat,
+		/* scrollToSharlat, */
 		scrollToLascabling,
 		scrollToJsart,
 		scrollToEmail,

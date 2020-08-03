@@ -11,7 +11,7 @@ import Portfolio from './routes/Portfolio/Portfolio';
 import About from './routes/About/About';
 import Contact from './routes/Contact/Contact';
 import Presto from './routes/Portfolio Articles/Presto';
-import Sharlat from './routes/Portfolio Articles/Sharlat';
+/* import Sharlat from './routes/Portfolio Articles/Sharlat'; */
 import LASC from './routes/Portfolio Articles/LASC';
 import JSArt from './routes/Portfolio Articles/JSArt';
 import Email from './routes/Portfolio Articles/Email';
