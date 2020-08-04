@@ -10,7 +10,7 @@
 	font-size: 80px;
 	font-weight: 200;
 	text-transform: none;
-	margin-top: 215px;
+	margin-top: 150px;
 	text-align: center;
 	background-color: white;
 }
@@ -28,19 +28,22 @@
 	text-transform: lowercase;
 }
 
+.skills ul {
+	margin-bottom: 125px;
+}
+
 .container li {
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: 300;
 	list-style: none;
 	text-align: center;
-	margin: 2rem auto;
+	margin: 1.5rem auto;
 }
 
 @media (min-width: 800px) {
 	.container h1 {
 		margin: 175px auto 3rem auto;
 	}
-
 	.container h2 {
 		font-size: 135px;
 		font-weight: 200;
@@ -57,8 +60,9 @@
 		font-size: 50px;
 		font-weight: 200;
 	}
+
 	.container li {
-		font-size: 50px;
+		font-size: 30px;
 	}
 }
 
