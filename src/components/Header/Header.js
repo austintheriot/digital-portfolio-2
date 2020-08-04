@@ -25,6 +25,14 @@ export default (props) => {
 						</li>
 						<li className={styles.li}>
 							<NavLink
+								to='/jsart'
+								activeClassName={styles.isActive}
+								isActive={() => checkIsActive('/jsart')}>
+								JSArt
+							</NavLink>
+						</li>
+						<li className={styles.li}>
+							<NavLink
 								to='/presto'
 								activeClassName={styles.isActive}
 								isActive={() => checkIsActive('/presto')}>
@@ -42,14 +50,7 @@ export default (props) => {
 								LASCabling
 							</NavLink>
 						</li>
-						<li className={styles.li}>
-							<NavLink
-								to='/jsart'
-								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/jsart')}>
-								JSArt
-							</NavLink>
-						</li>
+
 						<li className={styles.li}>
 							<NavLink
 								to='/email-api'

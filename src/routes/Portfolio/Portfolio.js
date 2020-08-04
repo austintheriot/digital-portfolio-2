@@ -103,6 +103,15 @@ export default (props) => {
 					id='sharlat'
 					color='cream'
 				/> */}
+				<div ref={jsart}></div>
+				<ProjectCard
+					img={jsartGif}
+					title='JSArt'
+					subtitle='interactive canvas app'
+					id='jsart'
+					color='gray'
+					rightalign={true}
+				/>
 				<div ref={presto}></div>
 				<ProjectCard
 					img={prestoLogo}
@@ -110,7 +119,6 @@ export default (props) => {
 					subtitle='react social media web app'
 					id='presto'
 					color='purple'
-					rightalign={true}
 				/>
 				<div ref={lascabling}></div>
 				<ProjectCard
@@ -119,14 +127,6 @@ export default (props) => {
 					subtitle='local business landing page'
 					id='lascabling'
 					color='blue'
-				/>
-				<div ref={jsart}></div>
-				<ProjectCard
-					img={jsartGif}
-					title='JSArt'
-					subtitle='interactive canvas app'
-					id='jsart'
-					color='gray'
 					rightalign={true}
 				/>
 				<div ref={email}></div>
