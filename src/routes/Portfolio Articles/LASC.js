@@ -18,9 +18,9 @@ export default (props) => {
 			<h2 className={generalStyles.h2}>Local Business Landing Page</h2>
 			<h3 className={generalStyles.h3}>About</h3>
 			<p className={generalStyles.p}>
-				LASCabling.com is a responsive landing page I made for a local business
-				in Louisiana to advertise their services to local residents as well as
-				generate customer leads. Web traffic increase is currently being
+				LASCabling.com is a responsive landing page that was built for a local
+				business in Louisiana to advertise their services to local residents as
+				well as generate customer leads. Web traffic increase is currently being
 				measured by Google Analytics.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
@@ -49,15 +49,15 @@ export default (props) => {
 			</a>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
-				I built this page using HTML5, CSS3, and JavaScript—although I believe
-				that templates and libraries like Bootstrap are a fast and useful way to
-				build websites, I tend to my websites from scratch. This ensures that
-				the needs of the client, and not whatever library I'm using at the
-				moment determine the choices I make in the build process. Finally, as in
-				all of the websites that I build for my clients, the contact page uses
-				my own{' '}
+				Designed in Adobe Photoshop and built using HTML5, CSS3, and JavaScript.
+				Although I believe that templates and libraries like Bootstrap are a
+				fast and useful way to build websites, I tend to make my clients'
+				websites completely from scratch. This ensures that the needs of the
+				client, and not whatever library or framework I'm using at the moment,
+				determine the choices I make in the build process. The contact page also
+				uses my own{' '}
 				<Link className={generalStyles.trueLink} to='/email-api'>
-					custom Email API
+					custom Email API microservice
 				</Link>{' '}
 				to send the owner of the page an email upon form submission. This
 				eliminates the need for a hosting service that allows server-side code
