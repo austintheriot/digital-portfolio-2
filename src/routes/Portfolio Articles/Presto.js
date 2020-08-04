@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -9,9 +9,7 @@ import hero1 from '../../assets/images/presto__hero1.jpg';
 import hero2 from '../../assets/images/presto__hero2.jpg';
 
 export default (props) => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	window.scrollTo(0, 0);
 
 	const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
 

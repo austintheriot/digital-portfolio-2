@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './About.module.css';
 
 import Button from '../../components/Button/Button';
@@ -8,9 +8,7 @@ import Decoration from '../../components/Decorations/Decorations1';
 import headshot from '../../assets/images/headshot.jpg';
 
 export default (props) => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	window.scrollTo(0, 0);
 
 	return (
 		<section className={styles.aboutme}>

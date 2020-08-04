@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './Contact.module.css';
 import { contactForm } from '../../config';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -9,6 +9,8 @@ import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
 
 export default (props) => {
+	window.scrollTo(0, 0);
+
 	const [inputs, setInputs] = useState({
 		email: {
 			value: '',
@@ -46,10 +48,6 @@ export default (props) => {
 	});
 	const [buttonDisabled, setbuttonDisabled] = useState(false);
 	const [modalMessage, setModalMessage] = useState('');
-
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
 
 	const handleFocus = (event, newestType) => {
 		//animation

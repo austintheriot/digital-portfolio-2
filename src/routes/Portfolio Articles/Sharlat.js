@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -9,9 +9,7 @@ import hero2 from '../../assets/images/yevgeniy__hero2.png';
 import hero3 from '../../assets/images/yevgeniy__hero3.png';
 
 export default (props) => {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+	window.scrollTo(0, 0);
 
 	const WEBSITE_URL = 'https://ysharlat.imfast.io/';
 
