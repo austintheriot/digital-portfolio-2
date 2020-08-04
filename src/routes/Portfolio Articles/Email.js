@@ -25,9 +25,9 @@ export default (props) => {
 				support a server-side script, and trying to set up a cheap or free
 				3rd-party emailing service was a nightmare for overhead costs. There was
 				also never the guarantee of privacy when outsourcing email services. So
-				instead, I set up my own Email Sender API to allow all of my static
-				sites to send emails upon form submission (or for whatever other
-				reasons) for free.
+				instead, I set up my own Email Sender API microservice to allow all of
+				my static sites to send emails upon form submission (or for whatever
+				other reasons) for free.
 			</p>
 			<div className={generalStyles.center}>
 				<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
@@ -38,11 +38,11 @@ export default (props) => {
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
 				This project uses Node.js, Express.js, the Express CORS middleware (to
-				allow cross-origin scripting), and the Nodemailer Node.js module to send
-				emails. This project also relies on Firebase Cloud Functions to run the
-				script via HTTP request. I chose to use Firebase cloud functions because
-				of their generous free tier and ease of set up—unless I'm calling the
-				service over 2,000,000 times a month, it's free. I also chose to use the
+				allow cross-origin scripting), and the Nodemailer module to send emails.
+				This project also relies on Firebase Cloud Functions to run scripts via
+				HTTP request. I chose to use Firebase cloud functions because of their
+				generous free tier and ease of set up—unless I'm calling the service
+				over 2,000,000 times a month, it's free. I also chose to use the
 				Firebase Firestore to store my own, personally generated API keys and
 				verify the API key of whatever website is requesting access (to limit
 				unathorized access to the service).
