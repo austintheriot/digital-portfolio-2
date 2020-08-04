@@ -3,9 +3,6 @@ import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 export default (props) => {
 	const checkIsActive = (string, ...rest) => {
-		console.log(
-			new URL(window.location.href).pathname === string ? true : false
-		);
 		return new URL(window.location.href).pathname === string ? true : false;
 	};
 
