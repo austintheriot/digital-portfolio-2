@@ -6,6 +6,7 @@ export default (props) => {
 		<>
 			<div className={styles.div}>
 				<label
+					for={props.props?.inputs[props.customType]?.value}
 					className={[
 						//general
 						styles.label,
@@ -29,6 +30,8 @@ export default (props) => {
 				</label>
 			</div>
 			<input
+				id={props.props?.inputs[props.customType]?.value}
+				autocomplete='on'
 				readOnly={props?.readOnly || false}
 				className={[
 					//general
