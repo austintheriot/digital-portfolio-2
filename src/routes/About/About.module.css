@@ -22,7 +22,6 @@
 	max-width: 600px;
 	width: 90%;
 	background-color: white;
-	padding: 0 2rem 0 0;
 }
 
 .headshot {
@@ -62,6 +61,10 @@
 	.aboutme h2 {
 		margin: 0 5%;
 		text-align: left;
+	}
+
+	.aboutme p {
+		padding: 0 2rem 0 0;
 	}
 
 	.headshot {
