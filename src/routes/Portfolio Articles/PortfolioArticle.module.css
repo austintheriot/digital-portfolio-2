@@ -11,6 +11,11 @@
 	background-color: white;
 }
 
+.h2 span {
+	display: block;
+	font-size: 20px;
+}
+
 .h3,
 .p {
 	width: 90%;
@@ -72,6 +77,10 @@ a,
 
 /* Hover animations */
 @media (min-width: 800px) {
+	.h2 span {
+		font-size: 30px;
+	}
+
 	.panel a:after {
 		position: absolute;
 		z-index: 1;

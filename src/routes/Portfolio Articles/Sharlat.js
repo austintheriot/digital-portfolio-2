@@ -57,7 +57,7 @@ export default (props) => {
 			</a>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
-				Designed in Adobe Photoshop and built using HTML5, CSS3, and JavaScript.
+				Designed in Adobe XD and built using HTML5, CSS3, and JavaScript.
 				Although I believe that templates and libraries like Bootstrap are a
 				fast and useful way to build websites, I tend to make my clients'
 				websites completely from scratch. This ensures that the needs of the
