@@ -93,7 +93,6 @@ export default (props) => {
 				</Button>
 			</section>
 			<section>
-				<div ref={mywork}></div>
 				<h2 id='work'>My Work</h2>
 				{/* <div ref={sharlat}></div>
 				<ProjectCard
@@ -103,6 +102,7 @@ export default (props) => {
 					id='sharlat'
 					color='cream'
 				/> */}
+				<div ref={mywork}></div>
 				<div ref={jsart}></div>
 				<ProjectCard
 					img={jsartGif}

@@ -110,3 +110,7 @@ a,
 		max-height: 750px;
 	}
 }
+
+.showLink {
+	text-decoration: underline;
+}

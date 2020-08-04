@@ -26,7 +26,7 @@ export default (props) => {
 	// eslint-disable-next-line no-unused-vars
 	const WEB_PARTICLES_CODE = 'https://github.com/austintheriot/web-particles';
 	const FRACTURES_LIVE =
-		'https://canvasprojects.imfast.io/fractures-index.html';
+		'https://canvasprojects.imfast.io/fractures/index.html';
 	// eslint-disable-next-line no-unused-vars
 	const FRACTURES_CODE = 'https://github.com/austintheriot/fractures';
 	const BROWNIAN_LIVE =
@@ -34,7 +34,7 @@ export default (props) => {
 	// eslint-disable-next-line no-unused-vars
 	const BROWNIAN_CODE = 'https://github.com/austintheriot/brownian-motion';
 	const STOCHASTIC_LIVE =
-		'https://canvasprojects.imfast.io/stochastic-roots-index.html';
+		'https://canvasprojects.imfast.io/stochastic-roots/index.html';
 	// eslint-disable-next-line no-unused-vars
 	const STOCHASTIC_CODE = 'https://github.com/austintheriot/stochastic-roots';
 
@@ -45,9 +45,8 @@ export default (props) => {
 			<h2 className={generalStyles.h2}>javascript canvas application</h2>
 			<h3 className={generalStyles.h3}>About</h3>
 			<p className={generalStyles.p}>
-				A collection of applications I built using the JavaScript Canvas API.
-				Achieved dual objectives of being 100% crash-free and providing
-				interactive setting controls on every project for visitors.
+				A collection of JavaScript applications built to provide interactive art
+				designs and patterns that respond to visitors' settings.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
@@ -74,11 +73,24 @@ export default (props) => {
 				</a>
 			</div>
 
-			<h3 className={generalStyles.h3}>Purpose</h3>
+			<h3 className={generalStyles.h3}>More Info</h3>
 			<p className={generalStyles.p}>
-				These projects allow visitors to generate new algorithmically-generated
-				visual patterns and designs based on predefined settings provided by the
-				user.
+				Each project uses a custom algorithm to generate patterns, many which of
+				are inspired by real-life phenomena.{' '}
+				<a
+					href={FRACTURES_LIVE}
+					target='_blank'
+					rel='noopener noreferrer'
+					className={generalStyles.showLink}>
+					"Fractures"
+				</a>
+				, for instance, draws inspiration from the way glass panes and ceramic
+				dishes crack. Each line is given a random chance to break away as it
+				travels in one direction and stops when it reaches another line.
+				Sometimes these applications generate unexpected results when given the
+				right parameters. "Fractures", for instance, can also resemble other
+				natural textures like yarn or fur rather than cracks. Play with the
+				settings yourself to see what interesting patterns you can make.
 			</p>
 
 			{/* Panel 2 ////////////////////////////////////// */}
@@ -96,8 +108,8 @@ export default (props) => {
 
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
-				I built these projects using the JavaScript Canvas API and a small
-				amount of HTML and CSS to provide the settings interface.
+				Built using the JavaScript Canvas API and a small amount of HTML and CSS
+				to provide a simple settings interface.
 			</p>
 
 			{/* Panel 3 ////////////////////////////////////// */}
