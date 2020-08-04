@@ -20,7 +20,6 @@ import emailAPI from '../../assets/images/email-api__logo.svg';
 
 //enable smooth scroll on Safari
 import smoothscroll from 'smoothscroll-polyfill';
-// kick off the polyfill!
 smoothscroll.polyfill();
 
 gsap.registerPlugin(ScrollTrigger);

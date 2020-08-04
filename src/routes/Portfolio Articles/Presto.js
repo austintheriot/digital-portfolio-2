@@ -45,8 +45,8 @@ export default (props) => {
 			<p className={generalStyles.p}>
 				Enabling local musicians to collaborate and be hired more easily.
 				Intended for performers, composers, arrangers, conductors, soloists,
-				ensembles, bands, and any people from their local community interested
-				in hiring them.
+				ensembles, bands, and any people from the local community interested in
+				hiring them.
 			</p>
 			<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
 				<img
@@ -60,20 +60,16 @@ export default (props) => {
 				Presto is a React single-page web app bootstrapped with Create React
 				App. It is built to be fast, secure, and intuitive. Uses React Hooks and
 				Context API for state management;{' '}
-				<a
-					href='https://firebase.google.com/products/auth'
-					target='_blank'
-					rel='noopener noreferrer'
-					className={generalStyles.showLink}>
+				<ShowLink href='https://firebase.google.com/products/auth'>
 					Firebase Authentication,
-				</a>
+				</ShowLink>
 				<ShowLink href='https://firebase.google.com/products/storage'>
 					Cloud Storage,
 				</ShowLink>
 				<ShowLink href='https://firebase.google.com/products/firestore'>
 					Cloud Firestore
 				</ShowLink>
-				for back end. Presto also makes use of the
+				for the back end. Presto also makes use of the
 				<ShowLink href='https://www.geoapify.com/'>Geoapify API</ShowLink> to
 				validate users' location: they can either autofill their location using
 				the built-in JavaScript Geolocation API combined with Geoapify, or they
