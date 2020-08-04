@@ -110,7 +110,6 @@ export default (props) => {
 					subtitle='interactive canvas app'
 					id='jsart'
 					color='gray'
-					rightalign={true}
 				/>
 				<div ref={presto}></div>
 				<ProjectCard
@@ -119,6 +118,7 @@ export default (props) => {
 					subtitle='react social media web app'
 					id='presto'
 					color='purple'
+					rightalign={true}
 				/>
 				<div ref={lascabling}></div>
 				<ProjectCard
@@ -127,7 +127,6 @@ export default (props) => {
 					subtitle='local business landing page'
 					id='lascabling'
 					color='blue'
-					rightalign={true}
 				/>
 				<div ref={email}></div>
 				<ProjectCard
@@ -136,6 +135,7 @@ export default (props) => {
 					subtitle='service for static sites'
 					id='email-api'
 					color='green'
+					rightalign={true}
 				/>
 			</section>
 			<section className={styles.skills}>
