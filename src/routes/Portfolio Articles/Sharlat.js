@@ -57,15 +57,15 @@ export default (props) => {
 			</a>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
-				I built this page using HTML5, CSS3, and JavaScript—although I believe
-				that templates and libraries like Bootstrap are a fast and useful way to
-				build websites, I tend to my websites from scratch. This ensures that
-				the needs of the client, and not whatever library I'm using at the
-				moment determine the choices I make in the build process. Finally, as in
-				all of the websites that I build for my clients, the contact page uses
-				my own{' '}
+				Designed in Adobe Photoshop and built using HTML5, CSS3, and JavaScript.
+				Although I believe that templates and libraries like Bootstrap are a
+				fast and useful way to build websites, I tend to make my clients'
+				websites completely from scratch. This ensures that the needs of the
+				client, and not whatever library or framework I'm using at the moment,
+				determine the choices I make in the build process. The contact page also
+				uses my own{' '}
 				<Link className={generalStyles.trueLink} to='/email-api'>
-					custom Email API
+					custom Email API microservice
 				</Link>{' '}
 				to send the owner of the page an email upon form submission. This
 				eliminates the need for a hosting service that allows server-side code

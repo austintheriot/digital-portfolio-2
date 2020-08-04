@@ -18,9 +18,9 @@ export default (props) => {
 			<h2 className={generalStyles.h2}>Local Business Landing Page</h2>
 			<h3 className={generalStyles.h3}>About</h3>
 			<p className={generalStyles.p}>
-				LASCabling.com is a responsive landing page that was built for a local
-				business in Louisiana to advertise their services to local residents as
-				well as generate customer leads. Web traffic increase is currently being
+				LASCabling.com is a responsive landing page built for a local business
+				in Louisiana to advertise their services to local residents as well as
+				generate customer leads. Web traffic increase is currently being
 				measured by Google Analytics.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
