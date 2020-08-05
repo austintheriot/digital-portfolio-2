@@ -1,13 +1,19 @@
-.section {
+.Link {
+	display: block;
 	position: relative;
 	height: max-content;
 	width: 90vw;
 	max-width: 400px;
-	overflow: hidden;
-	box-shadow: var(--shadow);
 	opacity: 0;
 	cursor: pointer;
 	margin: 3rem auto 4rem auto;
+}
+
+.section {
+	position: relative;
+	height: max-content;
+	width: 100%;
+	box-shadow: var(--shadow);
 }
 
 .img {
@@ -31,11 +37,16 @@
 
 /* Medium-size screens */
 @media (min-width: 800px) {
-	.section {
-		max-width: none;
-		height: 400px;
+	.Link {
 		margin: 3rem 0 4rem 0;
+		height: 400px;
+		max-width: none;
 	}
+
+	.section {
+		height: 100%;
+	}
+
 	.img {
 		position: absolute;
 		z-index: -1;
@@ -119,7 +130,7 @@
 
 /* Styling for right-aligned projects -- Medium-Sized Screens */
 @media (min-width: 800px) {
-	.section.rightalign {
+	.Link.rightalign {
 		left: 10%;
 	}
 
