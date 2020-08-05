@@ -260,7 +260,6 @@ export default (props) => {
 	};
 
 	return (
-		//display modal message if redirected from another page requiring authentication:
 		<section className={styles.contact}>
 			<Decoration />
 			<h1 className={styles.title}>Contact Me</h1>
