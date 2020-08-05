@@ -39,9 +39,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.175"
-     inkscape:cx="1496.3688"
-     inkscape:cy="1839.548"
+     inkscape:zoom="0.061871843"
+     inkscape:cx="-486.83871"
+     inkscape:cy="4391.6303"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -73,49 +73,29 @@
        x="99.704918"
        xml:space="preserve"
        id="text835"
-       style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect837);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.281886;"
-       transform="matrix(3.5475255,0,0,3.5475255,-246.08033,-162.38557)"><tspan
+       style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:0.95;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect837);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.281886;"
+       transform="matrix(3.5475255,0,0,3.5475255,-246.08033,-118.5526)"><tspan
          x="129.73848"
-         y="97.634027"><tspan
+         y="90.014026"><tspan
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:50.8px;font-family:'Work Sans';-inkscape-font-specification:'Work Sans Light';text-align:center;text-anchor:middle;stroke-width:0.281886">AUSTIN
 </tspan></tspan><tspan
          x="112.97051"
-         y="162.81415"><tspan
+         y="139.95415"><tspan
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:50.8px;font-family:'Work Sans';-inkscape-font-specification:'Work Sans Light';text-align:center;text-anchor:middle;stroke-width:0.281886">THERIOT</tspan></tspan></text>
     <text
-       transform="matrix(1.2166276,0,0,1.2166276,176.54238,398.43839)"
-       style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect845);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.821943;"
+       transform="matrix(1.6933691,0,0,1.6933691,27.128908,338.53423)"
+       style="font-style:normal;font-weight:normal;font-size:50.8px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect845);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.590538;"
        id="text843"
        xml:space="preserve"><tspan
          x="112.24023"
          y="97.634027"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:'Work Sans';-inkscape-font-specification:'Work Sans';stroke-width:0.821943">web developer</tspan></tspan></text>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1.85208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M -78.259972,-27.611159 H 485.68052"
-       id="path849" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1.85208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 319.37098,-63.89688 H -150.8314"
-       id="path851" />
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;font-family:'Work Sans';-inkscape-font-specification:'Work Sans';stroke-width:0.590538">web developer</tspan></tspan></text>
     <circle
        r="0.39687499"
        cy="562.98608"
        cx="742.70428"
        style="fill:none;stroke:#000000;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path847-4" />
-    <path
-       id="path849-1"
-       d="m -152.34335,569.0337 h 397.631"
-       style="fill:none;stroke:#000000;stroke-width:1.85208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       id="path851-5"
-       d="M 986.12103,562.98608 H 704.9067"
-       style="fill:none;stroke:#000000;stroke-width:1.85208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:1.85208;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 1091.9543,597.75989 H 810.74003"
-       id="path874" />
     <rect
        y="-104.71831"
        x="134.91859"
