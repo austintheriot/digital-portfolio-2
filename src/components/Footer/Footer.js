@@ -5,12 +5,11 @@ export default (props) => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.linkContainer}>
-				<Link to='/contact'>
+				<Link to='/contact' data-name='Contact'>
 					<img
 						alt='Email'
 						src={require('../../assets/images/email.svg')}
 						className={styles.email}
-						data-name='Email'
 					/>
 				</Link>
 				<a

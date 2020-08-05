@@ -22,3 +22,24 @@
 	padding: 1rem 0;
 	text-align: center;
 }
+
+/* Hover animations */
+.footer a {
+	position: relative;
+}
+
+.footer a:after {
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	z-index: 1;
+	content: attr(data-name);
+	transition: opacity 0.4s;
+	opacity: 0;
+}
+
+.footer a:hover:after {
+	opacity: 1;
+}
