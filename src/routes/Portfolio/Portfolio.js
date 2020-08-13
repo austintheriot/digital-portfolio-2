@@ -142,6 +142,8 @@ export default (props) => {
 				<h3>Code:</h3>
 				<ul>
 					<li>React</li>
+					<li>Redux</li>
+					<li>TypeScript</li>
 					<li>JavaScript (ES6+)</li>
 					<li>CSS3</li>
 					<li>HTML5</li>
