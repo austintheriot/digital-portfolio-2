@@ -12,6 +12,7 @@ export default (props) => {
 	window.scrollTo(0, 0);
 
 	const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
+	const DEMO_URL = 'https://prestomusicians.com';
 
 	return (
 		<article>
@@ -29,7 +30,11 @@ export default (props) => {
 				musical services you offer. Then, when you've found a musician that
 				you'd like to work with, message them privately to connect.
 			</p>
-			<div className={generalStyles.center}>
+			<div className={generalStyles.center}></div>
+			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
+				<a href={DEMO_URL} target='_blank' rel='noopener noreferrer'>
+					<Button>See Live Demo</Button>
+				</a>
 				<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
 					<Button>See Code</Button>
 				</a>
@@ -57,9 +62,9 @@ export default (props) => {
 			</a>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
-				Presto is a React single-page web app bootstrapped with Create React
-				App. It is built to be fast, secure, and intuitive. Uses React Hooks and
-				Context API for state management;{' '}
+				Presto is a React single-page web app bootstrapped with Create React App
+				and written in TypeScript, It is built to be fast, secure, and
+				intuitive. React Hooks and Redux for state management;{' '}
 				<ShowLink href='https://firebase.google.com/products/auth'>
 					Firebase Authentication,
 				</ShowLink>
@@ -69,7 +74,7 @@ export default (props) => {
 				<ShowLink href='https://firebase.google.com/products/firestore'>
 					Cloud Firestore
 				</ShowLink>
-				for the back end. Presto also makes use of the
+				for the back end. Presto also uses the
 				<ShowLink href='https://www.geoapify.com/'>Geoapify API</ShowLink> to
 				validate users' location: they can either autofill their location using
 				the built-in JavaScript Geolocation API combined with Geoapify, or they
