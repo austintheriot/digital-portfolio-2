@@ -86,7 +86,7 @@ export default (props) => {
 			<section>
 				<Decoration />
 				<h1>Austin Theriot</h1>
-				<p className={styles.subtitle}>web developer</p>
+				<p className={styles.subtitle}>front end developer</p>
 				<Button onClick={scrollToMywork} arrow={'true'} down={'true'}>
 					See My Work
 				</Button>

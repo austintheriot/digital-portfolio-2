@@ -84,9 +84,10 @@
 	font-weight: 200;
 	text-transform: lowercase;
 	text-align: center;
-	width: max-content;
 	margin: 2rem auto;
 	background-color: white;
+	width: 90%;
+	line-height: 1.25;
 }
 
 .Link {

@@ -21,7 +21,7 @@ export default (props) => {
 					className={styles.headshot}
 				/>
 				<div className={styles.wrapper}>
-					<h2>web designer and developer based in Austin, TX</h2>
+					<h2>front end designer and developer</h2>
 					<p>
 						Before I became a software developer, I was an award-winning
 						classical composer. Problem solving and creativity—whether audio,
