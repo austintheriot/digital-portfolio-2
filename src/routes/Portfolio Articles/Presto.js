@@ -32,7 +32,7 @@ export default (props) => {
 				communities to reconnect by enabling guests and musicians to make public
 				posts based on location. Trying to meet a singer? Make a post. Want to
 				talk about the new Kronos Quartet album? Write a post. Tell a little
-				about youself on your own profile so that others can learn more about
+				about yourself on your own profile so that others can learn more about
 				you. Then, if you find a musician you'd like to talk to individually,
 				message them privately to connect.
 			</p>
@@ -54,10 +54,9 @@ export default (props) => {
 			</a>
 			<h3 className={generalStyles.h3}>More Info</h3>
 			<p className={generalStyles.p}>
-				Enabling local musicians to collaborate and be hired more easily.
-				Intended for performers, composers, arrangers, conductors, soloists,
-				ensembles, bands, and any guests interested in hiring them or joining
-				the conversation.
+				Enabling local musicians to reconnect. Intended for performers,
+				composers, arrangers, conductors, soloists, ensembles, bands, and any
+				guests interested in hiring them or joining the conversation.
 			</p>
 			<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
 				<img
