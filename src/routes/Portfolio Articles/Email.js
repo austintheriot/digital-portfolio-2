@@ -23,9 +23,9 @@ export default (props) => {
 				support a server-side script, and trying to set up a cheap or free
 				3rd-party emailing service was a nightmare for overhead costs. There was
 				also never the guarantee of privacy when outsourcing email services. So
-				instead, I set up my own Email Sender API microservice to allow all of
-				my static sites to send emails upon form submission (or for whatever
-				other reasons) for free.
+				instead, I set up my own Email Sender API to allow all of my static
+				sites to send emails upon form submission (or for whatever other
+				reasons) for free.
 			</p>
 			<div className={generalStyles.center}>
 				<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
