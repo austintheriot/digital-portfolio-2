@@ -9,9 +9,9 @@ Welcome to my digital, Front-End Developer portfolio! Take a look around or chec
 - Create React App 
 - Styling: CSS Modules
 - Animations: GreenSock Animation Platform (GSAP)
-- Google Analytics
 - Firebase Hosting
 - Contact Form: Uses my personal [Email API Service](https://github.com/austintheriot/email-sender-api).
+- Google Analytics
 
 ## Contact
 
