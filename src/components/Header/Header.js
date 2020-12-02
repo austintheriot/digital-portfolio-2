@@ -22,10 +22,26 @@ export default function Header(props) {
 						</li>
 						<li className={styles.li}>
 							<NavLink
-								to='/jsart'
+								to='/lascabling'
 								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/jsart')}>
-								JSArt
+								isActive={() => checkIsActive('/lascabling')}>
+								LASCabling
+							</NavLink>
+						</li>
+						<li className={styles.li}>
+							<NavLink
+								to='/email-api'
+								activeClassName={styles.isActive}
+								isActive={() => checkIsActive('/email-api')}>
+								Email API
+							</NavLink>
+						</li>
+						<li className={styles.li}>
+							<NavLink
+								to='/memorize'
+								activeClassName={styles.isActive}
+								isActive={() => checkIsActive('/memorize')}>
+								Memorize
 							</NavLink>
 						</li>
 						<li className={styles.li}>
@@ -36,26 +52,17 @@ export default function Header(props) {
 								Presto
 							</NavLink>
 						</li>
+						<li className={styles.li}>
+							<NavLink
+								to='/jsart'
+								activeClassName={styles.isActive}
+								isActive={() => checkIsActive('/jsart')}>
+								JSArt
+							</NavLink>
+						</li>
 						{/* <li className={styles.li}>
 							<NavLink to='/sharlat' activeClassName={styles.isActive} isActive={() => checkIsActive('/sharlat')}>Sharlat</NavLink>
 						</li> */}
-						<li className={styles.li}>
-							<NavLink
-								to='/lascabling'
-								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/lascabling')}>
-								LASCabling
-							</NavLink>
-						</li>
-
-						<li className={styles.li}>
-							<NavLink
-								to='/email-api'
-								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/email-api')}>
-								Email API
-							</NavLink>
-						</li>
 					</div>
 					<li className={styles.li}>
 						<NavLink
