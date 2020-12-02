@@ -29,3 +29,5 @@ storage.rules
 untracked/
 
 notes.txt
+
+.firebase/
