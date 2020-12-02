@@ -6,7 +6,7 @@ import Decoration from '../../components/Decorations/Decorations1';
 
 import hero1 from '../../assets/images/lascabling__allscreens.jpg';
 
-export default (props) => {
+export default function LASC(props) {
 	window.scrollTo(0, 0);
 
 	const LASCABLING_LIVE = 'https://www.lascabling.com/';
@@ -66,4 +66,4 @@ export default (props) => {
 			</div>
 		</article>
 	);
-};
+}
