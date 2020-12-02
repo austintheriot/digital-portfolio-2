@@ -14,9 +14,10 @@ import { Link } from 'react-router-dom';
 //images
 import prestoLogo from '../../assets/images/presto__logo.svg';
 /* import yevgeniyMonogram from '../../assets/images/yevgeniy__monogram.svg'; */
-import lascablingLogo from '../../assets/images/lascabling__logo.png';
-import jsartGif from '../../assets/images/jsart__gif.gif';
+import lascablingLogo from '../../assets/images/lascabling__logo.svg';
+import jsartGif from '../../assets/images/jsart__logo.svg';
 import emailAPI from '../../assets/images/email-api__logo.svg';
+import memorizeLogo from '../../assets/images/memorize__logo.svg';
 
 //enable smooth scroll on Safari
 import smoothscroll from 'smoothscroll-polyfill';
@@ -49,8 +50,9 @@ const useSmoothScroll = () => {
 	return [executeSmoothScroll, htmlElRef];
 };
 
-export default (props) => {
+export default function Portfolio(props) {
 	const [scrollToMywork, mywork] = useSmoothScroll();
+	const [scrollToMemorize, memorize] = useSmoothScroll();
 	const [scrollToPresto, presto] = useScroll();
 	/* 	const [scrollToSharlat, sharlat] = useScroll(); */
 	const [scrollToLascabling, lascabling] = useScroll();
@@ -63,6 +65,7 @@ export default (props) => {
 		if (window.location.href.includes('#')) {
 			let scrollLocation = window.location.href.split('#')[1];
 			if (scrollLocation === 'presto') return scrollToPresto();
+			if (scrollLocation === 'memorize') return scrollToMemorize();
 			/* else if (scrollLocation === 'sharlat') return scrollToSharlat(); */ else if (
 				scrollLocation === 'lascabling'
 			)
@@ -75,6 +78,7 @@ export default (props) => {
 		}
 	}, [
 		scrollToPresto,
+		scrollToMemorize,
 		/* scrollToSharlat, */
 		scrollToLascabling,
 		scrollToJsart,
@@ -119,6 +123,14 @@ export default (props) => {
 					color='green'
 					rightalign={true}
 				/>
+				<div ref={memorize}></div>
+				<ProjectCard
+					img={memorizeLogo}
+					title='Memorize'
+					subtitle='react progressive web app'
+					id='presto'
+					color='pink'
+				/>
 				<div ref={presto}></div>
 				<ProjectCard
 					img={prestoLogo}
@@ -126,6 +138,7 @@ export default (props) => {
 					subtitle='react social media web app'
 					id='presto'
 					color='purple'
+					rightalign={true}
 				/>
 				<div ref={jsart}></div>
 				<ProjectCard
@@ -134,7 +147,6 @@ export default (props) => {
 					subtitle='interactive canvas app'
 					id='jsart'
 					color='gray'
-					rightalign={true}
 				/>
 			</section>
 			<section className={styles.skills}>
@@ -165,4 +177,4 @@ export default (props) => {
 			</Link>
 		</div>
 	);
-};
+}

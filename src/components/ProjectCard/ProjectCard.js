@@ -7,7 +7,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
-export default (props) => {
+export default function ProjectCard(props) {
 	//ref enables GSAP animations
 	const linkRef = useRef(null);
 	let history = useHistory();
@@ -64,4 +64,4 @@ export default (props) => {
 			</section>
 		</Link>
 	);
-};
+}
