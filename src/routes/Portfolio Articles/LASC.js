@@ -49,7 +49,7 @@ export default function LASC(props) {
 				determine the choices I make in the build process. The contact page also
 				uses my own{' '}
 				<Link className={generalStyles.trueLink} to='/email-api'>
-					custom Email API microservice
+					custom Email Sender API
 				</Link>{' '}
 				to send the owner of the page an email upon form submission. This
 				eliminates the need for a hosting service that allows server-side code
