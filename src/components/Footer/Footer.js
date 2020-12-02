@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import emailIcon from '../../assets/images/email.svg';
 import gitHubIcon from '../../assets/images/github.svg';
 import linkedInIcon from '../../assets/images/linkedin.svg';
-import upworkIcon from '../../assets/images/upwork.png';
+// import upworkIcon from '../../assets/images/upwork.png';
 
 export default function footer() {
 	return (
@@ -28,13 +28,13 @@ export default function footer() {
 					data-name='LinkedIn'>
 					<img alt='LinkedIn' src={linkedInIcon} className={styles.linkedin} />
 				</a>
-				<a
+				{/* <a
 					href='https://www.upwork.com/freelancers/~01be06d76d2a4301ca'
 					target='_blank'
 					rel='noopener noreferrer'
 					data-name='Upwork'>
 					<img alt='Upwork' src={upworkIcon} className={styles.upwork} />
-				</a>
+				</a> */}
 			</div>
 			<p className={styles.copyright}>
 				Copyright &#169; {new Date().getFullYear()} Austin Theriot
