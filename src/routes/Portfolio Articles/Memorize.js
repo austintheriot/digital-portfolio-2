@@ -26,12 +26,12 @@ export default function Memorie() {
 			</p>
 
 			<p className={generalStyles.p}>
-				Even with that said, however, memorization, for the vast majority of
-				people, isn't enjoyable. More often than not, it's a laborious process,
-				filled with frustration and failure rather than success. For this
-				reason, many people give up when trying to memorize Bible verses or stop
-				after they've learned only a verse or two. But I don't think it has to
-				be this way. Most people have just never learned <em>how</em> to learn.
+				Memorization for the vast majority of people, however, isn't enjoyable.
+				More often than not, it's a laborious process, filled with frustration
+				and failure rather than success. For this reason, many people give up
+				when trying to memorize Bible verses or stop after they've learned only
+				a verse or two. But I don't think it has to be this way. Most people
+				have just never learned <em>how</em> to learn.
 			</p>
 
 			<p className={generalStyles.p}>
