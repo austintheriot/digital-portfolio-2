@@ -9,6 +9,9 @@ import hero1 from '../../assets/images/lascabling__allscreens.jpg';
 export default (props) => {
 	window.scrollTo(0, 0);
 
+	const LASCABLING_LIVE = 'https://www.lascabling.com/';
+	const LASCABLING_CODE = 'https://github.com/austintheriot/lascabling';
+
 	return (
 		<article>
 			<Decoration />
@@ -22,23 +25,14 @@ export default (props) => {
 				measured by Google Analytics.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<a
-					href='https://www.lascabling.com/'
-					target='_blank'
-					rel='noopener noreferrer'>
+				<a href={LASCABLING_LIVE} target='_blank' rel='noopener noreferrer'>
 					<Button>See Live</Button>
 				</a>
-				<a
-					href='https://github.com/austintheriot/local-business-landing-page'
-					target='_blank'
-					rel='noopener noreferrer'>
+				<a href={LASCABLING_CODE} target='_blank' rel='noopener noreferrer'>
 					<Button>See Code</Button>
 				</a>
 			</div>
-			<a
-				href='https://www.lascabling.com/'
-				target='_blank'
-				rel='noopener noreferrer'>
+			<a href={LASCABLING_LIVE} target='_blank' rel='noopener noreferrer'>
 				<img
 					alt='photos of the LASCabling website'
 					src={hero1}
