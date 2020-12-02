@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, Switch, useLocation } from 'react-router-dom';
+import { analytics } from './config';
 
 //Components
 import Header from './components/Header/Header';
@@ -18,24 +19,31 @@ import Email from './routes/Portfolio Articles/Email';
 import Memorize from './routes/Portfolio Articles/Memorize';
 
 function App() {
+	const location = useLocation();
+
+	useEffect(() => {
+		analytics.logEvent('page_view', {
+			page_path: location.pathname,
+			page_location: window.location.href,
+		});
+	}, [location]);
+
 	return (
-		<Router>
-			<div className='App'>
-				<Header />
-				<Switch>
-					<Route path='/lascabling' component={LASC} />
-					{/* <Route path='/sharlat' component={Sharlat} /> */}
-					<Route path='/email-api' component={Email} />
-					<Route path='/memorize' component={Memorize} />
-					<Route path='/presto' component={Presto} />
-					<Route path='/jsart' component={JSArt} />
-					<Route path='/about' component={About} />
-					<Route path='/contact' component={Contact} />
-					<Route path='/' component={Portfolio} />
-				</Switch>
-				<Footer />
-			</div>
-		</Router>
+		<div className='App'>
+			<Header />
+			<Switch>
+				<Route path='/lascabling' component={LASC} />
+				{/* <Route path='/sharlat' component={Sharlat} /> */}
+				<Route path='/email-api' component={Email} />
+				<Route path='/memorize' component={Memorize} />
+				<Route path='/presto' component={Presto} />
+				<Route path='/jsart' component={JSArt} />
+				<Route path='/about' component={About} />
+				<Route path='/contact' component={Contact} />
+				<Route path='/' component={Portfolio} />
+			</Switch>
+			<Footer />
+		</div>
 	);
 }
 
