@@ -26,9 +26,11 @@
 
 .headshot {
 	display: block;
-	max-width: 300px;
+	width: 300px;
+	height: 450px;
 	margin: 1rem auto;
 	align-self: center;
+	background-color: lightgray;
 }
 
 .buttonContainer {
@@ -38,6 +40,10 @@
 
 .Link {
 	text-decoration: none;
+}
+
+.showLink {
+	text-decoration: underline;
 }
 
 .buttonContainer {
