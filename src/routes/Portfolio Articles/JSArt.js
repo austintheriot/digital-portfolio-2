@@ -20,21 +20,11 @@ export default (props) => {
 	// eslint-disable-next-line no-unused-vars
 	const CANVAS_PROJECTS_COLLECTION_CODE =
 		'https://github.com/austintheriot/canvas-projects-combined';
-	const WEB_PARTICLES_LIVE = 'https://canvasprojects.imfast.io/index.html';
-	// eslint-disable-next-line no-unused-vars
-	const WEB_PARTICLES_CODE = 'https://github.com/austintheriot/web-particles';
-	const FRACTURES_LIVE =
-		'https://canvasprojects.imfast.io/fractures/index.html';
-	// eslint-disable-next-line no-unused-vars
-	const FRACTURES_CODE = 'https://github.com/austintheriot/fractures';
-	const BROWNIAN_LIVE =
-		'https://canvasprojects.imfast.io/brownian-motion/index.html';
-	// eslint-disable-next-line no-unused-vars
-	const BROWNIAN_CODE = 'https://github.com/austintheriot/brownian-motion';
+	const WEB_PARTICLES_LIVE = 'https://jsart-2020.web.app/';
+	const FRACTURES_LIVE = 'https://jsart-2020.web.app/fractures/index.html';
+	const BROWNIAN_LIVE = 'https://jsart-2020.web.app/brownian-motion/index.html';
 	const STOCHASTIC_LIVE =
-		'https://canvasprojects.imfast.io/stochastic-roots/index.html';
-	// eslint-disable-next-line no-unused-vars
-	const STOCHASTIC_CODE = 'https://github.com/austintheriot/stochastic-roots';
+		'https://jsart-2020.web.app/stochastic-roots/index.html';
 
 	return (
 		<article>
