@@ -25,3 +25,7 @@ yarn-error.log*
 config.js
 
 storage.rules
+
+untracked/
+
+notes.txt
