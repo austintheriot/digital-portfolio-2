@@ -43,6 +43,7 @@
 	height: max-content;
 	visibility: hidden;
 	text-transform: none;
+	box-shadow: var(--shadow);
 }
 
 .portfolio {
