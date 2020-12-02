@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import styles from './ProjectCard.module.css';
 import { useHistory, Link } from 'react-router-dom';
 
+import { analytics } from '../../config';
+
 //GSAP
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -49,6 +51,9 @@ export default function ProjectCard(props) {
 				//when clicked, replace the current url with the object id and go to the location
 				onClick={(e) => {
 					history.replace(`/#${props.id}`);
+					analytics.logEvent('clicked_project_card', {
+						name: props.title,
+					});
 				}}
 				className={styles.section}>
 				<img alt='' className={styles.img} src={props.img || ''} />
