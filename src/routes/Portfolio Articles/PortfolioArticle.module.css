@@ -100,6 +100,7 @@ a,
 }
 
 .hero {
+	display: block;
 	object-fit: cover;
 	width: 100%;
 	margin: 2rem auto;
@@ -108,6 +109,11 @@ a,
 
 .heroBigger {
 	composes: hero;
+}
+
+.heroBiggerNoClip {
+	width: 90vw;
+	object-fit: contain;
 }
 
 @media (min-width: 800px) {

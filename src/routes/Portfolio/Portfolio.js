@@ -128,7 +128,7 @@ export default function Portfolio(props) {
 					img={memorizeLogo}
 					title='Memorize'
 					subtitle='react progressive web app'
-					id='presto'
+					id='memorize'
 					color='pink'
 				/>
 				<div ref={presto}></div>

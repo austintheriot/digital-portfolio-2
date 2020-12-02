@@ -2,7 +2,10 @@ import React from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
+import { Link } from 'react-router-dom';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx';
+
+import hero1 from '../../assets/images/memorize__hero--1.png';
 
 export default function Memorie() {
 	window.scrollTo(0, 0);
@@ -16,6 +19,14 @@ export default function Memorie() {
 			<Decoration />
 			<h1 className={generalStyles.h1}>Memorize</h1>
 			<h2 className={generalStyles.h2}>React Progressive Web App</h2>
+			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
+				<a href={MEMORIZE_LIVE_URL} target='_blank' rel='noopener noreferrer'>
+					<Button>See Live</Button>
+				</a>
+				<a href={MEMORIZE_CODE_URL} target='_blank' rel='noopener noreferrer'>
+					<Button>See Code</Button>
+				</a>
+			</div>
 			<h3 className={generalStyles.h3}>About</h3>
 			<p className={generalStyles.p}>
 				The art of memory has been a fascination of mine for a long time. Over
@@ -32,6 +43,25 @@ export default function Memorie() {
 				a verse or two. But I don't think it has to be this way. Most people
 				have just never learned <em>how</em> to learn.
 			</p>
+
+			<a
+				href={MEMORIZE_LIVE_URL}
+				target='_blank'
+				rel='noopener noreferrer'
+				style={{
+					display: 'block',
+					width: '90vw',
+					margin: 'auto',
+					position: 'relative',
+					height: '75vw',
+					backgroundColor: 'lightgray',
+				}}>
+				<img
+					alt='photos of the Memorize Scripture website'
+					src={hero1}
+					className={generalStyles.heroBiggerNoClip}
+				/>
+			</a>
 
 			<p className={generalStyles.p}>
 				I first stumbled on the idea of condensing a text to memorize it via{' '}
@@ -90,20 +120,20 @@ export default function Memorie() {
 				</ExternalLink>
 				, from which all Bible quotes are drawn, unless otherwise indicated.
 			</p>
-			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<a href={MEMORIZE_LIVE_URL} target='_blank' rel='noopener noreferrer'>
-					<Button>See Live</Button>
-				</a>
-				<a href={MEMORIZE_CODE_URL} target='_blank' rel='noopener noreferrer'>
-					<Button>See Code</Button>
-				</a>
-			</div>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
 				This project uses React, TypeScript, Redux, and the ESV Bible API.
 				End-to-end tests with Cypress. Integration and unit tests with React
 				Testing Library and Jest.
 			</p>
+			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
+				<Link to='/#lascabling'>
+					<Button arrowLeft='true'>Portfolio</Button>
+				</Link>
+				<Link to='/contact' className={generalStyles.Link}>
+					<Button arrow='true'>Contact Me</Button>
+				</Link>
+			</div>
 		</article>
 	);
 }
