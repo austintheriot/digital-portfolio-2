@@ -14,7 +14,7 @@ import hero3__1 from '../../assets/images/jsart__hero3--1.jpg';
 import hero3__2 from '../../assets/images/jsart__hero3--2.jpg';
 import hero3__3 from '../../assets/images/jsart__hero3--3.jpg';
 
-export default (props) => {
+export default function JSArt(props) {
 	window.scrollTo(0, 0);
 
 	// eslint-disable-next-line no-unused-vars
@@ -122,4 +122,4 @@ export default (props) => {
 			</div>
 		</article>
 	);
-};
+}

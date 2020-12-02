@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Decoration from '../../components/Decorations/Decorations1';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx';
 
-export default (props) => {
+export default function Memorie() {
 	window.scrollTo(0, 0);
 
 	const MEMORIZE_CODE_URL =
@@ -18,29 +18,23 @@ export default (props) => {
 			<h1 className={generalStyles.h1}>Memorize</h1>
 			<h2 className={generalStyles.h2}>React Progressive Web App</h2>
 			<h3 className={generalStyles.h3}>About</h3>
-			<p>
+			<p className={generalStyles.p}>
 				The art of memory has been a fascination of mine for a long time. Over
 				the years, I've practiced memorizing many different kinds of
 				information, but extended memorization of the Bible in particular has
-				proven to me to be one of the greatest personal treasures. To carry
-				God's Word in my heart and to have it on my mind at any hour of the day
-				or night is an incredible blessing. Additionally, I firmly believe it's
-				of enormous benefit to the Christian to memorize large portions of
-				Scripture at a time, <em>in its context</em>, without the distraction of
-				verse numbers and footnotes, appreciating the ebb and flow of a psalm,
-				chapter, or even a book and its contents.
+				proven to me to be one of the greatest personal treasures.
 			</p>
 
-			<p>
-				But let's face it: memorization, for the vast majority of people, isn't
-				enjoyable. More often than not, it's a laborious process, filled with
-				frustration and failure rather than success. For this reason, many
-				people give up when trying to memorize Bible verses or stop after
-				they've learned only a verse or two. But I don't think it has to be this
-				way. Most people have just never learned <em>how</em> to learn.
+			<p className={generalStyles.p}>
+				Even with that said, however, memorization, for the vast majority of
+				people, isn't enjoyable. More often than not, it's a laborious process,
+				filled with frustration and failure rather than success. For this
+				reason, many people give up when trying to memorize Bible verses or stop
+				after they've learned only a verse or two. But I don't think it has to
+				be this way. Most people have just never learned <em>how</em> to learn.
 			</p>
 
-			<p>
+			<p className={generalStyles.p}>
 				I first stumbled on the idea of condensing a text to memorize it via{' '}
 				<ExternalLink to='http://www.productivity501.com/how-to-memorize-verbatim-text/294/'>
 					this article
@@ -57,7 +51,7 @@ export default (props) => {
 				collections of shorter verses.
 			</p>
 
-			<p>
+			<p className={generalStyles.p}>
 				This app has been created with the permission of the creators of the{' '}
 				<ExternalLink to='https://www.esv.org/'>
 					English Standard Bible (ESV)
@@ -86,4 +80,4 @@ export default (props) => {
 			</div>
 		</article>
 	);
-};
+}
