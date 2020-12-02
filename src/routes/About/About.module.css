@@ -75,6 +75,7 @@
 
 	.headshot {
 		margin: 0;
+		align-self: flex-start;
 	}
 	.wrapper {
 		margin: 0;
