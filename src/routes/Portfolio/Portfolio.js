@@ -102,23 +102,6 @@ export default (props) => {
 					color='cream'
 				/> */}
 				<div ref={mywork}></div>
-				<div ref={jsart}></div>
-				<ProjectCard
-					img={jsartGif}
-					title='JSArt'
-					subtitle='interactive canvas app'
-					id='jsart'
-					color='gray'
-				/>
-				<div ref={presto}></div>
-				<ProjectCard
-					img={prestoLogo}
-					title='Presto'
-					subtitle='react social media web app'
-					id='presto'
-					color='purple'
-					rightalign={true}
-				/>
 				<div ref={lascabling}></div>
 				<ProjectCard
 					img={lascablingLogo}
@@ -134,6 +117,23 @@ export default (props) => {
 					subtitle='service for static sites'
 					id='email-api'
 					color='green'
+					rightalign={true}
+				/>
+				<div ref={presto}></div>
+				<ProjectCard
+					img={prestoLogo}
+					title='Presto'
+					subtitle='react social media web app'
+					id='presto'
+					color='purple'
+				/>
+				<div ref={jsart}></div>
+				<ProjectCard
+					img={jsartGif}
+					title='JSArt'
+					subtitle='interactive canvas app'
+					id='jsart'
+					color='gray'
 					rightalign={true}
 				/>
 			</section>
