@@ -1,49 +1,39 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import { Link } from 'react-router-dom';
-export default (props) => {
+
+import emailIcon from '../../assets/images/email.svg';
+import gitHubIcon from '../../assets/images/github.svg';
+import linkedInIcon from '../../assets/images/linkedin.svg';
+import upworkIcon from '../../assets/images/upwork.png';
+
+export default function footer() {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.linkContainer}>
 				<Link to='/contact' data-name='Contact'>
-					<img
-						alt='Email'
-						src={require('../../assets/images/email.svg')}
-						className={styles.email}
-					/>
+					<img alt='Email' src={emailIcon} className={styles.email} />
 				</Link>
 				<a
 					href='https://github.com/austintheriot'
 					target='_blank'
 					rel='noopener noreferrer'
 					data-name='GitHub'>
-					<img
-						alt='GitHub'
-						src={require('../../assets/images/github.svg')}
-						className={styles.github}
-					/>
+					<img alt='GitHub' src={gitHubIcon} className={styles.github} />
 				</a>
 				<a
 					href='https://www.linkedin.com/in/austinmtheriot/'
 					target='_blank'
 					rel='noopener noreferrer'
 					data-name='LinkedIn'>
-					<img
-						alt='LinkedIn'
-						src={require('../../assets/images/linkedin.svg')}
-						className={styles.linkedin}
-					/>
+					<img alt='LinkedIn' src={linkedInIcon} className={styles.linkedin} />
 				</a>
 				<a
 					href='https://www.upwork.com/freelancers/~01be06d76d2a4301ca'
 					target='_blank'
 					rel='noopener noreferrer'
 					data-name='Upwork'>
-					<img
-						alt='Upwork'
-						src={require('../../assets/images/upwork.png')}
-						className={styles.upwork}
-					/>
+					<img alt='Upwork' src={upworkIcon} className={styles.upwork} />
 				</a>
 			</div>
 			<p className={styles.copyright}>
@@ -51,4 +41,4 @@ export default (props) => {
 			</p>
 		</footer>
 	);
-};
+}
