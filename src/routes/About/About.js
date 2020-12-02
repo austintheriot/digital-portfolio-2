@@ -7,7 +7,7 @@ import Decoration from '../../components/Decorations/Decorations1';
 
 import headshot from '../../assets/images/headshot.jpg';
 
-export default (props) => {
+export default function About() {
 	window.scrollTo(0, 0);
 	const OPEN_SOURCE_JAVASCRIPT_ALGORITHMS =
 		'https://github.com/trekhleb/javascript-algorithms';
@@ -92,4 +92,4 @@ export default (props) => {
 			</div>
 		</section>
 	);
-};
+}

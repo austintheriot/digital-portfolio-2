@@ -15,6 +15,7 @@ import Presto from './routes/Portfolio Articles/Presto';
 import LASC from './routes/Portfolio Articles/LASC';
 import JSArt from './routes/Portfolio Articles/JSArt';
 import Email from './routes/Portfolio Articles/Email';
+import Memorize from './routes/Portfolio Articles/Memorize';
 
 function App() {
 	return (
@@ -22,13 +23,14 @@ function App() {
 			<div className='App'>
 				<Header />
 				<Switch>
+					<Route path='/lascabling' component={LASC} />
+					{/* <Route path='/sharlat' component={Sharlat} /> */}
+					<Route path='/email-api' component={Email} />
+					<Route path='/memorize' component={Memorize} />
+					<Route path='/presto' component={Presto} />
+					<Route path='/jsart' component={JSArt} />
 					<Route path='/about' component={About} />
 					<Route path='/contact' component={Contact} />
-					<Route path='/presto' component={Presto} />
-					{/* <Route path='/sharlat' component={Sharlat} /> */}
-					<Route path='/lascabling' component={LASC} />
-					<Route path='/jsart' component={JSArt} />
-					<Route path='/email-api' component={Email} />
 					<Route path='/' component={Portfolio} />
 				</Switch>
 				<Footer />
