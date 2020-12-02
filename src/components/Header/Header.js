@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
-export default (props) => {
+export default function Header(props) {
 	const checkIsActive = (string, ...rest) => {
 		return new URL(window.location.href).pathname === string ? true : false;
 	};
@@ -77,4 +77,4 @@ export default (props) => {
 			</nav>
 		</header>
 	);
-};
+}

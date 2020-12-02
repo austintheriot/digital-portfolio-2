@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './Button.module.css';
 
-export default ({ children, arrowLeft, ...props }) => {
+import rightArrowIcon from '../../assets/images/arrow-right.svg';
+
+export default function Button({ children, arrowLeft, ...props }) {
 	return (
 		<button
 			className={[
@@ -11,7 +13,7 @@ export default ({ children, arrowLeft, ...props }) => {
 			{...props}>
 			{arrowLeft ? (
 				<img
-					src={require('../../assets/images/arrow-right.svg')}
+					src={rightArrowIcon}
 					alt=''
 					className={[styles.arrowLeft].join(' ')}
 				/>
@@ -19,7 +21,7 @@ export default ({ children, arrowLeft, ...props }) => {
 			{children}
 			{props.arrow ? (
 				<img
-					src={require('../../assets/images/arrow-right.svg')}
+					src={rightArrowIcon}
 					alt=''
 					className={[styles.arrow, props.down ? styles.down : null].join(' ')}
 				/>
@@ -29,4 +31,4 @@ export default ({ children, arrowLeft, ...props }) => {
 			<div className={styles.lineDiv3}></div>
 		</button>
 	);
-};
+}
