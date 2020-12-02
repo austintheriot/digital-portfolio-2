@@ -1,7 +1,6 @@
 import React from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
-import { Link } from 'react-router-dom';
 import Decoration from '../../components/Decorations/Decorations1';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx';
 
