@@ -21,6 +21,7 @@ export const ExternalLink = (props: {
 
 	return (
 		<a
+			style={{ textDecoration: 'underline' }}
 			href={props.to}
 			ref={anchor}
 			onClick={(e) => handleClick(e, anchor)}
