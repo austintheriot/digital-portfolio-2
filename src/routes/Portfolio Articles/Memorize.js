@@ -68,16 +68,10 @@ export default function Memorie() {
 			</div>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
-				This project uses React, TypeScript, Redux,
+				This project uses React, TypeScript, Redux, and the ESV Bible API.
+				End-to-end tests with Cypress. Integration and unit tests with React
+				Testing Library and Jest.
 			</p>
-			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to='/#email-api'>
-					<Button arrowLeft='true'>Portfolio</Button>
-				</Link>
-				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow='true'>Contact Me</Button>
-				</Link>
-			</div>
 		</article>
 	);
 }
