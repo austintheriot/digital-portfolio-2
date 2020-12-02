@@ -52,6 +52,39 @@ export default function Memorie() {
 			</p>
 
 			<p className={generalStyles.p}>
+				Basically, this app works by condensing the text of the English Standard
+				Version Bible (ESV) down to only its first letters alone. Users then
+				practice speaking the <em>original</em> text while looking at the{' '}
+				<em>condensed text</em> and/or listening to the spoken ESV Audio. Once
+				the full text can be spoken while looking at the condensed version, the
+				text is essentially memorized, and all that remains is to solidify any
+				weaker parts.
+			</p>
+
+			<p className={generalStyles.p}>
+				This process works well for most people because of a psychological
+				principle called{' '}
+				<ExternalLink to='https://en.wikipedia.org/wiki/Chunking_(psychology)'>
+					"chunking"
+				</ExternalLink>
+				, in which individual pieces of information are grouped together into a
+				collected whole. Chunking helps us remember more than we normally would
+				be able to if we were trying to remember the same information as
+				individual pieces. This is why we tend to group long numbers into 3
+				groups of 3 or 4, such as phone numbers: "(012) 345-6789" rather than
+				"0123456789." The principle also applies when memorizing a text:
+				reducing a passage down to its first letters allows us to "chunk" a text
+				in groups of phrases, sentences, and verses rather than as individual
+				words.
+			</p>
+
+			<p className={generalStyles.p}>
+				I have included other additional tools in the app, such as a review tool
+				and a tool for condensing other, general texts down to their first
+				letters for those interested in memorizing texts beside the Bible.
+			</p>
+
+			<p className={generalStyles.p}>
 				This app has been created with the permission of the creators of the{' '}
 				<ExternalLink to='https://www.esv.org/'>
 					English Standard Bible (ESV)
