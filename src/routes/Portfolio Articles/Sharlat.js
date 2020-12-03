@@ -3,6 +3,7 @@ import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import Decoration from '../../components/Decorations/Decorations1';
+import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 
 import hero1 from '../../assets/images/yevgeniy__hero1.png';
 import hero2 from '../../assets/images/yevgeniy__hero2.png';
@@ -26,17 +27,17 @@ export default function Sharlat(props) {
 				and easily find his music online and learn more about his work.
 			</p>
 			<div className={generalStyles.center}>
-				<a href={WEBSITE_URL} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink href={WEBSITE_URL} underline={false}>
 					<Button>See Demo</Button>
-				</a>
+				</ExternalLink>
 			</div>
-			<a href={WEBSITE_URL} target='_blank' rel='noopener noreferrer'>
+			<ExternalLink href={WEBSITE_URL} underline={false}>
 				<img
 					alt='designs of Yevgeniy Sharlat&#39;s website'
 					src={hero1}
 					className={generalStyles.hero}
 				/>
-			</a>
+			</ExternalLink>
 			<h3 className={generalStyles.h3}>Purpose</h3>
 			<p className={generalStyles.p}>
 				This digital portfolio features Yevgeniy Sharlat's music prominently on
@@ -46,13 +47,13 @@ export default function Sharlat(props) {
 				work. The website also allows visitors to browse his biography, read
 				reviews of his work, and see news pertaining to his music.
 			</p>
-			<a href={WEBSITE_URL} target='_blank' rel='noopener noreferrer'>
+			<ExternalLink href={WEBSITE_URL}>
 				<img
 					alt='designs of Yevgeniy Sharlat&#39;s website'
 					src={hero2}
 					className={generalStyles.hero}
 				/>
-			</a>
+			</ExternalLink>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
 				Designed in Adobe XD and built using HTML5, CSS3, and JavaScript.
@@ -78,13 +79,13 @@ export default function Sharlat(props) {
 					<Button arrow='true'>Contact Me</Button>
 				</Link>
 			</div>
-			<a href={WEBSITE_URL} target='_blank' rel='noopener noreferrer'>
+			<ExternalLink href={WEBSITE_URL}>
 				<img
 					alt='design previews of Presto'
 					src={hero3}
 					className={generalStyles.hero}
 				/>
-			</a>
+			</ExternalLink>
 		</article>
 	);
 }

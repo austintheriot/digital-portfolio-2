@@ -4,8 +4,9 @@ import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import TryItOut from '../../components/TryItOut/TryItOut';
 import Decoration from '../../components/Decorations/Decorations1';
+import { ExternalLink } from 'components/ExternalLink/ExternalLink';
 
-export default (props) => {
+export default function Email(props) {
 	window.scrollTo(0, 0);
 
 	const CODE_URL = 'https://github.com/austintheriot/email-sender-api';
@@ -28,9 +29,9 @@ export default (props) => {
 				reasons) for free.
 			</p>
 			<div className={generalStyles.center}>
-				<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink to={CODE_URL} unerline={false}>
 					<Button>See Code</Button>
-				</a>
+				</ExternalLink>
 			</div>
 			<TryItOut />
 			<h3 className={generalStyles.h3}>Tech</h3>
@@ -55,4 +56,4 @@ export default (props) => {
 			</div>
 		</article>
 	);
-};
+}

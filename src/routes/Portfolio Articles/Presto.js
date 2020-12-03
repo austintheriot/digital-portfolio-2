@@ -38,33 +38,33 @@ export default function Presto(props) {
 			</p>
 			<div className={generalStyles.center}></div>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<a href={DEMO_URL} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink href={DEMO_URL} underline={false}>
 					<Button>See Live Demo</Button>
-				</a>
-				<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink href={CODE_URL} underline={false}>
 					<Button>See Code</Button>
-				</a>
+				</ExternalLink>
 			</div>
-			<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
+			<ExternalLink href={CODE_URL}>
 				<img
 					alt='design previews of Presto'
 					src={hero1}
 					className={generalStyles.hero}
 				/>
-			</a>
+			</ExternalLink>
 			<h3 className={generalStyles.h3}>More Info</h3>
 			<p className={generalStyles.p}>
 				Enabling local musicians to reconnect. Intended for performers,
 				composers, arrangers, conductors, soloists, ensembles, bands, and any
 				guests interested in hiring them or joining the conversation.
 			</p>
-			<a href={CODE_URL} target='_blank' rel='noopener noreferrer'>
+			<ExternalLink href={CODE_URL}>
 				<img
 					alt='design previews of Presto'
 					src={hero2}
 					className={generalStyles.hero}
 				/>
-			</a>
+			</ExternalLink>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
 				Presto is a React single-page web app bootstrapped with Create React App

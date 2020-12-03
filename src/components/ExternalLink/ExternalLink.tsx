@@ -5,6 +5,8 @@ export const ExternalLink = (
 	props: {
 		children: string | JSX.Element;
 		to: string;
+		href?: string;
+		underline?: boolean;
 		className?: string;
 	},
 	...rest: any[]
@@ -24,8 +26,15 @@ export const ExternalLink = (
 
 	return (
 		<a
-			style={{ textDecoration: 'underline' }}
-			href={props.to}
+			style={{
+				textDecoration:
+					props.underline === undefined
+						? 'underline'
+						: props.underline
+						? 'underline'
+						: 'none',
+			}}
+			href={props.to || props.href}
 			ref={anchor}
 			onClick={(e) => handleClick(e, anchor)}
 			rel='noopener noreferrer'

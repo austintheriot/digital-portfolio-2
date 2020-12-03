@@ -4,6 +4,8 @@ import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import Decoration from '../../components/Decorations/Decorations1';
 
+import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
+
 import hero1 from '../../assets/images/lascabling__allscreens.jpg';
 
 export default function LASC(props) {
@@ -25,20 +27,20 @@ export default function LASC(props) {
 				measured by Google Analytics.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<a href={LASCABLING_LIVE} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink href={LASCABLING_LIVE} underline={false}>
 					<Button>See Live</Button>
-				</a>
-				<a href={LASCABLING_CODE} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink href={LASCABLING_CODE} underline={false}>
 					<Button>See Code</Button>
-				</a>
+				</ExternalLink>
 			</div>
-			<a href={LASCABLING_LIVE} target='_blank' rel='noopener noreferrer'>
+			<ExternalLink href={LASCABLING_LIVE}>
 				<img
 					alt='photos of the LASCabling website'
 					src={hero1}
 					className={generalStyles.heroBigger}
 				/>
-			</a>
+			</ExternalLink>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
 				Designed in Adobe Photoshop and built using HTML5, CSS3, and JavaScript.

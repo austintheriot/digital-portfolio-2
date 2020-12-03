@@ -13,6 +13,7 @@ import hero2__3 from '../../assets/images/jsart__hero2--3.jpg';
 import hero3__1 from '../../assets/images/jsart__hero3--1.jpg';
 import hero3__2 from '../../assets/images/jsart__hero3--2.jpg';
 import hero3__3 from '../../assets/images/jsart__hero3--3.jpg';
+import { ExternalLink } from 'components/ExternalLink/ExternalLink';
 
 export default function JSArt(props) {
 	window.scrollTo(0, 0);
@@ -37,61 +38,52 @@ export default function JSArt(props) {
 				designs and patterns that respond to visitors' settings.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink to={WEB_PARTICLES_LIVE} underline={false}>
 					<Button>See Live</Button>
-				</a>
-				<a
-					href={CANVAS_PROJECTS_COLLECTION_CODE}
-					target='_blank'
-					rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink to={CANVAS_PROJECTS_COLLECTION_CODE} underline={false}>
 					<Button>See Code</Button>
-				</a>
+				</ExternalLink>
 			</div>
 
 			{/* Panel 1 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink to={FRACTURES_LIVE} underline={false}>
 					<img alt='Example of Fractures app' src={hero1__1} />
-				</a>
-				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink to={WEB_PARTICLES_LIVE} underline={false}>
 					<img alt='Example of Web Particles app' src={hero1__2} />
-				</a>
-				<a href={BROWNIAN_LIVE} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink to={BROWNIAN_LIVE} underline={false}>
 					<img alt='Example of Brownian Motion app' src={hero1__3} />
-				</a>
+				</ExternalLink>
 			</div>
 
 			<h3 className={generalStyles.h3}>More Info</h3>
 			<p className={generalStyles.p}>
 				Each project uses a custom algorithm to generate patterns, many which of
 				are inspired by real-life phenomena.{' '}
-				<a
-					href={FRACTURES_LIVE}
-					target='_blank'
-					rel='noopener noreferrer'
-					className={generalStyles.showLink}>
-					"Fractures"
-				</a>
-				, for instance, draws inspiration from the way glass panes and ceramic
-				dishes crack. Each line is given a random chance to break away as it
-				travels in one direction and stops when it reaches another line.
-				Sometimes these applications generate unexpected results when given the
-				right parameters. "Fractures", for instance, can also resemble other
-				natural textures like yarn or fur rather than cracks. Play with the
-				settings yourself to see what interesting patterns you can make.
+				<ExternalLink href={FRACTURES_LIVE}>"Fractures"</ExternalLink>, for
+				instance, draws inspiration from the way glass panes and ceramic dishes
+				crack. Each line is given a random chance to break away as it travels in
+				one direction and stops when it reaches another line. Sometimes these
+				applications generate unexpected results when given the right
+				parameters. "Fractures", for instance, can also resemble other natural
+				textures like yarn or fur rather than cracks. Play with the settings
+				yourself to see what interesting patterns you can make.
 			</p>
 
 			{/* Panel 2 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<a href={WEB_PARTICLES_LIVE} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink href={WEB_PARTICLES_LIVE}>
 					<img alt='Example of Web Particles app' src={hero2__1} />
-				</a>
-				<a href={BROWNIAN_LIVE} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink href={BROWNIAN_LIVE}>
 					<img alt='Example of Brownian Motion' src={hero2__2} />
-				</a>
-				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink href={FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero2__3} />
-				</a>
+				</ExternalLink>
 			</div>
 
 			<h3 className={generalStyles.h3}>Tech</h3>
@@ -102,15 +94,15 @@ export default function JSArt(props) {
 
 			{/* Panel 3 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
+				<ExternalLink href={FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero3__1} />
-				</a>
-				<a href={STOCHASTIC_LIVE} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink href={STOCHASTIC_LIVE}>
 					<img alt='Example Stochastic Roots app' src={hero3__2} />
-				</a>
-				<a href={FRACTURES_LIVE} target='_blank' rel='noopener noreferrer'>
+				</ExternalLink>
+				<ExternalLink href={FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero3__3} />
-				</a>
+				</ExternalLink>
 			</div>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#jsart'>
