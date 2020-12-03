@@ -63,7 +63,8 @@ export default function Portfolio(props) {
 		//scroll to indicated position in the url one is defined
 		//divs in between the project items give react an easy html element to use as a ref
 		if (window.location.href.includes('#')) {
-			let scrollLocation = window.location.href.split('#')[1];
+			let scrollLocationArray = window.location.href.split('#');
+			let scrollLocation = scrollLocationArray[scrollLocationArray.length - 1];
 			if (scrollLocation === 'presto') return scrollToPresto();
 			if (scrollLocation === 'memorize') return scrollToMemorize();
 			/* else if (scrollLocation === 'sharlat') return scrollToSharlat(); */ else if (
