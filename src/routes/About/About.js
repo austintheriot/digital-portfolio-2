@@ -4,6 +4,7 @@ import styles from './About.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import Decoration from '../../components/Decorations/Decorations1';
+import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 
 import headshot from '../../assets/images/headshot.jpg';
 
@@ -36,13 +37,9 @@ export default function About() {
 					<p>
 						Check out my open-source contributions to the largest JavaScript
 						algorithms &amp; data structures repo on GitHub:{' '}
-						<a
-							href={OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}
-							target='_blank'
-							rel='noopener noreferrer'
-							className={styles.showLink}>
+						<ExternalLink to={OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}>
 							{OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}
-						</a>
+						</ExternalLink>
 						.
 					</p>
 
@@ -73,13 +70,7 @@ export default function About() {
 
 					<p>
 						Check out my GitHub{' '}
-						<a
-							href={AUSTINS_GITHUB}
-							target='_blank'
-							rel='noopener noreferrer'
-							className={styles.showLink}>
-							({AUSTINS_GITHUB})
-						</a>{' '}
+						<ExternalLink to={AUSTINS_GITHUB}>({AUSTINS_GITHUB})</ExternalLink>{' '}
 						to see some examples of my work. If you're interested in hiring me,
 						or just want to say hi, please don't hesitate to drop a line.
 					</p>
