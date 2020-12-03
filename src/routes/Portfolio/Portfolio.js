@@ -31,7 +31,7 @@ const useScroll = () => {
 	const executeScroll = () =>
 		window.scrollTo({
 			left: 0,
-			top: htmlElRef.current.offsetTop,
+			top: htmlElRef.current.offsetTop - 50,
 			behavior: 'auto',
 		});
 
@@ -52,7 +52,7 @@ const useSmoothScroll = () => {
 
 export default function Portfolio(props) {
 	const [scrollToMywork, mywork] = useSmoothScroll();
-	const [scrollToMemorize, memorize] = useSmoothScroll();
+	const [scrollToMemorize, memorize] = useScroll();
 	const [scrollToPresto, presto] = useScroll();
 	/* 	const [scrollToSharlat, sharlat] = useScroll(); */
 	const [scrollToLascabling, lascabling] = useScroll();
@@ -63,8 +63,7 @@ export default function Portfolio(props) {
 		//scroll to indicated position in the url one is defined
 		//divs in between the project items give react an easy html element to use as a ref
 		if (window.location.href.includes('#')) {
-			let scrollLocationArray = window.location.href.split('#');
-			let scrollLocation = scrollLocationArray[scrollLocationArray.length - 1];
+			let scrollLocation = window.location.href.split('#').pop();
 			if (scrollLocation === 'presto') return scrollToPresto();
 			if (scrollLocation === 'memorize') return scrollToMemorize();
 			/* else if (scrollLocation === 'sharlat') return scrollToSharlat(); */ else if (
@@ -159,7 +158,7 @@ export default function Portfolio(props) {
 					<li>React</li>
 					<li>Redux</li>
 					<li>CSS3</li>
-					<li>Sass/scss</li>
+					<li>Sass</li>
 					<li>HTML5</li>
 					<li>Git/GitHub</li>
 					<li>REST APIs</li>
