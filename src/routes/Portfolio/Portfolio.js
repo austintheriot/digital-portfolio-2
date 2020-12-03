@@ -43,7 +43,7 @@ const useSmoothScroll = () => {
 	const executeSmoothScroll = () =>
 		window.scrollTo({
 			left: 0,
-			top: htmlElRef.current.offsetTop,
+			top: htmlElRef.current.offsetTop - 50,
 			behavior: 'smooth',
 		});
 
