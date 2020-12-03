@@ -22,7 +22,7 @@ export default function About() {
 			<div className={styles.flexContainer}>
 				<img
 					src={headshot}
-					alt='professional headshot of Austin Theriot'
+					alt='headshot of Austin Theriot'
 					className={styles.headshot}
 				/>
 				<div className={styles.wrapper}>
