@@ -36,6 +36,7 @@
 
 .subtitle {
 	margin: 2rem auto 3rem auto;
+	font-weight: 300 !important;
 }
 
 /* Medium-size screens */
@@ -85,6 +86,7 @@
 		/* To match edges of ProjectCards: */
 		margin-left: 10vw;
 		margin-right: 5vw;
+		font-weight: 200 !important;
 	}
 }
 
