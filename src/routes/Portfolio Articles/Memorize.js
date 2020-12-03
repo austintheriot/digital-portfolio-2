@@ -44,10 +44,8 @@ export default function Memorie() {
 				have just never learned <em>how</em> to learn.
 			</p>
 
-			<a
-				href={MEMORIZE_LIVE_URL}
-				target='_blank'
-				rel='noopener noreferrer'
+			<ExternalLink
+				to={MEMORIZE_LIVE_URL}
 				style={{
 					display: 'block',
 					width: '90vw',
@@ -61,7 +59,7 @@ export default function Memorie() {
 					src={hero1}
 					className={generalStyles.heroBiggerNoClip}
 				/>
-			</a>
+			</ExternalLink>
 
 			<p className={generalStyles.p}>
 				I first stumbled on the idea of condensing a text to memorize it via{' '}

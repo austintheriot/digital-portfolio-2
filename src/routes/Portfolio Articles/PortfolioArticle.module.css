@@ -112,7 +112,9 @@ a,
 }
 
 .heroBiggerNoClip {
+	display: block;
 	width: 90vw;
+	margin: auto;
 	object-fit: contain;
 }
 
