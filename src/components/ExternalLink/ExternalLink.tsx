@@ -25,7 +25,8 @@ export const ExternalLink = (props: {
 			href={props.to}
 			ref={anchor}
 			onClick={(e) => handleClick(e, anchor)}
-			rel='noreferrer noopener'
+			rel='noopener noreferrer'
+			target='_blank'
 			className={props.className || ''}>
 			{props.children}
 		</a>
