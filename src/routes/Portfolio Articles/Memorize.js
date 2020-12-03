@@ -127,7 +127,7 @@ export default function Memorie() {
 				Testing Library and Jest.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to='/#lascabling'>
+				<Link to='/#memorize'>
 					<Button arrowLeft='true'>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>

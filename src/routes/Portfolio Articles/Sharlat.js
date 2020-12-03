@@ -8,7 +8,7 @@ import hero1 from '../../assets/images/yevgeniy__hero1.png';
 import hero2 from '../../assets/images/yevgeniy__hero2.png';
 import hero3 from '../../assets/images/yevgeniy__hero3.png';
 
-export default (props) => {
+export default function Sharlat(props) {
 	window.scrollTo(0, 0);
 
 	const WEBSITE_URL = 'https://ysharlat.imfast.io/';
@@ -87,4 +87,4 @@ export default (props) => {
 			</a>
 		</article>
 	);
-};
+}

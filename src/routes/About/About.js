@@ -35,7 +35,7 @@ export default function About() {
 
 					<p>
 						Check out my open-source contributions to the largest JavaScript
-						algorithms & data structures repo on GitHub:{' '}
+						algorithms &amp; data structures repo on GitHub:{' '}
 						<a
 							href={OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}
 							target='_blank'

@@ -3,12 +3,12 @@ import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
 import Decoration from '../../components/Decorations/Decorations1';
-import ShowLink from './ShowLink';
+import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 
 import hero1 from '../../assets/images/presto__hero1.jpg';
 import hero2 from '../../assets/images/presto__hero2.jpg';
 
-export default (props) => {
+export default function Presto(props) {
 	window.scrollTo(0, 0);
 
 	const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
@@ -70,28 +70,28 @@ export default (props) => {
 				Presto is a React single-page web app bootstrapped with Create React App
 				and written in TypeScript, It is built to be fast, secure, and
 				intuitive. React Hooks and Redux for state management;{' '}
-				<ShowLink href='https://firebase.google.com/products/auth'>
+				<ExternalLink to='https://firebase.google.com/products/auth'>
 					Firebase Authentication,
-				</ShowLink>
-				<ShowLink href='https://firebase.google.com/products/storage'>
+				</ExternalLink>{' '}
+				<ExternalLink to='https://firebase.google.com/products/storage'>
 					Cloud Storage,
-				</ShowLink>
-				<ShowLink href='https://firebase.google.com/products/firestore'>
+				</ExternalLink>{' '}
+				<ExternalLink to='https://firebase.google.com/products/firestore'>
 					Cloud Firestore
-				</ShowLink>
-				for the back end. Presto also uses the
-				<ShowLink href='https://www.geoapify.com/'>Geoapify API</ShowLink> to
-				validate users' location: they can either autofill their location using
-				the built-in JavaScript Geolocation API combined with Geoapify, or they
-				can manually input their location and select from the options provided
-				by the Geoapify autocomplete API. For styling, Presto uses CSS modules
-				and is inspired by Google's Material UI to be clean, accessible, and
-				modern.
+				</ExternalLink>{' '}
+				for the back end. Presto also uses the{' '}
+				<ExternalLink to='https://www.geoapify.com/'>Geoapify API</ExternalLink>{' '}
+				to validate users' location: they can either autofill their location
+				using the built-in JavaScript Geolocation API combined with Geoapify, or
+				they can manually input their location and select from the options
+				provided by the Geoapify autocomplete API. For styling, Presto uses CSS
+				modules and is inspired by Google's Material UI to be clean, accessible,
+				and modern.
 			</p>
 			<p className={generalStyles.p}>
-				If you're interested in learning more or contributing to this project,
-				<ShowLink href={CODE_URL}>check out the GitHub</ShowLink> or{' '}
-				<Link to='/contact' className={generalStyles.showLink}>
+				If you're interested in learning more or contributing to this project,{' '}
+				<ExternalLink to={CODE_URL}>check out the GitHub</ExternalLink> or{' '}
+				<Link to='/contact' className={generalStyles.ExternalLink}>
 					get in touch
 				</Link>
 				.
@@ -106,4 +106,4 @@ export default (props) => {
 			</div>
 		</article>
 	);
-};
+}
