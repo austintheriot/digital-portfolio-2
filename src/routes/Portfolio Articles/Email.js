@@ -29,7 +29,7 @@ export default function Email(props) {
 				reasons) for free.
 			</p>
 			<div className={generalStyles.center}>
-				<ExternalLink to={CODE_URL} unerline={false}>
+				<ExternalLink to={CODE_URL} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
