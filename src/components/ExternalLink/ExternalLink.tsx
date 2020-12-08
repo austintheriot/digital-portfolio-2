@@ -1,16 +1,13 @@
 import React, { useRef } from 'react';
 import { analytics } from '../../config';
 
-export const ExternalLink = (
-	props: {
-		children: string | JSX.Element;
-		to: string;
-		href?: string;
-		underline?: boolean;
-		className?: string;
-	},
-	...rest: any[]
-) => {
+export const ExternalLink = (props: {
+	children: string | JSX.Element;
+	to: string;
+	href?: string;
+	underline?: boolean;
+	className?: string;
+}) => {
 	const anchor = useRef<HTMLAnchorElement | null>(null);
 
 	const handleClick = (
@@ -39,7 +36,7 @@ export const ExternalLink = (
 			onClick={(e) => handleClick(e, anchor)}
 			rel='noopener noreferrer'
 			target='_blank'
-			{...rest}>
+			className={props.className || ''}>
 			{props.children}
 		</a>
 	);
