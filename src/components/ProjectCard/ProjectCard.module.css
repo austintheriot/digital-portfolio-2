@@ -35,7 +35,7 @@
 }
 
 .subtitle {
-	margin: 2rem auto 3rem auto;
+	margin: 1rem auto 3rem auto;
 	font-weight: 300 !important;
 }
 
@@ -147,7 +147,8 @@
 	.rightalign .title,
 	.rightalign .subtitle {
 		text-align: right;
-		margin: 0 10vw 0 5vw;
+		margin-right: 10vw;
+		margin-left: 5vw;
 	}
 
 	.rightalign .topDiv {
