@@ -11,6 +11,7 @@
 }
 
 .container h1 {
+	font-size: 3.5rem;
 	max-width: 90%;
 	text-align: center;
 	margin: 150px auto 3rem auto;

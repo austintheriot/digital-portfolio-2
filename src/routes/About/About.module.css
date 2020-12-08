@@ -88,9 +88,3 @@
 		left: 5%;
 	}
 }
-
-@media (min-width: 1000px) {
-	.headshot {
-		align-self: start;
-	}
-}
