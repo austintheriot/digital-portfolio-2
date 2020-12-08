@@ -1,86 +1,21 @@
 /* General Font Sizing: --alternative sizes for Portfolio page only*/
 
-.container h1 {
-	max-width: 90%;
-	text-align: center;
-	margin: 150px auto 3rem auto;
-}
-
-.container h2 {
-	font-size: 80px;
-	font-weight: 200;
-	text-transform: none;
-	margin-top: 150px;
-	text-align: center;
-	background-color: white;
-}
-
-.container h3 {
-	font-size: 50px;
-	font-weight: 200;
-	text-align: center;
-	margin-top: 2.5rem;
-}
-
-.container h4 {
-	font-size: 30px;
-	font-weight: 400;
-	text-transform: lowercase;
-}
-
-.skills ul {
-	margin-bottom: 125px;
-}
-
-.container li {
-	font-size: 25px;
-	font-weight: 300;
-	list-style: none;
-	text-align: center;
-	margin: 1.5rem auto;
-}
-
-@media (min-width: 800px) {
-	.container h1 {
-		margin: 175px auto 3rem auto;
-	}
-	.container h2 {
-		font-size: 135px;
-		font-weight: 200;
-		text-transform: none;
-	}
-
-	.container h3 {
-		font-size: 75px;
-		font-weight: 300;
-		margin-top: 4rem;
-	}
-
-	.container h4 {
-		font-size: 50px;
-		font-weight: 200;
-	}
-
-	.container li {
-		font-size: 30px;
-	}
-}
-
-/* ///////////////////////////// Specific formatting ///////////////////////////// */
-
 .container .titleContainer {
 	position: relative;
 	padding-top: 125px;
 }
 
 .container h1 {
+	max-width: 90%;
+	text-align: center;
+	margin: 150px auto 3rem auto;
 	font-weight: 200;
 	text-transform: uppercase;
 	background-color: white;
 }
 
 .subtitle {
-	font-size: 50px;
+	font-size: 35px;
 	font-weight: 200;
 	text-transform: lowercase;
 	text-align: center;
@@ -106,6 +41,48 @@
 	margin: 5rem auto 0 auto;
 }
 
+/* My Work, Skills, etc. */
+.container h2 {
+	font-size: 50px;
+	font-weight: 200;
+	text-transform: none;
+	margin-top: 150px;
+	text-align: center;
+	background-color: white;
+}
+
+/* Project Card Title */
+.container h3 {
+	font-size: 35px;
+	font-weight: 200;
+	text-align: center;
+	margin-top: 2.5rem;
+}
+
+.code {
+	font-size: 10px;
+	font-weight: 200;
+}
+
+/* Project Card Description */
+.container h4 {
+	font-size: 25px;
+	font-weight: 400;
+	text-transform: lowercase;
+}
+
+.skills ul {
+	margin-bottom: 125px;
+}
+
+.container li {
+	font-size: 20px;
+	font-weight: 300;
+	list-style: none;
+	text-align: center;
+	margin: 1.5rem auto;
+}
+
 @media (min-width: 800px) {
 	.container .titleContainer {
 		padding-top: 10vw;
@@ -119,11 +96,35 @@
 	}
 
 	.container h1 {
-		font-size: 150px;
+		margin: 175px auto 3rem auto;
+		font-size: 75px;
 		font-weight: 200;
 	}
 
-	.container .subtitle {
+	.container h2 {
+		font-size: 4rem;
+		font-weight: 200;
+		text-transform: none;
+	}
+
+	.container h3 {
+		font-size: 3rem;
 		font-weight: 300;
+		margin-top: 4rem;
+	}
+
+	.container h4 {
+		font-size: 2rem;
+		font-weight: 200;
+	}
+
+	/* Skills titles: Code, Testing, Design, etc. */
+	.container .skills h3 {
+		font-size: 3rem;
+		font-weight: 200;
+	}
+
+	.container li {
+		font-size: 30px;
 	}
 }

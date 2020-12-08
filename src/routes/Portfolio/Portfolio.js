@@ -151,7 +151,7 @@ export default function Portfolio(props) {
 			</section>
 			<section className={styles.skills}>
 				<h2>Skills</h2>
-				<h3>Code:</h3>
+				<h3 className={styles.code}>Code:</h3>
 				<ul>
 					<li>JavaScript (ES6+)</li>
 					<li>TypeScript</li>

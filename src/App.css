@@ -53,13 +53,13 @@ p {
 	}
 
 	h1 {
-		font-size: 135px;
+		font-size: 75px;
 		font-weight: 200;
 	}
 
 	h2 {
-		font-size: 50px;
-		font-weight: 300;
+		font-size: 35px;
+		font-weight: 200;
 		text-transform: lowercase;
 	}
 
