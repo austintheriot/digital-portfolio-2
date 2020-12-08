@@ -5,6 +5,11 @@
 	padding-top: 125px;
 }
 
+.container {
+	width: 100vw;
+	overflow-x: hidden;
+}
+
 .container h1 {
 	max-width: 90%;
 	text-align: center;
