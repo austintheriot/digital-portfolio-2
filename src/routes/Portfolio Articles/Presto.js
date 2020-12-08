@@ -38,14 +38,14 @@ export default function Presto(props) {
 			</p>
 			<div className={generalStyles.center}></div>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<ExternalLink href={DEMO_URL} underline={false}>
+				<ExternalLink to={DEMO_URL} underline={false}>
 					<Button>See Live Demo</Button>
 				</ExternalLink>
-				<ExternalLink href={CODE_URL} underline={false}>
+				<ExternalLink to={CODE_URL} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
-			<ExternalLink href={CODE_URL}>
+			<ExternalLink to={CODE_URL}>
 				<img
 					alt='design previews of Presto'
 					src={hero1}
@@ -58,7 +58,7 @@ export default function Presto(props) {
 				composers, arrangers, conductors, soloists, ensembles, bands, and any
 				guests interested in hiring them or joining the conversation.
 			</p>
-			<ExternalLink href={CODE_URL}>
+			<ExternalLink to={CODE_URL}>
 				<img
 					alt='design previews of Presto'
 					src={hero2}

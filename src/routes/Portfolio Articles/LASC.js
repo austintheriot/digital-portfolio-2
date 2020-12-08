@@ -27,14 +27,14 @@ export default function LASC(props) {
 				measured by Google Analytics.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<ExternalLink href={LASCABLING_LIVE} underline={false}>
+				<ExternalLink to={LASCABLING_LIVE} underline={false}>
 					<Button>See Live</Button>
 				</ExternalLink>
-				<ExternalLink href={LASCABLING_CODE} underline={false}>
+				<ExternalLink to={LASCABLING_CODE} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
-			<ExternalLink href={LASCABLING_LIVE}>
+			<ExternalLink to={LASCABLING_LIVE}>
 				<img
 					alt='photos of the LASCabling website'
 					src={hero1}

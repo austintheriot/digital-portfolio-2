@@ -20,10 +20,10 @@ export default function Memorie() {
 			<h1 className={generalStyles.h1}>Memorize</h1>
 			<h2 className={generalStyles.h2}>React Progressive Web App</h2>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<ExternalLink href={MEMORIZE_LIVE_URL} underline={false}>
+				<ExternalLink to={MEMORIZE_LIVE_URL} underline={false}>
 					<Button>See Live</Button>
 				</ExternalLink>
-				<ExternalLink href={MEMORIZE_CODE_URL} underline={false}>
+				<ExternalLink to={MEMORIZE_CODE_URL} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>

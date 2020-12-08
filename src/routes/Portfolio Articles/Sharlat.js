@@ -27,11 +27,11 @@ export default function Sharlat(props) {
 				and easily find his music online and learn more about his work.
 			</p>
 			<div className={generalStyles.center}>
-				<ExternalLink href={WEBSITE_URL} underline={false}>
+				<ExternalLink to={WEBSITE_URL} underline={false}>
 					<Button>See Demo</Button>
 				</ExternalLink>
 			</div>
-			<ExternalLink href={WEBSITE_URL} underline={false}>
+			<ExternalLink to={WEBSITE_URL} underline={false}>
 				<img
 					alt='designs of Yevgeniy Sharlat&#39;s website'
 					src={hero1}
@@ -47,7 +47,7 @@ export default function Sharlat(props) {
 				work. The website also allows visitors to browse his biography, read
 				reviews of his work, and see news pertaining to his music.
 			</p>
-			<ExternalLink href={WEBSITE_URL}>
+			<ExternalLink to={WEBSITE_URL}>
 				<img
 					alt='designs of Yevgeniy Sharlat&#39;s website'
 					src={hero2}
@@ -79,7 +79,7 @@ export default function Sharlat(props) {
 					<Button arrow='true'>Contact Me</Button>
 				</Link>
 			</div>
-			<ExternalLink href={WEBSITE_URL}>
+			<ExternalLink to={WEBSITE_URL}>
 				<img
 					alt='design previews of Presto'
 					src={hero3}

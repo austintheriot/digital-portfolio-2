@@ -39,7 +39,6 @@ export const ExternalLink = (
 			onClick={(e) => handleClick(e, anchor)}
 			rel='noopener noreferrer'
 			target='_blank'
-			className={props.className || ''}
 			{...rest}>
 			{props.children}
 		</a>

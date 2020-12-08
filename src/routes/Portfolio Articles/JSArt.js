@@ -63,7 +63,7 @@ export default function JSArt(props) {
 			<p className={generalStyles.p}>
 				Each project uses a custom algorithm to generate patterns, many which of
 				are inspired by real-life phenomena.{' '}
-				<ExternalLink href={FRACTURES_LIVE}>"Fractures"</ExternalLink>, for
+				<ExternalLink to={FRACTURES_LIVE}>"Fractures"</ExternalLink>, for
 				instance, draws inspiration from the way glass panes and ceramic dishes
 				crack. Each line is given a random chance to break away as it travels in
 				one direction and stops when it reaches another line. Sometimes these
@@ -75,13 +75,13 @@ export default function JSArt(props) {
 
 			{/* Panel 2 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<ExternalLink href={WEB_PARTICLES_LIVE}>
+				<ExternalLink to={WEB_PARTICLES_LIVE}>
 					<img alt='Example of Web Particles app' src={hero2__1} />
 				</ExternalLink>
-				<ExternalLink href={BROWNIAN_LIVE}>
+				<ExternalLink to={BROWNIAN_LIVE}>
 					<img alt='Example of Brownian Motion' src={hero2__2} />
 				</ExternalLink>
-				<ExternalLink href={FRACTURES_LIVE}>
+				<ExternalLink to={FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero2__3} />
 				</ExternalLink>
 			</div>
@@ -94,13 +94,13 @@ export default function JSArt(props) {
 
 			{/* Panel 3 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<ExternalLink href={FRACTURES_LIVE}>
+				<ExternalLink to={FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero3__1} />
 				</ExternalLink>
-				<ExternalLink href={STOCHASTIC_LIVE}>
+				<ExternalLink to={STOCHASTIC_LIVE}>
 					<img alt='Example Stochastic Roots app' src={hero3__2} />
 				</ExternalLink>
-				<ExternalLink href={FRACTURES_LIVE}>
+				<ExternalLink to={FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero3__3} />
 				</ExternalLink>
 			</div>
