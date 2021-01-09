@@ -61,7 +61,7 @@ export default function About() {
 						Before I became a software developer, I was an award-winning
 						classical composer. Problem solving and creativity—whether audio,
 						visual or text—have always been two of my greatest strengths. When I
-						first discovered programming during my my masters degree in music at
+						first discovered programming during my masters degree in music at
 						the University of Texas at Austin, I instantly fell in love,
 						realizing that coding provided a way for me to use my talents in
 						tangible ways for other people. Now I design and develop websites
