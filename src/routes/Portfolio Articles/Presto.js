@@ -12,7 +12,7 @@ export default function Presto(props) {
 	window.scrollTo(0, 0);
 
 	const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
-	const DEMO_URL = 'https://prestomusicians.com';
+	const DEMO_URL = 'https://presto-6b7c9.web.app.com';
 
 	return (
 		<article>
