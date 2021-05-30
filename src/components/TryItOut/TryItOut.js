@@ -220,9 +220,9 @@ export default (props) => {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					Name: inputs.name.value,
-					Email: inputs.email.value,
-					Message: inputs.message.value,
+					name: inputs.name.value,
+					email: inputs.email.value,
+					message: inputs.message.value,
 					_private: {
 						key: tryItOut,
 					},
