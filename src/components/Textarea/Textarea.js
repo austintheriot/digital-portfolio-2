@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Textarea.module.css';
 
-export default (props) => {
+const Textarea = (props) => {
 	return (
 		<>
 			<div className={styles.div}>
@@ -68,3 +68,5 @@ export default (props) => {
 		</>
 	);
 };
+
+export default Textarea;

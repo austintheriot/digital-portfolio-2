@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Input.module.css';
 
-export default (props) => {
+const Input = (props) => {
 	return (
 		<>
 			<div className={styles.div}>
@@ -69,3 +69,5 @@ export default (props) => {
 		</>
 	);
 };
+
+export default Input;
