@@ -1,9 +1,10 @@
 import { Animation } from '../Animation';
 import { Stack } from '../../data structures/Stack';
 import { Queue } from '../../data structures/Queue';
+import { debounce } from 'lodash';
 import { Cell } from './Cell';
 
-const CELL_SIZE = 10;
+const CELL_SIZE = 30;
 
 export interface MazeOptions {
 	[key: string]: any;
@@ -14,13 +15,13 @@ export interface MazeOptions {
 	searchesPerFrame?: string;
 	solvePathsPerFrame?: string;
 	waiting?: boolean;
+	runOnSmallScreenSizes?: boolean;
 }
 
 export class MazeAnimation extends Animation {
 	array: Cell[][];
 	firstCell: Cell;
-	width: number;
-	height: number;
+	dimensions: number;
 	padding: number;
 	state: 'generating' | 'searching' | 'solving' | 'complete';
 	generationsPerFrame: number;
@@ -35,13 +36,16 @@ export class MazeAnimation extends Animation {
 	endCell: Cell;
 	solvePath: Cell[];
 	isWaitingForAnimation: boolean;
+	runOnSmallScreenSizes: boolean;
 	searchType: 'bfs' | 'dfs';
 
 	constructor(canvas: HTMLCanvasElement, options: MazeOptions = {}) {
 		super(canvas);
 		this.ctx.lineWidth = Math.floor(Number(options?.lineWidth ?? 2)); //width of maze walls
-		this.width = Math.max(Number(options.dimensions ?? Math.ceil(window.innerWidth / CELL_SIZE)), 1); //default to 10, but never less than 1
-		this.height = Math.max(Number(options.dimensions ?? Math.ceil(window.innerHeight / CELL_SIZE)), 1); //default to 10, but never less than 1
+		this.dimensions = Math.max(
+			Number(options.dimensions ?? Math.ceil(window.innerWidth / CELL_SIZE)),
+			1,
+		); //default to 10, but never less than 1
 		this.padding = Math.floor(Number(options.padding ?? 4)); // slightly offset so wall lines aren't cut off
 		this.generationStack = new Stack(); //used to generate the maze
 		this.animationQueue = new Queue(); //used for processing necessary animations
@@ -50,6 +54,7 @@ export class MazeAnimation extends Animation {
 		this.searchType = 'dfs';
 		this.solvePath = [];
 		this.frameCount = 0;
+		this.runOnSmallScreenSizes = options.runOnSmallScreenSizes ?? true;
 
 		//which portion of the animation is complete
 		this.state = 'generating';
@@ -60,9 +65,9 @@ export class MazeAnimation extends Animation {
 		this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
 		//build array of cells--fill them with info about their position in the array
-		this.array = new Array(this.width).fill(null);
+		this.array = new Array(this.dimensions).fill(null);
 		for (let col = 0; col < this.array.length; col++) {
-			this.array[col] = new Array(this.height).fill(null);
+			this.array[col] = new Array(this.dimensions).fill(null);
 			const innerArray = this.array[col];
 			for (let row = 0; row < innerArray.length; row++) {
 				innerArray[row] = new Cell({
@@ -77,7 +82,7 @@ export class MazeAnimation extends Animation {
 
 		//make entrance the top left cell & exit the bottom right cell
 		this.array[0][0].northWall = false;
-		this.array[this.width - 1][this.height - 1].southWall = false;
+		this.array[this.array.length - 1][this.array.length - 1].southWall = false;
 
 		/* 
       How many function calls to do per frame.
@@ -115,6 +120,16 @@ export class MazeAnimation extends Animation {
 		this.searchQueue.add(this.startCell);
 		this.searchStack.push(this.startCell);
 		this.endCell = this.array[this.array.length - 1][this.array.length - 1];
+
+		// reset on window resize after 500 ms of not resizing
+		window.onresize = debounce(
+			() => {
+				this.reset(options);
+				this.animate();
+			},
+			500,
+			{ leading: false },
+		);
 	}
 
 	/* 
@@ -339,12 +354,14 @@ export class MazeAnimation extends Animation {
 	}
 
 	/* 
-		A direct copy of the class constructor function.
+		A direct copy of the class constructor function (minus the resize function)
 	*/
 	reset(options: MazeOptions) {
 		this.ctx.lineWidth = Math.floor(Number(options?.lineWidth ?? 2)); //width of maze walls
-		this.width = Math.max(Number(options.dimensions ?? Math.ceil(window.innerWidth / CELL_SIZE)), 1); //default to 10, but never less than 1
-		this.height = Math.max(Number(options.dimensions ?? Math.ceil(window.innerHeight / CELL_SIZE)), 1); //default to 10, but never less than 1
+		this.dimensions = Math.max(
+			Number(options.dimensions ?? Math.ceil(window.innerWidth / CELL_SIZE)),
+			1,
+		); //default to 10, but never less than 1
 		this.padding = Math.floor(Number(options.padding ?? 4)); // slightly offset so wall lines aren't cut off
 		this.generationStack = new Stack(); //used to generate the maze
 		this.animationQueue = new Queue(); //used for processing necessary animations
@@ -353,6 +370,7 @@ export class MazeAnimation extends Animation {
 		this.searchType = 'dfs';
 		this.solvePath = [];
 		this.frameCount = 0;
+		this.runOnSmallScreenSizes = options.runOnSmallScreenSizes ?? true;
 
 		//which portion of the animation is complete
 		this.state = 'generating';
@@ -363,9 +381,9 @@ export class MazeAnimation extends Animation {
 		this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
 		//build array of cells--fill them with info about their position in the array
-		this.array = new Array(this.width).fill(null);
+		this.array = new Array(this.dimensions).fill(null);
 		for (let col = 0; col < this.array.length; col++) {
-			this.array[col] = new Array(this.height).fill(null);
+			this.array[col] = new Array(this.dimensions).fill(null);
 			const innerArray = this.array[col];
 			for (let row = 0; row < innerArray.length; row++) {
 				innerArray[row] = new Cell({
@@ -425,6 +443,11 @@ export class MazeAnimation extends Animation {
     Recursively calls itself to generate new frames.
   */
 	animate() {
+		// do not run on small screen sizes
+		if (!this.runOnSmallScreenSizes && window.innerWidth < 1100) {
+			return;
+		}
+
 		/* 
 			After each phase of the maze generation/solve,
 			the animation queue runs until all animations

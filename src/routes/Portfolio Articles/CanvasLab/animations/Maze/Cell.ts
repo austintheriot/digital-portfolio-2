@@ -106,7 +106,7 @@ export class Cell {
 
 		this.ctx = params.ctx;
 
-		this.generationIncrement = Math.ceil(((this.maze.width + this.maze.height) / 2) / 10);
+		this.generationIncrement = Math.ceil(this.maze.dimensions / 10);
 		this.searchIncrement = 10;
 		this.solveIncrement = 10;
 

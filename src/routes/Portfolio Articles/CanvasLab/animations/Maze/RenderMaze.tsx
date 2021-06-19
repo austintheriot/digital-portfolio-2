@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 import { useAnimation } from '../../hooks/useAnimation';
 import type { MazeOptions } from './Maze';
 import { MazeAnimation } from './Maze';
@@ -7,11 +7,14 @@ const defaults: MazeOptions = {
 	lineWidth: '1',
 };
 
-export function RenderMaze() {
-	const [options] = useState<MazeOptions>(defaults);
-	const [canvas] = useAnimation(MazeAnimation, options);
+interface RenderMazeProps {
+	options?: MazeOptions;
+}
 
-	return (
-		<>{canvas}</>
-	);
+export function RenderMaze({ options = {} }: RenderMazeProps) {
+	// prevent infinite re-renders from the prop changing
+	const animationOptions = useMemo(() => ({ ...defaults, ...options}), [options])
+	const [canvas] = useAnimation(MazeAnimation, animationOptions as MazeOptions);
+
+	return <>{canvas}</>;
 }
