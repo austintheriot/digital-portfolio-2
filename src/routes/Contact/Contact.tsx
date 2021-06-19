@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import styles from './Contact.module.css';
 import { contactForm } from '../../config';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -8,12 +8,37 @@ import Modal from '../../components/Modal/Modal';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
 
-const Contact = (props) => {
+enum InputTypes {
+	EMAIL = 'email',
+	NAME = 'name',
+	MESSAGE = 'message',
+}
+
+interface InputInnerState {
+	value: string,
+	animateUp: boolean,
+	empty: boolean,
+	touched: boolean,
+	disabled: boolean,
+	message: {
+		error: boolean,
+		text: string,
+	},
+}
+
+type InputState = {
+	[input in InputTypes]: InputInnerState;
+}
+
+const isInputType = (t: unknown): t is InputTypes => typeof t === 'string' && ['email', 'name', 'message'].includes(t);
+
+
+const Contact = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [])
 
-	const [inputs, setInputs] = useState({
+	const [inputs, setInputs] = useState<InputState>({
 		email: {
 			value: '',
 			animateUp: false,
@@ -51,7 +76,7 @@ const Contact = (props) => {
 	const [buttonDisabled, setbuttonDisabled] = useState(false);
 	const [modalMessage, setModalMessage] = useState('');
 
-	const handleFocus = (event, newestType) => {
+	const handleFocus = (event: FocusEvent, newestType: InputTypes) => {
 		//animation
 		setInputs((prevState) => ({
 			...prevState,
@@ -63,7 +88,7 @@ const Contact = (props) => {
 		}));
 	};
 
-	const handleBlur = (event, newestType) => {
+	const handleBlur = (event: FocusEvent, newestType: InputTypes) => {
 		//animation & output error if empty
 		let targetEmpty =
 			inputs[newestType].touched && inputs[newestType].value.length === 0
@@ -92,13 +117,15 @@ const Contact = (props) => {
 	};
 
 	const validateInputs = (
-		newestType,
-		targetValue,
-		targetEmpty,
-		isBeingSubmitted = false
+		newestType: InputTypes | '',
+		targetValue: string | null,
+		targetEmpty: boolean | null,
+		isBeingSubmitted: boolean | null = false,
 	) => {
 		//validate input here
-		let anyErrorsObject = {};
+		let anyErrorsObject = {} as {
+			[key in InputTypes]: string;
+		};
 		let email = newestType === 'email' ? targetValue : inputs.email.value;
 
 		//prevent unnecessary validation checks
@@ -108,6 +135,7 @@ const Contact = (props) => {
 			inputs.email.message.error
 		) {
 			if (
+				!email ||
 				!email.match(
 					// eslint-disable-next-line no-control-regex
 					/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
@@ -116,17 +144,18 @@ const Contact = (props) => {
 				anyErrorsObject.email = 'Invalid email';
 			}
 
-			if (email.length === 0) {
+			if (!email || email.length === 0) {
 				anyErrorsObject.email = 'This field is required.';
 			}
 		}
 
 		//update state for all inputs
 		Object.keys(inputs).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			setInputs((prevState) => ({
 				...prevState,
 				[inputType]: {
-					...prevState[inputType],
+					...prevState[inputType as InputTypes],
 
 					//update generic values
 					value:
@@ -147,7 +176,7 @@ const Contact = (props) => {
 		return anyErrorsObject;
 	};
 
-	const handleChange = (event, newestType) => {
+	const handleChange = (event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>, newestType: InputTypes) => {
 		let targetValue = event.target.value;
 		let targetEmpty = targetValue.length === 0 ? true : false;
 		if (
@@ -158,7 +187,7 @@ const Contact = (props) => {
 		}
 	};
 
-	const submitHandler = (event) => {
+	const submitHandler = (event: FormEvent) => {
 		//prevent default form submission
 		event.preventDefault();
 
@@ -166,6 +195,7 @@ const Contact = (props) => {
 		let anyErrorsFound = false;
 		let errors = validateInputs('', null, null, true);
 		Object.keys(errors).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			if (errors[inputType]) {
 				anyErrorsFound = true;
 			}
@@ -180,9 +210,10 @@ const Contact = (props) => {
 		}
 	};
 
-	const disableElements = (disabled) => {
+	const disableElements = (disabled: boolean) => {
 		//Set all inputs to disabled or enabled
 		Object.keys(inputs).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			setInputs((prevState) => ({
 				...prevState,
 				[inputType]: {
@@ -196,6 +227,7 @@ const Contact = (props) => {
 
 	const clearInputs = () => {
 		Object.keys(inputs).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			setInputs((prevState) => ({
 				...prevState,
 				[inputType]: {
@@ -268,28 +300,28 @@ const Contact = (props) => {
 			<form onSubmit={submitHandler}>
 				<Input
 					type='text'
-					customType='email'
-					handleFocus={(e) => handleFocus(e, 'email')}
-					handleBlur={(e) => handleBlur(e, 'email')}
-					handleChange={(e) => handleChange(e, 'email')}
+					customType={InputTypes.EMAIL}
+					handleFocus={(e: FocusEvent) => handleFocus(e, InputTypes.EMAIL)}
+					handleBlur={(e: FocusEvent) => handleBlur(e, InputTypes.EMAIL)}
+					handleChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, InputTypes.EMAIL)}
 					label={'Email*'}
 					inputs={inputs}
 				/>
 				<Input
 					type='text'
-					customType='name'
-					handleFocus={(e) => handleFocus(e, 'name')}
-					handleBlur={(e) => handleBlur(e, 'name')}
-					handleChange={(e) => handleChange(e, 'name')}
+					customType={InputTypes.NAME}
+					handleFocus={(e: FocusEvent) => handleFocus(e, InputTypes.NAME)}
+					handleBlur={(e: FocusEvent) => handleBlur(e, InputTypes.NAME)}
+					handleChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, InputTypes.NAME)}
 					label={'Name (optional)'}
 					inputs={inputs}
 				/>
 				<Textarea
 					type='text'
-					customType='message'
-					handleFocus={(e) => handleFocus(e, 'message')}
-					handleBlur={(e) => handleBlur(e, 'message')}
-					handleChange={(e) => handleChange(e, 'message')}
+					customType={InputTypes.MESSAGE}
+					handleFocus={(e: FocusEvent) => handleFocus(e, InputTypes.MESSAGE)}
+					handleBlur={(e: FocusEvent) => handleBlur(e, InputTypes.MESSAGE)}
+					handleChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleChange(e, InputTypes.MESSAGE)}
 					label={'Message (optional)'}
 					inputs={inputs}
 				/>

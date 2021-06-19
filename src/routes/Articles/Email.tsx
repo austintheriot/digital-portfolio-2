@@ -5,8 +5,12 @@ import { Link } from 'react-router-dom';
 import TryItOut from '../../components/TryItOut/TryItOut';
 import Decoration from '../../components/Decorations/Decorations1';
 import { ExternalLink } from 'components/ExternalLink/ExternalLink';
+import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
+import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
+import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
+import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 
-export default function Email(props) {
+export default function Email() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -16,10 +20,10 @@ export default function Email(props) {
 	return (
 		<article>
 			<Decoration />
-			<h1 className={generalStyles.h1}>Email API</h1>
-			<h2 className={generalStyles.h2}>Email Service for Static Sites</h2>
-			<h3 className={generalStyles.h3}>About</h3>
-			<p className={generalStyles.p}>
+			<ArticleTitle>Email API</ArticleTitle>
+			<ArticleSubtitle>Email Service for Static Sites</ArticleSubtitle>
+			<ArticleHeading>About</ArticleHeading>
+			<ArticleParagraph>
 				As a freelance web developer, I was tired of trying to set up services
 				for clients that would send an email after a form submission: there was
 				never a guarantee that whatever hosting service they were using would
@@ -29,15 +33,15 @@ export default function Email(props) {
 				instead, I set up my own Email Sender API to allow all of my static
 				sites to send emails upon form submission (or for whatever other
 				reasons) for free.
-			</p>
+			</ArticleParagraph>
 			<div className={generalStyles.center}>
 				<ExternalLink to={CODE_URL} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
 			<TryItOut />
-			<h3 className={generalStyles.h3}>Tech</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>Tech</ArticleHeading>
+			<ArticleParagraph>
 				This project uses Node.js, Express.js, the Express CORS middleware (to
 				allow cross-origin scripting), and the Nodemailer module to send emails.
 				This project also relies on Firebase Cloud Functions to run scripts via
@@ -47,7 +51,7 @@ export default function Email(props) {
 				Firebase Firestore to store my own, personally generated API keys and
 				verify the API key of whatever website is requesting access (to limit
 				unathorized access to the service).
-			</p>
+			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#email-api'>
 					<Button arrowLeft>Portfolio</Button>

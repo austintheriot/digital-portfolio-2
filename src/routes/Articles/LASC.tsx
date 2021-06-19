@@ -7,27 +7,31 @@ import Decoration from '../../components/Decorations/Decorations1';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 
 import hero1 from '../../assets/images/lascabling__allscreens.jpg';
+import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
+import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
+import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
+import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 
-export default function LASC(props) {
+const LASCABLING_LIVE = 'https://www.lascabling.com/';
+const LASCABLING_CODE = 'https://github.com/austintheriot/lascabling';
+
+export default function LASC() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const LASCABLING_LIVE = 'https://www.lascabling.com/';
-	const LASCABLING_CODE = 'https://github.com/austintheriot/lascabling';
-
 	return (
 		<article>
 			<Decoration />
-			<h1 className={generalStyles.h1}>LASCabling</h1>
-			<h2 className={generalStyles.h2}>Local Business Landing Page</h2>
-			<h3 className={generalStyles.h3}>About</h3>
-			<p className={generalStyles.p}>
+			<ArticleTitle>LASCabling</ArticleTitle>
+			<ArticleSubtitle>Local Business Landing Page</ArticleSubtitle>
+			<ArticleHeading>About</ArticleHeading>
+			<ArticleParagraph>
 				LASCabling.com is a responsive landing page built for a local business
 				in Louisiana to advertise their services to local residents as well as
 				generate customer leads. Web traffic increase is currently being
 				measured by Google Analytics.
-			</p>
+			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<ExternalLink to={LASCABLING_LIVE} underline={false}>
 					<Button>See Live</Button>
@@ -43,8 +47,8 @@ export default function LASC(props) {
 					className={generalStyles.heroBigger}
 				/>
 			</ExternalLink>
-			<h3 className={generalStyles.h3}>Tech</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>Tech</ArticleHeading>
+			<ArticleParagraph>
 				Designed in Adobe Photoshop and built using HTML5, CSS3, and JavaScript.
 				Although I believe that templates and libraries like Bootstrap are a
 				fast and useful way to build websites, I tend to make my clients'
@@ -59,7 +63,7 @@ export default function LASC(props) {
 				submission. This eliminates the need for a hosting service that allows
 				server-side code and also cuts cost for my clients, who might otherwise
 				be forced to pay for a third party email service.
-			</p>
+			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to="/#lascabling">
 					<Button arrowLeft>Portfolio</Button>

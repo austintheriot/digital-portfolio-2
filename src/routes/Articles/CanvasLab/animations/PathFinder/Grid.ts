@@ -1,6 +1,6 @@
 import { Animation } from '../Animation';
-import { Stack } from 'routes/Portfolio Articles/CanvasLab/data structures/Stack';
-import { Queue } from 'routes/Portfolio Articles/CanvasLab/data structures/Queue';
+import { Stack } from 'routes/Articles/CanvasLab/data structures/Stack';
+import { Queue } from 'routes/Articles/CanvasLab/data structures/Queue';
 import { Tile } from './Tile';
 import { bfs, dfs, biBfs } from './solves';
 

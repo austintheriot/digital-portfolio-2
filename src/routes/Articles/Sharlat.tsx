@@ -8,26 +8,30 @@ import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 import hero1 from '../../assets/images/yevgeniy__hero1.png';
 import hero2 from '../../assets/images/yevgeniy__hero2.png';
 import hero3 from '../../assets/images/yevgeniy__hero3.png';
+import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
+import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
+import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
+import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 
-export default function Sharlat(props) {
+const WEBSITE_URL = 'https://ysharlat.imfast.io/';
+
+export default function Sharlat() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const WEBSITE_URL = 'https://ysharlat.imfast.io/';
-
 	return (
 		<article>
 			<Decoration />
-			<h1 className={generalStyles.h1}>Sharlat</h1>
-			<h2 className={generalStyles.h2}>Classical Composer Portfolio Site</h2>
-			<h3 className={generalStyles.h3}>About</h3>
-			<p className={generalStyles.p}>
+			<ArticleTitle>Sharlat</ArticleTitle>
+			<ArticleSubtitle>Classical Composer Portfolio Site</ArticleSubtitle>
+			<ArticleHeading>About</ArticleHeading>
+			<ArticleParagraph>
 				Yevgeniy Sharlat is a classical composer currently based in Austin,
 				Texas, and a recent recipient of a Guggenheim Fellowship. I designed and
 				coded this digital portfolio website for him so that others can quickly
 				and easily find his music online and learn more about his work.
-			</p>
+			</ArticleParagraph>
 			<div className={generalStyles.center}>
 				<ExternalLink to={WEBSITE_URL} underline={false}>
 					<Button>See Demo</Button>
@@ -40,15 +44,15 @@ export default function Sharlat(props) {
 					className={generalStyles.hero}
 				/>
 			</ExternalLink>
-			<h3 className={generalStyles.h3}>Purpose</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>Purpose</ArticleHeading>
+			<ArticleParagraph>
 				This digital portfolio features Yevgeniy Sharlat's music prominently on
 				the front page to allow visitors to quickly and easily listen to his
 				music. If visitors wish, they can then proceed to the dedicated Music
 				page of his website to browse a more robust selection of Mr. Sharlat's
 				work. The website also allows visitors to browse his biography, read
 				reviews of his work, and see news pertaining to his music.
-			</p>
+			</ArticleParagraph>
 			<ExternalLink to={WEBSITE_URL}>
 				<img
 					alt='designs of Yevgeniy Sharlat&#39;s website'
@@ -56,8 +60,8 @@ export default function Sharlat(props) {
 					className={generalStyles.hero}
 				/>
 			</ExternalLink>
-			<h3 className={generalStyles.h3}>Tech</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>Tech</ArticleHeading>
+			<ArticleParagraph>
 				Designed in Adobe XD and built using HTML5, CSS3, and JavaScript.
 				Although I believe that templates and libraries like Bootstrap are a
 				fast and useful way to build websites, I tend to make my clients'
@@ -72,7 +76,7 @@ export default function Sharlat(props) {
 				eliminates the need for a hosting service that allows server-side code
 				and also cuts cost for my clients, who might otherwise be forced to pay
 				for a third party email service.
-			</p>
+			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#sharlat'>
 					<Button arrowLeft>Portfolio</Button>

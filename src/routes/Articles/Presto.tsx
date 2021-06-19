@@ -7,24 +7,28 @@ import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 
 import hero1 from '../../assets/images/presto__hero1.jpg';
 import hero2 from '../../assets/images/presto__hero2.jpg';
+import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
+import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
+import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
+import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 
-export default function Presto(props) {
+const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
+const DEMO_URL = 'https://presto-6b7c9.firebaseapp.com/';
+
+export default function Presto() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
-	const DEMO_URL = 'https://presto-6b7c9.firebaseapp.com/';
-
 	return (
 		<article>
 			<Decoration />
-			<h1 className={generalStyles.h1}>Presto</h1>
-			<h2 className={generalStyles.h2}>
+			<ArticleTitle>Presto</ArticleTitle>
+			<ArticleSubtitle>
 				React Social Media Web App <span>(Currently in Development)</span>
-			</h2>
-			<h3 className={generalStyles.h3}>About</h3>
-			<p className={generalStyles.p}>
+			</ArticleSubtitle>
+			<ArticleHeading>About</ArticleHeading>
+			<ArticleParagraph>
 				Designed and developed by musicians for musicians. In today's day and
 				age, meeting local musicians should be easy, but until now, there hasn't
 				been a go-to social media space for musicians to connect with other
@@ -37,7 +41,7 @@ export default function Presto(props) {
 				about yourself on your own profile so that others can learn more about
 				you. Then, if you find a musician you'd like to talk to individually,
 				message them privately to connect.
-			</p>
+			</ArticleParagraph>
 			<div className={generalStyles.center}></div>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<ExternalLink to={DEMO_URL} underline={false}>
@@ -54,12 +58,12 @@ export default function Presto(props) {
 					className={generalStyles.hero}
 				/>
 			</ExternalLink>
-			<h3 className={generalStyles.h3}>More Info</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>More Info</ArticleHeading>
+			<ArticleParagraph>
 				Enabling local musicians to reconnect. Intended for performers,
 				composers, arrangers, conductors, soloists, ensembles, bands, and any
 				guests interested in hiring them or joining the conversation.
-			</p>
+			</ArticleParagraph>
 			<ExternalLink to={CODE_URL}>
 				<img
 					alt="design previews of Presto"
@@ -67,8 +71,8 @@ export default function Presto(props) {
 					className={generalStyles.hero}
 				/>
 			</ExternalLink>
-			<h3 className={generalStyles.h3}>Tech</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>Tech</ArticleHeading>
+			<ArticleParagraph>
 				Presto is a React single-page web app written in TypeScript and React,
 				It is built to be fast, secure, and intuitive. React Hooks and Redux for
 				state management;{' '}
@@ -89,15 +93,15 @@ export default function Presto(props) {
 				provided by the Geoapify autocomplete API. For styling, Presto uses CSS
 				modules and is inspired by Google's Material UI to be clean, accessible,
 				and modern.
-			</p>
-			<p className={generalStyles.p}>
+			</ArticleParagraph>
+			<ArticleParagraph>
 				If you're interested in learning more or contributing to this project,{' '}
 				<ExternalLink to={CODE_URL}>check out the GitHub</ExternalLink> or{' '}
 				<Link to="/contact" className={generalStyles.ExternalLink}>
 					get in touch
 				</Link>
 				.
-			</p>
+			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to="/#presto">
 					<Button arrowLeft>Portfolio</Button>

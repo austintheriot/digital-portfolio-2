@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import styles from './Portfolio.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -11,58 +11,33 @@ import jsartGif from '../../assets/images/jsart__logo.svg';
 import emailAPI from '../../assets/images/email-api__logo.svg';
 import memorizeLogo from '../../assets/images/memorize__logo.svg';
 import canvasLabLogo from '../../assets/images/canvas-lab__logo.svg';
+import smoothscroll from 'smoothscroll-polyfill';
+import { RenderMaze } from 'routes/Articles/CanvasLab/animations/Maze/RenderMaze';
+import { useSmoothScroll } from 'hooks/useSmoothScroll';
+import { useScroll } from 'hooks/useScroll';
 /* import yevgeniyMonogram from '../../assets/images/yevgeniy__monogram.svg'; */
 
-//enable smooth scroll on Safari
-import smoothscroll from 'smoothscroll-polyfill';
-import { RenderMaze } from 'routes/Portfolio Articles/CanvasLab/animations/Maze/RenderMaze';
 smoothscroll.polyfill();
-
 gsap.registerPlugin(ScrollTrigger);
-
-//custom hook to scroll to an element indicated in url
-const useScroll = () => {
-	const htmlElRef = useRef(null);
-	const executeScroll = () =>
-		window.scrollTo({
-			left: 0,
-			top: htmlElRef.current.offsetTop - 50,
-			behavior: 'auto',
-		});
-
-	return [executeScroll, htmlElRef];
-};
-
-const useSmoothScroll = () => {
-	const htmlElRef = useRef(null);
-	const executeSmoothScroll = () =>
-		window.scrollTo({
-			left: 0,
-			top: htmlElRef.current.offsetTop - 50,
-			behavior: 'smooth',
-		});
-
-	return [executeSmoothScroll, htmlElRef];
-};
 
 const mazeOptions = {
 	shouldRunOnSmallScreens: false,
 	shouldResetOnWindowResize: true,
 };
 
-export default function Portfolio(props) {
-	const [scrollToMyWork, myWorkRef] = useSmoothScroll();
-	const [scrollToMemorize, memorizeRef] = useScroll();
-	const [scrollToPresto, prestoRef] = useScroll();
-	/* 	const [scrollToSharlat, sharlatRef] = useScroll(); */
-	const [scrollToLascabling, lascablingRef] = useScroll();
-	const [scrollToJsart, jsartRef] = useScroll();
-	const [scrollToEmail, emailRef] = useScroll();
-	const [scrollToCanvasLab, canvasLabRef] = useScroll();
+export default function Portfolio() {
+	const [scrollToMyWork, myWorkRef] = useSmoothScroll<HTMLDivElement>();
+	const [scrollToMemorize, memorizeRef] = useScroll<HTMLDivElement>();
+	const [scrollToPresto, prestoRef] = useScroll<HTMLDivElement>();
+	const [scrollToLascabling, lascablingRef] = useScroll<HTMLDivElement>();
+	const [scrollToJsart, jsartRef] = useScroll<HTMLDivElement>();
+	const [scrollToEmail, emailRef] = useScroll<HTMLDivElement>();
+	const [scrollToCanvasLab, canvasLabRef] = useScroll<HTMLDivElement>();
+	/* 	const [scrollToSharlat, sharlatRef] = useScroll<HTMLDivElement>(); */
 
 	useEffect(() => {
-		//scroll to indicated position in the url one is defined
-		//divs in between the project items give react an easy html element to use as a ref
+		// scroll to indicated position in the url one is defined
+		// divs in between the project items give react an easy html element to use as a ref
 		if (window.location.href.includes('#')) {
 			let scrollLocation = window.location.href.split('#').pop();
 			if (scrollLocation === 'presto') return scrollToPresto();
@@ -81,11 +56,11 @@ export default function Portfolio(props) {
 	}, [
 		scrollToPresto,
 		scrollToMemorize,
-		/* scrollToSharlat, */
 		scrollToLascabling,
 		scrollToJsart,
 		scrollToEmail,
 		scrollToCanvasLab,
+		/* scrollToSharlat, */
 	]);
 
 	return (

@@ -11,13 +11,13 @@ import Footer from './components/Footer/Footer';
 import Portfolio from './routes/Portfolio/Portfolio';
 import About from './routes/About/About';
 import Contact from './routes/Contact/Contact';
-import Presto from './routes/Portfolio Articles/Presto';
+import Presto from './routes/Articles/Presto';
 /* import Sharlat from './routes/Portfolio Articles/Sharlat'; */
-import LASC from './routes/Portfolio Articles/LASC';
-import JSArt from './routes/Portfolio Articles/JSArt';
-import Email from './routes/Portfolio Articles/Email';
-import Memorize from './routes/Portfolio Articles/Memorize';
-import { CanvasLab } from './routes/Portfolio Articles/CanvasLab/CanvasLab';
+import LASC from './routes/Articles/LASC';
+import JSArt from './routes/Articles/JSArt';
+import Email from './routes/Articles/Email';
+import Memorize from './routes/Articles/Memorize';
+import { CanvasLab } from './routes/Articles/CanvasLab/CanvasLab';
 
 function App() {
 	const location = useLocation();

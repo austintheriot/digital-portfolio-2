@@ -1,13 +1,18 @@
-import React, { useRef } from 'react';
+import React, { ComponentProps, useRef } from 'react';
 import { analytics } from '../../config';
 
-export const ExternalLink = (props: {
-	children: string | JSX.Element;
+interface ExternalLinkProps extends ComponentProps<'a'> {
 	to: string;
-	href?: string;
 	underline?: boolean;
-	className?: string;
-}) => {
+}
+
+export const ExternalLink = ({
+	to,
+	href,
+	className,
+	underline,
+	children,
+}: ExternalLinkProps) => {
 	const anchor = useRef<HTMLAnchorElement | null>(null);
 
 	const handleClick = (
@@ -25,19 +30,19 @@ export const ExternalLink = (props: {
 		<a
 			style={{
 				textDecoration:
-					props.underline === undefined
+					underline === undefined
 						? 'underline'
-						: props.underline
+						: underline
 						? 'underline'
 						: 'none',
 			}}
-			href={props.to || props.href}
+			href={to || href}
 			ref={anchor}
 			onClick={(e) => handleClick(e, anchor)}
 			rel='noopener noreferrer'
 			target='_blank'
-			className={props.className || ''}>
-			{props.children}
+			className={className || ''}>
+			{children}
 		</a>
 	);
 };

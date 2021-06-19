@@ -14,8 +14,12 @@ import hero3__1 from '../../assets/images/jsart__hero3--1.jpg';
 import hero3__2 from '../../assets/images/jsart__hero3--2.jpg';
 import hero3__3 from '../../assets/images/jsart__hero3--3.jpg';
 import { ExternalLink } from 'components/ExternalLink/ExternalLink';
+import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
+import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
+import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
+import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 
-export default function JSArt(props) {
+export default function JSArt() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -32,13 +36,13 @@ export default function JSArt(props) {
 	return (
 		<article>
 			<Decoration />
-			<h1 className={generalStyles.h1}>JSArt</h1>
-			<h2 className={generalStyles.h2}>javascript canvas application</h2>
-			<h3 className={generalStyles.h3}>About</h3>
-			<p className={generalStyles.p}>
+			<ArticleTitle>JSArt</ArticleTitle>
+			<ArticleSubtitle>javascript canvas application</ArticleSubtitle>
+			<ArticleHeading>About</ArticleHeading>
+			<ArticleParagraph>
 				A collection of JavaScript applications built to provide interactive art
 				designs and patterns that respond to visitors' settings.
-			</p>
+			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<ExternalLink to={WEB_PARTICLES_LIVE} underline={false}>
 					<Button>See Live</Button>
@@ -61,8 +65,8 @@ export default function JSArt(props) {
 				</ExternalLink>
 			</div>
 
-			<h3 className={generalStyles.h3}>More Info</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>More Info</ArticleHeading>
+			<ArticleParagraph>
 				Each project uses a custom algorithm to generate patterns, many which of
 				are inspired by real-life phenomena.{' '}
 				<ExternalLink to={FRACTURES_LIVE}>"Fractures"</ExternalLink>, for
@@ -73,7 +77,7 @@ export default function JSArt(props) {
 				parameters. "Fractures", for instance, can also resemble other natural
 				textures like yarn or fur rather than cracks. Play with the settings
 				yourself to see what interesting patterns you can make.
-			</p>
+			</ArticleParagraph>
 
 			{/* Panel 2 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
@@ -88,11 +92,11 @@ export default function JSArt(props) {
 				</ExternalLink>
 			</div>
 
-			<h3 className={generalStyles.h3}>Tech</h3>
-			<p className={generalStyles.p}>
+			<ArticleHeading>Tech</ArticleHeading>
+			<ArticleParagraph>
 				Built using the JavaScript Canvas API and a small amount of HTML and CSS
 				to provide a simple settings interface.
-			</p>
+			</ArticleParagraph>
 
 			{/* Panel 3 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>

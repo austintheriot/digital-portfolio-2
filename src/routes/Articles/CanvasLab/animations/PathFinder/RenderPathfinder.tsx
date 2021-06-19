@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { useAnimation } from 'routes/Portfolio Articles/CanvasLab/hooks/useAnimation';
-import type { GridOptions } from '../../animations/PathFinder/Grid';
-import { GridAnimation } from '../../animations/PathFinder/Grid';
+import { useAnimation } from 'routes/Articles/CanvasLab/hooks/useAnimation';
+import type { GridOptions } from './Grid';
+import { GridAnimation } from './Grid';
 import { cloneDeep } from 'lodash';
 import Button from 'components/Button/Button';
 import canvasLabStyles from './RenderPathfinder.module.scss';
