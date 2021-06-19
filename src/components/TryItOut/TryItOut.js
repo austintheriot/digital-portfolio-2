@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import styles from './TryItOut.module.css';
 import { tryItOut } from '../../config';
-
 import Input from '../../components/Input/Input';
-import Modal from '../../components/Modal/Modal';
+import Modal from '../Message/Message';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
 
-const TryItOut = (props) => {
+const TryItOut = () => {
 	const [inputs, setInputs] = useState({
 		email: {
 			value: '',

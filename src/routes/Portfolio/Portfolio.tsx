@@ -72,7 +72,7 @@ export default function Portfolio() {
 				<h1>Austin Theriot</h1>
 				<p className={styles.subtitle}>front end developer</p>
 				<div className={styles.SeeMyWork}>
-					<Button onClick={scrollToMyWork} arrow down animateLines={false}>
+					<Button onClick={scrollToMyWork} arrow='down' animateLines={false}>
 						See My Work
 					</Button>
 				</div>
@@ -179,7 +179,7 @@ export default function Portfolio() {
 			</section>
 			<div className={styles.AboutMeButton}>
 				<Link to="/about" className={styles.Link}>
-					<Button arrow>About Me</Button>
+					<Button arrow='right'>About Me</Button>
 				</Link>
 			</div>
 		</div>

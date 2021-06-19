@@ -6,13 +6,14 @@ import emailIcon from '../../assets/images/email.svg';
 import gitHubIcon from '../../assets/images/github.svg';
 import linkedInIcon from '../../assets/images/linkedin.svg';
 import { ExternalLink } from 'components/ExternalLink/ExternalLink';
+import { Routes } from 'types';
 // import upworkIcon from '../../assets/images/upwork.png';
 
-export default function footer() {
+export default function Footer() {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.linkContainer}>
-				<Link to='/contact' data-name='Contact'>
+				<Link to={Routes.CONTACT} data-name='Contact'>
 					<img alt='Email' src={emailIcon} className={styles.email} />
 				</Link>
 				<ExternalLink to='https://github.com/austintheriot' data-name='GitHub'>

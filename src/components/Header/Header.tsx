@@ -1,11 +1,14 @@
 import React from 'react';
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
-export default function Header(props) {
-	const checkIsActive = (string, ...rest) => {
-		return new URL(window.location.href).pathname === string ? true : false;
-	};
+import { Routes } from 'types';
 
+const checkIsActive = (pathname: Routes) => {
+	return new URL(window.location.href).pathname === pathname ? true : false;
+};
+
+
+export default function Header() {
 	return (
 		<header className={styles.header}>
 			<nav className={styles.nav}>
@@ -13,59 +16,59 @@ export default function Header(props) {
 					<div className={styles.rolloutMenu}>
 						<li className={[styles.li, styles.portfolio].join(' ')}>
 							<NavLink
-								to='/'
+								to={Routes.HOME}
 								activeClassName={styles.isActive}
 								//forces exact path matching (though not required by Router)
-								isActive={() => checkIsActive('/')}>
+								isActive={() => checkIsActive(Routes.HOME)}>
 								Portfolio
 							</NavLink>
 						</li>
 						<li className={[styles.li].join(' ')}>
 							<NavLink
-								to='/canvas-lab'
+								to={Routes.CANVAS_LAB}
 								activeClassName={styles.isActive}
 								//forces exact path matching (though not required by Router)
-								isActive={() => checkIsActive('/canvas-lab')}>
+								isActive={() => checkIsActive(Routes.CANVAS_LAB)}>
 								Canvas Lab
 							</NavLink>
 						</li>
 						<li className={styles.li}>
 							<NavLink
-								to='/lascabling'
+								to={Routes.LASC}
 								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/lascabling')}>
+								isActive={() => checkIsActive(Routes.LASC)}>
 								LASCabling
 							</NavLink>
 						</li>
 						<li className={styles.li}>
 							<NavLink
-								to='/email-api'
+								to={Routes.EMAIL}
 								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/email-api')}>
+								isActive={() => checkIsActive(Routes.EMAIL)}>
 								Email API
 							</NavLink>
 						</li>
 						<li className={styles.li}>
 							<NavLink
-								to='/memorize'
+								to={Routes.MEMORIZE}
 								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/memorize')}>
+								isActive={() => checkIsActive(Routes.MEMORIZE)}>
 								Memorize
 							</NavLink>
 						</li>
 						<li className={styles.li}>
 							<NavLink
-								to='/presto'
+								to={Routes.PRESTO}
 								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/presto')}>
+								isActive={() => checkIsActive(Routes.PRESTO)}>
 								Presto
 							</NavLink>
 						</li>
 						<li className={styles.li}>
 							<NavLink
-								to='/jsart'
+								to={Routes.JSART}
 								activeClassName={styles.isActive}
-								isActive={() => checkIsActive('/jsart')}>
+								isActive={() => checkIsActive(Routes.JSART)}>
 								JSArt
 							</NavLink>
 						</li>
@@ -75,17 +78,17 @@ export default function Header(props) {
 					</div>
 					<li className={styles.li}>
 						<NavLink
-							to='/about'
+							to={Routes.ABOUT}
 							activeClassName={styles.isActive}
-							isActive={() => checkIsActive('/about')}>
+							isActive={() => checkIsActive(Routes.ABOUT)}>
 							About
 						</NavLink>
 					</li>
 					<li className={styles.li}>
 						<NavLink
-							to='/contact'
+							to={Routes.CONTACT}
 							activeClassName={styles.isActive}
-							isActive={() => checkIsActive('/contact')}>
+							isActive={() => checkIsActive(Routes.CONTACT)}>
 							Contact
 						</NavLink>
 					</li>

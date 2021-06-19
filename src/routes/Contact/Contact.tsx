@@ -4,7 +4,7 @@ import { contactForm } from '../../config';
 import Decoration from '../../components/Decorations/Decorations1';
 
 import Input from '../../components/Input/Input';
-import Modal from '../../components/Modal/Modal';
+import Modal from '../../components/Message/Message';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
 import { Inputs } from 'types';

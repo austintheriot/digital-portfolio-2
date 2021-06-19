@@ -1,9 +1,17 @@
 import React from 'react';
-import styles from './Modal.module.css';
+import styles from './Message.module.css';
 
-const modal = (props) => {
+interface MessageProps {
+	message: string,
+	color?: 'black' | 'hidden',
+}
+
+const Message = ({
+	message, 
+	color = 'hidden',
+}: MessageProps) => {
 	let divStyle;
-	switch (props?.color) {
+	switch (color) {
 		case 'black':
 			divStyle = styles.divBlack;
 			break;
@@ -12,7 +20,7 @@ const modal = (props) => {
 	}
 
 	let paragraphStyle;
-	switch (props?.color) {
+	switch (color) {
 		case 'black':
 			paragraphStyle = styles.paragraphBlack;
 			break;
@@ -22,9 +30,9 @@ const modal = (props) => {
 
 	return (
 		<div className={divStyle}>
-			<p className={paragraphStyle}>{props.message}</p>
+			<p className={paragraphStyle}>{message}</p>
 		</div>
 	);
 };
 
-export default modal;
+export default Message;

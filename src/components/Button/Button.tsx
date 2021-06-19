@@ -4,19 +4,15 @@ import styles from './Button.module.scss';
 import rightArrowIcon from '../../assets/images/arrow-right.svg';
 
 interface ButtonProps extends ComponentProps<'button'> {
-	arrowLeft?: boolean;
-	arrow?: boolean;
-	down?: boolean;
+	arrow?: 'none' | 'left' | 'right' | 'down',
 	animateLines?: boolean,
 }
 
 export default function Button({
 	children,
-	arrowLeft = false,
+	arrow = 'none',
 	animateLines = true,
 	disabled,
-	arrow,
-	down,
 	...props
 }: ButtonProps) {
 	return (
@@ -29,19 +25,19 @@ export default function Button({
 			disabled={disabled}
 			{...props}
 		>
-			{arrowLeft ? (
+			{arrow === 'left' ? (
 				<img
 					src={rightArrowIcon}
-					alt=""
+					alt={`arrow ${arrow}`}
 					className={[styles.arrowLeft].join(' ')}
 				/>
 			) : null}
 			{children}
-			{arrow ? (
+			{arrow === 'right' || arrow === 'down' ? (
 				<img
 					src={rightArrowIcon}
-					alt=""
-					className={[styles.arrow, down ? styles.down : null].join(' ')}
+					alt={`arrow ${arrow}`}
+					className={[styles.arrow, arrow === 'down' ? styles.down : null].join(' ')}
 				/>
 			) : null}
 			<div className={styles.lineDiv1}></div>

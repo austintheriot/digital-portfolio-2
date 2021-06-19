@@ -13,3 +13,15 @@ export interface InputInnerState {
 export type Inputs<InputType extends string> = {
 	[key in InputType]: InputInnerState;
 }
+
+export enum Routes {
+	HOME = '/',
+	ABOUT = '/about',
+	CONTACT = '/contact',
+  CANVAS_LAB = 'canvas-lab',
+  LASC = 'lascabling',
+  EMAIL = 'email-api',
+  MEMORIZE = 'memorize',
+  PRESTO = 'presto',
+  JSART = 'jsart',
+}

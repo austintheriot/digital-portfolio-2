@@ -77,7 +77,7 @@ export default function About() {
 					</p>
 					<div className={styles.buttonContainer}>
 						<Link to='/contact' className={styles.Link}>
-							<Button arrow>Contact Me</Button>
+							<Button arrow='right'>Contact Me</Button>
 						</Link>
 					</div>
 				</div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Decorations.module.css';
 
-export default (props) => {
+const Decorations3 = () => {
 	return (
 		<>
 			<div className={styles.decoration3__1}></div>
@@ -10,3 +10,5 @@ export default (props) => {
 		</>
 	);
 };
+
+export default Decorations3;

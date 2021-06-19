@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Decorations.module.css';
 
-const Decorations1 = (props) => {
+const Decorations1 = () => {
 	return (
 		<>
 			<div className={styles.decoration1__1}></div>

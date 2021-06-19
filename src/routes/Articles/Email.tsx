@@ -54,10 +54,10 @@ export default function Email() {
 			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#email-api'>
-					<Button arrowLeft>Portfolio</Button>
+					<Button arrow='left'>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow>Contact Me</Button>
+					<Button arrow='right'>Contact Me</Button>
 				</Link>
 			</div>
 		</article>
