@@ -38,7 +38,7 @@ export default function LASC(props) {
 			</div>
 			<ExternalLink to={LASCABLING_LIVE}>
 				<img
-					alt='photos of the LASCabling website'
+					alt="photos of the LASCabling website"
 					src={hero1}
 					className={generalStyles.heroBigger}
 				/>
@@ -52,19 +52,19 @@ export default function LASC(props) {
 				client, and not whatever library or framework I'm using at the moment,
 				determine the choices I make in the build process. The contact page also
 				uses my own{' '}
-				<Link className={generalStyles.trueLink} to='/email-api'>
+				<Link className={generalStyles.trueLink} to="/email-api">
 					custom Email Sender API
 				</Link>{' '}
-				to send the owner of the page an email upon form submission. This
-				eliminates the need for a hosting service that allows server-side code
-				and also cuts cost for my clients, who might otherwise be forced to pay
-				for a third party email service.
+				&#40;Node.js&#41; to send the owner of the page an email upon form
+				submission. This eliminates the need for a hosting service that allows
+				server-side code and also cuts cost for my clients, who might otherwise
+				be forced to pay for a third party email service.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to='/#lascabling'>
+				<Link to="/#lascabling">
 					<Button arrowLeft>Portfolio</Button>
 				</Link>
-				<Link to='/contact' className={generalStyles.Link}>
+				<Link to="/contact" className={generalStyles.Link}>
 					<Button arrow>Contact Me</Button>
 				</Link>
 			</div>

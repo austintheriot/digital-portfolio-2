@@ -49,7 +49,7 @@ export default function Presto(props) {
 			</div>
 			<ExternalLink to={CODE_URL}>
 				<img
-					alt='design previews of Presto'
+					alt="design previews of Presto"
 					src={hero1}
 					className={generalStyles.hero}
 				/>
@@ -62,27 +62,27 @@ export default function Presto(props) {
 			</p>
 			<ExternalLink to={CODE_URL}>
 				<img
-					alt='design previews of Presto'
+					alt="design previews of Presto"
 					src={hero2}
 					className={generalStyles.hero}
 				/>
 			</ExternalLink>
 			<h3 className={generalStyles.h3}>Tech</h3>
 			<p className={generalStyles.p}>
-				Presto is a React single-page web app bootstrapped with Create React App
-				and written in TypeScript, It is built to be fast, secure, and
-				intuitive. React Hooks and Redux for state management;{' '}
-				<ExternalLink to='https://firebase.google.com/products/auth'>
+				Presto is a React single-page web app written in TypeScript and React,
+				It is built to be fast, secure, and intuitive. React Hooks and Redux for
+				state management;{' '}
+				<ExternalLink to="https://firebase.google.com/products/auth">
 					Firebase Authentication,
 				</ExternalLink>{' '}
-				<ExternalLink to='https://firebase.google.com/products/storage'>
+				<ExternalLink to="https://firebase.google.com/products/storage">
 					Cloud Storage,
 				</ExternalLink>{' '}
-				<ExternalLink to='https://firebase.google.com/products/firestore'>
+				<ExternalLink to="https://firebase.google.com/products/firestore">
 					Cloud Firestore
 				</ExternalLink>{' '}
 				for the back end. Presto also uses the{' '}
-				<ExternalLink to='https://www.geoapify.com/'>Geoapify API</ExternalLink>{' '}
+				<ExternalLink to="https://www.geoapify.com/">Geoapify API</ExternalLink>{' '}
 				to validate users' location: they can either autofill their location
 				using the built-in JavaScript Geolocation API combined with Geoapify, or
 				they can manually input their location and select from the options
@@ -93,16 +93,16 @@ export default function Presto(props) {
 			<p className={generalStyles.p}>
 				If you're interested in learning more or contributing to this project,{' '}
 				<ExternalLink to={CODE_URL}>check out the GitHub</ExternalLink> or{' '}
-				<Link to='/contact' className={generalStyles.ExternalLink}>
+				<Link to="/contact" className={generalStyles.ExternalLink}>
 					get in touch
 				</Link>
 				.
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to='/#presto'>
+				<Link to="/#presto">
 					<Button arrowLeft>Portfolio</Button>
 				</Link>
-				<Link to='/contact' className={generalStyles.Link}>
+				<Link to="/contact" className={generalStyles.Link}>
 					<Button arrow>Contact Me</Button>
 				</Link>
 			</div>
