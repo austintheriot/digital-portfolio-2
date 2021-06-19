@@ -1,0 +1,142 @@
+.button {
+	position: relative;
+	display: block;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	text-transform: uppercase;
+	border: 1px solid black;
+	padding: 0.5rem 1rem;
+	margin: 2rem 0;
+	cursor: pointer;
+	background-color: white;
+}
+
+.button a {
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.arrow {
+	position: relative;
+	top: 0.5px;
+	height: 100%;
+	max-width: 100%;
+	margin: 0 0 0 0.5rem;
+	transition: transform 0.2s;
+}
+
+.arrowLeft {
+	composes: arrow;
+	margin: 0 0.5rem 0 0;
+	transform: rotate(180deg);
+}
+
+.button:hover .arrow.down {
+	transform: rotate(90deg);
+}
+
+.inactive {
+	color: #777;
+	background-color: #efefef;
+	border: 1px solid #777;
+	cursor: auto;
+}
+.button.inactive a {
+	pointer-events: none;
+}
+
+/* Hover animations */
+/* Base settings */
+.lineDiv1,
+.lineDiv2,
+.lineDiv3 {
+	display: none;
+}
+
+.animateLines {
+	.lineDiv1,
+	.lineDiv2,
+	.lineDiv3 {
+		top: 0;
+		left: 0;
+		position: absolute;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		display: block !important;
+	}
+
+	.lineDiv1:before,
+	.lineDiv1:after,
+	.lineDiv2:before,
+	.lineDiv2:after,
+	.lineDiv3:before,
+	.lineDiv3:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: 1px;
+		background-color: gray;
+		z-index: -1;
+		transition: left 0.1s;
+	}
+
+	/* Starting Points */
+	.lineDiv1:before {
+		top: 85%;
+	}
+
+	.lineDiv1:after {
+		top: 93%;
+	}
+
+	.lineDiv2:before {
+		top: 17%;
+	}
+
+	.lineDiv2:after {
+		top: 61%;
+	}
+
+	.lineDiv3:before {
+		top: 55%;
+	}
+
+	.lineDiv3:after {
+		top: 25%;
+	}
+
+	/* Hover */
+	&:hover .lineDiv1:before {
+		left: 31%;
+	}
+
+	&:hover .lineDiv1:after {
+		left: -13%;
+	}
+
+	&:hover .lineDiv2:before {
+		left: -23%;
+	}
+
+	&:hover .lineDiv2:after {
+		left: -41%;
+	}
+
+	&:hover .lineDiv3:before {
+		left: 15%;
+	}
+
+	&:hover .lineDiv3:after {
+		left: 37%;
+	}
+
+	/* Focus */
+	&:focus {
+		outline: 1px solid black;
+		outline-offset: 2px;
+	}
+}

@@ -1,5 +1,5 @@
 import React, { ComponentProps } from 'react';
-import styles from './Button.module.css';
+import styles from './Button.module.scss';
 
 import rightArrowIcon from '../../assets/images/arrow-right.svg';
 
@@ -8,12 +8,14 @@ interface ButtonProps extends ComponentProps<'button'> {
 	inactive?: boolean;
 	arrow?: boolean;
 	down?: boolean;
+	animateLines?: boolean,
 }
 
 export default function Button({
 	children,
 	arrowLeft = false,
 	inactive = false,
+	animateLines = true,
 	disabled,
 	arrow,
 	down,
@@ -24,6 +26,7 @@ export default function Button({
 			className={[
 				styles.button,
 				disabled || inactive ? styles.inactive : null,
+				animateLines ? styles.animateLines : null,
 			].join(' ')}
 			{...props}
 		>
