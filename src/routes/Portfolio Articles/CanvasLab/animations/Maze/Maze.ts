@@ -107,25 +107,25 @@ export class MazeAnimation extends Animation {
 		this.generationStack.push(this.firstCell);
 		this.firstCell.generationVisited = true;
 
-		/* 
-    Initialze searchQueue for bfs later.
+		/* Initialize searchQueue for bfs later.
     Starting cell is the top left cell.
     Ending cell is the bottom right cell.
     Even though the cells do not yet have their end state
     values (walls, etc.), they are reference values, 
     so by the time we get around to solving the maze,
-    they will be ready.
-    */
+    they will be ready. */
 		this.startCell = this.array[0][0];
 		this.searchQueue.add(this.startCell);
 		this.searchStack.push(this.startCell);
 		this.endCell = this.array[this.array.length - 1][this.array.length - 1];
 
-		// reset on window resize after 500 ms of not resizing
+		// reset on window resize after 500 ms of pause in resizing
 		window.onresize = debounce(
 			() => {
-				this.reset(options);
-				this.animate();
+				if (window.innerWidth > 1100) {
+					this.reset(options);
+					this.animate(); 
+				}
 			},
 			500,
 			{ leading: false },
