@@ -7,7 +7,7 @@ import Modal from '../../components/Modal/Modal';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
 
-export default (props) => {
+const TryItOut = (props) => {
 	const [inputs, setInputs] = useState({
 		email: {
 			value: '',
@@ -299,3 +299,5 @@ export default (props) => {
 		</section>
 	);
 };
+
+export default TryItOut;
