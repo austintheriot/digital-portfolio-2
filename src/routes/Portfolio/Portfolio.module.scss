@@ -1,5 +1,24 @@
-/* General Font Sizing: --alternative sizes for Portfolio page only*/
+.Maze {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100vw;
+	max-width: 1000px;
+	height: 100vw;
+	max-height: 1000px;
+	opacity: 0.2;
+	mask-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255, 1));
+	-webkit-mask-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0), rgba(255,255,255, 1));
 
+	canvas {
+		height: 100%;
+		width: 100%;
+	}
+}
+
+/* General Font Sizing: --alternative sizes for Portfolio page only*/
 .container .titleContainer {
 	position: relative;
 	padding-top: 125px;
@@ -17,7 +36,6 @@
 	margin: 150px auto 3rem auto;
 	font-weight: 200;
 	text-transform: uppercase;
-	background-color: white;
 }
 
 .subtitle {
@@ -26,7 +44,6 @@
 	text-transform: lowercase;
 	text-align: center;
 	margin: 2rem auto;
-	background-color: white;
 	width: 90%;
 	line-height: 1.25;
 }
@@ -54,7 +71,6 @@
 	text-transform: none;
 	margin-top: 150px;
 	text-align: center;
-	background-color: white;
 }
 
 /* Project Card Title */

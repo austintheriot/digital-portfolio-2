@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styles from './Portfolio.module.css';
+import styles from './Portfolio.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../../components/Button/Button';
@@ -16,6 +16,7 @@ import canvasLabLogo from '../../assets/images/canvas-lab__logo.svg';
 
 //enable smooth scroll on Safari
 import smoothscroll from 'smoothscroll-polyfill';
+import { RenderMaze } from 'routes/Portfolio Articles/CanvasLab/animations/Maze/RenderMaze';
 smoothscroll.polyfill();
 
 gsap.registerPlugin(ScrollTrigger);
@@ -86,6 +87,9 @@ export default function Portfolio(props) {
 	return (
 		<div className={styles.container}>
 			<section>
+				<div className={styles.Maze}>
+					<RenderMaze />
+				</div>
 				<Decoration />
 				<h1>Austin Theriot</h1>
 				<p className={styles.subtitle}>front end developer</p>
