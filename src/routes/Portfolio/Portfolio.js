@@ -46,7 +46,8 @@ const useSmoothScroll = () => {
 };
 
 const mazeOptions = {
-	runOnSmallScreenSizes: false
+	shouldRunOnSmallScreens: false,
+	shouldResetOnWindowResize: true,
 };
 
 export default function Portfolio(props) {

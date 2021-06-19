@@ -16,7 +16,7 @@ interface RenderPathfinderProps {
 }
 
 export const RenderPathfinder = ({
-	options: optionProps = {},
+	options: optionProps = defaults,
 }: RenderPathfinderProps) => {
 	useEffect(() => {
 		window.scrollTo(0, 0);

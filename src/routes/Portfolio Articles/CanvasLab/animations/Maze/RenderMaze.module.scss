@@ -1,0 +1,21 @@
+.Container {
+  height: max-content;
+  width: max-content;
+  margin: 2rem auto;
+
+	button {
+		margin: 2rem auto;
+	}
+}
+
+.MazeContainer {
+	width: 90vw;
+	max-width: 800px;
+	height: 80vw;
+	max-height: 800px;
+
+	canvas {
+		height: 100%;
+		width: 100%;
+	}
+}

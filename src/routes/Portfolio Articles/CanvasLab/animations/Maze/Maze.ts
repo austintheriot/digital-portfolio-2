@@ -15,7 +15,8 @@ export interface MazeOptions {
 	searchesPerFrame?: string;
 	solvePathsPerFrame?: string;
 	waiting?: boolean;
-	runOnSmallScreenSizes?: boolean;
+	shouldRunOnSmallScreens?: boolean;
+	shouldResetOnWindowResize?: boolean;
 }
 
 export class MazeAnimation extends Animation {
@@ -36,7 +37,8 @@ export class MazeAnimation extends Animation {
 	endCell: Cell;
 	solvePath: Cell[];
 	isWaitingForAnimation: boolean;
-	runOnSmallScreenSizes: boolean;
+	shouldRunOnSmallScreens: boolean;
+	shouldResetOnWindowResize: boolean;
 	searchType: 'bfs' | 'dfs';
 
 	constructor(canvas: HTMLCanvasElement, options: MazeOptions = {}) {
@@ -54,7 +56,8 @@ export class MazeAnimation extends Animation {
 		this.searchType = 'dfs';
 		this.solvePath = [];
 		this.frameCount = 0;
-		this.runOnSmallScreenSizes = options.runOnSmallScreenSizes ?? true;
+		this.shouldRunOnSmallScreens = options.shouldRunOnSmallScreens ?? true;
+		this.shouldResetOnWindowResize = options.shouldResetOnWindowResize ?? false;
 
 		//which portion of the animation is complete
 		this.state = 'generating';
@@ -122,7 +125,7 @@ export class MazeAnimation extends Animation {
 		// reset on window resize after 500 ms of pause in resizing
 		window.onresize = debounce(
 			() => {
-				if (window.innerWidth > 1100) {
+				if (this.shouldResetOnWindowResize && window.innerWidth > 1100) {
 					this.reset(options);
 					this.animate(); 
 				}
@@ -370,7 +373,7 @@ export class MazeAnimation extends Animation {
 		this.searchType = 'dfs';
 		this.solvePath = [];
 		this.frameCount = 0;
-		this.runOnSmallScreenSizes = options.runOnSmallScreenSizes ?? true;
+		this.shouldRunOnSmallScreens = options.shouldRunOnSmallScreens ?? true;
 
 		//which portion of the animation is complete
 		this.state = 'generating';
@@ -444,7 +447,7 @@ export class MazeAnimation extends Animation {
   */
 	animate() {
 		// do not run on small screen sizes
-		if (!this.runOnSmallScreenSizes && window.innerWidth < 1100) {
+		if (!this.shouldRunOnSmallScreens && window.innerWidth < 1100) {
 			return;
 		}
 
