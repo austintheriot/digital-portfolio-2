@@ -45,6 +45,8 @@ export const CanvasLab = () => {
 					newOptions.searchType = value;
 					return newOptions;
 				});
+				// the canvas resets on selection
+				setIsSolved(false);
 			}
 		}
 	};
@@ -108,7 +110,7 @@ export const CanvasLab = () => {
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
-			<h3 className={generalStyles.h3}>Try It Out</h3>
+			<h3 className={generalStyles.h3}>Pathfinder Visualization</h3>
 			<div className={canvasLabStyles.ControlsContainer}>
 				<Button onClick={handleSolveClick} disabled={isSolved}>
 					Solve
