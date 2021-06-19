@@ -10,6 +10,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
+import { Routes } from 'types';
 
 const CODE_URL = 'https://github.com/austintheriot/canvas-lab';
 
@@ -62,7 +63,7 @@ export const CanvasLab = () => {
 				<Link to="/#canvas-lab">
 					<Button arrow='left'>Portfolio</Button>
 				</Link>
-				<Link to="/contact" className={generalStyles.Link}>
+				<Link to={Routes.CONTACT} className={generalStyles.Link}>
 					<Button arrow='right'>Contact Me</Button>
 				</Link>
 			</div>

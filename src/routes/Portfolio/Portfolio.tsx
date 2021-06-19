@@ -15,6 +15,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 import { RenderMaze } from 'routes/Articles/CanvasLab/animations/Maze/RenderMaze';
 import { useSmoothScroll } from 'hooks/useSmoothScroll';
 import { useScroll } from 'hooks/useScroll';
+import { Routes } from 'types';
 /* import yevgeniyMonogram from '../../assets/images/yevgeniy__monogram.svg'; */
 
 smoothscroll.polyfill();
@@ -178,7 +179,7 @@ export default function Portfolio() {
 				</ul>
 			</section>
 			<div className={styles.AboutMeButton}>
-				<Link to="/about" className={styles.Link}>
+				<Link to={Routes.ABOUT} className={styles.Link}>
 					<Button arrow='right'>About Me</Button>
 				</Link>
 			</div>

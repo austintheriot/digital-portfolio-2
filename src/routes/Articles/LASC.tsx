@@ -11,6 +11,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
+import { Routes } from 'types';
 
 const LASCABLING_LIVE = 'https://www.lascabling.com/';
 const LASCABLING_CODE = 'https://github.com/austintheriot/lascabling';
@@ -56,7 +57,7 @@ export default function LASC() {
 				client, and not whatever library or framework I'm using at the moment,
 				determine the choices I make in the build process. The contact page also
 				uses my own{' '}
-				<Link className={generalStyles.trueLink} to="/email-api">
+				<Link className={generalStyles.trueLink} to={Routes.EMAIL}>
 					custom Email Sender API
 				</Link>{' '}
 				&#40;Node.js&#41; to send the owner of the page an email upon form
@@ -68,7 +69,7 @@ export default function LASC() {
 				<Link to="/#lascabling">
 					<Button arrow='left'>Portfolio</Button>
 				</Link>
-				<Link to="/contact" className={generalStyles.Link}>
+				<Link to={Routes.CONTACT} className={generalStyles.Link}>
 					<Button arrow='right'>Contact Me</Button>
 				</Link>
 			</div>

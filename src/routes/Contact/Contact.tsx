@@ -17,7 +17,6 @@ enum InputTypes {
 
 const isInputType = (t: unknown): t is InputTypes => typeof t === 'string' && ['email', 'name', 'message'].includes(t);
 
-
 const Contact = () => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -286,26 +285,26 @@ const Contact = () => {
 				<Input
 					type='text'
 					customType={InputTypes.EMAIL}
-					handleFocus={(e: FocusEvent) => handleFocus(e, InputTypes.EMAIL)}
-					handleBlur={(e: FocusEvent) => handleBlur(e, InputTypes.EMAIL)}
-					handleChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, InputTypes.EMAIL)}
+					handleFocus={handleFocus}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
 					label={'Email*'}
 					inputs={inputs}
 				/>
 				<Input
 					type='text'
 					customType={InputTypes.NAME}
-					handleFocus={(e: FocusEvent) => handleFocus(e, InputTypes.NAME)}
-					handleBlur={(e: FocusEvent) => handleBlur(e, InputTypes.NAME)}
-					handleChange={(e: ChangeEvent<HTMLInputElement>) => handleChange(e, InputTypes.NAME)}
+					handleFocus={handleFocus}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
 					label={'Name (optional)'}
 					inputs={inputs}
 				/>
 				<Textarea
 					customType={InputTypes.MESSAGE}
-					handleFocus={(e: FocusEvent<HTMLTextAreaElement>, customType: InputTypes.MESSAGE) => handleFocus(e, customType)}
-					handleBlur={(e: FocusEvent<HTMLTextAreaElement>, customType: InputTypes.MESSAGE) => handleBlur(e, customType)}
-					handleChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleChange(e, InputTypes.MESSAGE)}
+					handleFocus={handleFocus}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
 					label={'Message (optional)'}
 					inputs={inputs}
 				/>

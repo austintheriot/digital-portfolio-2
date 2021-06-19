@@ -73,7 +73,7 @@ export default function Header() {
 							</NavLink>
 						</li>
 						{/* <li className={styles.li}>
-							<NavLink to='/sharlat' activeClassName={styles.isActive} isActive={() => checkIsActive('/sharlat')}>Sharlat</NavLink>
+							<NavLink to={Routes.SHARLAT} activeClassName={styles.isActive} isActive={() => checkIsActive('/sharlat')}>Sharlat</NavLink>
 						</li> */}
 					</div>
 					<li className={styles.li}>

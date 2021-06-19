@@ -18,6 +18,7 @@ import JSArt from './routes/Articles/JSArt';
 import Email from './routes/Articles/Email';
 import Memorize from './routes/Articles/Memorize';
 import { CanvasLab } from './routes/Articles/CanvasLab/CanvasLab';
+import { Routes } from 'types';
 
 function App() {
 	const location = useLocation();
@@ -33,7 +34,7 @@ function App() {
 		<div className="App">
 			<Header />
 			<Switch>
-				<Route path="/lascabling" component={LASC} />
+				<Route path={Routes.LASC} component={LASC} />
 				{/* <Route path='/sharlat' component={Sharlat} /> */}
 				<Route path="/email-api" component={Email} />
 				<Route path="/memorize" component={Memorize} />

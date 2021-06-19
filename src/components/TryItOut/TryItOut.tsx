@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, FocusEvent, FormEvent, useState } from 'react';
 import styles from './TryItOut.module.css';
 import { tryItOut } from '../../config';
 import Input from '../../components/Input/Input';
 import Modal from '../Message/Message';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
+import { Inputs } from 'types';
+
+enum InputTypes {
+	EMAIL = 'email',
+	NAME = 'name',
+	MESSAGE = 'message',
+}
+
+const isInputType = (t: unknown): t is InputTypes => typeof t === 'string' && ['email', 'name', 'message'].includes(t);
 
 const TryItOut = () => {
-	const [inputs, setInputs] = useState({
+	const [inputs, setInputs] = useState<Inputs<InputTypes>>({
 		email: {
 			value: '',
 			animateUp: false,
@@ -45,7 +54,7 @@ const TryItOut = () => {
 	const [buttonDisabled, setbuttonDisabled] = useState(false);
 	const [modalMessage, setModalMessage] = useState('');
 
-	const handleFocus = (event, newestType) => {
+	const handleFocus = (event: FocusEvent, newestType: InputTypes) => {
 		//animation
 		setInputs((prevState) => ({
 			...prevState,
@@ -57,7 +66,7 @@ const TryItOut = () => {
 		}));
 	};
 
-	const handleBlur = (event, newestType) => {
+	const handleBlur = (event: FocusEvent, newestType: InputTypes) => {
 		//animation & output error if empty
 		let targetEmpty =
 			inputs[newestType].touched && inputs[newestType].value.length === 0
@@ -86,13 +95,15 @@ const TryItOut = () => {
 	};
 
 	const validateInputs = (
-		newestType,
-		targetValue,
-		targetEmpty,
-		isBeingSubmitted = false
+		newestType: InputTypes | '',
+		targetValue: string | null,
+		targetEmpty: boolean | null,
+		isBeingSubmitted: boolean | null = false
 	) => {
 		//validate input here
-		let anyErrorsObject = {};
+		let anyErrorsObject = {} as {
+			[key in InputTypes]: string;
+		};
 		let email = newestType === 'email' ? targetValue : inputs.email.value;
 
 		//prevent unnecessary validation checks
@@ -102,6 +113,7 @@ const TryItOut = () => {
 			inputs.email.message.error
 		) {
 			if (
+				!email ||
 				!email.match(
 					// eslint-disable-next-line no-control-regex
 					/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
@@ -110,13 +122,14 @@ const TryItOut = () => {
 				anyErrorsObject.email = 'Invalid email';
 			}
 
-			if (email.length === 0) {
+			if (!email || email.length === 0) {
 				anyErrorsObject.email = 'This field is required.';
 			}
 		}
 
 		//update state for all inputs
 		Object.keys(inputs).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			setInputs((prevState) => ({
 				...prevState,
 				[inputType]: {
@@ -141,7 +154,7 @@ const TryItOut = () => {
 		return anyErrorsObject;
 	};
 
-	const handleChange = (event, newestType) => {
+	const handleChange = (event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>, newestType: InputTypes) => {
 		let targetValue = event.target.value;
 		let targetEmpty = targetValue.length === 0 ? true : false;
 		if (
@@ -152,7 +165,7 @@ const TryItOut = () => {
 		}
 	};
 
-	const submitHandler = (event) => {
+	const submitHandler = (event: FormEvent) => {
 		//prevent default form submission
 		event.preventDefault();
 
@@ -160,6 +173,7 @@ const TryItOut = () => {
 		let anyErrorsFound = false;
 		let errors = validateInputs('', null, null, true);
 		Object.keys(errors).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			if (errors[inputType]) {
 				anyErrorsFound = true;
 			}
@@ -174,9 +188,10 @@ const TryItOut = () => {
 		}
 	};
 
-	const disableElements = (disabled) => {
+	const disableElements = (disabled: boolean) => {
 		//Set all inputs to disabled or enabled
 		Object.keys(inputs).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			setInputs((prevState) => ({
 				...prevState,
 				[inputType]: {
@@ -190,6 +205,7 @@ const TryItOut = () => {
 
 	const clearInputs = () => {
 		Object.keys(inputs).forEach((inputType) => {
+			if (!isInputType(inputType)) return;
 			setInputs((prevState) => ({
 				...prevState,
 				[inputType]: {
@@ -263,28 +279,27 @@ const TryItOut = () => {
 			<form onSubmit={submitHandler}>
 				<Input
 					type='text'
-					customType='email'
-					handleFocus={(e) => handleFocus(e, 'email')}
-					handleBlur={(e) => handleBlur(e, 'email')}
-					handleChange={(e) => handleChange(e, 'email')}
+					customType={InputTypes.EMAIL}
+					handleFocus={handleFocus}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
 					label={'Email*'}
 					inputs={inputs}
 				/>
 				<Input
 					type='text'
-					customType='name'
-					handleFocus={(e) => handleFocus(e, 'name')}
-					handleBlur={(e) => handleBlur(e, 'name')}
-					handleChange={(e) => handleChange(e, 'name')}
+					customType={InputTypes.NAME}
+					handleFocus={handleFocus}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
 					label={'Name (optional)'}
 					inputs={inputs}
 				/>
 				<Textarea
-					type='text'
-					customType='message'
-					handleFocus={(e) => handleFocus(e, 'message')}
-					handleBlur={(e) => handleBlur(e, 'message')}
-					handleChange={(e) => handleChange(e, 'message')}
+					customType={InputTypes.MESSAGE}
+					handleFocus={handleFocus}
+					handleBlur={handleBlur}
+					handleChange={handleChange}
 					label={'Message (optional)'}
 					inputs={inputs}
 				/>

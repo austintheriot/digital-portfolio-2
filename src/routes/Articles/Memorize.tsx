@@ -10,6 +10,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
+import { Routes } from 'types';
 
 const MEMORIZE_CODE_URL = 'https://github.com/austintheriot/memorize-scripture';
 const MEMORIZE_LIVE_URL = 'https://memorizescripture.org/';
@@ -133,7 +134,7 @@ export default function Memorize() {
 				<Link to='/#memorize'>
 					<Button arrow='left'>Portfolio</Button>
 				</Link>
-				<Link to='/contact' className={generalStyles.Link}>
+				<Link to={Routes.CONTACT} className={generalStyles.Link}>
 					<Button arrow='right'>Contact Me</Button>
 				</Link>
 			</div>

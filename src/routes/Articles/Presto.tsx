@@ -11,6 +11,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
+import { Routes } from 'types';
 
 const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
 const DEMO_URL = 'https://presto-6b7c9.firebaseapp.com/';
@@ -97,7 +98,7 @@ export default function Presto() {
 			<ArticleParagraph>
 				If you're interested in learning more or contributing to this project,{' '}
 				<ExternalLink to={CODE_URL}>check out the GitHub</ExternalLink> or{' '}
-				<Link to="/contact" className={generalStyles.ExternalLink}>
+				<Link to={Routes.CONTACT} className={generalStyles.ExternalLink}>
 					get in touch
 				</Link>
 				.
@@ -106,7 +107,7 @@ export default function Presto() {
 				<Link to="/#presto">
 					<Button arrow='left'>Portfolio</Button>
 				</Link>
-				<Link to="/contact" className={generalStyles.Link}>
+				<Link to={Routes.CONTACT} className={generalStyles.Link}>
 					<Button arrow='right'>Contact Me</Button>
 				</Link>
 			</div>
