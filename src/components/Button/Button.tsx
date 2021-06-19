@@ -5,7 +5,6 @@ import rightArrowIcon from '../../assets/images/arrow-right.svg';
 
 interface ButtonProps extends ComponentProps<'button'> {
 	arrowLeft?: boolean;
-	inactive?: boolean;
 	arrow?: boolean;
 	down?: boolean;
 	animateLines?: boolean,
@@ -14,7 +13,6 @@ interface ButtonProps extends ComponentProps<'button'> {
 export default function Button({
 	children,
 	arrowLeft = false,
-	inactive = false,
 	animateLines = true,
 	disabled,
 	arrow,
@@ -25,9 +23,10 @@ export default function Button({
 		<button
 			className={[
 				styles.button,
-				disabled || inactive ? styles.inactive : null,
+				disabled ? styles.disabled : null,
 				animateLines ? styles.animateLines : null,
 			].join(' ')}
+			disabled={disabled}
 			{...props}
 		>
 			{arrowLeft ? (
