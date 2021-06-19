@@ -3,7 +3,6 @@ import styles from './Portfolio.module.scss';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Button from '../../components/Button/Button';
-import Decoration from '../../components/Decorations/Decorations1';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { Link } from 'react-router-dom';
 import prestoLogo from '../../assets/images/presto__logo.svg';
@@ -46,8 +45,12 @@ const useSmoothScroll = () => {
 	return [executeSmoothScroll, htmlElRef];
 };
 
+const mazeOptions = {
+	runOnSmallScreenSizes: false
+};
+
 export default function Portfolio(props) {
-	const [scrollToMywork, myWorkRef] = useSmoothScroll();
+	const [scrollToMyWork, myWorkRef] = useSmoothScroll();
 	const [scrollToMemorize, memorizeRef] = useScroll();
 	const [scrollToPresto, prestoRef] = useScroll();
 	/* 	const [scrollToSharlat, sharlatRef] = useScroll(); */
@@ -88,14 +91,15 @@ export default function Portfolio(props) {
 		<div className={styles.container}>
 			<section>
 				<div className={styles.Maze}>
-					<RenderMaze />
+					<RenderMaze options={mazeOptions} />
 				</div>
-				<Decoration />
 				<h1>Austin Theriot</h1>
 				<p className={styles.subtitle}>front end developer</p>
-				<Button onClick={scrollToMywork} arrow={'true'} down={'true'}>
-					See My Work
-				</Button>
+				<div className={styles.SeeMyWork}>
+					<Button onClick={scrollToMyWork} arrow down animateLines={false}>
+						See My Work
+					</Button>
+				</div>
 			</section>
 			<section>
 				<h2 id="work">My Work</h2>
