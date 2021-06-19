@@ -31,3 +31,4 @@ untracked/
 notes.txt
 
 .firebase/
+.eslintcache

@@ -1,29 +1,45 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import styles from './Button.module.css';
 
 import rightArrowIcon from '../../assets/images/arrow-right.svg';
 
-export default function Button({ children, arrowLeft, ...props }) {
+interface ButtonProps extends ComponentProps<'button'> {
+	arrowLeft?: boolean;
+	inactive?: boolean;
+	arrow?: boolean;
+	down?: boolean;
+}
+
+export default function Button({
+	children,
+	arrowLeft = false,
+	inactive = false,
+	disabled,
+	arrow,
+	down,
+	...props
+}: ButtonProps) {
 	return (
 		<button
 			className={[
 				styles.button,
-				props.disabled || props.inactive ? styles.inactive : null,
+				disabled || inactive ? styles.inactive : null,
 			].join(' ')}
-			{...props}>
+			{...props}
+		>
 			{arrowLeft ? (
 				<img
 					src={rightArrowIcon}
-					alt=''
+					alt=""
 					className={[styles.arrowLeft].join(' ')}
 				/>
 			) : null}
 			{children}
-			{props.arrow ? (
+			{arrow ? (
 				<img
 					src={rightArrowIcon}
-					alt=''
-					className={[styles.arrow, props.down ? styles.down : null].join(' ')}
+					alt=""
+					className={[styles.arrow, down ? styles.down : null].join(' ')}
 				/>
 			) : null}
 			<div className={styles.lineDiv1}></div>

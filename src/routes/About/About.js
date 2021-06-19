@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './About.module.css';
 
 import Button from '../../components/Button/Button';
@@ -9,7 +9,10 @@ import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 import headshot from '../../assets/images/headshot.jpg';
 
 export default function About() {
-	window.scrollTo(0, 0);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
+
 	const OPEN_SOURCE_JAVASCRIPT_ALGORITHMS =
 		'https://github.com/trekhleb/javascript-algorithms';
 

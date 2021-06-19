@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -16,7 +16,9 @@ import hero3__3 from '../../assets/images/jsart__hero3--3.jpg';
 import { ExternalLink } from 'components/ExternalLink/ExternalLink';
 
 export default function JSArt(props) {
-	window.scrollTo(0, 0);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	// eslint-disable-next-line no-unused-vars
 	const CANVAS_PROJECTS_COLLECTION_CODE =
@@ -106,10 +108,10 @@ export default function JSArt(props) {
 			</div>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#jsart'>
-					<Button arrowLeft='true'>Portfolio</Button>
+					<Button arrowLeft>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow='true'>Contact Me</Button>
+					<Button arrow>Contact Me</Button>
 				</Link>
 			</div>
 		</article>

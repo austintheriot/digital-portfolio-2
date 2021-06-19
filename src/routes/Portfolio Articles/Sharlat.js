@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -10,7 +10,9 @@ import hero2 from '../../assets/images/yevgeniy__hero2.png';
 import hero3 from '../../assets/images/yevgeniy__hero3.png';
 
 export default function Sharlat(props) {
-	window.scrollTo(0, 0);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const WEBSITE_URL = 'https://ysharlat.imfast.io/';
 
@@ -73,10 +75,10 @@ export default function Sharlat(props) {
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#sharlat'>
-					<Button arrowLeft='true'>Portfolio</Button>
+					<Button arrowLeft>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow='true'>Contact Me</Button>
+					<Button arrow>Contact Me</Button>
 				</Link>
 			</div>
 			<ExternalLink to={WEBSITE_URL}>

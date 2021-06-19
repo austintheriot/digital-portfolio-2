@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,9 @@ import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 import hero1 from '../../assets/images/lascabling__allscreens.jpg';
 
 export default function LASC(props) {
-	window.scrollTo(0, 0);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const LASCABLING_LIVE = 'https://www.lascabling.com/';
 	const LASCABLING_CODE = 'https://github.com/austintheriot/lascabling';
@@ -60,10 +62,10 @@ export default function LASC(props) {
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#lascabling'>
-					<Button arrowLeft='true'>Portfolio</Button>
+					<Button arrowLeft>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow='true'>Contact Me</Button>
+					<Button arrow>Contact Me</Button>
 				</Link>
 			</div>
 		</article>

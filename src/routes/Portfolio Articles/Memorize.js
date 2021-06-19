@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -8,7 +8,9 @@ import { ExternalLink } from '../../components/ExternalLink/ExternalLink.tsx';
 import hero1 from '../../assets/images/memorize__hero--1.png';
 
 export default function Memorie() {
-	window.scrollTo(0, 0);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const MEMORIZE_CODE_URL =
 		'https://github.com/austintheriot/memorize-scripture';
@@ -126,10 +128,10 @@ export default function Memorie() {
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#memorize'>
-					<Button arrowLeft='true'>Portfolio</Button>
+					<Button arrowLeft>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow='true'>Contact Me</Button>
+					<Button arrow>Contact Me</Button>
 				</Link>
 			</div>
 		</article>

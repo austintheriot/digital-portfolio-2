@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,9 @@ import hero1 from '../../assets/images/presto__hero1.jpg';
 import hero2 from '../../assets/images/presto__hero2.jpg';
 
 export default function Presto(props) {
-	window.scrollTo(0, 0);
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
 	const DEMO_URL = 'https://presto-6b7c9.firebaseapp.com/';
@@ -98,10 +100,10 @@ export default function Presto(props) {
 			</p>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
 				<Link to='/#presto'>
-					<Button arrowLeft='true'>Portfolio</Button>
+					<Button arrowLeft>Portfolio</Button>
 				</Link>
 				<Link to='/contact' className={generalStyles.Link}>
-					<Button arrow='true'>Contact Me</Button>
+					<Button arrow>Contact Me</Button>
 				</Link>
 			</div>
 		</article>

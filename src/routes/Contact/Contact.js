@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Contact.module.css';
 import { contactForm } from '../../config';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -8,8 +8,10 @@ import Modal from '../../components/Modal/Modal';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
 
-export default (props) => {
-	window.scrollTo(0, 0);
+const Contact = (props) => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [])
 
 	const [inputs, setInputs] = useState({
 		email: {
@@ -299,3 +301,5 @@ export default (props) => {
 		</section>
 	);
 };
+
+export default Contact;
