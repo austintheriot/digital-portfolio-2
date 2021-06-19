@@ -1,29 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useAnimation } from 'routes/Portfolio Articles/CanvasLab/hooks/useAnimation';
-import type { GridOptions } from './animations/PathFinder/Grid';
-import { GridAnimation } from './animations/PathFinder/Grid';
+import type { GridOptions } from '../../animations/PathFinder/Grid';
+import { GridAnimation } from '../../animations/PathFinder/Grid';
 import { cloneDeep } from 'lodash';
-import Decoration from '../../../components/Decorations/Decorations1';
 import Button from 'components/Button/Button';
-import { Link } from 'react-router-dom';
-import generalStyles from '../PortfolioArticle.module.css';
-import canvasLabStyles from './CanvasLab.module.scss';
-import { ExternalLink } from 'components/ExternalLink/ExternalLink';
-import { RenderPathfinder } from './animations/PathFinder/RenderPathfinder';
+import canvasLabStyles from './RenderPathfinder.module.scss';
 
 const defaults: GridOptions = {
 	dimensions: '50',
 	lineWidth: '1',
 };
 
-const CODE_URL = 'https://github.com/austintheriot/canvas-lab';
+interface RenderPathfinderProps {
+	options?: GridOptions;
+}
 
-export const CanvasLab = () => {
+export const RenderPathfinder = ({
+	options: optionProps = {},
+}: RenderPathfinderProps) => {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const [options, setOptions] = useState<GridOptions>(defaults);
+  // prevent infinite re-renders when feeding options to useAnimation
+	const animationOptions = useMemo(() => ({ ...defaults, ...optionProps }), [
+		optionProps,
+	]);
+	const [options, setOptions] = useState<GridOptions>(animationOptions);
 	const [canvas, animation, canvasRef] = useAnimation(GridAnimation, options);
 	const gridAnimation = animation as GridAnimation | null;
 	// require reset before trying to solve again
@@ -39,7 +42,8 @@ export const CanvasLab = () => {
 	const handleSearchSelection = (e: React.ChangeEvent<HTMLSelectElement>) => {
 		const value = e.currentTarget.value;
 		if (gridAnimation) {
-			if (value === 'bfs' || value === 'dfs' || value === 'biBfs') {
+      if (value === 'bfs' || value === 'dfs' || value === 'biBfs') {
+        animation.init(options);
 				gridAnimation.onSearchSelection(value);
 				setOptions((prevOptions) => {
 					const newOptions = cloneDeep(prevOptions);
@@ -89,36 +93,29 @@ export const CanvasLab = () => {
 	});
 
 	return (
-		<article>
-			<Decoration />
-			<h1 className={generalStyles.h1}>Canvas Lab</h1>
-			<h2 className={generalStyles.h2}>Algorithm visualizations</h2>
-			<h3 className={generalStyles.h3}>About</h3>
-			<p className={generalStyles.p}>
-				I've always been fascinated with data structures and algorithms, and
-				I've also always been interested in interactive visual experiments /
-				generative art projects. This project was a way for me to combine those
-				interests in one place. Here's a sample from this project: a
-				path-finding algorithm visualizer. Play around with placing walls walls
-				and letting the algorithm try to find a path from one corner of the
-				canvas to the other! This project was a created with TypeScript and
-				React.
-			</p>
-			<div className={generalStyles.center}>
-				<ExternalLink to={CODE_URL} underline={false}>
-					<Button>See Code</Button>
-				</ExternalLink>
+		<>
+			<div className={canvasLabStyles.ControlsContainer}>
+				<Button onClick={handleSolveClick} disabled={isSolved}>
+					Solve
+				</Button>
+				<Button
+					onClick={() => {
+						animation.init(options);
+						setIsSolved(false);
+					}}
+				>
+					Start Over
+				</Button>
+				<div>
+					<label htmlFor="searchType">Search Type</label>
+					<select onChange={handleSearchSelection} id="searchType">
+						<option value="bfs">Breadth-First Search</option>
+						<option value="dfs">Depth-First Search</option>
+						<option value="biBfs">Bidirectional Breadth-First Search</option>
+					</select>
+				</div>
 			</div>
-			<h3 className={generalStyles.h3}>Pathfinder Visualization</h3>
-			<RenderPathfinder />
-			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<Link to="/#canvas-lab">
-					<Button arrowLeft>Portfolio</Button>
-				</Link>
-				<Link to="/contact" className={generalStyles.Link}>
-					<Button arrow>Contact Me</Button>
-				</Link>
-			</div>
-		</article>
+			<div className={canvasLabStyles.CanvasContainer}>{canvas}</div>
+		</>
 	);
 };

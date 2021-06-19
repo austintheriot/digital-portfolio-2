@@ -115,8 +115,7 @@ export class GridAnimation extends Animation {
 		this.generationStack.push(this.firstTile);
 		this.firstTile.generationVisited = true;
 
-		/* 
-    Initialze searchQueue1 for bfs later.
+		/* Initialize searchQueue1 for bfs later.
     Starting tile is the top left tile.
     Ending tile is the bottom right tile.
     Even though the tiles do not yet have their end state
@@ -256,11 +255,6 @@ export class GridAnimation extends Animation {
 			this.isWaitingForAnimation = false;
 		}
 	}
-
-	/* 
-		Should be a direct copy of the class constructor function.
-	*/
-	reset(options: GridOptions) {}
 
 	/* 
     Top-level animation function. 
