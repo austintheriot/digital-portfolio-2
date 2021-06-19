@@ -169,16 +169,14 @@ export default function Portfolio(props) {
 				<h2>Skills</h2>
 				<h3 className={styles.code}>Code:</h3>
 				<ul>
-					<li>JavaScript (ES6+)</li>
 					<li>TypeScript</li>
+					<li>JavaScript</li>
 					<li>React</li>
 					<li>Redux</li>
 					<li>CSS3</li>
-					<li>Sass</li>
 					<li>HTML5</li>
+					<li>Sass</li>
 					<li>Git/GitHub</li>
-					<li>REST APIs</li>
-					<li>Firebase</li>
 					<li>Data Structures</li>
 					<li>Algorithms</li>
 				</ul>
@@ -199,10 +197,16 @@ export default function Portfolio(props) {
 						Illustrator)
 					</li>
 				</ul>
+				<h3>Learning:</h3>
+				<ul>
+					<li>Rust</li>
+				</ul>
 			</section>
-			<Link to="/about" className={styles.Link}>
-				<Button arrow={'true'}>About Me</Button>
-			</Link>
+			<div className={styles.AboutMeButton}>
+				<Link to="/about" className={styles.Link}>
+					<Button arrow>About Me</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }
