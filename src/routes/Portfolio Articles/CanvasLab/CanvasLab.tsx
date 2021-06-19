@@ -18,6 +18,10 @@ const defaults: GridOptions = {
 const CODE_URL = 'https://github.com/austintheriot/canvas-lab';
 
 export const CanvasLab = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	const [options, setOptions] = useState<GridOptions>(defaults);
 	const [canvas, animation, canvasRef] = useAnimation(GridAnimation, options);
 	const gridAnimation = animation as GridAnimation | null;

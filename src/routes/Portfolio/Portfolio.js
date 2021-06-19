@@ -1,23 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Portfolio.module.css';
-
-//GSAP
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-//components
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { Link } from 'react-router-dom';
-
-//images
 import prestoLogo from '../../assets/images/presto__logo.svg';
-/* import yevgeniyMonogram from '../../assets/images/yevgeniy__monogram.svg'; */
 import lascablingLogo from '../../assets/images/lascabling__logo.svg';
 import jsartGif from '../../assets/images/jsart__logo.svg';
 import emailAPI from '../../assets/images/email-api__logo.svg';
 import memorizeLogo from '../../assets/images/memorize__logo.svg';
+import canvasLabLogo from '../../assets/images/canvas-lab__logo.svg';
+/* import yevgeniyMonogram from '../../assets/images/yevgeniy__monogram.svg'; */
 
 //enable smooth scroll on Safari
 import smoothscroll from 'smoothscroll-polyfill';
@@ -51,13 +46,14 @@ const useSmoothScroll = () => {
 };
 
 export default function Portfolio(props) {
-	const [scrollToMywork, mywork] = useSmoothScroll();
-	const [scrollToMemorize, memorize] = useScroll();
-	const [scrollToPresto, presto] = useScroll();
-	/* 	const [scrollToSharlat, sharlat] = useScroll(); */
-	const [scrollToLascabling, lascabling] = useScroll();
-	const [scrollToJsart, jsart] = useScroll();
-	const [scrollToEmail, email] = useScroll();
+	const [scrollToMywork, myWorkRef] = useSmoothScroll();
+	const [scrollToMemorize, memorizeRef] = useScroll();
+	const [scrollToPresto, prestoRef] = useScroll();
+	/* 	const [scrollToSharlat, sharlatRef] = useScroll(); */
+	const [scrollToLascabling, lascablingRef] = useScroll();
+	const [scrollToJsart, jsartRef] = useScroll();
+	const [scrollToEmail, emailRef] = useScroll();
+	const [scrollToCanvasLab, canvasLabRef] = useScroll();
 
 	useEffect(() => {
 		//scroll to indicated position in the url one is defined
@@ -72,6 +68,7 @@ export default function Portfolio(props) {
 				return scrollToLascabling();
 			else if (scrollLocation === 'jsart') return scrollToJsart();
 			else if (scrollLocation === 'email-api') return scrollToEmail();
+			else if (scrollLocation === 'canvas-lab') return scrollToCanvasLab();
 			else return;
 		} else {
 			window.scrollTo(0, 0);
@@ -83,6 +80,7 @@ export default function Portfolio(props) {
 		scrollToLascabling,
 		scrollToJsart,
 		scrollToEmail,
+		scrollToCanvasLab,
 	]);
 
 	return (
@@ -96,7 +94,7 @@ export default function Portfolio(props) {
 				</Button>
 			</section>
 			<section>
-				<h2 id='work'>My Work</h2>
+				<h2 id="work">My Work</h2>
 				{/* <div ref={sharlat}></div>
 				<ProjectCard
 					img={yevgeniyMonogram}
@@ -105,48 +103,57 @@ export default function Portfolio(props) {
 					id='sharlat'
 					color='cream'
 				/> */}
-				<div ref={mywork}></div>
-				<div ref={lascabling}></div>
+				<div ref={myWorkRef}></div>
+				<div ref={canvasLabRef}></div>
+				<ProjectCard
+					img={canvasLabLogo}
+					title="Canvas Lab"
+					subtitle="algorithm visualizations"
+					id="canvas-lab"
+					color="yellow"
+					rightalign
+				/>
+				<div ref={lascablingRef}></div>
 				<ProjectCard
 					img={lascablingLogo}
-					title='LASC'
-					subtitle='local business landing page'
-					id='lascabling'
-					color='blue'
+					title="LASC"
+					subtitle="local business landing page"
+					id="lascabling"
+					color="blue"
 				/>
-				<div ref={email}></div>
+				<div ref={emailRef}></div>
 				<ProjectCard
 					img={emailAPI}
-					title='Email API'
-					subtitle='service for static sites'
-					id='email-api'
-					color='green'
-					rightalign={true}
+					title="Email API"
+					subtitle="service for static sites"
+					id="email-api"
+					color="green"
+					rightalign
 				/>
-				<div ref={memorize}></div>
+				<div ref={memorizeRef}></div>
 				<ProjectCard
 					img={memorizeLogo}
-					title='Memorize'
-					subtitle='react progressive web app'
-					id='memorize'
-					color='pink'
+					title="Memorize"
+					subtitle="react progressive web app"
+					id="memorize"
+					color="pink"
 				/>
-				<div ref={presto}></div>
+				<div ref={prestoRef}></div>
 				<ProjectCard
 					img={prestoLogo}
-					title='Presto'
-					subtitle='react social media web app'
-					id='presto'
-					color='purple'
-					rightalign={true}
+					title="Presto"
+					subtitle="react social media web app"
+					id="presto"
+					color="purple"
+					rightalign
 				/>
-				<div ref={jsart}></div>
+				<div ref={jsartRef}></div>
 				<ProjectCard
 					img={jsartGif}
-					title='JSArt'
-					subtitle='interactive canvas app'
-					id='jsart'
-					color='gray'
+					title="JSArt"
+					subtitle="interactive canvas app"
+					id="jsart"
+					color="gray"
 				/>
 			</section>
 			<section className={styles.skills}>
@@ -184,7 +191,7 @@ export default function Portfolio(props) {
 					</li>
 				</ul>
 			</section>
-			<Link to='/about' className={styles.Link}>
+			<Link to="/about" className={styles.Link}>
 				<Button arrow={'true'}>About Me</Button>
 			</Link>
 		</div>
