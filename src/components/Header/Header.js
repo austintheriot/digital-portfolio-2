@@ -20,6 +20,15 @@ export default function Header(props) {
 								Portfolio
 							</NavLink>
 						</li>
+						<li className={[styles.li].join(' ')}>
+							<NavLink
+								to='/canvas-lab'
+								activeClassName={styles.isActive}
+								//forces exact path matching (though not required by Router)
+								isActive={() => checkIsActive('/canvas-lab')}>
+								Canvas Lab
+							</NavLink>
+						</li>
 						<li className={styles.li}>
 							<NavLink
 								to='/lascabling'
