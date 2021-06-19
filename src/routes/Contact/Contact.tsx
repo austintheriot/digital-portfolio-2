@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FormEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, FocusEvent, FormEvent, useEffect, useState } from 'react';
 import styles from './Contact.module.css';
 import { contactForm } from '../../config';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -7,27 +7,12 @@ import Input from '../../components/Input/Input';
 import Modal from '../../components/Modal/Modal';
 import Button from '../../components/Button/Button';
 import Textarea from '../../components/Textarea/Textarea';
+import { Inputs } from 'types';
 
 enum InputTypes {
 	EMAIL = 'email',
 	NAME = 'name',
 	MESSAGE = 'message',
-}
-
-interface InputInnerState {
-	value: string,
-	animateUp: boolean,
-	empty: boolean,
-	touched: boolean,
-	disabled: boolean,
-	message: {
-		error: boolean,
-		text: string,
-	},
-}
-
-type InputState = {
-	[input in InputTypes]: InputInnerState;
 }
 
 const isInputType = (t: unknown): t is InputTypes => typeof t === 'string' && ['email', 'name', 'message'].includes(t);
@@ -38,7 +23,7 @@ const Contact = () => {
 		window.scrollTo(0, 0);
 	}, [])
 
-	const [inputs, setInputs] = useState<InputState>({
+	const [inputs, setInputs] = useState<Inputs<InputTypes>>({
 		email: {
 			value: '',
 			animateUp: false,
@@ -317,10 +302,9 @@ const Contact = () => {
 					inputs={inputs}
 				/>
 				<Textarea
-					type='text'
 					customType={InputTypes.MESSAGE}
-					handleFocus={(e: FocusEvent) => handleFocus(e, InputTypes.MESSAGE)}
-					handleBlur={(e: FocusEvent) => handleBlur(e, InputTypes.MESSAGE)}
+					handleFocus={(e: FocusEvent<HTMLTextAreaElement>, customType: InputTypes.MESSAGE) => handleFocus(e, customType)}
+					handleBlur={(e: FocusEvent<HTMLTextAreaElement>, customType: InputTypes.MESSAGE) => handleBlur(e, customType)}
 					handleChange={(e: ChangeEvent<HTMLTextAreaElement>) => handleChange(e, InputTypes.MESSAGE)}
 					label={'Message (optional)'}
 					inputs={inputs}

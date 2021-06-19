@@ -8,15 +8,13 @@ import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 
 import headshot from '../../assets/images/headshot.jpg';
 
+const OPEN_SOURCE_JAVASCRIPT_ALGORITHMS = 'https://github.com/trekhleb/javascript-algorithms';
+const AUSTINS_GITHUB = 'https://github.com/austintheriot';
+
 export default function About() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, [])
-
-	const OPEN_SOURCE_JAVASCRIPT_ALGORITHMS =
-		'https://github.com/trekhleb/javascript-algorithms';
-
-	const AUSTINS_GITHUB = 'https://github.com/austintheriot';
+	}, []);
 
 	return (
 		<section className={styles.aboutme}>

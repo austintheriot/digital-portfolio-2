@@ -1,11 +1,23 @@
-import React from 'react';
-import styles from './Textarea.module.css';
+import React, { ChangeEvent, ComponentProps, FocusEvent } from 'react';
+import { Inputs } from 'types';
+import styles from './Input.module.css';
 
-const Textarea = (props) => {
+
+interface InputProps<InputType extends string> extends ComponentProps<'input'> {
+	customType: InputType,
+	inputs: Inputs<InputType>
+	label?: string,
+	handleBlur: (e: FocusEvent<HTMLInputElement>, customType: InputType) => void,
+	handleFocus: (e: FocusEvent<HTMLInputElement>, customType: InputType) => void,
+	handleChange: (e: ChangeEvent<HTMLInputElement>, customType: InputType) => void,
+}
+
+const Input = <InputType extends string>(props: InputProps<InputType>) => {
 	return (
 		<>
 			<div className={styles.div}>
 				<label
+					htmlFor={props?.inputs[props.customType]?.value}
 					className={[
 						//general
 						styles.label,
@@ -28,25 +40,25 @@ const Textarea = (props) => {
 					{props?.label || 'Label'}
 				</label>
 			</div>
-			<textarea
+			<input
+				id={props.inputs[props.customType]?.value}
+				autoComplete='on'
 				readOnly={props?.readOnly || false}
 				className={[
 					//general
-					styles.textarea,
+					styles.input,
 
 					//animate up?
-					props?.inputs[props.customType]?.animateUp
-						? styles.focusTextarea
-						: '',
+					props?.inputs[props.customType]?.animateUp ? styles.colorInput : '',
 
 					//error?
 					props?.inputs[props.customType]?.message?.error
-						? styles.redTextarea
+						? styles.redInput
 						: '',
 
 					//inactive?
 					props?.readOnly || props?.inputs[props.customType]?.disabled
-						? styles.inactiveTextarea
+						? styles.inactiveInput
 						: '',
 				].join(' ')}
 				value={props?.inputs[props.customType]?.value || ''}
@@ -69,4 +81,4 @@ const Textarea = (props) => {
 	);
 };
 
-export default Textarea;
+export default Input;
