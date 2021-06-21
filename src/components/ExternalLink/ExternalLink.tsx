@@ -1,8 +1,9 @@
 import React, { ComponentProps, useRef } from 'react';
+import { Links } from 'types';
 import { analytics } from '../../config';
 
 interface ExternalLinkProps extends ComponentProps<'a'> {
-	to: string;
+	to: Links;
 	underline?: boolean;
 }
 

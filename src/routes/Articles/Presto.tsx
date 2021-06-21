@@ -5,6 +5,7 @@ import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 import { Routes, Links } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -107,18 +108,18 @@ export default function Presto() {
         {' '}
         or
         {' '}
-        <Link to={Routes.CONTACT} className={generalStyles.ExternalLink}>
+        <InternalLink to={Routes.CONTACT} className={generalStyles.ExternalLink}>
           get in touch
-        </Link>
+        </InternalLink>
         .
       </ArticleParagraph>
       <div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-        <Link to="/#presto">
+        <InternalLink to="/#presto">
           <Button arrow="left">Portfolio</Button>
-        </Link>
-        <Link to={Routes.CONTACT} className={generalStyles.Link}>
+        </InternalLink>
+        <InternalLink to={Routes.CONTACT} className={generalStyles.Link}>
           <Button arrow="right">Contact Me</Button>
-        </Link>
+        </InternalLink>
       </div>
     </article>
   );

@@ -6,6 +6,7 @@ import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 import { Links, Routes } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import Decoration from '../../components/Decorations/Decorations1';
 import TryItOut from '../../components/TryItOut/TryItOut';
 import Button from '../../components/Button/Button';
@@ -52,12 +53,12 @@ export default function Email() {
         unathorized access to the service).
       </ArticleParagraph>
       <div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-        <Link to="/#email-api">
+        <InternalLink to="/#email-api">
           <Button arrow="left">Portfolio</Button>
-        </Link>
-        <Link to={Routes.CONTACT} className={generalStyles.Link}>
+        </InternalLink>
+        <InternalLink to={Routes.CONTACT} className={generalStyles.Link}>
           <Button arrow="right">Contact Me</Button>
-        </Link>
+        </InternalLink>
       </div>
     </article>
   );

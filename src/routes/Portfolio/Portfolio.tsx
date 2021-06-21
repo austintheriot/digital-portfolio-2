@@ -6,7 +6,8 @@ import smoothscroll from 'smoothscroll-polyfill';
 import { RenderMaze } from 'routes/Articles/CanvasLab/animations/Maze/RenderMaze';
 import { useSmoothScroll } from 'hooks/useSmoothScroll';
 import { useScroll } from 'hooks/useScroll';
-import { Routes } from 'types';
+import { PortfolioProjectIds, Routes } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import styles from './Portfolio.module.scss';
 import Button from '../../components/Button/Button';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -40,14 +41,12 @@ export default function Portfolio() {
     // divs in between the project items give react an easy html element to use as a ref
     if (window.location.href.includes('#')) {
       const scrollLocation = window.location.href.split('#').pop();
-      if (scrollLocation === 'presto') return scrollToPresto();
-      if (scrollLocation === 'memorize') return scrollToMemorize();
-      /* else if (scrollLocation === 'sharlat') return scrollToSharlat(); */ if (
-        scrollLocation === 'lascabling'
-      ) return scrollToLascabling();
-      if (scrollLocation === 'jsart') return scrollToJsart();
-      if (scrollLocation === 'email-api') return scrollToEmail();
-      if (scrollLocation === 'canvas-lab') return scrollToCanvasLab();
+      if (scrollLocation === PortfolioProjectIds.PRESTO) return scrollToPresto();
+      if (scrollLocation === PortfolioProjectIds.MEMORIZE) return scrollToMemorize();
+      if (scrollLocation === PortfolioProjectIds.LASC) return scrollToLascabling();
+      if (scrollLocation === PortfolioProjectIds.JSART) return scrollToJsart();
+      if (scrollLocation === PortfolioProjectIds.EMAIL) return scrollToEmail();
+      if (scrollLocation === PortfolioProjectIds.CANVAS_LAB) return scrollToCanvasLab();
     } else {
       window.scrollTo(0, 0);
     }
@@ -84,7 +83,7 @@ export default function Portfolio() {
           img={canvasLabLogo}
           title="Canvas Lab"
           subtitle="algorithm visualizations"
-          id="canvas-lab"
+          id={PortfolioProjectIds.CANVAS_LAB}
           color="yellow"
           rightalign
         />
@@ -93,7 +92,7 @@ export default function Portfolio() {
           img={lascablingLogo}
           title="LASC"
           subtitle="local business landing page"
-          id="lascabling"
+          id={PortfolioProjectIds.LASC}
           color="blue"
         />
         <div ref={emailRef} />
@@ -101,7 +100,7 @@ export default function Portfolio() {
           img={emailAPI}
           title="Email API"
           subtitle="service for static sites"
-          id="email-api"
+          id={PortfolioProjectIds.EMAIL}
           color="green"
           rightalign
         />
@@ -110,7 +109,7 @@ export default function Portfolio() {
           img={memorizeLogo}
           title="Memorize"
           subtitle="react progressive web app"
-          id="memorize"
+          id={PortfolioProjectIds.MEMORIZE}
           color="pink"
         />
         <div ref={prestoRef} />
@@ -118,7 +117,7 @@ export default function Portfolio() {
           img={prestoLogo}
           title="Presto"
           subtitle="react social media web app"
-          id="presto"
+          id={PortfolioProjectIds.PRESTO}
           color="purple"
           rightalign
         />
@@ -127,7 +126,7 @@ export default function Portfolio() {
           img={jsartGif}
           title="JSArt"
           subtitle="interactive canvas app"
-          id="jsart"
+          id={PortfolioProjectIds.JSART}
           color="gray"
         />
       </section>
@@ -171,9 +170,9 @@ export default function Portfolio() {
         </ul>
       </section>
       <div className={styles.AboutMeButton}>
-        <Link to={Routes.ABOUT} className={styles.Link}>
+        <InternalLink to={Routes.ABOUT} className={styles.Link}>
           <Button arrow="right">About Me</Button>
-        </Link>
+        </InternalLink>
       </div>
     </div>
   );

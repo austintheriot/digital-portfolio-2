@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Links } from 'types';
+import { Links, Routes } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import styles from './About.module.css';
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -79,9 +80,9 @@ export default function About() {
             or just want to say hi, please don&apos;t hesitate to drop a line.
           </p>
           <div className={styles.buttonContainer}>
-            <Link to="/contact" className={styles.Link}>
+            <InternalLink to="/contact" className={styles.Link}>
               <Button arrow="right">Contact Me</Button>
-            </Link>
+            </InternalLink>
           </div>
         </div>
       </div>

@@ -2,15 +2,18 @@ import React, { useEffect, useRef } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { PortfolioProjectIds } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import { analytics } from '../../config';
 import styles from './ProjectCard.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
 type ProjectCardColors = 'purple' | 'cream' | 'pink' | 'blue' | 'yellow' | 'gray' | 'green';
+type ProjectCardIdType = `${PortfolioProjectIds}`;
 
 interface ProjectCardProps {
-	id: string,
+	id: ProjectCardIdType,
 	title: string,
 	subtitle: string,
 	img: string,
@@ -64,8 +67,9 @@ export default function ProjectCard({
   }, [rightalign]);
 
   return (
-    <Link
-      to={`/${id}`}
+    <InternalLink
+      /* TypeScript can't infer this one from usage */
+      to={`/${id}` as `/${PortfolioProjectIds}`}
       className={[
 			  styles.Link,
 			  rightalign ? styles.rightalign : null,
@@ -99,6 +103,6 @@ export default function ProjectCard({
           <h4 className={styles.subtitle}>{subtitle || 'Subtitle'}</h4>
         </div>
       </section>
-    </Link>
+    </InternalLink>
   );
 }

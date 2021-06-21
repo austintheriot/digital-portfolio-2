@@ -6,6 +6,7 @@ import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 import { Links, Routes } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import hero1 from '../../assets/images/memorize__hero--1.png';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -145,12 +146,12 @@ export default function Memorize() {
         Testing Library and Jest.
       </ArticleParagraph>
       <div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-        <Link to="/#memorize">
+        <InternalLink to="/#memorize">
           <Button arrow="left">Portfolio</Button>
-        </Link>
-        <Link to={Routes.CONTACT} className={generalStyles.Link}>
+        </InternalLink>
+        <InternalLink to={Routes.CONTACT} className={generalStyles.Link}>
           <Button arrow="right">Contact Me</Button>
-        </Link>
+        </InternalLink>
       </div>
     </article>
   );

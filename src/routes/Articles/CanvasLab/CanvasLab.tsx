@@ -7,6 +7,7 @@ import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 import { Links, Routes } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import { RenderMaze } from './animations/Maze/RenderMaze';
 import { RenderPathfinder } from './animations/PathFinder/RenderPathfinder';
 import generalStyles from '../PortfolioArticle.module.css';
@@ -65,12 +66,12 @@ export const CanvasLab = () => {
       </ArticleParagraph>
       <RenderPathfinder />
       <div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-        <Link to="/#canvas-lab">
+        <InternalLink to="/#canvas-lab">
           <Button arrow="left">Portfolio</Button>
-        </Link>
-        <Link to={Routes.CONTACT} className={generalStyles.Link}>
+        </InternalLink>
+        <InternalLink to={Routes.CONTACT} className={generalStyles.Link}>
           <Button arrow="right">Contact Me</Button>
-        </Link>
+        </InternalLink>
       </div>
     </article>
   );

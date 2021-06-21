@@ -30,6 +30,19 @@ export enum Routes {
 }
 
 /**
+ * Ids of portfolio projects--used for navigation/smooth-scrolling
+ * on the main Portfolio page.
+ */
+export enum PortfolioProjectIds {
+	CANVAS_LAB = 'canvas-lab',
+	LASC = 'lascabling',
+	EMAIL = 'email-api',
+	MEMORIZE = 'memorize',
+	PRESTO = 'presto',
+	JSART = 'jsart',
+}
+
+/**
  * External links
  */
 export enum Links {

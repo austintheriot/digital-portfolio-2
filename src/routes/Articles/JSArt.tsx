@@ -7,6 +7,7 @@ import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 import { Links, Routes } from 'types';
+import InternalLink from 'components/InternalLink/InternalLink';
 import generalStyles from './PortfolioArticle.module.css';
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -108,12 +109,12 @@ export default function JSArt() {
         </ExternalLink>
       </div>
       <div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-        <Link to="/#jsart">
+        <InternalLink to="/#jsart">
           <Button arrow="left">Portfolio</Button>
-        </Link>
-        <Link to={Routes.CONTACT} className={generalStyles.Link}>
+        </InternalLink>
+        <InternalLink to={Routes.CONTACT} className={generalStyles.Link}>
           <Button arrow="right">Contact Me</Button>
-        </Link>
+        </InternalLink>
       </div>
     </article>
   );
