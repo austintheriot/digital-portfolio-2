@@ -15,7 +15,7 @@ export type Inputs<InputType extends string> = {
 };
 
 /**
- * Internal links/routes
+ * Internal links/routes to pages.
  */
 export enum Routes {
 	HOME = '/',
@@ -31,7 +31,7 @@ export enum Routes {
 
 /**
  * Ids of portfolio projects--used for navigation/smooth-scrolling
- * on the main Portfolio page.
+ * on the main Portfolio page. i.e. "lascabling" becomes "/#lascabling" for scrolling.
  */
 export enum PortfolioProjectIds {
 	CANVAS_LAB = 'canvas-lab',
