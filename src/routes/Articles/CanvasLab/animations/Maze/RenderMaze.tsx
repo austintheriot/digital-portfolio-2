@@ -6,7 +6,7 @@ import { MazeAnimation } from './Maze';
 import renderMazeStyles from './RenderMaze.module.scss';
 
 const defaults: MazeOptions = {
-	lineWidth: '1',
+  lineWidth: '1',
 };
 
 interface RenderMazeProps {
@@ -15,23 +15,26 @@ interface RenderMazeProps {
 }
 
 export function RenderMaze({
-	options = defaults,
-	renderControls = false,
+  options = defaults,
+  renderControls = false,
 }: RenderMazeProps) {
-	// prevent infinite re-renders from the prop changing
-	const animationOptions = useMemo(() => ({ ...defaults, ...options }), [
-		options,
-	]);
-	const [canvas, animation] = useAnimation(MazeAnimation, animationOptions as MazeOptions);
+  // prevent infinite re-renders from the prop changing
+  const animationOptions = useMemo(() => ({ ...defaults, ...options }), [
+    options,
+  ]);
+  const [canvas, animation] = useAnimation(MazeAnimation, animationOptions as MazeOptions);
 
-	return renderControls ? (
-		<div className={renderMazeStyles.Container}>
-			<Button onClick={() => {
-				animation.reset(animationOptions);
-			}}>Reset</Button>
-			<div className={renderMazeStyles.MazeContainer}>
-				{canvas}
-			</div>
-		</div>
-	) : <>{canvas}</>;
+  return renderControls ? (
+    <div className={renderMazeStyles.Container}>
+      <Button onClick={() => {
+			  animation.reset(animationOptions);
+      }}
+      >
+        Reset
+      </Button>
+      <div className={renderMazeStyles.MazeContainer}>
+        {canvas}
+      </div>
+    </div>
+  ) : <>{canvas}</>;
 }

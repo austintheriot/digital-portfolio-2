@@ -9,40 +9,41 @@ interface ButtonProps extends ComponentProps<'button'> {
 }
 
 export default function Button({
-	children,
-	arrow = 'none',
-	animateLines = true,
-	disabled,
-	...props
+  children,
+  arrow = 'none',
+  animateLines = true,
+  disabled,
+  ...props
 }: ButtonProps) {
-	return (
-		<button
-			className={[
-				styles.button,
-				disabled ? styles.disabled : null,
-				animateLines ? styles.animateLines : null,
-			].join(' ')}
-			disabled={disabled}
-			{...props}
-		>
-			{arrow === 'left' ? (
-				<img
-					src={rightArrowIcon}
-					alt={`arrow ${arrow}`}
-					className={[styles.arrowLeft].join(' ')}
-				/>
-			) : null}
-			{children}
-			{arrow === 'right' || arrow === 'down' ? (
-				<img
-					src={rightArrowIcon}
-					alt={`arrow ${arrow}`}
-					className={[styles.arrow, arrow === 'down' ? styles.down : null].join(' ')}
-				/>
-			) : null}
-			<div className={styles.lineDiv1}></div>
-			<div className={styles.lineDiv2}></div>
-			<div className={styles.lineDiv3}></div>
-		</button>
-	);
+  return (
+    <button
+      type="button"
+      className={[
+			  styles.button,
+			  disabled ? styles.disabled : null,
+			  animateLines ? styles.animateLines : null,
+      ].join(' ')}
+      disabled={disabled}
+      {...props}
+    >
+      {arrow === 'left' ? (
+        <img
+          src={rightArrowIcon}
+          alt={`arrow ${arrow}`}
+          className={[styles.arrowLeft].join(' ')}
+        />
+      ) : null}
+      {children}
+      {arrow === 'right' || arrow === 'down' ? (
+        <img
+          src={rightArrowIcon}
+          alt={`arrow ${arrow}`}
+          className={[styles.arrow, arrow === 'down' ? styles.down : null].join(' ')}
+        />
+      ) : null}
+      <div className={styles.lineDiv1} />
+      <div className={styles.lineDiv2} />
+      <div className={styles.lineDiv3} />
+    </button>
+  );
 }

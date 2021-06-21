@@ -7,32 +7,32 @@ interface MessageProps {
 }
 
 const Message = ({
-	message, 
-	color = 'hidden',
+  message,
+  color = 'hidden',
 }: MessageProps) => {
-	let divStyle;
-	switch (color) {
-		case 'black':
-			divStyle = styles.divBlack;
-			break;
-		default:
-			divStyle = styles.divHidden;
-	}
+  let divStyle;
+  switch (color) {
+    case 'black':
+      divStyle = styles.divBlack;
+      break;
+    default:
+      divStyle = styles.divHidden;
+  }
 
-	let paragraphStyle;
-	switch (color) {
-		case 'black':
-			paragraphStyle = styles.paragraphBlack;
-			break;
-		default:
-			paragraphStyle = styles.paragraphHidden;
-	}
+  let paragraphStyle;
+  switch (color) {
+    case 'black':
+      paragraphStyle = styles.paragraphBlack;
+      break;
+    default:
+      paragraphStyle = styles.paragraphHidden;
+  }
 
-	return (
-		<div className={divStyle}>
-			<p className={paragraphStyle}>{message}</p>
-		</div>
-	);
+  return (
+    <div className={divStyle}>
+      <p className={paragraphStyle}>{message}</p>
+    </div>
+  );
 };
 
 export default Message;

@@ -1,6 +1,6 @@
 import React, { ChangeEvent, ComponentProps, FocusEvent } from 'react';
-import styles from './Textarea.module.css';
 import { Inputs } from 'types';
+import styles from './Textarea.module.css';
 
 interface TextareaProps<InputType extends string> extends ComponentProps<'textarea'> {
 	customType: InputType,
@@ -11,71 +11,84 @@ interface TextareaProps<InputType extends string> extends ComponentProps<'textar
 	handleChange: (e: ChangeEvent<HTMLTextAreaElement>, customType: InputType) => void,
 }
 
-const Textarea = <InputType extends string>(props: TextareaProps<InputType>) => {
-	return (
-		<>
-			<div className={styles.div}>
-				<label
-					className={[
-						//general
-						styles.label,
+const Textarea = <InputType extends string>({
+  id,
+  inputs,
+  customType,
+  label,
+  readOnly,
+  handleFocus,
+  handleChange,
+  handleBlur,
+  ...rest
+}: TextareaProps<InputType>) => (
+  <>
+    <div className={styles.div}>
+      <label
+        htmlFor={id}
+        className={[
+					  // general
+					  styles.label,
 
-						//animate up?
-						props?.inputs[props.customType]?.animateUp
-							? styles.up
-							: styles.down,
+					  // animate up?
+					  inputs[customType]?.animateUp
+					    ? styles.up
+					    : styles.down,
 
-						//error?
-						props?.inputs[props.customType]?.message?.error
-							? styles.redLabel
-							: '',
+					  // error?
+					  inputs[customType]?.message?.error
+					    ? styles.redLabel
+					    : '',
 
-						//inactive?
-						props?.readOnly || props?.inputs[props.customType]?.disabled
-							? styles.inactiveLabel
-							: '',
-					].join(' ')}>
-					{props?.label || 'Label'}
-				</label>
-			</div>
-			<textarea
-				readOnly={props?.readOnly || false}
-				className={[
-					//general
-					styles.textarea,
+					  // inactive?
+					  readOnly || inputs[customType]?.disabled
+					    ? styles.inactiveLabel
+					    : '',
+        ].join(' ')}
+      >
+        {label || 'Label'}
+      </label>
+    </div>
+    <textarea
+      id={id}
+      readOnly={readOnly || false}
+      className={[
+				  // general
+				  styles.textarea,
 
-					//animate up?
-					props?.inputs[props.customType]?.animateUp
-						? styles.focusTextarea
-						: '',
+				  // animate up?
+				  inputs[customType]?.animateUp
+				    ? styles.focusTextarea
+				    : '',
 
-					//error?
-					props?.inputs[props.customType]?.message?.error
-						? styles.redTextarea
-						: '',
+				  // error?
+				  inputs[customType]?.message?.error
+				    ? styles.redTextarea
+				    : '',
 
-					//inactive?
-					props?.readOnly || props?.inputs[props.customType]?.disabled
-						? styles.inactiveTextarea
-						: '',
-				].join(' ')}
-				value={props?.inputs[props.customType]?.value || ''}
-				disabled={props?.inputs[props.customType]?.disabled || false}
-				onBlur={(e) => props.handleBlur(e, props.customType)}
-				onFocus={(e) => props.handleFocus(e, props.customType)}
-				onChange={(e) => props.handleChange(e, props.customType)}
-			/>
-			<p
-				className={[
-					styles.message,
-					props?.inputs[props.customType]?.message?.error
-						? styles.redMessage
-						: null,
-				].join(' ')}>
-				{props?.inputs[props.customType]?.message?.text}
-			</p>
-		</>
-	);
-};
+				  // inactive?
+				  readOnly || inputs[customType]?.disabled
+				    ? styles.inactiveTextarea
+				    : '',
+      ].join(' ')}
+      value={inputs[customType]?.value || ''}
+      disabled={inputs[customType]?.disabled || false}
+      onBlur={(e) => handleBlur(e, customType)}
+      onFocus={(e) => handleFocus(e, customType)}
+      onChange={(e) => handleChange(e, customType)}
+      {...rest}
+    />
+    <p
+      className={[
+				  styles.message,
+				  inputs[customType]?.message?.error
+				    ? styles.redMessage
+				    : null,
+      ].join(' ')}
+    >
+      {inputs[customType]?.message?.text}
+    </p>
+  </>
+  );
 
 export default Textarea;

@@ -9,9 +9,9 @@ import React, { useEffect, useRef, useState } from 'react';
  * @returns [Canvas Ref, Animation, canvasRef ]
  */
 export const useAnimation = (
-	Animation: any,
-	animationOptions?: any,
-	updateValues?: boolean,
+  Animation: any,
+  animationOptions?: any,
+  updateValues?: boolean,
 ): [
 	React.DetailedHTMLProps<
 		React.CanvasHTMLAttributes<HTMLCanvasElement>,
@@ -20,22 +20,20 @@ export const useAnimation = (
 	any,
 	React.MutableRefObject<HTMLCanvasElement | null>,
 ] => {
-	const canvasRef = useRef<HTMLCanvasElement | null>(null);
-	const [animation, setAnimation] = useState<any | null>(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [animation, setAnimation] = useState<any | null>(null);
 
-	useEffect(() => {
-		if (canvasRef.current != null) {
-			const newAnimation = new Animation(canvasRef.current, animationOptions);
-			setAnimation(newAnimation);
-			newAnimation.animate();
-		}
-	}, [Animation, animationOptions, canvasRef]);
+  useEffect(() => {
+    if (canvasRef.current != null) {
+      const newAnimation = new Animation(canvasRef.current, animationOptions);
+      setAnimation(newAnimation);
+      newAnimation.animate();
+    }
+  }, [Animation, animationOptions, canvasRef]);
 
-	useEffect(() => {
-		if (animationOptions && updateValues)
-			animation.updateValues(animationOptions);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [animationOptions]);
+  useEffect(() => {
+    if (animationOptions && updateValues) animation.updateValues(animationOptions);
+  }, [animationOptions]);
 
-	return [<canvas ref={canvasRef} />, animation, canvasRef];
+  return [<canvas ref={canvasRef} />, animation, canvasRef];
 };

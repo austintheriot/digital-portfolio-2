@@ -7,42 +7,38 @@ interface ExternalLinkProps extends ComponentProps<'a'> {
 }
 
 export const ExternalLink = ({
-	to,
-	href,
-	className,
-	underline,
-	children,
+  to,
+  href,
+  className,
+  underline,
+  children,
 }: ExternalLinkProps) => {
-	const anchor = useRef<HTMLAnchorElement | null>(null);
+  const anchor = useRef<HTMLAnchorElement | null>(null);
 
-	const handleClick = (
-		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-		anchor: React.MutableRefObject<HTMLAnchorElement | null>
-	) => {
-		if (anchor == null) return;
-		const href = anchor.current?.href;
-		analytics.logEvent('external_link_clicked', {
-			href,
-		});
-	};
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+    anchor: React.MutableRefObject<HTMLAnchorElement | null>,
+  ) => {
+    if (anchor == null) return;
+    const href = anchor.current?.href;
+    analytics.logEvent('external_link_clicked', {
+      href,
+    });
+  };
 
-	return (
-		<a
-			style={{
-				textDecoration:
-					underline === undefined
-						? 'underline'
-						: underline
-						? 'underline'
-						: 'none',
-			}}
-			href={to || href}
-			ref={anchor}
-			onClick={(e) => handleClick(e, anchor)}
-			rel='noopener noreferrer'
-			target='_blank'
-			className={className || ''}>
-			{children}
-		</a>
-	);
+  return (
+    <a
+      style={{
+			  textDecoration: underline ? 'underline' : 'none',
+      }}
+      href={to || href}
+      ref={anchor}
+      onClick={(e) => handleClick(e, anchor)}
+      rel="noopener noreferrer"
+      target="_blank"
+      className={className || ''}
+    >
+      {children}
+    </a>
+  );
 };

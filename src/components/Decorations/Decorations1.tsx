@@ -1,14 +1,12 @@
 import React from 'react';
 import styles from './Decorations.module.css';
 
-const Decorations1 = () => {
-	return (
-		<>
-			<div className={styles.decoration1__1}></div>
-			<div className={styles.decoration1__2}></div>
-			<div className={styles.decoration1__3}></div>
-		</>
-	);
-};
+const Decorations1 = () => (
+  <>
+    <div className={styles.decoration1__1} />
+    <div className={styles.decoration1__2} />
+    <div className={styles.decoration1__3} />
+  </>
+);
 
 export default Decorations1;
