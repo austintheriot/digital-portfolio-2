@@ -12,9 +12,6 @@ import Decoration from '../../components/Decorations/Decorations1';
 import Button from '../../components/Button/Button';
 import generalStyles from './PortfolioArticle.module.css';
 
-const MEMORIZE_CODE_URL = 'https://github.com/austintheriot/memorize-scripture';
-const MEMORIZE_LIVE_URL = 'https://memorizescripture.org/';
-
 export default function Memorize() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,10 +23,10 @@ export default function Memorize() {
       <ArticleTitle>Memorize</ArticleTitle>
       <ArticleSubtitle>React Progressive Web App</ArticleSubtitle>
       <div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-        <ExternalLink to={MEMORIZE_LIVE_URL} underline={false}>
+        <ExternalLink to={Links.MEMORIZE_LIVE} underline={false}>
           <Button>See Live</Button>
         </ExternalLink>
-        <ExternalLink to={MEMORIZE_CODE_URL} underline={false}>
+        <ExternalLink to={Links.MEMORIZE_CODE} underline={false}>
           <Button>See Code</Button>
         </ExternalLink>
       </div>
@@ -55,7 +52,7 @@ export default function Memorize() {
       </ArticleParagraph>
 
       <ExternalLink
-        to={MEMORIZE_LIVE_URL}
+        to={Links.MEMORIZE_LIVE}
         style={{
 				  display: 'block',
 				  width: '90vw',
@@ -75,7 +72,7 @@ export default function Memorize() {
       <ArticleParagraph>
         I first stumbled on the idea of condensing a text to memorize it via
         {' '}
-        <ExternalLink to="http://www.productivity501.com/how-to-memorize-verbatim-text/294/">
+        <ExternalLink to={Links.HOW_TO_MEMORIZE_VERBATIM}>
           this article
         </ExternalLink>
         {' '}
@@ -85,7 +82,7 @@ export default function Memorize() {
         that&quot;s my end goal for this app: to facilitate the extended memorization
         of God&quot;s Word. This same technique is also used by a few other scripture
         memory softwares (
-        <ExternalLink to="https://www.memverse.com/">memverse.com</ExternalLink>
+        <ExternalLink to={Links.MEMVERSE}>memverse.com</ExternalLink>
         {' '}
         for example), but I hope to offer a more mobile-friendly, streamlined
         app here, one that is focused on extended memorization, rather than
@@ -113,7 +110,7 @@ export default function Memorize() {
         This process works well for most people because of a psychological
         principle called
         {' '}
-        <ExternalLink to="https://en.wikipedia.org/wiki/Chunking_(psychology)">
+        <ExternalLink to={Links.CHUNKING}>
           &quot;chunking&quot;
         </ExternalLink>
         , in which individual pieces of information are grouped together into a

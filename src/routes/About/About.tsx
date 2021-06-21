@@ -2,14 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Links } from 'types';
 import styles from './About.module.css';
-
 import Button from '../../components/Button/Button';
 import Decoration from '../../components/Decorations/Decorations1';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
-
 import headshot from '../../assets/images/headshot.jpg';
-
-const OPEN_SOURCE_JAVASCRIPT_ALGORITHMS = 'https://github.com/trekhleb/javascript-algorithms';
 
 export default function About() {
   useEffect(() => {
@@ -39,8 +35,8 @@ export default function About() {
             Check out my open-source contributions to the largest JavaScript
             algorithms &amp; data structures repo on GitHub:
             {' '}
-            <ExternalLink to={OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}>
-              {OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}
+            <ExternalLink to={Links.OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}>
+              {Links.OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}
             </ExternalLink>
             .
           </p>

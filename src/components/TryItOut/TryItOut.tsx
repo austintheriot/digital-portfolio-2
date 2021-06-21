@@ -1,7 +1,7 @@
 import React, {
   ChangeEvent, FocusEvent, FormEvent, useState,
 } from 'react';
-import { Inputs } from 'types';
+import { API, Inputs } from 'types';
 import styles from './TryItOut.module.css';
 import { tryItOut } from '../../config';
 import Input from '../Input/Input';
@@ -206,7 +206,7 @@ const TryItOut = () => {
     );
 
     const response = await fetch(
-      'https://us-central1-austins-email-server.cloudfunctions.net/sendEmail/tryItOut',
+      API.TRY_IT_OUT,
       {
         method: 'POST',
         headers: {

@@ -5,7 +5,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Routes } from 'types';
+import { Links, Routes } from 'types';
 import Decoration from '../../components/Decorations/Decorations1';
 import TryItOut from '../../components/TryItOut/TryItOut';
 import Button from '../../components/Button/Button';
@@ -15,8 +15,6 @@ export default function Email() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const CODE_URL = 'https://github.com/austintheriot/email-sender-api';
 
   return (
     <article>
@@ -36,7 +34,7 @@ export default function Email() {
         reasons) for free.
       </ArticleParagraph>
       <div className={generalStyles.center}>
-        <ExternalLink to={CODE_URL} underline={false}>
+        <ExternalLink to={Links.EMAIL_CODE} underline={false}>
           <Button>See Code</Button>
         </ExternalLink>
       </div>

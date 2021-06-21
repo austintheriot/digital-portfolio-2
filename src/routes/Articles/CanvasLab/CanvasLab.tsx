@@ -6,13 +6,11 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Routes } from 'types';
+import { Links, Routes } from 'types';
 import { RenderMaze } from './animations/Maze/RenderMaze';
 import { RenderPathfinder } from './animations/PathFinder/RenderPathfinder';
 import generalStyles from '../PortfolioArticle.module.css';
 import Decoration from '../../../components/Decorations/Decorations1';
-
-const CODE_URL = 'https://github.com/austintheriot/canvas-lab';
 
 export const CanvasLab = () => {
   useEffect(() => {
@@ -37,7 +35,7 @@ export const CanvasLab = () => {
         TypeScript and React.
       </ArticleParagraph>
       <div className={generalStyles.center}>
-        <ExternalLink to={CODE_URL} underline={false}>
+        <ExternalLink to={Links.CANVAS_LAB_CODE} underline={false}>
           <Button>See Code</Button>
         </ExternalLink>
       </div>

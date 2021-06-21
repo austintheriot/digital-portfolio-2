@@ -1,7 +1,7 @@
 import React, {
   ChangeEvent, FocusEvent, FormEvent, useEffect, useState,
 } from 'react';
-import { Inputs } from 'types';
+import { API, Inputs } from 'types';
 import styles from './Contact.module.css';
 import { contactForm } from '../../config';
 import Decoration from '../../components/Decorations/Decorations1';
@@ -212,7 +212,7 @@ const Contact = () => {
     );
 
     const response = await fetch(
-      'https://us-central1-austins-email-server.cloudfunctions.net/sendEmail/contactForm',
+      API.CONTACT,
       {
         method: 'POST',
         headers: {

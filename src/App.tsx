@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { Route, Switch, useLocation } from 'react-router-dom';
+import { Routes } from 'types';
 import { analytics } from './config';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -29,15 +30,15 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route path="/lascabling" component={LASC} />
-        <Route path="/email-api" component={Email} />
-        <Route path="/memorize" component={Memorize} />
-        <Route path="/presto" component={Presto} />
-        <Route path="/jsart" component={JSArt} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/canvas-lab" component={CanvasLab} />
-        <Route path="/" component={Portfolio} />
+        <Route path={Routes.LASC} component={LASC} />
+        <Route path={Routes.EMAIL} component={Email} />
+        <Route path={Routes.MEMORIZE} component={Memorize} />
+        <Route path={Routes.PRESTO} component={Presto} />
+        <Route path={Routes.JSART} component={JSArt} />
+        <Route path={Routes.ABOUT} component={About} />
+        <Route path={Routes.CONTACT} component={Contact} />
+        <Route path={Routes.CANVAS_LAB} component={CanvasLab} />
+        <Route path={Routes.HOME} component={Portfolio} />
       </Switch>
       <Footer />
     </div>
