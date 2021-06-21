@@ -1,6 +1,7 @@
 import { Stack } from 'routes/Articles/CanvasLab/data structures/Stack';
 import { Queue } from 'routes/Articles/CanvasLab/data structures/Queue';
 import { Animation } from '../Animation';
+// eslint-disable-next-line import/no-cycle
 import { Tile } from './Tile';
 import { bfs, dfs, biBfs } from './solves';
 
@@ -75,8 +76,8 @@ export class GridAnimation extends Animation {
 	  this.mouse = new Uint8Array([0, 0]);
 	  this.isMouseDown = false;
 	  this.ctx.lineWidth = Math.floor(Number(options?.lineWidth ?? 2)); // width of grid walls
-	  // default to 10, but never less than 1
-	  this.dimensions = Math.max(Number(options.dimensions ?? 10), 1);
+	  // default to 50, but never less than 1
+	  this.dimensions = Math.max(Number(options.dimensions ?? 50), 1);
 	  // slightly offset so wall lines aren't cut off
 	  this.padding = Math.floor(Number(options.padding ?? 4));
 	  this.generationStack = new Stack(); // used to generate the grid

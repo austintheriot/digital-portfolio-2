@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { CSSProperties, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
@@ -8,6 +8,8 @@ import { useSmoothScroll } from 'hooks/useSmoothScroll';
 import { useScroll } from 'hooks/useScroll';
 import { PortfolioProjectIds, Routes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
+import { useMediaQuery } from 'hooks/useMediaQuery';
+import Decorations1 from 'components/Decorations/Decorations1';
 import styles from './Portfolio.module.scss';
 import Button from '../../components/Button/Button';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -34,6 +36,7 @@ export default function Portfolio() {
   const [scrollToJsart, jsartRef] = useScroll<HTMLDivElement>();
   const [scrollToEmail, emailRef] = useScroll<HTMLDivElement>();
   const [scrollToCanvasLab, canvasLabRef] = useScroll<HTMLDivElement>();
+  const isDesktopSize = useMediaQuery('(min-width: 1100px)');
 
   // eslint-disable-next-line consistent-return
   useEffect(() => {
@@ -57,15 +60,16 @@ export default function Portfolio() {
     scrollToJsart,
     scrollToEmail,
     scrollToCanvasLab,
-    /* scrollToSharlat, */
   ]);
 
   return (
     <div className={styles.container}>
       <section>
-        <div className={styles.Maze}>
-          <RenderMaze options={mazeOptions} />
-        </div>
+        {isDesktopSize ? (
+          <div className={styles.Maze}>
+            <RenderMaze options={mazeOptions} />
+          </div>
+        ) : <Decorations1 />}
         <h1>Austin Theriot</h1>
         <p className={styles.subtitle}>front end developer</p>
         <div className={styles.SeeMyWork}>

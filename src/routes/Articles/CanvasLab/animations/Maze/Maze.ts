@@ -2,6 +2,7 @@ import { debounce } from 'lodash';
 import { Animation } from '../Animation';
 import { Stack } from '../../data structures/Stack';
 import { Queue } from '../../data structures/Queue';
+// eslint-disable-next-line import/no-cycle
 import { Cell } from './Cell';
 
 const CELL_SIZE = 30;

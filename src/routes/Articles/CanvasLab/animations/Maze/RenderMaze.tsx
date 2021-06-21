@@ -5,29 +5,23 @@ import type { MazeOptions } from './Maze';
 import { MazeAnimation } from './Maze';
 import renderMazeStyles from './RenderMaze.module.scss';
 
-const defaults: MazeOptions = {
-  lineWidth: '1',
-};
-
 interface RenderMazeProps {
 	options?: MazeOptions;
 	renderControls?: boolean;
 }
 
+const DEFAULT_OPTIONS = {};
+
 export function RenderMaze({
-  options = defaults,
+  options = DEFAULT_OPTIONS,
   renderControls = false,
 }: RenderMazeProps) {
-  // prevent infinite re-renders from the prop changing
-  const animationOptions = useMemo(() => ({ ...defaults, ...options }), [
-    options,
-  ]);
-  const [canvas, animation] = useAnimation(MazeAnimation, animationOptions as MazeOptions);
+  const [canvas, animation] = useAnimation(MazeAnimation, options as MazeOptions);
 
   return renderControls ? (
     <div className={renderMazeStyles.Container}>
       <Button onClick={() => {
-			  animation.reset(animationOptions);
+			  animation.reset(options);
       }}
       >
         Reset

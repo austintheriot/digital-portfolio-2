@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import { MazeAnimation } from './Maze';
 import { arrayToRGB } from '../../utils/arrayToRGB';
 

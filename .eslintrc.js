@@ -6,7 +6,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'import'],
   overrides: [
     {
       files: ['**/*.{ts,tsx}'],
@@ -17,14 +17,23 @@ module.exports = {
     },
   ],
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
       node: {
         paths: ['src'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
+      typescript: {
+        // always try to resolve types under `<root>@types` directory
+        // even it doesn't contain any source code, like `@types/unist`
+        alwaysTryTypes: true,
+      },
     },
   },
   rules: {
+    'import/no-unresolved': 'error',
     'import/extensions': [
       'error',
       'ignorePackages',

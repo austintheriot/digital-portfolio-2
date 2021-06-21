@@ -6,27 +6,20 @@ import type { GridOptions } from './Grid';
 import { GridAnimation } from './Grid';
 import canvasLabStyles from './RenderPathfinder.module.scss';
 
-const defaults: GridOptions = {
-  dimensions: '50',
-  lineWidth: '1',
-};
-
 interface RenderPathfinderProps {
 	options?: GridOptions;
 }
 
+const DEFAULT_OPTIONS = {};
+
 export const RenderPathfinder = ({
-  options: optionProps = defaults,
+  options: optionProps = DEFAULT_OPTIONS,
 }: RenderPathfinderProps) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // prevent infinite re-renders when feeding options to useAnimation
-  const animationOptions = useMemo(() => ({ ...defaults, ...optionProps }), [
-    optionProps,
-  ]);
-  const [options, setOptions] = useState<GridOptions>(animationOptions);
+  const [options, setOptions] = useState<GridOptions>(optionProps);
   const [canvas, animation, canvasRef] = useAnimation(GridAnimation, options);
   const gridAnimation = animation as GridAnimation | null;
   // require reset before trying to solve again

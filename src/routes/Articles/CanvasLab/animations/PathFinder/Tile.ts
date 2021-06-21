@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle -- this is a TypeScript type, not a dependency cycle
 import { GridAnimation } from './Grid';
 import { arrayToRGB } from '../../utils/arrayToRGB';
 
