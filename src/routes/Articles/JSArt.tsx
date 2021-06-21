@@ -18,7 +18,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Routes } from 'types';
+import { Links, Routes } from 'types';
 
 export default function JSArt() {
 	useEffect(() => {
@@ -26,13 +26,7 @@ export default function JSArt() {
 	}, []);
 
 	// eslint-disable-next-line no-unused-vars
-	const CANVAS_PROJECTS_COLLECTION_CODE =
-		'https://github.com/austintheriot/canvas-projects-combined';
-	const WEB_PARTICLES_LIVE = 'https://jsart-2020.web.app/';
-	const FRACTURES_LIVE = 'https://jsart-2020.web.app/fractures/index.html';
-	const BROWNIAN_LIVE = 'https://jsart-2020.web.app/brownian-motion/index.html';
-	const STOCHASTIC_LIVE =
-		'https://jsart-2020.web.app/stochastic-roots/index.html';
+
 
 	return (
 		<article>
@@ -45,23 +39,23 @@ export default function JSArt() {
 				designs and patterns that respond to visitors' settings.
 			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<ExternalLink to={WEB_PARTICLES_LIVE} underline={false}>
+				<ExternalLink to={Links.WEB_PARTICLES_LIVE} underline={false}>
 					<Button>See Live</Button>
 				</ExternalLink>
-				<ExternalLink to={CANVAS_PROJECTS_COLLECTION_CODE} underline={false}>
+				<ExternalLink to={Links.CANVAS_PROJECTS_COLLECTION_CODE} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
 
 			{/* Panel 1 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<ExternalLink to={FRACTURES_LIVE} underline={false}>
+				<ExternalLink to={Links.FRACTURES_LIVE} underline={false}>
 					<img alt='Example of Fractures app' src={hero1__1} />
 				</ExternalLink>
-				<ExternalLink to={WEB_PARTICLES_LIVE} underline={false}>
+				<ExternalLink to={Links.WEB_PARTICLES_LIVE} underline={false}>
 					<img alt='Example of Web Particles app' src={hero1__2} />
 				</ExternalLink>
-				<ExternalLink to={BROWNIAN_LIVE} underline={false}>
+				<ExternalLink to={Links.BROWNIAN_LIVE} underline={false}>
 					<img alt='Example of Brownian Motion app' src={hero1__3} />
 				</ExternalLink>
 			</div>
@@ -70,7 +64,7 @@ export default function JSArt() {
 			<ArticleParagraph>
 				Each project uses a custom algorithm to generate patterns, many which of
 				are inspired by real-life phenomena.{' '}
-				<ExternalLink to={FRACTURES_LIVE}>"Fractures"</ExternalLink>, for
+				<ExternalLink to={Links.FRACTURES_LIVE}>"Fractures"</ExternalLink>, for
 				instance, draws inspiration from the way glass panes and ceramic dishes
 				crack. Each line is given a random chance to break away as it travels in
 				one direction and stops when it reaches another line. Sometimes these
@@ -82,13 +76,13 @@ export default function JSArt() {
 
 			{/* Panel 2 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<ExternalLink to={WEB_PARTICLES_LIVE}>
+				<ExternalLink to={Links.WEB_PARTICLES_LIVE}>
 					<img alt='Example of Web Particles app' src={hero2__1} />
 				</ExternalLink>
-				<ExternalLink to={BROWNIAN_LIVE}>
+				<ExternalLink to={Links.BROWNIAN_LIVE}>
 					<img alt='Example of Brownian Motion' src={hero2__2} />
 				</ExternalLink>
-				<ExternalLink to={FRACTURES_LIVE}>
+				<ExternalLink to={Links.FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero2__3} />
 				</ExternalLink>
 			</div>
@@ -101,13 +95,13 @@ export default function JSArt() {
 
 			{/* Panel 3 ////////////////////////////////////// */}
 			<div className={generalStyles.panel}>
-				<ExternalLink to={FRACTURES_LIVE}>
+				<ExternalLink to={Links.FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero3__1} />
 				</ExternalLink>
-				<ExternalLink to={STOCHASTIC_LIVE}>
+				<ExternalLink to={Links.STOCHASTIC_LIVE}>
 					<img alt='Example Stochastic Roots app' src={hero3__2} />
 				</ExternalLink>
-				<ExternalLink to={FRACTURES_LIVE}>
+				<ExternalLink to={Links.FRACTURES_LIVE}>
 					<img alt='Example of Fractures app' src={hero3__3} />
 				</ExternalLink>
 			</div>

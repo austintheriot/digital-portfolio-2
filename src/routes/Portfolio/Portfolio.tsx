@@ -34,7 +34,6 @@ export default function Portfolio() {
 	const [scrollToJsart, jsartRef] = useScroll<HTMLDivElement>();
 	const [scrollToEmail, emailRef] = useScroll<HTMLDivElement>();
 	const [scrollToCanvasLab, canvasLabRef] = useScroll<HTMLDivElement>();
-	/* 	const [scrollToSharlat, sharlatRef] = useScroll<HTMLDivElement>(); */
 
 	useEffect(() => {
 		// scroll to indicated position in the url one is defined
@@ -80,14 +79,7 @@ export default function Portfolio() {
 			</section>
 			<section>
 				<h2 id="work">My Work</h2>
-				{/* <div ref={sharlat}></div>
-				<ProjectCard
-					img={yevgeniyMonogram}
-					title='Sharlat'
-					subtitle='classical composer portfolio'
-					id='sharlat'
-					color='cream'
-				/> */}
+
 				<div ref={myWorkRef}></div>
 				<div ref={canvasLabRef}></div>
 				<ProjectCard

@@ -11,10 +11,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Routes } from 'types';
-
-const CODE_URL = 'https://github.com/austintheriot/presto-web-app';
-const DEMO_URL = 'https://presto-6b7c9.firebaseapp.com/';
+import { Routes, Links } from 'types';
 
 export default function Presto() {
 	useEffect(() => {
@@ -45,14 +42,14 @@ export default function Presto() {
 			</ArticleParagraph>
 			<div className={generalStyles.center}></div>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<ExternalLink to={DEMO_URL} underline={false}>
+				<ExternalLink to={Links.PRESTO_DEMO} underline={false}>
 					<Button>See Live Demo</Button>
 				</ExternalLink>
-				<ExternalLink to={CODE_URL} underline={false}>
+				<ExternalLink to={Links.PRESTO_GITHUB} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
-			<ExternalLink to={CODE_URL}>
+			<ExternalLink to={Links.PRESTO_GITHUB}>
 				<img
 					alt="design previews of Presto"
 					src={hero1}
@@ -65,7 +62,7 @@ export default function Presto() {
 				composers, arrangers, conductors, soloists, ensembles, bands, and any
 				guests interested in hiring them or joining the conversation.
 			</ArticleParagraph>
-			<ExternalLink to={CODE_URL}>
+			<ExternalLink to={Links.PRESTO_GITHUB}>
 				<img
 					alt="design previews of Presto"
 					src={hero2}
@@ -77,17 +74,17 @@ export default function Presto() {
 				Presto is a React single-page web app written in TypeScript and React,
 				It is built to be fast, secure, and intuitive. React Hooks and Redux for
 				state management;{' '}
-				<ExternalLink to="https://firebase.google.com/products/auth">
+				<ExternalLink to={Links.FIREBASE_AUTH}>
 					Firebase Authentication,
 				</ExternalLink>{' '}
-				<ExternalLink to="https://firebase.google.com/products/storage">
+				<ExternalLink to={Links.FIREBASE_STORAGE}>
 					Cloud Storage,
 				</ExternalLink>{' '}
-				<ExternalLink to="https://firebase.google.com/products/firestore">
+				<ExternalLink to={Links.FIREBASE_AUTH}>
 					Cloud Firestore
 				</ExternalLink>{' '}
 				for the back end. Presto also uses the{' '}
-				<ExternalLink to="https://www.geoapify.com/">Geoapify API</ExternalLink>{' '}
+				<ExternalLink to={Links.GEOAPIFY}>Geoapify API</ExternalLink>{' '}
 				to validate users' location: they can either autofill their location
 				using the built-in JavaScript Geolocation API combined with Geoapify, or
 				they can manually input their location and select from the options
@@ -97,7 +94,7 @@ export default function Presto() {
 			</ArticleParagraph>
 			<ArticleParagraph>
 				If you're interested in learning more or contributing to this project,{' '}
-				<ExternalLink to={CODE_URL}>check out the GitHub</ExternalLink> or{' '}
+				<ExternalLink to={Links.PRESTO_GITHUB}>check out the GitHub</ExternalLink> or{' '}
 				<Link to={Routes.CONTACT} className={generalStyles.ExternalLink}>
 					get in touch
 				</Link>

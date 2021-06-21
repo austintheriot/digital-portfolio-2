@@ -10,7 +10,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Routes } from 'types';
+import { Links, Routes } from 'types';
 
 const MEMORIZE_CODE_URL = 'https://github.com/austintheriot/memorize-scripture';
 const MEMORIZE_LIVE_URL = 'https://memorizescripture.org/';
@@ -119,7 +119,7 @@ export default function Memorize() {
 
 			<ArticleParagraph>
 				This app has been created with the permission of the creators of the{' '}
-				<ExternalLink to='https://www.esv.org/'>
+				<ExternalLink to={Links.ESV}>
 					English Standard Bible (ESV)
 				</ExternalLink>
 				, from which all Bible quotes are drawn, unless otherwise indicated.

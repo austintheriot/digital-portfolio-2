@@ -7,9 +7,9 @@ import Decoration from '../../components/Decorations/Decorations1';
 import { ExternalLink } from '../../components/ExternalLink/ExternalLink';
 
 import headshot from '../../assets/images/headshot.jpg';
+import { Links } from 'types';
 
 const OPEN_SOURCE_JAVASCRIPT_ALGORITHMS = 'https://github.com/trekhleb/javascript-algorithms';
-const AUSTINS_GITHUB = 'https://github.com/austintheriot';
 
 export default function About() {
 	useEffect(() => {
@@ -71,7 +71,7 @@ export default function About() {
 
 					<p>
 						Check out my GitHub{' '}
-						<ExternalLink to={AUSTINS_GITHUB}>({AUSTINS_GITHUB})</ExternalLink>{' '}
+						<ExternalLink to={Links.MY_GITHUB}>({Links.MY_GITHUB})</ExternalLink>{' '}
 						to see some examples of my work. If you're interested in hiring me,
 						or just want to say hi, please don't hesitate to drop a line.
 					</p>

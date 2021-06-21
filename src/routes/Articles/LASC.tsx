@@ -11,10 +11,7 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Routes } from 'types';
-
-const LASCABLING_LIVE = 'https://www.lascabling.com/';
-const LASCABLING_CODE = 'https://github.com/austintheriot/lascabling';
+import { Links, Routes } from 'types';
 
 export default function LASC() {
 	useEffect(() => {
@@ -34,14 +31,14 @@ export default function LASC() {
 				measured by Google Analytics.
 			</ArticleParagraph>
 			<div className={[generalStyles.center, generalStyles.flex].join(' ')}>
-				<ExternalLink to={LASCABLING_LIVE} underline={false}>
+				<ExternalLink to={Links.LASC_LIVE} underline={false}>
 					<Button>See Live</Button>
 				</ExternalLink>
-				<ExternalLink to={LASCABLING_CODE} underline={false}>
+				<ExternalLink to={Links.LASC_CODE} underline={false}>
 					<Button>See Code</Button>
 				</ExternalLink>
 			</div>
-			<ExternalLink to={LASCABLING_LIVE}>
+			<ExternalLink to={Links.LASC_LIVE}>
 				<img
 					alt="photos of the LASCabling website"
 					src={hero1}

@@ -7,7 +7,6 @@ const checkIsActive = (pathname: Routes) => {
 	return new URL(window.location.href).pathname === pathname ? true : false;
 };
 
-
 export default function Header() {
 	return (
 		<header className={styles.header}>
@@ -72,9 +71,6 @@ export default function Header() {
 								JSArt
 							</NavLink>
 						</li>
-						{/* <li className={styles.li}>
-							<NavLink to={Routes.SHARLAT} activeClassName={styles.isActive} isActive={() => checkIsActive('/sharlat')}>Sharlat</NavLink>
-						</li> */}
 					</div>
 					<li className={styles.li}>
 						<NavLink
