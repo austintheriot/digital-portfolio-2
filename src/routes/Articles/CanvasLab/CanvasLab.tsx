@@ -6,12 +6,18 @@ import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Links, Routes } from 'types';
+import { Links, Routes, Styles } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
+import mazeAutomataImg from 'assets/images/maze-automata.png';
 import { RenderMaze } from './animations/Maze/RenderMaze';
 import { RenderPathfinder } from './animations/PathFinder/RenderPathfinder';
 import generalStyles from '../PortfolioArticle.module.css';
 import Decoration from '../../../components/Decorations/Decorations1';
+
+const mazeAutomataStyles: Styles = {
+  width: '80vw',
+  margin: '2rem auto',
+};
 
 export const CanvasLab = () => {
   useEffect(() => {
@@ -64,7 +70,26 @@ export const CanvasLab = () => {
         {' '}
         route!
       </ArticleParagraph>
-      <RenderPathfinder />
+      <ArticleHeading>Maze Automata</ArticleHeading>
+      <ArticleParagraph>
+        Play around with placing walls and letting the algorithm try to find a
+        path from one corner of the canvas to the other! Try the various types
+        of searches. As you may remember, breadth- and depth-first searches
+        guarantee to find
+        {' '}
+        <em>a</em>
+        {' '}
+        route to the destination, but not
+        necessarily the
+        <em>shortest</em>
+        {' '}
+        route!
+      </ArticleParagraph>
+      <img
+        style={mazeAutomataStyles}
+        src={mazeAutomataImg}
+        alt="example of maze automata"
+      />
       <div className={[generalStyles.center, generalStyles.flex].join(' ')}>
         <InternalLink to="/#canvas-lab">
           <Button arrow="left">Portfolio</Button>
