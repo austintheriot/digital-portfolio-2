@@ -35,5 +35,6 @@ export const useAnimation = (
     if (animationOptions && updateValues) animation.updateValues(animationOptions);
   }, [animationOptions]);
 
+  // eslint-disable-next-line react/jsx-key
   return [<canvas ref={canvasRef} />, animation, canvasRef];
 };

@@ -18,4 +18,6 @@ const InternalLink = forwardRef<HTMLAnchorElement, InternalLinkProps>((props, re
   <Link ref={ref} {...props} />
 ));
 
+InternalLink.displayName = 'InternalLink';
+
 export default InternalLink;

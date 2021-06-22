@@ -24,9 +24,9 @@
 
 .InnerContainer {
 	position: relative;
+	transition: transform 0.6s ease;
 	width: 100%;
 	height: 100%;
-	transition: transform 0.4s ease;
 	transform-style: preserve-3d;
 }
 
@@ -40,6 +40,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 1.5s ease;
+	transform: translateY(30px);
+	opacity: 0;
+}
+
+.Visible {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .CardFront {
