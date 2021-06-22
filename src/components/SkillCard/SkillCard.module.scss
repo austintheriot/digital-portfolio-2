@@ -1,0 +1,63 @@
+.Container {
+	margin: 0 auto;
+	width: 125px;
+	height: 125px;
+	position: relative;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+
+	&:focus {
+		outline: 1px solid black;
+		outline-offset: 3px;
+	}
+
+	&:hover,
+	&:focus {
+		.InnerContainer {
+			transform: rotateY(180deg);
+		}
+		.CardBack {
+			border: 1px solid black;
+		}
+	}
+}
+
+.InnerContainer {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.4s ease;
+	transform-style: preserve-3d;
+}
+
+.CardFront,
+.CardBack {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.CardFront {
+	img {
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+
+.CardBack {
+	// pre-flipped
+	transform: rotateY(180deg);
+	transition: border 0.6s;
+	border: 1px solid transparent;
+	p {
+		width: 90%;
+		text-align: center;
+	}
+}

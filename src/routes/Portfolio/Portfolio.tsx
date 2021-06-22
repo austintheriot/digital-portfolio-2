@@ -10,6 +10,8 @@ import { PortfolioProjectIds, Routes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import { useMediaQuery } from 'hooks/useMediaQuery';
 import Decorations1 from 'components/Decorations/Decorations1';
+import SkillCard from 'components/SkillCard/SkillCard';
+import SkillsList from 'components/SkillsList/SkillsList';
 import styles from './Portfolio.module.scss';
 import Button from '../../components/Button/Button';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -19,6 +21,22 @@ import jsartGif from '../../assets/images/jsart__logo.svg';
 import emailAPI from '../../assets/images/email-api__logo.svg';
 import memorizeLogo from '../../assets/images/memorize__logo.svg';
 import canvasLabLogo from '../../assets/images/canvas-lab__logo.svg';
+import cssImg from '../../assets/logos/css.svg';
+import cypressImg from '../../assets/logos/cypress.svg';
+import firebaseImg from '../../assets/logos/firebase.png';
+import gitImg from '../../assets/logos/git.svg';
+import githubImg from '../../assets/logos/github.png';
+import graphImg from '../../assets/logos/graph.svg';
+import htmlImg from '../../assets/logos/html.svg';
+import javascriptImg from '../../assets/logos/javascript.svg';
+import jestImg from '../../assets/logos/jest.svg';
+import testingLibraryImg from '../../assets/logos/react-testing-library.png';
+import reactImg from '../../assets/logos/react.svg';
+import reduxImg from '../../assets/logos/redux.svg';
+import rustImg from '../../assets/logos/rust.svg';
+import sassImg from '../../assets/logos/sass.svg';
+import typescriptImg from '../../assets/logos/typescript.svg';
+import wasmImg from '../../assets/logos/web-assembly.png';
 
 smoothscroll.polyfill();
 gsap.registerPlugin(ScrollTrigger);
@@ -69,7 +87,9 @@ export default function Portfolio() {
           <div className={styles.Maze}>
             <RenderMaze options={mazeOptions} />
           </div>
-        ) : <Decorations1 />}
+        ) : (
+          <Decorations1 />
+        )}
         <h1>Austin Theriot</h1>
         <p className={styles.subtitle}>front end developer</p>
         <div className={styles.SeeMyWork}>
@@ -136,42 +156,23 @@ export default function Portfolio() {
       </section>
       <section className={styles.skills}>
         <h2>Skills</h2>
-        <h3 className={styles.code}>Code:</h3>
-        <ul>
-          <li>TypeScript</li>
-          <li>JavaScript</li>
-          <li>React</li>
-          <li>Redux</li>
-          <li>CSS3</li>
-          <li>HTML5</li>
-          <li>Sass</li>
-          <li>Git/GitHub</li>
-          <li>Data Structures</li>
-          <li>Algorithms</li>
-        </ul>
-        <h3>Testing:</h3>
-        <ul>
-          <li>Cypress</li>
-          <li>React Testing Library</li>
-          <li>Jest</li>
-        </ul>
-        <h3>Graphic Design:</h3>
-        <ul>
-          <li>Adobe Photoshop</li>
-          <li>Adobe XD</li>
-          <li>
-            Inkscape (open-source
-            <br />
-            alternative to Adobe
-            {' '}
-            <br />
-            Illustrator)
-          </li>
-        </ul>
-        <h3>Learning:</h3>
-        <ul>
-          <li>Rust</li>
-        </ul>
+        <SkillsList>
+          <SkillCard text="TypeScript" src={typescriptImg} />
+          <SkillCard text="JavaScript" src={javascriptImg} />
+          <SkillCard text="React" src={reactImg} />
+          <SkillCard text="HTML" src={htmlImg} />
+          <SkillCard text="CSS" src={cssImg} />
+          <SkillCard text="Redux" src={reduxImg} />
+          <SkillCard text="Sass" src={sassImg} />
+          <SkillCard text="Git/GitHub" src={gitImg} />
+          <SkillCard text="Data Structures / Algorithms" src={graphImg} />
+          <SkillCard text="Jest" src={jestImg} />
+          <SkillCard text="React Testing Library" src={testingLibraryImg} />
+          <SkillCard text="Cypress.io" src={cypressImg} />
+          <SkillCard text="Firebase" src={firebaseImg} />
+          <SkillCard text="Rust (Learning)" src={rustImg} />
+          <SkillCard text="WebAssembly (Learning)" src={wasmImg} />
+        </SkillsList>
       </section>
       <div className={styles.AboutMeButton}>
         <InternalLink to={Routes.ABOUT} className={styles.Link}>
