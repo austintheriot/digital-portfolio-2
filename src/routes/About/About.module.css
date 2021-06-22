@@ -30,7 +30,7 @@
 	height: 450px;
 	margin: 1rem auto;
 	align-self: center;
-	background-color: lightgray;
+	background-color: #fafafa;
 }
 
 .buttonContainer {
@@ -46,13 +46,22 @@
 	text-decoration: underline;
 }
 
-.buttonContainer {
-	max-width: 600px;
-	margin: 2rem auto 0 auto;
+.center {
+	width: max-content;
+	margin: 3rem auto;
 }
 
-.buttonContainer button {
-	margin: 0 auto;
+.flex {
+	width: 75%;
+	min-width: 350px;
+	max-width: 600px;
+	display: flex;
+	flex: none;
+	justify-content: space-evenly;
+}
+
+.flex button {
+	margin: 0;
 }
 
 @media (min-width: 800px) {
@@ -80,11 +89,5 @@
 	.wrapper {
 		margin: 0;
 		align-self: start;
-	}
-
-	.buttonContainer button {
-		position: relative;
-		margin: 0;
-		left: 5%;
 	}
 }

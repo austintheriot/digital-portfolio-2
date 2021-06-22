@@ -26,61 +26,55 @@ export default function About() {
         <div className={styles.wrapper}>
           <h2>front end developer</h2>
           <p>
-            I am self-taught front end developer based in Austin, TX, with
-            experience developing web sites and web apps using JavaScript
-            (ES6+), TypeScript, React, Redux, CSS3, Sass/Scss, HTML5, Rest APIs,
-            JSON, and Git/GitHub.
+            Software engineer with hands-on experience bringing apps to
+            production in TypeScript, JavaScript, React, Redux, HTML, and CSS. I
+            am familiar with Node &amp; Express, JAMStack frameworks like
+            Gatsby, &amp; Next, GraphQL, ThemeUI, and CMS systems like Prismic
+            &amp; Contentful. I have experience writing tests for
+            production-level apps using Jest and React Testing Library, and I am
+            also familiar with the end-to-end &#40;e2e&#41; testing framework
+            Cypress.
           </p>
-
           <p>
-            Check out my open-source contributions to the largest JavaScript
-            algorithms &amp; data structures repo on GitHub:
+            I love data structures/algorithms, and I love open source. For that
+            reason, I contribute occasionally to the largest JavaScript
+            algorithms &amp; data structures repo on GitHub &#40;110k stars on
+            GitHub and counting&#41;:
             {' '}
-            <ExternalLink to={Links.OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}>
+            <ExternalLink
+              underline
+              to={Links.OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}
+            >
               {Links.OPEN_SOURCE_JAVASCRIPT_ALGORITHMS}
+            </ExternalLink>
+            . In addition, I maintain my own repo of JavaScript data structures
+            and algorithms on GitHub:
+            {' '}
+            <ExternalLink underline to={Links.ALGOS}>
+              {Links.ALGOS}
             </ExternalLink>
             .
           </p>
-
           <p>
-            I believe that objective metrics are one of the best tools a
-            developer can use to measure success throughout the development
-            process. Because of this, I use automated testing tools like
-            Cypress, React Testing Library, and Jest, along with the static
-            tests available through TypeScript to ensure my React apps and
-            JavaScript code work 100% to specification. I regularly audit my
-            websites with Google Lighthouse to ensure top notch performance,
-            SEO, best practices, and accessibility. I use Google Analytics to
-            know how many people are using my software and how they’re
-            interacting with it. Why settle for *hoping* your software works,
-            when you can *know* that it does through objective metrics?
+            For me, one of the greatest joys of being a software engineer is the
+            opportunity to learn and grow every single day on the job. Although
+            I&apos;m a front end developer by day, I&apos;m currently learning
+            Rust and WebAssembly in my spare time, and loving every second of
+            it. I&apos;m excited for a future where native apps can be deployed
+            across the internet, where a wide spectrum of languages can be
+            safely compiled, containerized, and run at near-native speeds on any
+            device, and where developers are equipped with ever-improving tools
+            to make lives better all across the globe.
           </p>
-
           <p>
-            Before I became a software developer, I was an award-winning
-            classical composer. Problem solving and creativity—whether audio,
-            visual or text—have always been two of my greatest strengths. When I
-            first discovered programming during my masters degree in music at
-            the University of Texas at Austin, I instantly fell in love,
-            realizing that coding provided a way for me to use my talents in
-            tangible ways for other people. Now I design and develop websites
-            and applications for clients as a freelance web developer.
+            When I&apos;m not programming, I love creating art, writing poetry,
+            composing music, reading, and hiking.
           </p>
-
-          <p>
-            Check out my GitHub
-            {' '}
-            <ExternalLink to={Links.MY_GITHUB}>
-              (
-              {Links.MY_GITHUB}
-              )
-            </ExternalLink>
-            {' '}
-            to see some examples of my work. If you&apos;re interested in hiring me,
-            or just want to say hi, please don&apos;t hesitate to drop a line.
-          </p>
-          <div className={styles.buttonContainer}>
-            <InternalLink to="/contact" className={styles.Link}>
+          <div className={[styles.center, styles.flex].join(' ')}>
+            <InternalLink to="/">
+              <Button arrow="left">Portfolio</Button>
+            </InternalLink>
+            <InternalLink to={Routes.CONTACT} className={styles.Link}>
               <Button arrow="right">Contact Me</Button>
             </InternalLink>
           </div>

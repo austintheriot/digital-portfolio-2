@@ -61,6 +61,7 @@ export enum Links {
 	LASC_LIVE = 'https://www.lascabling.com/',
 	LASC_CODE = 'https://github.com/austintheriot/lascabling',
 	CANVAS_PROJECTS_COLLECTION_CODE = 'https://github.com/austintheriot/canvas-projects-combined',
+	ALGOS = 'https://github.com/austintheriot/algorithms-and-data-structures',
 	WEB_PARTICLES_LIVE = 'https://jsart-2020.web.app/',
 	FRACTURES_LIVE = 'https://jsart-2020.web.app/fractures/index.html',
 	BROWNIAN_LIVE = 'https://jsart-2020.web.app/brownian-motion/index.html',
