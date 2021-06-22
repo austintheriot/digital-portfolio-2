@@ -1,7 +1,3 @@
-import * as CSS from 'csstype';
-
-export type Styles = CSS.Properties;
-
 export interface InputInnerState {
 	value: string;
 	animateUp: boolean;

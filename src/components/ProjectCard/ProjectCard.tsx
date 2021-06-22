@@ -1,13 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PortfolioProjectIds } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
+import { useHasBecomeVisible } from 'hooks/useHasBecomeVisible';
 import { analytics } from '../../config';
 import styles from './ProjectCard.module.css';
-
-gsap.registerPlugin(ScrollTrigger);
 
 type ProjectCardColors = 'purple' | 'cream' | 'pink' | 'blue' | 'yellow' | 'gray' | 'green';
 type ProjectCardIdType = `${PortfolioProjectIds}`;
@@ -32,7 +29,7 @@ export default function ProjectCard({
   whitetext = false,
 }: ProjectCardProps) {
   // ref enables GSAP animations
-  const linkRef = useRef(null);
+  const [ref, hasBecomeVisible] = useHasBecomeVisible<HTMLAnchorElement>(0.5);
   const history = useHistory();
 
   const handleClick = () => {
@@ -42,39 +39,16 @@ export default function ProjectCard({
     });
   };
 
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: linkRef.current || undefined,
-          start: 'top 75%',
-          toggleActions: 'play pause play pause',
-        },
-      })
-      .fromTo(
-        linkRef.current,
-        {
-          xPercent: rightalign ? 10 : -10,
-          duration: 0.5,
-          opacity: 0,
-        },
-        {
-          xPercent: 0,
-          duration: 0.5,
-          opacity: 1,
-        },
-      );
-  }, [rightalign]);
-
   return (
     <InternalLink
       /* TypeScript can't infer this one from usage */
       to={`/${id}` as `/${PortfolioProjectIds}`}
       className={[
 			  styles.Link,
-			  rightalign ? styles.rightalign : null,
+        rightalign ? styles.rightalign : '',
+        hasBecomeVisible ? styles.Visible : '',
       ].join(' ')}
-      ref={linkRef}
+      ref={ref}
     >
       <section
         role="button"

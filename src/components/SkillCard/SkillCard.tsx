@@ -16,7 +16,7 @@ interface SkillCardProps extends ComponentProps<'div'> {
 export default function SkillCard({
   text, src, index = Math.ceil(Math.random() * 10), ...rest
 }: SkillCardProps) {
-  const [ref, hasBecomeVisible] = useHasBecomeVisible<HTMLDivElement>();
+  const [ref, hasBecomeVisible] = useHasBecomeVisible<HTMLDivElement>(0.5);
 
   return (
   // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
@@ -27,7 +27,7 @@ export default function SkillCard({
         <div
           className={[styles.CardFront, hasBecomeVisible ? styles.Visible : ''].join(' ')}
           style={{
-            transitionDelay: `${index / 10}s`,
+            transitionDelay: `${index / 20}s`,
           }}
         >
           <img src={src} alt={text} />

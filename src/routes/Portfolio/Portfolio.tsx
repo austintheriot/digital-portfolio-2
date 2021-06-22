@@ -1,7 +1,4 @@
-import React, { CSSProperties, useEffect } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 import { RenderMaze } from 'routes/Articles/CanvasLab/animations/Maze/RenderMaze';
 import { useSmoothScroll } from 'hooks/useSmoothScroll';
@@ -39,7 +36,6 @@ import typescriptImg from '../../assets/logos/typescript.svg';
 import wasmImg from '../../assets/logos/web-assembly.png';
 
 smoothscroll.polyfill();
-gsap.registerPlugin(ScrollTrigger);
 
 const mazeOptions = {
   shouldRunOnSmallScreens: false,

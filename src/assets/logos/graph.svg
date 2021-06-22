@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="189.74mm" height="189.74mm" version="1.1" viewBox="0 0 189.74 189.74" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<svg width="160.25mm" height="160.25mm" version="1.1" viewBox="0 0 160.25 160.25" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
  <metadata>
   <rdf:RDF>
    <cc:Work rdf:about="">
@@ -9,22 +9,18 @@
    </cc:Work>
   </rdf:RDF>
  </metadata>
- <g transform="translate(-8.3155 -12.851)" fill="none" stroke="#000" stroke-width="1.5">
-  <circle cx="36.818" cy="51.936" r="12.118"/>
-  <circle cx="67.881" cy="141.71" r="6.5997"/>
-  <ellipse cx="148.44" cy="85.73" rx="9.4508" ry="9.1095"/>
-  <circle cx="118.06" cy="156.39" r="6.5997"/>
-  <circle cx="98.944" cy="126.35" r="6.5997"/>
+ <g transform="translate(-26.464 -46.875)" fill="none" stroke="#000" stroke-width="5.3932">
+  <circle cx="52.818" cy="79.479" r="15.646"/>
+  <circle cx="71.866" cy="168.82" r="15.646"/>
+  <circle cx="126.29" cy="181.97" r="15.646"/>
+  <circle cx="160.3" cy="114.4" r="15.646"/>
+  <circle cx="117.67" cy="73.583" r="15.646"/>
   <g>
-   <path d="m40.06 63.928 26.255 71.365"/>
-   <path d="m120.73 150.33 24.107-55.851"/>
-   <path d="m73.952 139.11 19.335-9.0698"/>
-   <path d="m101.64 131.71 12.65 18.617"/>
-   <path d="m73.236 145.08 38.189 10.263"/>
+   <path d="m51.684 94.218 17.687 58.05"/>
+   <path d="m78.442 154.54 32.653-66.213"/>
+   <path d="m85.244 162.24 62.585-37.188"/>
+   <path d="m130.6 167.23-19.501-78.911"/>
+   <path d="m86.151 178.12 23.129 1.3605"/>
   </g>
-  <circle cx="69.301" cy="82.281" r="6.5997"/>
-  <circle cx="156.25" cy="148.29" r="6.5997"/>
-  <circle cx="125.26" cy="52.229" r="6.5997"/>
-  <circle cx="53.258" cy="176.57" r="8.8572"/>
  </g>
 </svg>

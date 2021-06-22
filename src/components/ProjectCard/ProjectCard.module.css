@@ -1,13 +1,28 @@
 .Link {
+	/* Start out transparent and offset (left by default) */
+	transition: opacity 1s, transform 1s;
+	transform: translateX(-30px);
+
+	opacity: 0;
 	display: block;
 	position: relative;
 	height: max-content;
 	width: 90vw;
 	max-width: 400px;
-	opacity: 0;
 	cursor: pointer;
 	margin: 3rem auto 4rem auto;
 	background-color: white;
+}
+
+/* Start out transparent and offset (right by default) */
+.Link.rightalign {
+	transform: translateX(30px);
+}
+
+.Link.Visible,
+.Link.rightalign.Visible {
+	opacity: 1;
+	transform: translateX(0);
 }
 
 .section {

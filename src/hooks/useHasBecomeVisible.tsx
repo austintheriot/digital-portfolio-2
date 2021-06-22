@@ -1,17 +1,23 @@
-import { RefObject, useEffect } from 'react';
-import useIntersectionObserver from './useIntersectionObserver';
+import { RefObject, useEffect, useMemo } from 'react';
+import useIntersectionObserver, { ObserverCallback } from './useIntersectionObserver';
 import useStateIfMounted from './useStateIfMounted';
 
-export function useHasBecomeVisible<T extends HTMLElement>():
+/**
+ * Triggers when even the smallest fraction of the element comes into view.
+ */
+const DEFAULT_THRESHOLD = 0 as const;
+
+export function useHasBecomeVisible<T extends HTMLElement>(threshold: number = DEFAULT_THRESHOLD):
 [ref: RefObject<T>, hasBecomeVisible: boolean] {
-  const [isVisible, setIsVisible] = useStateIfMounted(false);
-  const handleVisibility = (visibility: boolean) => setIsVisible(visibility);
-  const ref = useIntersectionObserver<T>(handleVisibility);
   const [hasBecomeVisible, setHasBecomeVisible] = useStateIfMounted(false);
-  useEffect(() => {
-    if (isVisible && !hasBecomeVisible) {
-      setHasBecomeVisible(true);
+  const handleVisibility: ObserverCallback = (visibility, observer) => {
+    if (visibility) {
+      setHasBecomeVisible(visibility);
+      // stop listening after visibility becomes true
+      observer?.disconnect();
     }
-  }, [isVisible]);
+  };
+  const options = useMemo(() => ({ threshold }), []);
+  const ref = useIntersectionObserver<T>(handleVisibility, options);
   return [ref, hasBecomeVisible];
 }

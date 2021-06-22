@@ -1,12 +1,11 @@
 import React, { CSSProperties, useEffect } from 'react';
 import Button from 'components/Button/Button';
-import { Link } from 'react-router-dom';
 import { ExternalLink } from 'components/ExternalLink/ExternalLink';
 import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
 import { ArticleSubtitle } from 'components/ArticleSubtitle/ArticleSubtitle';
 import { ArticleHeading } from 'components/ArticleHeading/ArticleHeading';
 import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
-import { Links, Routes, Styles } from 'types';
+import { Links, Routes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import mazeAutomataImg from 'assets/images/maze-automata.png';
 import { RenderMaze } from './animations/Maze/RenderMaze';

@@ -40,7 +40,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: 1.5s ease;
+
+	// how long to become visible when entering
+	transition: 1s ease;
 	transform: translateY(30px);
 	opacity: 0;
 }
