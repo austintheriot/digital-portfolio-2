@@ -1,5 +1,8 @@
 import { useRef, useEffect } from 'react';
 
+/**
+ * Stores the previous value given to it.
+ */
 const usePrevious = <Value extends unknown>(value: Value) => {
   const ref = useRef(value);
 

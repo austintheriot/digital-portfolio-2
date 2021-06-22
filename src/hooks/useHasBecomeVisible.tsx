@@ -1,5 +1,7 @@
 import { RefObject, useEffect, useMemo } from 'react';
-import useIntersectionObserver, { ObserverCallback } from './useIntersectionObserver';
+import useIntersectionObserver, {
+  ObserverCallback,
+} from './useIntersectionObserver';
 import useStateIfMounted from './useStateIfMounted';
 
 /**
@@ -7,8 +9,15 @@ import useStateIfMounted from './useStateIfMounted';
  */
 const DEFAULT_THRESHOLD = 0 as const;
 
-export function useHasBecomeVisible<T extends HTMLElement>(threshold: number = DEFAULT_THRESHOLD):
-[ref: RefObject<T>, hasBecomeVisible: boolean] {
+/**
+ * Waits for the given threshold of a component to come into view,
+ * and then triggers a state change. Stops listening after the
+ * state is updated, so no more re-renders occur after the component
+ * becomes visible.
+ */
+export function useHasBecomeVisible<ElementType extends HTMLElement>(
+  threshold: number = DEFAULT_THRESHOLD,
+): [ref: RefObject<ElementType>, hasBecomeVisible: boolean] {
   const [hasBecomeVisible, setHasBecomeVisible] = useStateIfMounted(false);
   const handleVisibility: ObserverCallback = (visibility, observer) => {
     if (visibility) {
@@ -18,6 +27,6 @@ export function useHasBecomeVisible<T extends HTMLElement>(threshold: number = D
     }
   };
   const options = useMemo(() => ({ threshold }), []);
-  const ref = useIntersectionObserver<T>(handleVisibility, options);
+  const ref = useIntersectionObserver<ElementType>(handleVisibility, options);
   return [ref, hasBecomeVisible];
 }

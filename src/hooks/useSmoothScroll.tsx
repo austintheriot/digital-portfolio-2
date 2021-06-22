@@ -1,5 +1,8 @@
 import { MutableRefObject, useRef } from 'react';
 
+/**
+ * Scrolls smoothly to a givenelement.
+ */
 export const useSmoothScroll = <T extends HTMLElement>():
   [executeSmoothScroll: () => void, htmlElRef: MutableRefObject<T | null>] => {
   const htmlElRef = useRef<T | null>(null);

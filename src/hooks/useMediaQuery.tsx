@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * Updates state when a mediaQuery matches.
+ */
 export const useMediaQuery = (query: string) => {
   const mediaMatch = window.matchMedia(query);
   const [matches, setMatches] = useState(mediaMatch.matches);
