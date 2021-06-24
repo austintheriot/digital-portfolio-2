@@ -28,12 +28,11 @@ export default function About() {
           <p>
             Software engineer with hands-on experience bringing apps to
             production in TypeScript, JavaScript, React, Redux, HTML, and CSS. I
-            am familiar with Node &amp; Express, JAMStack frameworks like
-            Gatsby, &amp; Next, GraphQL, ThemeUI, and CMS systems like Prismic
-            &amp; Contentful. I have experience writing tests for
+            am familiar with Node &amp; Express, JAMStack frameworks like Gatsby, &amp;
+            Next, GraphQL, ThemeUI, WebSockets, and content management systems
+            like Prismic &amp; Contentful. I have experience writing tests for
             production-level apps using Jest and React Testing Library, and I am
-            also familiar with the end-to-end &#40;e2e&#41; testing framework
-            Cypress.
+            also familiar with the end-to-end &#40;e2e&#41; testing framework Cypress.
           </p>
           <p>
             I love data structures/algorithms, and I love open source. For that
