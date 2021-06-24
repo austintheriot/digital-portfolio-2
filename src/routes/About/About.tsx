@@ -34,10 +34,10 @@ export default function About() {
             experience writing tests for production-level apps using Jest and
             React Testing Library, and I am also familiar with the end-to-end
             &#40;e2e&#41; testing framework Cypress. I am accustomed to working
-            in fast-paced Agile Development.
+            in fast-paced Agile environment.
           </p>
           <p>
-            I love working with and learning about data structures/algorithms,
+            I love working with/learning about data structures/algorithms,
             and I love open source. For that reason, I contribute occasionally
             to the largest JavaScript algorithms &amp; data structures repo on
             GitHub &#40;110k stars on GitHub and counting&#41;:
@@ -69,7 +69,7 @@ export default function About() {
           </p>
           <p>
             When I&apos;m not programming, I love creating art, writing poetry,
-            composing music, reading, and hiking.
+            composing music, reading, and hiking &#40;not all at once&#41;.
           </p>
           <div className={[styles.center, styles.flex].join(' ')}>
             <InternalLink to="/">
