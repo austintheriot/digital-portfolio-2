@@ -1,13 +1,13 @@
 import React from 'react';
-import { useHistory, Link } from 'react-router-dom';
-import { PortfolioProjectIds } from 'types';
+import { useHistory } from 'react-router-dom';
+import { ProjectIds } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import { useHasBecomeVisible } from 'hooks/useHasBecomeVisible';
 import { analytics } from '../../config';
 import styles from './ProjectCard.module.css';
 
 type ProjectCardColors = 'purple' | 'cream' | 'pink' | 'blue' | 'yellow' | 'gray' | 'green';
-type ProjectCardIdType = `${PortfolioProjectIds}`;
+type ProjectCardIdType = `${ProjectIds}`;
 
 interface ProjectCardProps {
 	id: ProjectCardIdType,
@@ -42,7 +42,7 @@ export default function ProjectCard({
   return (
     <InternalLink
       /* TypeScript can't infer this one from usage */
-      to={`/${id}` as `/${PortfolioProjectIds}`}
+      to={`/${id}` as `/${ProjectIds}`}
       className={[
 			  styles.Link,
         rightalign ? styles.rightalign : '',

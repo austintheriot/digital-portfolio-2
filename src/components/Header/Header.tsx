@@ -1,9 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Routes } from 'types';
+import {
+  Routes, ScrollRoutes, PortfolioScrollLinks,
+} from 'types';
 import styles from './Header.module.css';
 
-const checkIsActive = (pathname: Routes) => (new URL(window.location.href).pathname === pathname);
+const checkIsActive = (
+  pathname: Routes | PortfolioScrollLinks,
+) => (new URL(window.location.href).pathname === pathname);
 
 export default function Header() {
   return (
@@ -74,6 +78,15 @@ export default function Header() {
                 isActive={() => checkIsActive(Routes.JSART)}
               >
                 JSArt
+              </NavLink>
+            </li>
+            <li className={styles.li}>
+              <NavLink
+                to={`/#${ScrollRoutes.SKILLS}`}
+                activeClassName={styles.isActive}
+                isActive={() => checkIsActive(`/#${ScrollRoutes.SKILLS}` as PortfolioScrollLinks)}
+              >
+                Skills
               </NavLink>
             </li>
           </div>

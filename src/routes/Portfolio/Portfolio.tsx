@@ -3,7 +3,7 @@ import smoothscroll from 'smoothscroll-polyfill';
 import { RenderMaze } from 'routes/Articles/CanvasLab/animations/Maze/RenderMaze';
 import { useSmoothScroll } from 'hooks/useSmoothScroll';
 import { useScroll } from 'hooks/useScroll';
-import { PortfolioProjectIds, Routes } from 'types';
+import { ProjectIds, Routes, ScrollRoutes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import { useMediaQuery } from 'hooks/useMediaQuery';
 import Decorations1 from 'components/Decorations/Decorations1';
@@ -50,6 +50,7 @@ export default function Portfolio() {
   const [scrollToJsart, jsartRef] = useScroll<HTMLDivElement>();
   const [scrollToEmail, emailRef] = useScroll<HTMLDivElement>();
   const [scrollToCanvasLab, canvasLabRef] = useScroll<HTMLDivElement>();
+  const [scrollToSkills, skillsRef] = useScroll<HTMLElement>();
   const isDesktopSize = useMediaQuery('(min-width: 1100px)');
 
   // eslint-disable-next-line consistent-return
@@ -58,12 +59,13 @@ export default function Portfolio() {
     // divs in between the project items give react an easy html element to use as a ref
     if (window.location.href.includes('#')) {
       const scrollLocation = window.location.href.split('#').pop();
-      if (scrollLocation === PortfolioProjectIds.PRESTO) return scrollToPresto();
-      if (scrollLocation === PortfolioProjectIds.MEMORIZE) return scrollToMemorize();
-      if (scrollLocation === PortfolioProjectIds.LASC) return scrollToLascabling();
-      if (scrollLocation === PortfolioProjectIds.JSART) return scrollToJsart();
-      if (scrollLocation === PortfolioProjectIds.EMAIL) return scrollToEmail();
-      if (scrollLocation === PortfolioProjectIds.CANVAS_LAB) return scrollToCanvasLab();
+      if (scrollLocation === ProjectIds.PRESTO) return scrollToPresto();
+      if (scrollLocation === ProjectIds.MEMORIZE) return scrollToMemorize();
+      if (scrollLocation === ProjectIds.LASC) return scrollToLascabling();
+      if (scrollLocation === ProjectIds.JSART) return scrollToJsart();
+      if (scrollLocation === ProjectIds.EMAIL) return scrollToEmail();
+      if (scrollLocation === ProjectIds.CANVAS_LAB) return scrollToCanvasLab();
+      if (scrollLocation === ScrollRoutes.SKILLS) return scrollToSkills();
     } else {
       window.scrollTo(0, 0);
     }
@@ -103,7 +105,7 @@ export default function Portfolio() {
           img={canvasLabLogo}
           title="Canvas Lab"
           subtitle="algorithm visualizations"
-          id={PortfolioProjectIds.CANVAS_LAB}
+          id={ProjectIds.CANVAS_LAB}
           color="yellow"
           rightalign
         />
@@ -112,7 +114,7 @@ export default function Portfolio() {
           img={lascablingLogo}
           title="LASC"
           subtitle="local business landing page"
-          id={PortfolioProjectIds.LASC}
+          id={ProjectIds.LASC}
           color="blue"
         />
         <div ref={emailRef} />
@@ -120,7 +122,7 @@ export default function Portfolio() {
           img={emailAPI}
           title="Email API"
           subtitle="service for static sites"
-          id={PortfolioProjectIds.EMAIL}
+          id={ProjectIds.EMAIL}
           color="green"
           rightalign
         />
@@ -129,7 +131,7 @@ export default function Portfolio() {
           img={memorizeLogo}
           title="Memorize"
           subtitle="react progressive web app"
-          id={PortfolioProjectIds.MEMORIZE}
+          id={ProjectIds.MEMORIZE}
           color="pink"
         />
         <div ref={prestoRef} />
@@ -137,7 +139,7 @@ export default function Portfolio() {
           img={prestoLogo}
           title="Presto"
           subtitle="react social media web app"
-          id={PortfolioProjectIds.PRESTO}
+          id={ProjectIds.PRESTO}
           color="purple"
           rightalign
         />
@@ -146,11 +148,11 @@ export default function Portfolio() {
           img={jsartGif}
           title="JSArt"
           subtitle="interactive canvas app"
-          id={PortfolioProjectIds.JSART}
+          id={ProjectIds.JSART}
           color="gray"
         />
       </section>
-      <section className={styles.skills}>
+      <section className={styles.skills} ref={skillsRef}>
         <h2>Skills</h2>
         <SkillsList>
           <SkillCard text="TypeScript" src={typescriptImg} index={0} />

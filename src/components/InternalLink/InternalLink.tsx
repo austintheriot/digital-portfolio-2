@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithRef, forwardRef } from 'react';
 import { Link } from 'react-router-dom';
-import { PortfolioProjectIds, Routes } from 'types';
+import { Routes, PortfolioScrollLinks } from 'types';
 
 interface InternalLinkProps extends ComponentPropsWithRef<'a'> {
   /**
@@ -8,7 +8,7 @@ interface InternalLinkProps extends ComponentPropsWithRef<'a'> {
    * Requires more flexibility, since the Portfolio page uses a lot of ids
    * for smooth scrolling, etc.
    */
-  to: `${Routes}` | `/#${PortfolioProjectIds}`,
+  to: `${Routes}` | PortfolioScrollLinks,
 }
 
 /**

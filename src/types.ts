@@ -33,7 +33,7 @@ export enum Routes {
  * Ids of portfolio projects--used for navigation/smooth-scrolling
  * on the main Portfolio page. i.e. "lascabling" becomes "/#lascabling" for scrolling.
  */
-export enum PortfolioProjectIds {
+export enum ProjectIds {
 	CANVAS_LAB = 'canvas-lab',
 	LASC = 'lascabling',
 	EMAIL = 'email-api',
@@ -41,6 +41,15 @@ export enum PortfolioProjectIds {
 	PRESTO = 'presto',
 	JSART = 'jsart',
 }
+
+export enum ScrollRoutes {
+	SKILLS = 'skills',
+}
+
+/**
+ * Links to scroll to parts of the Portfolio page.
+ */
+export type PortfolioScrollLinks = `/#${ProjectIds | ScrollRoutes}`;
 
 /**
  * External links
