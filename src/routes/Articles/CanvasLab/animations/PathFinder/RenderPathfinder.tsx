@@ -67,6 +67,23 @@ export const RenderPathfinder = ({
       if (gridAnimation) gridAnimation.onMouseDown(false);
     };
 
+    const onTouchMove = (e: TouchEvent) => {
+      const touch = e.touches[0] || e.changedTouches[0];
+      const realTarget = document.elementFromPoint(touch.clientX, touch.clientY);
+      if (!realTarget || realTarget !== canvasRef.current) return;
+      const offsetX = touch.clientX - realTarget.getBoundingClientRect().x;
+      const offsetY = touch.clientY - realTarget.getBoundingClientRect().y;
+      if (gridAnimation) gridAnimation.onMouseMove(offsetX, offsetY);
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      if (gridAnimation) gridAnimation.onMouseDown(true);
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (gridAnimation) gridAnimation.onMouseDown(false);
+    };
+
     // add event listener
     const currentCanvas = canvasRef.current;
     if (currentCanvas) {
@@ -74,6 +91,9 @@ export const RenderPathfinder = ({
       currentCanvas.addEventListener('mousedown', onMouseDown);
       currentCanvas.addEventListener('mouseup', onMouseUp);
       currentCanvas.addEventListener('mouseout', onMouseOut);
+      currentCanvas.addEventListener('touchmove', onTouchMove);
+      currentCanvas.addEventListener('touchstart', onTouchStart);
+      currentCanvas.addEventListener('touchend', onTouchEnd);
     }
 
     // remove event listener
