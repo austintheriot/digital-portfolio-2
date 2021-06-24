@@ -1,4 +1,4 @@
-import React, { CSSProperties, useEffect } from 'react';
+import React, { CSSProperties, lazy, useEffect } from 'react';
 import Button from 'components/Button/Button';
 import { ExternalLink } from 'components/ExternalLink/ExternalLink';
 import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
@@ -20,7 +20,7 @@ const mazeAutomataStyles: CSSProperties = {
   margin: '2rem auto',
 };
 
-export const CanvasLab = () => {
+const CanvasLab = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -97,3 +97,7 @@ export const CanvasLab = () => {
     </article>
   );
 };
+
+CanvasLab.displayName = 'CanvasLab';
+
+export default CanvasLab;

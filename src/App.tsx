@@ -1,20 +1,13 @@
 /* global window */
-import React, { useEffect } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { Routes } from 'types';
+import Loading from 'components/Loading/Loading';
 import { analytics } from './config';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Portfolio from './routes/Portfolio/Portfolio';
-import About from './routes/About/About';
-import Contact from './routes/Contact/Contact';
-import Presto from './routes/Articles/Presto';
-import LASC from './routes/Articles/LASC';
-import JSArt from './routes/Articles/JSArt';
-import Email from './routes/Articles/Email';
-import Memorize from './routes/Articles/Memorize';
-import { CanvasLab } from './routes/Articles/CanvasLab/CanvasLab';
 
 function App() {
   const location = useLocation();
@@ -26,19 +19,30 @@ function App() {
     });
   }, [location]);
 
+  const LASC = lazy(() => import('routes/Articles/LASC'));
+  const Email = lazy(() => import('routes/Articles/Email'));
+  const Memorize = lazy(() => import('routes/Articles/Memorize'));
+  const Presto = lazy(() => import('routes/Articles/Presto'));
+  const JSArt = lazy(() => import('routes/Articles/JSArt'));
+  const About = lazy(() => import('routes/About/About'));
+  const Contact = lazy(() => import('routes/Contact/Contact'));
+  const CanvasLab = lazy(() => import('routes/Articles/CanvasLab/CanvasLab'));
+
   return (
     <div className="App">
       <Header />
       <Switch>
-        <Route path={Routes.LASC} component={LASC} />
-        <Route path={Routes.EMAIL} component={Email} />
-        <Route path={Routes.MEMORIZE} component={Memorize} />
-        <Route path={Routes.PRESTO} component={Presto} />
-        <Route path={Routes.JSART} component={JSArt} />
-        <Route path={Routes.ABOUT} component={About} />
-        <Route path={Routes.CONTACT} component={Contact} />
-        <Route path={Routes.CANVAS_LAB} component={CanvasLab} />
-        <Route path={Routes.HOME} component={Portfolio} />
+        <Suspense fallback={<Loading />}>
+          <Route path={Routes.LASC} exact component={LASC} />
+          <Route path={Routes.EMAIL} exact component={Email} />
+          <Route path={Routes.MEMORIZE} exact component={Memorize} />
+          <Route path={Routes.PRESTO} exact component={Presto} />
+          <Route path={Routes.JSART} exact component={JSArt} />
+          <Route path={Routes.ABOUT} exact component={About} />
+          <Route path={Routes.CONTACT} exact component={Contact} />
+          <Route path={Routes.CANVAS_LAB} exact component={CanvasLab} />
+          <Route path={Routes.HOME} exact component={Portfolio} />
+        </Suspense>
       </Switch>
       <Footer />
     </div>
