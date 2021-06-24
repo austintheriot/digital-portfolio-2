@@ -28,17 +28,19 @@ export default function About() {
           <p>
             Software engineer with hands-on experience bringing apps to
             production in TypeScript, JavaScript, React, Redux, HTML, and CSS. I
-            am familiar with Node &amp; Express, JAMStack frameworks like Gatsby, &amp;
-            Next, GraphQL, ThemeUI, WebSockets, and content management systems
-            like Prismic &amp; Contentful. I have experience writing tests for
-            production-level apps using Jest and React Testing Library, and I am
-            also familiar with the end-to-end &#40;e2e&#41; testing framework Cypress.
+            am familiar with Node &amp; Express, JAMStack frameworks like
+            Gatsby, &amp; Next, GraphQL, ThemeUI, WebSockets, and content
+            management systems such as Prismic &amp; Contentful. I have
+            experience writing tests for production-level apps using Jest and
+            React Testing Library, and I am also familiar with the end-to-end
+            &#40;e2e&#41; testing framework Cypress. I am accustomed to working
+            in fast-paced Agile Development.
           </p>
           <p>
-            I love data structures/algorithms, and I love open source. For that
-            reason, I contribute occasionally to the largest JavaScript
-            algorithms &amp; data structures repo on GitHub &#40;110k stars on
-            GitHub and counting&#41;:
+            I love working with and learning about data structures/algorithms,
+            and I love open source. For that reason, I contribute occasionally
+            to the largest JavaScript algorithms &amp; data structures repo on
+            GitHub &#40;110k stars on GitHub and counting&#41;:
             {' '}
             <ExternalLink
               underline
@@ -59,11 +61,11 @@ export default function About() {
             opportunity to learn and grow every single day on the job. Although
             I&apos;m a front end developer by day, I&apos;m currently learning
             Rust and WebAssembly in my spare time, and loving every second of
-            it. I&apos;m excited for a future where native apps can be deployed
-            across the internet, where a wide spectrum of languages can be
-            safely compiled, containerized, and run at near-native speeds on any
-            device, and where developers are equipped with ever-improving tools
-            to make lives better all across the globe.
+            that. I&apos;m excited for a future where native apps can be
+            deployed across the internet, where a wide spectrum of languages can
+            be safely compiled, containerized, and run at near-native speeds on
+            any device, and where developers are equipped with ever-improving
+            tools to make lives better all across the world.
           </p>
           <p>
             When I&apos;m not programming, I love creating art, writing poetry,
