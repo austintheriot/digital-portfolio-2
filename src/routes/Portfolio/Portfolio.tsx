@@ -34,6 +34,9 @@ import rustImg from '../../assets/logos/rust.svg';
 import sassImg from '../../assets/logos/sass.svg';
 import typescriptImg from '../../assets/logos/typescript.svg';
 import wasmImg from '../../assets/logos/web-assembly.png';
+import nodeImg from '../../assets/logos/node.svg';
+import figmaImg from '../../assets/logos/figma.svg';
+import inkscapeImg from '../../assets/logos/inkscape.svg';
 
 smoothscroll.polyfill();
 
@@ -166,10 +169,13 @@ export default function Portfolio() {
           <SkillCard text="Data Structures / Algorithms" src={graphImg} index={4} />
           <SkillCard text="Jest" src={jestImg} index={0} />
           <SkillCard text="React Testing Library" src={testingLibraryImg} index={1} />
+          <SkillCard text="Node.js" src={nodeImg} index={1} />
           <SkillCard text="Cypress.io" src={cypressImg} index={2} />
           <SkillCard text="Firebase" src={firebaseImg} index={3} />
+          <SkillCard text="Figma" src={figmaImg} index={2} />
+          <SkillCard text="Inkscape" src={inkscapeImg} index={2} />
           <SkillCard text="Rust (Learning)" src={rustImg} index={4} />
-          <SkillCard text="WebAssembly (Learning)" src={wasmImg} index={5} />
+          <SkillCard text="WebAssembly (Learning)" src={wasmImg} index={0} />
         </SkillsList>
       </section>
       <div className={styles.AboutMeButton}>
