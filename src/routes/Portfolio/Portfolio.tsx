@@ -37,6 +37,7 @@ import wasmImg from '../../assets/logos/web-assembly.png';
 import nodeImg from '../../assets/logos/node.svg';
 import figmaImg from '../../assets/logos/figma.svg';
 import inkscapeImg from '../../assets/logos/inkscape.svg';
+import themeUiImg from '../../assets/logos/theme-ui.png';
 
 smoothscroll.polyfill();
 
@@ -158,24 +159,25 @@ export default function Portfolio() {
       <section className={styles.skills} ref={skillsRef}>
         <h2>Skills</h2>
         <SkillsList>
-          <SkillCard text="TypeScript" src={typescriptImg} index={0} />
-          <SkillCard text="JavaScript" src={javascriptImg} index={1} />
-          <SkillCard text="React" src={reactImg} index={2} />
-          <SkillCard text="HTML" src={htmlImg} index={3} />
-          <SkillCard text="CSS" src={cssImg} index={0} />
-          <SkillCard text="Redux" src={reduxImg} index={1} />
-          <SkillCard text="Sass" src={sassImg} index={2} />
-          <SkillCard text="Git/GitHub" src={gitImg} index={3} />
-          <SkillCard text="Data Structures / Algorithms" src={graphImg} index={4} />
-          <SkillCard text="Jest" src={jestImg} index={0} />
-          <SkillCard text="React Testing Library" src={testingLibraryImg} index={1} />
-          <SkillCard text="Node.js" src={nodeImg} index={1} />
-          <SkillCard text="Cypress.io" src={cypressImg} index={2} />
-          <SkillCard text="Firebase" src={firebaseImg} index={3} />
-          <SkillCard text="Figma" src={figmaImg} index={2} />
-          <SkillCard text="Inkscape" src={inkscapeImg} index={2} />
-          <SkillCard text="Rust (Learning)" src={rustImg} index={4} />
-          <SkillCard text="WebAssembly (Learning)" src={wasmImg} index={0} />
+          <SkillCard text="TypeScript" src={typescriptImg} />
+          <SkillCard text="JavaScript" src={javascriptImg} />
+          <SkillCard text="React" src={reactImg} />
+          <SkillCard text="HTML" src={htmlImg} />
+          <SkillCard text="CSS" src={cssImg} />
+          <SkillCard text="Redux" src={reduxImg} />
+          <SkillCard text="Sass" src={sassImg} />
+          <SkillCard text="Git/GitHub" src={gitImg} />
+          <SkillCard text="Data Structures / Algorithms" src={graphImg} />
+          <SkillCard text="Jest" src={jestImg} />
+          <SkillCard text="React Testing Library" src={testingLibraryImg} />
+          <SkillCard text="Node.js" src={nodeImg} />
+          <SkillCard text="ThemeUI" src={themeUiImg} />
+          <SkillCard text="Cypress.io" src={cypressImg} />
+          <SkillCard text="Firebase" src={firebaseImg} />
+          <SkillCard text="Figma" src={figmaImg} />
+          <SkillCard text="Inkscape" src={inkscapeImg} />
+          <SkillCard text="Rust (Learning)" src={rustImg} />
+          <SkillCard text="WebAssembly (Learning)" src={wasmImg} />
         </SkillsList>
       </section>
       <div className={styles.AboutMeButton}>

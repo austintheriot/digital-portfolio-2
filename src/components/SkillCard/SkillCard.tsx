@@ -4,7 +4,7 @@ import React, {
 import { useHasBecomeVisible } from 'hooks/useHasBecomeVisible';
 import styles from './SkillCard.module.scss';
 
-interface SkillCardProps extends ComponentProps<'div'> {
+export interface SkillCardProps extends ComponentProps<'div'> {
 	text: string;
   src: string;
   /**
