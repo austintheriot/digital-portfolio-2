@@ -12,6 +12,7 @@
 	cursor: pointer;
 	margin: 3rem auto 4rem auto;
 	background-color: white;
+	text-decoration: none;
 }
 
 /* Start out transparent and offset (right by default) */
