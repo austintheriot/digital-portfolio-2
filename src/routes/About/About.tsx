@@ -72,7 +72,7 @@ export default function About() {
             composing music, reading, and hiking &#40;not all at once&#41;.
           </p>
           <div className={[styles.center, styles.flex].join(' ')}>
-            <InternalLink to="/">
+            <InternalLink to="/" className={styles.Link}>
               <Button arrow="left">Portfolio</Button>
             </InternalLink>
             <InternalLink to={Routes.CONTACT} className={styles.Link}>
