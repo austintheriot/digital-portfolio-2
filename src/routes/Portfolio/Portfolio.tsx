@@ -9,6 +9,7 @@ import { useMediaQuery } from 'hooks/useMediaQuery';
 import Decorations1 from 'components/Decorations/Decorations1';
 import SkillCard from 'components/SkillCard/SkillCard';
 import SkillsList from 'components/SkillsList/SkillsList';
+import { useHasBecomeVisible } from 'hooks/useHasBecomeVisible';
 import styles from './Portfolio.module.scss';
 import Button from '../../components/Button/Button';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
@@ -73,14 +74,7 @@ export default function Portfolio() {
     } else {
       window.scrollTo(0, 0);
     }
-  }, [
-    scrollToPresto,
-    scrollToMemorize,
-    scrollToLascabling,
-    scrollToJsart,
-    scrollToEmail,
-    scrollToCanvasLab,
-  ]);
+  }, []);
 
   return (
     <div className={styles.container}>
