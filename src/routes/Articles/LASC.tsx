@@ -47,7 +47,7 @@ export default function LASC() {
       </ExternalLink>
       <ArticleHeading>Tech</ArticleHeading>
       <ArticleParagraph>
-        Designed in Adobe Photoshop and built using HTML5, CSS3, and JavaScript.
+        Designed in Adobe Photoshop and built using JavaScript, CSS, and HTML.
         Although I believe that templates and libraries like Bootstrap are a
         fast and useful way to build websites, I tend to make my clients&apos;
         websites completely from scratch. This ensures that the needs of the

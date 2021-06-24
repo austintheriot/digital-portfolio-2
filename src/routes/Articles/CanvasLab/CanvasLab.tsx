@@ -35,11 +35,11 @@ const CanvasLab = () => {
         I&apos;ve always been fascinated with data structures and algorithms,
         and I&apos;ve also always been interested in interactive visual
         experiments / generative art projects. This project was a way for me to
-        combine those interests in one place. The two projects you see below
+        combine those interests in one place. The projects you see below
         illustrate some different search algorithms and their possible
-        applications. Additionally, these examples use my own implementations of
-        data structures such as Stacks and Queues that I&apos;ve practiced over
-        the course of my software development career. This project was a created
+        applications. These examples use my own implementations of data
+        structures such as Stacks and Queues that I&apos;ve practiced over the
+        course of my software development career. This project was a created
         with TypeScript and React.
       </ArticleParagraph>
       <div className={generalStyles.center}>
