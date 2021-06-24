@@ -3,7 +3,6 @@ import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import { Routes } from 'types';
-import Loading from 'components/Loading/Loading';
 import { analytics } from './config';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -32,7 +31,8 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Suspense fallback={<Loading />}>
+        {/* Since bundle size is small, loading spinner would actually be more distracting */}
+        <Suspense fallback={null}>
           <Route path={Routes.LASC} exact component={LASC} />
           <Route path={Routes.EMAIL} exact component={Email} />
           <Route path={Routes.MEMORIZE} exact component={Memorize} />
