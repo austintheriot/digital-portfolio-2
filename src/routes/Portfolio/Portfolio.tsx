@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 import { RenderMaze } from 'routes/Articles/CanvasLab/animations/Maze/RenderMaze';
 import { useSmoothScroll } from 'hooks/useSmoothScroll';
@@ -39,6 +39,7 @@ import nodeImg from '../../assets/logos/node.svg';
 import figmaImg from '../../assets/logos/figma.svg';
 import inkscapeImg from '../../assets/logos/inkscape.svg';
 import themeUiImg from '../../assets/logos/theme-ui.png';
+import { FadeInElement } from '../../components/FadeInElement/FadeInElement';
 
 smoothscroll.polyfill();
 
@@ -59,7 +60,7 @@ export default function Portfolio() {
   const isDesktopSize = useMediaQuery('(min-width: 1100px)');
 
   // eslint-disable-next-line consistent-return
-  useEffect(() => {
+  useLayoutEffect(() => {
     // scroll to indicated position in the url one is defined
     // divs in between the project items give react an easy html element to use as a ref
     if (window.location.href.includes('#')) {
@@ -86,12 +87,14 @@ export default function Portfolio() {
         ) : (
           <Decorations1 />
         )}
-        <h1>Austin Theriot</h1>
-        <p className={styles.subtitle}>front end developer</p>
+        <FadeInElement><h1>Austin Theriot</h1></FadeInElement>
+        <FadeInElement animationDelay="0.15s"><p className={styles.subtitle}>front end developer</p></FadeInElement>
         <div className={styles.SeeMyWork}>
-          <Button onClick={scrollToMyWork} arrow="down" animateLines={false}>
-            See My Work
-          </Button>
+          <FadeInElement animationDelay="0.3s">
+            <Button onClick={scrollToMyWork} arrow="down" animateLines={false}>
+              See My Work
+            </Button>
+          </FadeInElement>
         </div>
       </section>
       <section>
@@ -151,7 +154,9 @@ export default function Portfolio() {
         />
       </section>
       <section className={styles.skills} ref={skillsRef}>
-        <h2>Skills</h2>
+        <FadeInElement>
+          <h2>Skills</h2>
+        </FadeInElement>
         <SkillsList>
           <SkillCard text="TypeScript" src={typescriptImg} />
           <SkillCard text="JavaScript" src={javascriptImg} />

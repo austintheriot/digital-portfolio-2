@@ -1,0 +1,22 @@
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+// these set up the element's state before the animation
+.PreFadeIn {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+// animation that fades in the component
+.FadeIn {
+	animation: fade-in 1.5s ease 0s 1 forwards;
+}
