@@ -34,6 +34,7 @@ module.exports = {
     },
   },
   rules: {
+    'no-unused-vars': 'error',
     'import/no-unresolved': 'error',
     'import/extensions': [
       'error',
