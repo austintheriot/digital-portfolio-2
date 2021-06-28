@@ -10,7 +10,7 @@
 	}
 }
 
-.OuterContainer {
+.Spinner {
 	position: 'fixed';
 	height: 100vh;
 	width: 100vw;
@@ -39,6 +39,86 @@
 			bottom: -2rem;
 			left: 52%;
 			transform: translate(-50%, 100%);
+		}
+	}
+}
+
+@keyframes wave {
+	0% {
+		background-position: 150% 50%;
+	}
+	100% {
+		background-position: -50% 50%;
+	}
+}
+
+.Wave {
+	background: linear-gradient(90deg, #f7f7f7, #ffffff, #f7f7f7);
+	background-size: 200% 100%;
+	animation: wave 2s infinite linear forwards;
+}
+
+.Ghost {
+	* {
+		border-radius: 5px;
+	}
+
+	.Title {
+		height: 4rem;
+		width: 90%;
+		max-width: 300px;
+		margin: 6rem auto 3rem;
+		background-color: #f7f7f7;
+	}
+
+	.Subtitle {
+		height: 3rem;
+		width: 90%;
+		max-width: 400px;
+		margin: 2rem auto;
+		background-color: #f7f7f7;
+	}
+
+	.Header {
+		height: 2.25rem;
+		width: 90%;
+		max-width: 600px;
+		margin: 2rem auto;
+
+		div {
+			height: 100%;
+			width: 6rem;
+			background-color: #f7f7f7;
+		}
+	}
+
+	.Paragraph {
+		width: 90%;
+		max-width: 600px;
+		margin: 1rem auto;
+
+		span {
+			display: block;
+			height: 1.5rem;
+			width: 100%;
+			background-color: #f7f7f7;
+			margin: 1rem 0;
+		}
+
+		span:nth-of-type(2n + 2) {
+			width: 87%;
+		}
+
+		span:nth-of-type(3n + 3) {
+			width: 51%;
+		}
+
+		span:nth-of-type(5n) {
+			width: 73%;
+		}
+
+		span:nth-of-type(7n + 5) {
+			width: 63%;
 		}
 	}
 }

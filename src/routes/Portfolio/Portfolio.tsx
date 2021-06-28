@@ -98,8 +98,9 @@ export default function Portfolio() {
         </div>
       </section>
       <section>
-        <h2 id="work">My Work</h2>
-
+        <FadeInElement>
+          <h2 id="work">My Work</h2>
+        </FadeInElement>
         <div ref={myWorkRef} />
         <div ref={canvasLabRef} />
         <ProjectCard
