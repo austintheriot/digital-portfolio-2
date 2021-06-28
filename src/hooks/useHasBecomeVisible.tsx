@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useMemo } from 'react';
+import { RefObject, useMemo } from 'react';
 import useIntersectionObserver, {
   ObserverCallback,
 } from './useIntersectionObserver';

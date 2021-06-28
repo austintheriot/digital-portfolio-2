@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Links, Routes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import styles from './About.module.css';

@@ -55,9 +55,7 @@ export default function ProjectCard({
         tabIndex={0}
         id={id}
 				// when clicked, replace the current url with the object id and go to the location
-        onClick={(e) => {
-          handleClick();
-        }}
+        onClick={handleClick}
         onKeyUp={(e) => {
           if ([' ', 'Space', 'Enter'].includes(e.key)) {
             handleClick();

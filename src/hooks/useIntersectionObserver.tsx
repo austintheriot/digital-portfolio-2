@@ -1,5 +1,5 @@
 import {
-  MutableRefObject, RefObject, useCallback, useEffect, useRef,
+  useCallback, useEffect, useRef,
 } from 'react';
 
 const defaultOptions: IntersectionObserverInit = { threshold: 0, root: null };

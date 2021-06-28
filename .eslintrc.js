@@ -3,8 +3,8 @@ module.exports = {
   extends: [
     'airbnb',
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import'],
@@ -34,7 +34,7 @@ module.exports = {
     },
   },
   rules: {
-    'no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
     'import/no-unresolved': 'error',
     'import/extensions': [
       'error',
@@ -49,7 +49,6 @@ module.exports = {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'no-use-before-define': 0,
     '@typescript-eslint/no-use-before-define': ['error'],
-    '@typescript-eslint/no-unused-vars': 0,
     'no-tabs': 0,
     'no-mixed-spaces-and-tabs': 0,
     'import/prefer-default-export': 0,

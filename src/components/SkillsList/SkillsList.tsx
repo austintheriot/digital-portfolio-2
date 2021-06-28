@@ -1,8 +1,6 @@
 import React, {
-  Component,
-  ComponentProps, ElementType, FC, isValidElement, ReactElement,
+  ComponentProps, ElementType, isValidElement,
 } from 'react';
-import { SkillCardProps } from 'components/SkillCard/SkillCard';
 import styles from './SkillsList.module.scss';
 
 export default function SkillsList({ children }: ComponentProps<'div'>) {

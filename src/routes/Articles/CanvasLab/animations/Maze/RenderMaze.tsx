@@ -1,5 +1,5 @@
 import Button from 'components/Button/Button';
-import React, { useMemo } from 'react';
+import React from 'react';
 import { useAnimation } from '../../hooks/useAnimation';
 import type { MazeOptions } from './Maze';
 import { MazeAnimation } from './Maze';

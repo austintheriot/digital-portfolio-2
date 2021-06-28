@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAnimation } from 'routes/Articles/CanvasLab/hooks/useAnimation';
 import { cloneDeep } from 'lodash';
 import Button from 'components/Button/Button';
@@ -55,15 +55,15 @@ export const RenderPathfinder = ({
       if (gridAnimation) gridAnimation.onMouseMove(e.offsetX, e.offsetY);
     };
 
-    const onMouseDown = (e: MouseEvent) => {
+    const onMouseDown = () => {
       if (gridAnimation) gridAnimation.onMouseDown(true);
     };
 
-    const onMouseUp = (e: MouseEvent) => {
+    const onMouseUp = () => {
       if (gridAnimation) gridAnimation.onMouseDown(false);
     };
 
-    const onMouseOut = (e: MouseEvent) => {
+    const onMouseOut = () => {
       if (gridAnimation) gridAnimation.onMouseDown(false);
     };
 
@@ -76,11 +76,11 @@ export const RenderPathfinder = ({
       if (gridAnimation) gridAnimation.onMouseMove(offsetX, offsetY);
     };
 
-    const onTouchStart = (e: TouchEvent) => {
+    const onTouchStart = () => {
       if (gridAnimation) gridAnimation.onMouseDown(true);
     };
 
-    const onTouchEnd = (e: TouchEvent) => {
+    const onTouchEnd = () => {
       if (gridAnimation) gridAnimation.onMouseDown(false);
     };
 
