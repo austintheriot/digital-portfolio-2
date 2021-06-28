@@ -1,7 +1,6 @@
 .Container {
-  height: max-content;
-  width: max-content;
-  margin: 2rem auto;
+	height: max-content;
+	width: max-content;
 
 	button {
 		margin: 2rem auto;
@@ -11,7 +10,7 @@
 .MazeContainer {
 	width: 90vw;
 	max-width: 800px;
-	height: 80vw;
+	height: 90vw;
 	max-height: 800px;
 
 	canvas {

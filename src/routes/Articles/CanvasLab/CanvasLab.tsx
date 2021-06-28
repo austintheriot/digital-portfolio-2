@@ -9,6 +9,7 @@ import { Links, Routes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import mazeAutomataImg from 'assets/images/maze-automata.png';
 import { useIsVisible } from 'hooks/useIsVisible';
+import useRerenderOnResize from 'hooks/useRerenderOnResize';
 import { RenderMaze } from './animations/Maze/RenderMaze';
 import { RenderPathfinder } from './animations/PathFinder/RenderPathfinder';
 import generalStyles from '../PortfolioArticle.module.css';
@@ -19,6 +20,9 @@ const mazeRefContainerStyles = {
   maxWidth: '800px',
   minHeight: 'calc(80vw + 100px)',
   margin: '0 auto',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 };
 
 const mazeAutomataStyles: CSSProperties = {
@@ -31,6 +35,8 @@ const mazeAutomataStyles: CSSProperties = {
 const CanvasLab = () => {
   // do not render if not visible
   const [mazeContainerRef, mazeVisible] = useIsVisible<HTMLDivElement>();
+  // HACKY: re-render on window resize to re-initialize animation dimensions
+  const [show] = useRerenderOnResize();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -67,7 +73,7 @@ const CanvasLab = () => {
         search are a little nicer in my opinion :&#41;
       </ArticleParagraph>
       <div ref={mazeContainerRef} style={mazeRefContainerStyles}>
-        {mazeVisible && <RenderMaze renderControls />}
+        {mazeVisible && show && <RenderMaze renderControls />}
       </div>
       <ArticleHeading>Pathfinder Visualization</ArticleHeading>
       <ArticleParagraph>
@@ -84,7 +90,7 @@ const CanvasLab = () => {
         {' '}
         route!
       </ArticleParagraph>
-      <RenderPathfinder />
+      {show && <RenderPathfinder />}
       <ArticleHeading>Maze Automata</ArticleHeading>
       <ArticleParagraph>
         Sometimes the neatest results occur as a result of &quot;happy

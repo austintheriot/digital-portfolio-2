@@ -5,6 +5,8 @@ import { Animation } from '../Animation';
 import { Tile } from './Tile';
 import { bfs, dfs, biBfs } from './solves';
 
+const CELL_SIZE = 30 as const;
+
 export interface GridOptions {
 	[key: string]: any;
 	dimensions?: string;
@@ -77,7 +79,10 @@ export class GridAnimation extends Animation {
 	  this.isMouseDown = false;
 	  this.ctx.lineWidth = Math.floor(Number(options?.lineWidth ?? 2)); // width of grid walls
 	  // default to 50, but never less than 1
-	  this.dimensions = Math.max(Number(options.dimensions ?? 50), 1);
+	  this.dimensions = Math.max(
+	    Number(options.dimensions ?? Math.ceil(window.innerWidth / CELL_SIZE)),
+	    1,
+	  );
 	  // slightly offset so wall lines aren't cut off
 	  this.padding = Math.floor(Number(options.padding ?? 4));
 	  this.generationStack = new Stack(); // used to generate the grid
