@@ -24,7 +24,7 @@ export function RenderMaze({
 			  animation.reset(options);
       }}
       >
-        Reset
+        Generate New Maze
       </Button>
       <div className={renderMazeStyles.MazeContainer}>
         {canvas}
