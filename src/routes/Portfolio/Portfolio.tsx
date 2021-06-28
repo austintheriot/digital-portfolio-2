@@ -115,7 +115,7 @@ export default function Portfolio() {
         <ProjectCard
           img={lascablingLogo}
           title="LASC"
-          subtitle="local business landing page"
+          subtitle="business landing page"
           id={ProjectIds.LASC}
           color="blue"
         />
@@ -123,9 +123,26 @@ export default function Portfolio() {
         <ProjectCard
           img={emailAPI}
           title="Email API"
-          subtitle="service for static sites"
+          subtitle="node.js email service"
           id={ProjectIds.EMAIL}
           color="green"
+          rightalign
+        />
+        <div ref={prestoRef} />
+        <ProjectCard
+          img={prestoLogo}
+          title="Presto"
+          subtitle="full stack react/firebase app"
+          id={ProjectIds.PRESTO}
+          color="purple"
+        />
+        <div ref={jsartRef} />
+        <ProjectCard
+          img={jsartGif}
+          title="JSArt"
+          subtitle="interactive canvas app"
+          id={ProjectIds.JSART}
+          color="gray"
           rightalign
         />
         <div ref={memorizeRef} />
@@ -135,23 +152,6 @@ export default function Portfolio() {
           subtitle="react progressive web app"
           id={ProjectIds.MEMORIZE}
           color="pink"
-        />
-        <div ref={prestoRef} />
-        <ProjectCard
-          img={prestoLogo}
-          title="Presto"
-          subtitle="react social media web app"
-          id={ProjectIds.PRESTO}
-          color="purple"
-          rightalign
-        />
-        <div ref={jsartRef} />
-        <ProjectCard
-          img={jsartGif}
-          title="JSArt"
-          subtitle="interactive canvas app"
-          id={ProjectIds.JSART}
-          color="gray"
         />
       </section>
       <section className={styles.skills} ref={skillsRef}>

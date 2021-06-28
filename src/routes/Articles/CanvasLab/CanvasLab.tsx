@@ -1,4 +1,4 @@
-import React, { CSSProperties, lazy, useEffect } from 'react';
+import React, { CSSProperties, useEffect } from 'react';
 import Button from 'components/Button/Button';
 import { ExternalLink } from 'components/ExternalLink/ExternalLink';
 import { ArticleTitle } from 'components/ArticleTitle/ArticleTitle';
@@ -8,10 +8,18 @@ import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 import { Links, Routes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import mazeAutomataImg from 'assets/images/maze-automata.png';
+import { useIsVisible } from 'hooks/useIsVisible';
 import { RenderMaze } from './animations/Maze/RenderMaze';
 import { RenderPathfinder } from './animations/PathFinder/RenderPathfinder';
 import generalStyles from '../PortfolioArticle.module.css';
 import Decoration from '../../../components/Decorations/Decorations1';
+
+const mazeRefContainerStyles = {
+  width: '90vw',
+  maxWidth: '800px',
+  minHeight: 'calc(80vw + 100px)',
+  margin: '0 auto',
+};
 
 const mazeAutomataStyles: CSSProperties = {
   display: 'block',
@@ -21,6 +29,9 @@ const mazeAutomataStyles: CSSProperties = {
 };
 
 const CanvasLab = () => {
+  // do not render if not visible
+  const [mazeContainerRef, mazeVisible] = useIsVisible<HTMLDivElement>();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -55,7 +66,9 @@ const CanvasLab = () => {
         work equally well to solve the maze, but the visuals of a depth-first
         search are a little nicer in my opinion :&#41;
       </ArticleParagraph>
-      <RenderMaze renderControls />
+      <div ref={mazeContainerRef} style={mazeRefContainerStyles}>
+        {mazeVisible && <RenderMaze renderControls />}
+      </div>
       <ArticleHeading>Pathfinder Visualization</ArticleHeading>
       <ArticleParagraph>
         Play around with placing walls and letting the algorithm try to find a
