@@ -5,7 +5,7 @@ import { Queue } from '../../data structures/Queue';
 // eslint-disable-next-line import/no-cycle
 import { Cell } from './Cell';
 
-const CELL_SIZE = 30;
+const CELL_SIZE = 20;
 
 export interface MazeOptions {
 	[key: string]: any;

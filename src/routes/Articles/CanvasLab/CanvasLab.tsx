@@ -8,17 +8,14 @@ import { ArticleParagraph } from 'components/ArticleParagraph/ArticleParagraph';
 import { Links, Routes } from 'types';
 import InternalLink from 'components/InternalLink/InternalLink';
 import mazeAutomataImg from 'assets/images/maze-automata.png';
-import { useIsVisible } from 'hooks/useIsVisible';
 import useRerenderOnResize from 'hooks/useRerenderOnResize';
+import { useHasBecomeVisible } from 'hooks/useHasBecomeVisible';
 import { RenderMaze } from './animations/Maze/RenderMaze';
 import { RenderPathfinder } from './animations/PathFinder/RenderPathfinder';
 import generalStyles from '../PortfolioArticle.module.css';
 import Decoration from '../../../components/Decorations/Decorations1';
 
 const mazeRefContainerStyles = {
-  width: '90vw',
-  maxWidth: '800px',
-  minHeight: 'calc(80vw + 100px)',
   margin: '0 auto',
   display: 'flex',
   justifyContent: 'center',
@@ -34,7 +31,7 @@ const mazeAutomataStyles: CSSProperties = {
 
 const CanvasLab = () => {
   // do not render if not visible
-  const [mazeContainerRef, mazeVisible] = useIsVisible<HTMLDivElement>();
+  const [mazeContainerRef, mazeVisible] = useHasBecomeVisible<HTMLDivElement>(0.5);
   // HACKY: re-render on window resize to re-initialize animation dimensions
   const [show] = useRerenderOnResize();
 
