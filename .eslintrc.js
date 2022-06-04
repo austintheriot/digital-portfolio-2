@@ -46,7 +46,10 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
+    ],
     'no-use-before-define': 0,
     '@typescript-eslint/no-use-before-define': ['error'],
     'no-tabs': 0,
@@ -58,5 +61,6 @@ module.exports = {
     'no-plusplus': 0,
     'no-restricted-syntax': 0,
     'max-classes-per-file': 0,
+    '@typescript-eslint/no-unnecessary-type-constraint': 0,
   },
 };

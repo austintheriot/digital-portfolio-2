@@ -1,9 +1,13 @@
 import React, {
-  ChangeEvent, FocusEvent, FormEvent, useEffect, useState,
+  ChangeEvent,
+  FocusEvent,
+  FormEvent,
+  useEffect,
+  useState,
 } from 'react';
-import { API, Inputs } from 'types';
+import { Inputs } from 'types';
 import styles from './Contact.module.css';
-import { contactForm } from '../../config';
+import { contactFormUrl } from '../../config';
 import Decoration from '../../components/Decorations/Decorations1';
 
 import Input from '../../components/Input/Input';
@@ -76,7 +80,9 @@ const Contact = () => {
 
   const handleBlur = (event: FocusEvent, newestType: InputTypes) => {
     // animation & output error if empty
-    const targetEmpty =			!!(inputs[newestType].touched && inputs[newestType].value.length === 0);
+    const targetEmpty = !!(
+      inputs[newestType].touched && inputs[newestType].value.length === 0
+    );
 
     setInputs((prevState) => ({
       ...prevState,
@@ -160,7 +166,8 @@ const Contact = () => {
   };
 
   const handleChange = (
-    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>, newestType: InputTypes,
+    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>,
+    newestType: InputTypes,
   ) => {
     const targetValue = event.target.value;
     const targetEmpty = targetValue.length === 0;
@@ -203,33 +210,17 @@ const Contact = () => {
     });
   };
 
-  const sendSubmission = async () => {
-    console.log(
-      'sending form...',
-      inputs.email.value,
-      inputs.name.value,
-      inputs.message.value,
-    );
-
-    const response = await fetch(
-      API.CONTACT,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: inputs.name.value,
-          email: inputs.email.value,
-          message: inputs.message.value,
-          _private: {
-            key: contactForm,
-          },
-        }),
-      },
-    );
-    return response.json();
-  };
+  const sendSubmission = async () => fetch(contactFormUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: inputs.name.value,
+      email: inputs.email.value,
+      message: inputs.message.value,
+    }),
+  });
 
   const submit = () => {
     disableElements(true);
@@ -237,7 +228,7 @@ const Contact = () => {
     sendSubmission()
       .then((data) => {
         disableElements(false);
-        if (data.error) {
+        if (data.status !== 200) {
           setModalMessage(
             'Sorry, there was an error processing your message. Please try again later.',
           );
